@@ -1,0 +1,51 @@
+/*
+ * Kiran Nonwovens — "Editorial Split" design tokens.
+ * Palette and type taken verbatim from the approved theme demo.
+ */
+:root {
+  /* ── Palette ───────────────────────────────────────────────── */
+  --forest: #132a20; /* primary / dark */
+  --forest-deep: #0b1912; /* footer, dark CTA band */
+  --cream: #f7f3ea; /* page background */
+  --sand: #ede5d3; /* alt section background */
+  --line: #d8cfb8; /* borders, rules */
+  --ink: #1b2a21; /* body text */
+  --muted: #5e6b5f; /* secondary text */
+  --rust: #b4592f; /* accent — links, active states, CTA highlights */
+
+  /* On-dark text */
+  --on-dark: #c8d3c6;
+  --on-dark-strong: #ffffff;
+  --rule-on-dark: rgba(255, 255, 255, 0.19);
+
+  /* ── Type ──────────────────────────────────────────────────── */
+  --font-serif: var(--font-fraunces), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-plex), system-ui, -apple-system, sans-serif;
+
+  --fs-display: clamp(2.1rem, 6.2vw, 3.6rem);
+  --fs-h1: clamp(1.9rem, 5vw, 3rem);
+  --fs-h2: clamp(1.5rem, 3.8vw, 2.1rem);
+  --fs-h3: 1.1rem;
+  --fs-body: 1rem;
+  --fs-small: 0.88rem;
+  --fs-tiny: 0.82rem;
+
+  /* ── Layout ────────────────────────────────────────────────── */
+  --wrap: 1180px;
+  --gutter: 24px;
+  --header-h: 66px;
+  --tap: 46px; /* minimum touch target */
+
+  /* ── Motion ────────────────────────────────────────────────── */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,11 @@
+<!--
+  PLACEHOLDER mark — the real Kiran Nonwovens logo is still pending.
+  Layered lines standing in for needled web; forest green on cream.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Kiran Nonwovens">
+  <rect width="32" height="32" rx="6" fill="#132A20"/>
+  <g stroke="#EDE5D3" stroke-width="2" stroke-linecap="round">
+    <path d="M8 11h16M8 16h16M8 21h16"/>
+  </g>
+  <path d="M16 6v20" stroke="#B4592F" stroke-width="2" stroke-linecap="round"/>
+</svg>

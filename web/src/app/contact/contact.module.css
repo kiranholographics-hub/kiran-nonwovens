@@ -1,0 +1,38 @@
+.layout {
+  display: grid;
+  gap: 32px;
+}
+
+.layout > * {
+  min-width: 0;
+}
+
+@media (min-width: 960px) {
+  .layout {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+  }
+}
+
+.details {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.details > div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.details dt {
+  color: var(--muted);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.details dd {
+  margin: 0;
+}

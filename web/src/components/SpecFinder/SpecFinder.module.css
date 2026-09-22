@@ -1,0 +1,108 @@
+.finder {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: 26px;
+  display: grid;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+@media (min-width: 900px) {
+  .finder {
+    grid-template-columns: 1fr 1fr 1.2fr;
+    align-items: end;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.field select {
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  border-radius: 2px;
+  min-height: var(--tap);
+}
+
+.field input[type='range'] {
+  padding: 0;
+  accent-color: var(--rust);
+  min-height: var(--tap);
+  width: 100%;
+}
+
+.gsmValue {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.summary {
+  color: var(--muted);
+  font-size: var(--fs-small);
+  padding: 12px 0 0;
+}
+
+.results {
+  margin-top: 6px;
+  border-top: 1px solid var(--line);
+}
+
+.results a {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+}
+
+.results a:hover h3 {
+  color: var(--rust);
+}
+
+.results h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 500;
+  transition: color 0.2s var(--ease);
+}
+
+.results small {
+  display: block;
+  color: var(--muted);
+  font-size: var(--fs-tiny);
+  margin-top: 2px;
+}
+
+.go {
+  color: var(--rust);
+  font-weight: 600;
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.none {
+  color: var(--muted);
+  padding: 16px 0;
+}
+
+.more {
+  display: inline-block;
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--rust);
+  text-decoration: none;
+}

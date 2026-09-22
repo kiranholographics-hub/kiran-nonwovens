@@ -1,0 +1,103 @@
+.form {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+
+.fields {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+@media (min-width: 640px) {
+  .two {
+    grid-template-columns: 1fr 1fr;
+  }
+  .three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--muted);
+}
+
+.req {
+  color: var(--rust);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  border-radius: 2px;
+  min-height: 44px;
+}
+
+.textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.input[aria-invalid='true'],
+.textarea[aria-invalid='true'] {
+  border-color: var(--rust);
+}
+
+.error {
+  display: block;
+  color: var(--rust);
+  font-size: var(--fs-tiny);
+  margin-top: 4px;
+}
+
+.legend {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.group {
+  border: 0;
+  padding: 0;
+  margin: 0 0 4px;
+}
+
+/* Honeypot — off-screen, never shown to a real buyer. */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.status {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 2px solid var(--rust);
+  font-size: var(--fs-small);
+}
+
+.ok {
+  border-left-color: var(--forest);
+}
+
+.hint {
+  font-size: var(--fs-tiny);
+  color: var(--muted);
+  margin: 0 0 16px;
+}
