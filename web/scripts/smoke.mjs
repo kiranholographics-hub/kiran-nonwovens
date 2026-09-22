@@ -54,7 +54,21 @@ const p = products[0];
 const prod = await get(`/products/${p.category}/${p.slug}`);
 check(prod.html.includes('<table'), 'product page has no <table>');
 check(prod.html.includes('Roll length'), 'spec table rows not server-rendered');
-check(prod.html.includes('To be confirmed'), 'TBD specs not rendered as text');
+// Every spec row must carry real text, whether it is a figure, a
+// "made to order" statement, or an explicit "to be confirmed".
+check(
+  prod.html.includes(p.specs.width),
+  'spec width value not server-rendered'
+);
+check(
+  prod.html.includes(p.specs.fibre[0]),
+  'spec fibre value not server-rendered'
+);
+check(
+  prod.html.includes('Made to requirement') ||
+    prod.html.includes('To be confirmed'),
+  'unsupplied specs render as neither a value nor a stated caveat'
+);
 check(prod.html.includes(p.shortDescription.slice(0, 40)), 'description not server-rendered');
 check(prod.html.includes(p.applications[0]), 'applications tab content not in server HTML');
 check(prod.html.includes(p.features[0]), 'features not in server HTML');

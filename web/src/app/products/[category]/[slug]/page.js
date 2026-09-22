@@ -17,6 +17,7 @@ import {
 } from '@/lib/api';
 import { pageMetadata } from '@/lib/metadata';
 import { SITE } from '@/lib/site';
+import { PLANT } from '@/data/catalog';
 
 import shared from '../../../shared.module.css';
 
@@ -74,14 +75,18 @@ export default async function ProductPage({ params }) {
         <>
           <SpecTable
             specs={product.specs}
-            specsConfirmed={product.specsConfirmed}
+            gsmConfirmed={product.gsmConfirmed}
             caption={`Specifications for ${product.name}`}
           />
-          {!product.specsConfirmed ? (
+          {product.specNote ? (
+            <PlaceholderNote>{product.specNote}</PlaceholderNote>
+          ) : null}
+          {!product.gsmConfirmed ? (
             <PlaceholderNote>
-              Thickness, roll length and colour have not been confirmed for this
-              product yet, and the GSM range shown is the plant&apos;s full
-              capability. Send an enquiry and we will confirm exact values.
+              This material is made to order across the plant&apos;s full
+              {' '}{PLANT.gsmLabel} GSM range. Tell us the GSM, thickness,
+              width and colour your application needs and we will confirm
+              exact figures with your quote.
             </PlaceholderNote>
           ) : null}
         </>

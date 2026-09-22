@@ -35,7 +35,7 @@ export default function SpecFinder({ businessAreas, products }) {
   const areaName = (slug) =>
     businessAreas.find((b) => b.slug === slug)?.name || slug;
 
-  const anyUnconfirmed = matches.some((p) => !p.specsConfirmed);
+  const anyUnconfirmed = matches.some((p) => !p.gsmConfirmed);
 
   return (
     <>
@@ -124,10 +124,10 @@ export default function SpecFinder({ businessAreas, products }) {
 
       {anyUnconfirmed ? (
         <PlaceholderNote>
-          Per-product GSM ranges are still being confirmed. Until then, results
-          are matched against the plant&apos;s full capability
-          ({PLANT.gsmLabel} GSM) — send an enquiry and we will confirm the exact
-          range for the product you need.
+          These materials are made to order, so results are matched against the
+          plant&apos;s full {PLANT.gsmLabel} GSM capability rather than a fixed
+          per-product range. Send an enquiry with the GSM you need and we will
+          confirm it.
         </PlaceholderNote>
       ) : null}
     </>

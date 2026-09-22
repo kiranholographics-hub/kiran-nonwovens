@@ -33,10 +33,13 @@ const productSchema = new mongoose.Schema(
       metaDescription: { type: String, default: '' },
     },
 
+    /** Free-text caveat shown under this product's spec table, when it needs one. */
+    specNote: { type: String, default: '' },
+
     /** False while the GSM range shown is the plant range, not a per-product one. */
-    specsConfirmed: { type: Boolean, default: false },
+    gsmConfirmed: { type: Boolean, default: false },
     /** True while the copy is awaiting sign-off. */
-    draft: { type: Boolean, default: true },
+    draft: { type: Boolean, default: false },
     order: { type: Number, default: 0 },
   },
   { timestamps: true }

@@ -21,14 +21,27 @@
  * visibly unfinished on the page on purpose. See `OWNER_INPUTS.md`
  * for the full outstanding list.
  *
- * Per-product `shortDescription`, `features` and `applications` are DRAFT copy
- * derived from the product name and the plant's stated capability. They are
- * marked `draft: true` and need Sir's sign-off before launch — but they are
- * real sentences so the site can be reviewed, not lorem ipsum.
+ * Per-product `shortDescription`, `features` and `applications` are taken from
+ * the company's own product-description document, lightly edited for the web
+ * (sentence case, consistent British spelling, applications split into a list).
+ * Nothing in them is invented.
+ *
+ * What that document does NOT give is a per-product GSM range — every product
+ * is offered across the plant's 100–1200 GSM capability. Products therefore
+ * carry `gsmConfirmed: false`, and the spec table and Spec Finder both say on
+ * screen that the range shown is plant capability.
  */
 
-/** Sentinel for a spec value Sir has not confirmed yet. */
+/** Sentinel for a spec value nobody has supplied yet — renders as italic
+ *  "To be confirmed" rather than a guessed number. */
 export const TBD = null;
+
+/**
+ * Every product in the company's product-description document is offered in
+ * "customised GSM, thickness, width and colour". So thickness, roll length and
+ * colour are not unknowns — there is no single fixed value to state.
+ */
+export const MADE_TO_ORDER = 'Made to requirement';
 
 /* ── Plant-wide capability (from the brief + approved demo stats band) ───── */
 export const PLANT = {
@@ -60,10 +73,11 @@ export const businessAreas = [
     overview:
       '[Overview content — what Kiran Nonwovens offers civil-works and infrastructure buyers, 2–3 paragraphs. Pending from Sir.]',
     applications: [
-      'Road and embankment separation layers',
-      'Subsurface and trench drainage',
-      'Slope and shoreline erosion control',
+      'Road, railway and embankment separation layers',
+      'Subsurface drainage and perforated-pipe wrapping',
+      'Slope, canal and embankment erosion control',
       'Pipeline and buried-cable protection',
+      'Industrial dust-collection filter bags',
     ],
     hasDownloads: true,
     images: ['/images/business-areas/geotextile.jpg'],
@@ -86,10 +100,11 @@ export const businessAreas = [
     overview:
       '[Overview content — Kiran Nonwovens for automotive interiors and tier-1 suppliers, 2–3 paragraphs. Pending from Sir.]',
     applications: [
-      'Cabin floor and dash insulation',
-      'Door trim and pillar backing',
-      'Boot and wheel-arch lining',
-      'Headliner and parcel-shelf substrates',
+      'Carpet backing, floor mats and parcel trays',
+      'Door panels, headliners and roof liners',
+      'Boot liners and wheel-arch liners',
+      'Dashboard and engine-bay insulation',
+      'Seat padding and NVH control layers',
     ],
     hasDownloads: false,
     images: ['/images/business-areas/automotive.jpg'],
@@ -112,10 +127,11 @@ export const businessAreas = [
     overview:
       '[Overview content — Kiran Nonwovens for garment and footwear manufacturers, 2–3 paragraphs. Pending from Sir.]',
     applications: [
-      'Shoulder pad and chest-piece construction',
-      'Shoe lining and collar reinforcement',
-      'Insole and midsole backing',
-      'Garment interlining and padding',
+      'Shoulder pads for blazers, suits and coats',
+      'Uniforms and ladies\u2019 fashion garments',
+      'Shoe uppers and inner lining',
+      'Insoles, heel counters and toe-puff support',
+      'Sports, safety and casual footwear',
     ],
     hasDownloads: false,
     images: ['/images/business-areas/apparel-footwear.jpg'],
@@ -138,10 +154,11 @@ export const businessAreas = [
     overview:
       '[Overview content — industrial, medical, flooring and custom-development work, 2–3 paragraphs. Pending from Sir.]',
     applications: [
-      'Orthopaedic and medical padding',
+      'Orthopaedic undercast padding and medical immobilisation',
       'Carpet backing and flooring underlay',
-      'Protective packaging and surface interleaving',
-      'Luggage, bag and case stiffening',
+      'Protective packaging for glass, furniture and electronics',
+      'Luggage, bag and case structure',
+      'Coloured felt for craft, décor and display',
     ],
     hasDownloads: true,
     images: ['/images/business-areas/industrial.jpg'],
@@ -163,26 +180,29 @@ export const businessAreas = [
 /**
  * Fills a product with the plant-wide defaults so no spec is silently invented.
  *
- * `specsConfirmed: false` means the GSM range shown is the plant's full
- * capability (100–1200), not a range confirmed for this specific product.
- * The spec table and the Spec Finder both say so on screen. Once Sir supplies
- * per-product values, set the real numbers and flip the flag to `true`.
+ * `gsmConfirmed: false` means the GSM range shown is the plant's full
+ * capability (100–1200) rather than a range confirmed for this product. The
+ * spec table and the Spec Finder both say so on screen. If a product ever gets
+ * a fixed range, set the real numbers and flip the flag to `true`.
  */
 function product(p) {
   return {
-    draft: true, // copy below is draft, pending Sir's sign-off
-    specsConfirmed: false,
+    draft: false, // copy comes from the company's product-description document
+    gsmConfirmed: false,
     downloads: [], // datasheets / test reports pending
     images: [`/images/products/${p.slug}.jpg`],
     ...p,
     specs: {
+      // Default fibre is the full plant range. Where the product document
+      // names the fibre, the product overrides this and the spec table drops
+      // its "full plant range" caveat.
       fibre: PLANT.fibres,
       gsmMin: PLANT.gsmMin,
       gsmMax: PLANT.gsmMax,
-      thickness: TBD,
+      thickness: MADE_TO_ORDER,
       width: PLANT.widthLabel,
-      rollLength: TBD,
-      colour: TBD,
+      rollLength: MADE_TO_ORDER,
+      colour: MADE_TO_ORDER,
       process: PLANT.processLabel,
       ...(p.specs || {}),
     },
@@ -196,24 +216,27 @@ export const products = [
     slug: 'pp-geotextile-fabric-for-civil-works',
     category: 'geotextile',
     shortDescription:
-      'Needle punched polypropylene geotextile for separation, reinforcement and filtration under roads, embankments and hard standings.',
+      'PP needle-punched geotextile for civil construction and infrastructure — a strong, permeable layer that handles separation, filtration, drainage, protection and reinforcement at once.',
     features: [
-      'Polypropylene staple fibre',
-      'Needle punched, non-woven structure',
-      'Separation and filtration in one layer',
-      'Roll widths up to 5.2 m',
+      'High strength and tear resistance',
+      'Excellent water permeability and drainage support',
+      'Helps separate soil layers and prevent mixing',
+      'Supports soil stabilisation and reinforcement',
+      'Resistant to moisture, chemicals and biological degradation',
+      'Available in customised GSM, width and roll length',
     ],
     applications: [
-      'Road and railway subgrade separation',
-      'Embankment and retaining-wall reinforcement',
-      'Hard standing and car park sub-base',
-      'General civil-works filtration layers',
+      'Road and railway construction',
+      'Landfills, retaining walls and embankments',
+      'Foundations and pavement subgrades',
+      'Drainage systems and canal lining protection',
+      'Landscaping and general civil-engineering works',
     ],
     specs: { fibre: ['PP (virgin)', 'PP (recycled)'] },
     seo: {
       title: 'PP Geotextile Fabric for Civil Works | Kiran Nonwovens',
       metaDescription:
-        'Needle punched PP geotextile fabric for road, embankment and civil-works separation and filtration. 100–1200 GSM, roll widths to 5.2 m. Export supply from India.',
+        'Needle punched PP geotextile for roads, embankments, subgrades and drainage — separation, filtration and reinforcement in one layer. Customised GSM, width and roll length.',
     },
   }),
   product({
@@ -221,23 +244,26 @@ export const products = [
     slug: 'drainage-soil-erosion-control-geotextile',
     category: 'geotextile',
     shortDescription:
-      'Permeable nonwoven geotextile that lets water pass while holding soil in place — for drains, slopes and shorelines.',
+      'Needle-punched geotextile that supports efficient drainage and protects soil from erosion — water flows through freely while soil particles stay put, preventing clogging and washout.',
     features: [
-      'High water permeability',
-      'Retains fines while draining freely',
-      'Needle punched for puncture resistance',
-      'Supplied in PP or polyester',
+      'Allows fast water flow while retaining soil particles',
+      'Helps prevent drainage-system clogging',
+      'Controls soil erosion and surface washout',
+      'Flexible, durable and easy to install',
+      'Provides a protective and separating layer',
+      'Available in customised GSM, width and roll length',
     ],
     applications: [
-      'French drains and trench drainage',
-      'Slope and embankment erosion control',
-      'Shoreline and canal bank protection',
-      'Landfill and pond drainage layers',
+      'French drains and subsurface drainage',
+      'Perforated-pipe wrapping',
+      'Slope protection, embankments and retaining walls',
+      'Canals, ponds and rainwater-harvesting systems',
+      'Landscaping, gardens and erosion-control projects',
     ],
     seo: {
       title: 'Drainage & Soil Erosion Control Geotextile | Kiran Nonwovens',
       metaDescription:
-        'Permeable needle punched geotextile for subsurface drainage, slope stabilisation and erosion control. 100–1200 GSM, PP or polyester, widths to 5.2 m.',
+        'Permeable needle punched geotextile for French drains, perforated-pipe wrapping, slope protection and erosion control. Fast water flow with soil retention.',
     },
   }),
   product({
@@ -245,23 +271,27 @@ export const products = [
     slug: 'pipeline-cable-protection-geotextile',
     category: 'geotextile',
     shortDescription:
-      'Heavy-weight protective nonwoven wrapped around buried pipelines and cables to cushion them against backfill and point loads.',
+      'Needle-punched nonwoven geotextile that shields buried pipelines, cables and utility lines from puncture, abrasion and impact, while still letting water drain through.',
     features: [
-      'Available in heavier GSM for cushioning',
-      'Resists puncture from angular backfill',
-      'Chemically inert to soil and groundwater',
-      'Rock-shield and rock-wrap formats',
+      'Protects pipelines and cables from puncture and abrasion',
+      'Provides cushioning against stones and backfill material',
+      'Offers separation and filtration support',
+      'Allows water drainage while helping retain soil particles',
+      'Durable, flexible and easy to install',
+      'Resistant to moisture, chemicals, rot and biological degradation',
     ],
     applications: [
-      'Buried pipeline rock shield',
-      'Cable duct and trench protection',
-      'Coated-pipe abrasion protection',
-      'Geomembrane cushioning layers',
+      'Oil, gas and water-supply pipelines',
+      'Drainage pipes and sewer lines',
+      'Electrical, telecom and fibre-optic cables',
+      'Utility corridors and underground infrastructure',
+      'Civil-engineering projects',
     ],
+    specs: { fibre: ['Polyester', 'PP (virgin)', 'PP (recycled)'] },
     seo: {
       title: 'Pipeline & Cable Protection Geotextile | Kiran Nonwovens',
       metaDescription:
-        'Heavy needle punched geotextile rock shield for buried pipelines and cable ducts. Puncture-resistant cushioning up to 1200 GSM, widths to 5.2 m.',
+        'Needle punched geotextile protecting buried pipelines, sewer lines and telecom cables from puncture, abrasion and backfill damage. PP or polyester, customised GSM.',
     },
   }),
   product({
@@ -269,23 +299,28 @@ export const products = [
     slug: 'filter-geo-bag-felt',
     category: 'geotextile',
     shortDescription:
-      'Nonwoven felt engineered for geo bag and sand-bag fabrication used in river training, bank protection and coastal works.',
+      'Dense needle-punched filtration felt for dust-collection and industrial air-filtration systems — it captures dust particles while holding air flow and mechanical strength.',
     features: [
-      'Stitched and sewn into geo bags',
-      'Filtration without loss of fill material',
-      'UV-stabilised grades available on request',
-      'Consistent GSM across the full roll width',
+      'Effective dust retention and filtration performance',
+      'Good air permeability',
+      'Strong, durable and tear resistant',
+      'Uniform thickness and fibre distribution',
+      'Suitable for cutting, stitching and bag fabrication',
+      'Available in customised specifications',
     ],
     applications: [
-      'River training and bank revetment',
-      'Coastal and estuary protection works',
-      'Temporary flood-defence bagging',
-      'Scour protection around structures',
+      'Dust-collector filter bags and baghouse systems',
+      'Cement and mineral plants',
+      'Woodworking and metal-processing units',
+      'Food-processing and pharmaceutical dust collection',
+      'Boilers and general industrial air-filtration systems',
     ],
+    specNote:
+      'Fibre composition and finish are matched to your operating temperature, dust type and filtration requirement.',
     seo: {
-      title: 'Filter Geo Bag Felt | Kiran Nonwovens',
+      title: 'Filter Geo Bag Felt — Dust Filtration | Kiran Nonwovens',
       metaDescription:
-        'Nonwoven geo bag felt for river training, bank revetment and coastal protection. Needle punched, 100–1200 GSM, supplied on rolls to 5.2 m wide.',
+        'Needle punched filter felt for dust-collector bags and baghouse systems in cement, mineral, woodworking and food-processing plants. Made to your temperature and dust type.',
     },
   }),
 
@@ -295,23 +330,27 @@ export const products = [
     slug: 'automotive-needle-punched-felt',
     category: 'automotive',
     shortDescription:
-      'General-purpose needle punched felt for vehicle interiors — trim backing, lining and substrate layers.',
+      'Needle-punched felt engineered for vehicle interiors — durable, sound absorbing and thermally insulating, with a uniform structure that cuts, moulds, laminates and die-cuts cleanly.',
     features: [
-      'Mouldable and die-cuttable',
-      'Consistent density across the roll',
-      'Polyester, PP and recycled blends',
-      'Thermal bonded finish available',
+      'Excellent sound absorption and vibration reduction',
+      'Good thermal insulation',
+      'Durable, lightweight and resilient',
+      'Easy to mould, cut, laminate and stitch',
+      'Uniform thickness and smooth finish',
+      'Customised GSM, thickness, width and colour options',
     ],
     applications: [
-      'Door trim and pillar backing',
-      'Boot and wheel-arch lining',
-      'Parcel shelf and headliner substrates',
-      'Seat-back and under-carpet layers',
+      'Carpet backing and floor mats',
+      'Boot liners and parcel trays',
+      'Door panels and headliners',
+      'Wheel-arch liners and dashboard insulation',
+      'Seat padding and other interior components',
     ],
+    specs: { fibre: ['Polyester', 'PP (virgin)', 'PP (recycled)'] },
     seo: {
       title: 'Automotive Needle Punched Felt | Kiran Nonwovens',
       metaDescription:
-        'Needle punched automotive felt for door trim, boot lining, headliner and under-carpet layers. Polyester and PP, 100–1200 GSM, widths to 5.2 m.',
+        'Needle punched automotive felt for carpet backing, boot liners, door panels, headliners and dashboard insulation. Polyester and polypropylene, made to your GSM.',
     },
   }),
   product({
@@ -319,23 +358,27 @@ export const products = [
     slug: 'nvh-sound-insulation-fabric',
     category: 'automotive',
     shortDescription:
-      'Nonwoven fabric built for noise, vibration and harshness control in cabins — absorbing airborne noise and damping panel resonance.',
+      'Needle-punched NVH fabric built to control noise, vibration and harshness — a dense, resilient fibre structure that absorbs sound energy and damps vibration transfer.',
     features: [
-      'Engineered for airborne sound absorption',
-      'Panel damping and vibration control',
-      'Lightweight alternative to heavy barriers',
-      'Fibre blend tuned to the target frequency',
+      'Helps reduce noise, vibration and harshness',
+      'Effective sound absorption and acoustic insulation',
+      'Supports thermal-insulation performance',
+      'Lightweight, durable and resilient',
+      'Easy to cut, laminate, mould and process',
+      'Available in customised GSM, thickness, density, width and colour',
     ],
     applications: [
-      'Dash and firewall insulation',
-      'Floor and tunnel acoustic layers',
-      'Engine bay and bonnet lining',
-      'Door and pillar noise damping',
+      'Automotive carpets, door panels and headliners',
+      'Boot liners, wheel-arch liners and dashboard insulation',
+      'Engine-bay insulation and generator enclosures',
+      'HVAC ducts and machinery covers',
+      'Acoustic wall panels and construction sound-control systems',
     ],
+    specs: { fibre: ['Polyester', 'PP (virgin)', 'PP (recycled)'] },
     seo: {
-      title: 'NVH & Sound Insulation Fabric | Kiran Nonwovens',
+      title: 'NVH & Sound Insulation Nonwoven Fabric | Kiran Nonwovens',
       metaDescription:
-        'Nonwoven NVH and sound insulation fabric for vehicle dash, floor and door acoustics. Needle punched and thermal bonded, 100–1200 GSM.',
+        'Needle punched NVH fabric controlling noise, vibration and harshness in automotive, industrial and appliance builds. Tuned for sound absorption, density and weight.',
     },
   }),
   product({
@@ -343,23 +386,27 @@ export const products = [
     slug: 'acoustic-thermal-insulation-felt',
     category: 'automotive',
     shortDescription:
-      'Dual-purpose insulation felt that cuts noise transfer and heat transfer in the same layer.',
+      'Needle-punched felt that cuts unwanted noise and holds temperature in the same layer — a resilient structure that traps sound energy and slows heat transfer.',
     features: [
-      'Combined acoustic and thermal performance',
-      'Lofted structure for higher absorption',
-      'Available in heavier GSM builds',
-      'Suits both automotive and appliance use',
+      'Effective sound absorption and noise reduction',
+      'Good thermal insulation properties',
+      'Lightweight, soft and durable',
+      'Resilient structure with good shape retention',
+      'Easy to cut, laminate, mould and process',
+      'Available in customised GSM, thickness, width, density and colour',
     ],
     applications: [
-      'Engine and exhaust heat shielding',
-      'HVAC duct and plenum lining',
-      'Appliance and equipment enclosures',
-      'Cabin thermal comfort layers',
+      'Automotive interiors and engine compartments',
+      'Door panels and roof liners',
+      'HVAC systems and appliances',
+      'Machinery covers and generator enclosures',
+      'Wall and ceiling insulation, partitions and furniture',
     ],
+    specs: { fibre: ['Polyester', 'PP (virgin)', 'PP (recycled)'] },
     seo: {
       title: 'Acoustic & Thermal Insulation Felt | Kiran Nonwovens',
       metaDescription:
-        'Needle punched acoustic and thermal insulation felt for automotive, HVAC and appliance enclosures. 100–1200 GSM, roll widths to 5.2 m.',
+        'Needle punched felt combining sound absorption and thermal resistance for automotive interiors, HVAC, appliances, machinery covers and building insulation.',
     },
   }),
 
@@ -369,23 +416,26 @@ export const products = [
     slug: 'shoulder-pad-nonwoven-fabric',
     category: 'apparel-footwear',
     shortDescription:
-      'Resilient nonwoven built for shoulder pad and chest-piece construction — holds its shape through wear and cleaning.',
+      'Needle-punched polyester shoulder pad fabric that gives garments a smooth shape, comfortable support and a premium finish — clean, well-defined shoulders without bulk.',
     features: [
-      'Shape retention after compression',
-      'Cuts and moulds cleanly',
-      'Soft hand with structured body',
-      'Light GSM builds for tailoring',
+      'Soft, lightweight and comfortable',
+      'Good shape retention and resilience',
+      'Smooth and uniform surface',
+      'Easy to cut, stitch and laminate',
+      'Available in different thicknesses, GSM, widths and colours',
+      'Suitable for customised garment requirements',
     ],
     applications: [
-      'Suit and jacket shoulder pads',
-      'Chest pieces and canvas substitutes',
-      'Garment interlining and padding',
-      'Uniform and workwear structure',
+      'Blazers, suits and coats',
+      'Jackets and uniforms',
+      "Ladies' fashion garments",
+      'Other apparel requiring shoulder support and structure',
     ],
+    specs: { fibre: ['Polyester'] },
     seo: {
       title: 'Shoulder Pad Nonwoven Fabric | Kiran Nonwovens',
       metaDescription:
-        'Resilient nonwoven fabric for shoulder pads, chest pieces and garment interlining. Needle punched and thermal bonded, made to your GSM.',
+        'Needle punched polyester shoulder pad fabric for blazers, suits, coats, jackets and uniforms. Holds its shape through wear, cuts and stitches cleanly.',
     },
   }),
   product({
@@ -393,23 +443,27 @@ export const products = [
     slug: 'shoe-lining-nonwoven-fabric',
     category: 'apparel-footwear',
     shortDescription:
-      'Nonwoven lining and reinforcement fabric for footwear — used in collars, quarters, insoles and toe puffs.',
+      'Needle-punched polyester lining fabric for footwear — a smooth, cushioned surface that stays comfortable against the foot and helps the shoe hold its shape and finish.',
     features: [
-      'Abrasion resistant against the foot',
-      'Skives and laminates cleanly',
-      'Breathable open structure',
-      'Consistent thickness for die-cutting',
+      'Soft and comfortable against the foot',
+      'Lightweight and breathable',
+      'Durable with good abrasion resistance',
+      'Good cushioning and shape retention',
+      'Easy to cut, stitch, laminate and bond',
+      'Available in customised GSM, thickness, width and colour',
     ],
     applications: [
-      'Shoe collar and quarter lining',
-      'Insole covering and backing',
-      'Toe puff and counter reinforcement',
-      'Sports and safety footwear linings',
+      'Shoe uppers and inner lining',
+      'Insoles and heel counters',
+      'Toe-puff support',
+      'Sports, safety and casual footwear',
+      'Slipper lining and other footwear components',
     ],
+    specs: { fibre: ['Polyester'] },
     seo: {
       title: 'Shoe Lining Nonwoven Fabric | Kiran Nonwovens',
       metaDescription:
-        'Nonwoven shoe lining and reinforcement fabric for collars, insoles, toe puffs and counters. Needle punched, export supply from India.',
+        'Needle punched polyester shoe lining fabric for uppers, inner lining, insoles, heel counters and toe puffs. Breathable, abrasion resistant, made to your GSM.',
     },
   }),
 
@@ -419,23 +473,24 @@ export const products = [
     slug: 'orthopaedic-cast-padding',
     category: 'industrial',
     shortDescription:
-      'Soft, conformable nonwoven padding used under orthopaedic casts and splints as the layer against the skin.',
+      'Soft nonwoven padding that sits between the skin and a plaster or synthetic cast, protecting sensitive areas from pressure, friction and irritation.',
     features: [
-      'Soft, low-irritation surface',
-      'Conforms to limb contours',
-      'Tears cleanly by hand',
-      'Supplied in rolls or slit to width',
+      'Soft and skin-friendly',
+      'Lightweight and breathable',
+      'Provides cushioning and pressure protection',
+      'Easy to tear, wrap and apply',
+      'Uniform thickness for consistent coverage',
+      'Available in customised widths, thicknesses, GSM and roll lengths',
     ],
     applications: [
-      'Under-cast and under-splint padding',
-      'Compression bandage underlay',
-      'Protective padding in orthotics',
-      'Veterinary casting and bandaging',
+      'Undercast padding for plaster and synthetic casts',
+      'Orthopaedic supports and splinting',
+      'Medical immobilisation applications',
     ],
     seo: {
       title: 'Orthopaedic Cast Padding | Kiran Nonwovens',
       metaDescription:
-        'Soft conformable nonwoven orthopaedic cast padding for under-cast, splint and bandage underlay. Supplied in rolls or slit to width.',
+        'Soft, breathable nonwoven undercast padding for plaster and synthetic casts, orthopaedic supports and medical immobilisation. Tears and wraps by hand.',
     },
   }),
   product({
@@ -443,23 +498,27 @@ export const products = [
     slug: 'carpet-backing-felt',
     category: 'industrial',
     shortDescription:
-      'Dimensionally stable nonwoven felt used as primary and secondary carpet backing.',
+      'Needle-punched backing felt that gives carpets and floor coverings strength, cushioning and dimensional stability, and improves comfort underfoot.',
     features: [
-      'Dimensional stability under tension',
-      'Good tuft-lock and adhesive anchorage',
-      'Available in heavy GSM builds',
-      'Full 5.2 m width for broadloom',
+      'Provides strength and dimensional stability',
+      'Soft cushioning for improved walking comfort',
+      'Helps reduce sound and impact noise',
+      'Good thermal-insulation properties',
+      'Durable, lightweight and resilient',
+      'Easy to laminate, cut and process',
     ],
     applications: [
-      'Primary and secondary carpet backing',
-      'Rug and mat construction',
-      'Exhibition and event carpet',
-      'Automotive floor carpet substrates',
+      'Wall-to-wall carpets and area rugs',
+      'Automotive and exhibition carpets',
+      'Floor mats',
+      'Commercial and residential flooring',
+      'Hotel and office carpets',
     ],
+    specs: { fibre: ['Polyester', 'PP (virgin)', 'PP (recycled)'] },
     seo: {
       title: 'Carpet Backing Felt | Kiran Nonwovens',
       metaDescription:
-        'Needle punched carpet backing felt for broadloom, rugs, mats and exhibition carpet. Up to 1200 GSM and 5.2 m wide.',
+        'Needle punched carpet backing felt for wall-to-wall carpets, rugs, exhibition and automotive carpets. Dimensional stability, cushioning and quieter floors.',
     },
   }),
   product({
@@ -467,23 +526,26 @@ export const products = [
     slug: 'packaging-protective-felt',
     category: 'industrial',
     shortDescription:
-      'Cushioning nonwoven that protects finished surfaces in transit — interleaving, wrapping and crate lining.',
+      'Cushioning nonwoven that protects finished surfaces from scratches, abrasion and impact during storage, handling, transport and packing — soft, reusable and easy to convert.',
     features: [
-      'Non-marking against finished surfaces',
-      'Absorbs shock and vibration in transit',
-      'Cuts to sheet, strip or roll',
-      'Recycled fibre builds available',
+      'Protects against scratches, scuffs and abrasion',
+      'Provides cushioning against minor impact and vibration',
+      'Soft, non-abrasive surface',
+      'Lightweight, flexible and easy to handle',
+      'Reusable and durable',
+      'Easy to cut, wrap, laminate and convert',
     ],
     applications: [
-      'Glass, panel and sheet interleaving',
-      'Furniture and appliance wrapping',
-      'Crate and container lining',
-      'Component separation in transit',
+      'Furniture wrapping and glass protection',
+      'Metal-sheet and automotive-component packaging',
+      'Electronics and appliance protection',
+      'Wooden products, leather goods and luggage',
+      'Machinery parts and general industrial packing',
     ],
     seo: {
       title: 'Packaging Protective Felt | Kiran Nonwovens',
       metaDescription:
-        'Cushioning nonwoven packaging felt for interleaving, wrapping and crate lining. Non-marking protection for glass, panels and finished goods.',
+        'Soft, reusable nonwoven packaging felt protecting glass, furniture, metal sheet, electronics and finished surfaces from scratches and impact in transit.',
     },
   }),
   product({
@@ -491,23 +553,26 @@ export const products = [
     slug: 'luggage-bag-support-felt',
     category: 'industrial',
     shortDescription:
-      'Structural nonwoven that gives luggage, bags and cases their body without adding weight.',
+      'Needle-punched support felt that gives bags, luggage and cases a firm but flexible shape, while cushioning the contents against impact and abrasion.',
     features: [
-      'Stiffness without heavy weight',
-      'Laminates and bonds cleanly',
-      'Die-cuts without fraying',
-      'Consistent thickness panel to panel',
+      'Provides shape, structure and support',
+      'Good cushioning and impact protection',
+      'Lightweight, durable and flexible',
+      'Good tear and abrasion resistance',
+      'Easy to cut, stitch, laminate and bond',
+      'Available in customised GSM, thickness, width and colour',
     ],
     applications: [
-      'Suitcase and trolley bag panels',
-      'Handbag and backpack stiffening',
-      'Instrument and tool case bodies',
-      'Laptop sleeve and padded inserts',
+      'Travel luggage and trolley bags',
+      'Handbags, backpacks and laptop bags',
+      'Briefcases and cosmetic bags',
+      'Shopping bags, organisers and protective cases',
+      'Bag lining and reinforcement components',
     ],
     seo: {
       title: 'Luggage & Bag Support Felt | Kiran Nonwovens',
       metaDescription:
-        'Structural nonwoven support felt for luggage panels, handbag stiffening and case bodies. Die-cuts cleanly, laminates well, made to your GSM.',
+        'Needle punched support felt giving trolley bags, handbags, backpacks and cases their structure. Bonds to fabric, leather and synthetics; die-cuts cleanly.',
     },
   }),
   product({
@@ -515,23 +580,26 @@ export const products = [
     slug: 'flooring-underlay-felt',
     category: 'industrial',
     shortDescription:
-      'Underlay felt laid beneath carpet, laminate and vinyl flooring for comfort, sound reduction and substrate levelling.',
+      'Needle-punched underlay that creates a comfortable, stable layer beneath floor coverings — cushioning underfoot, quieter impact sound and a smoother subfloor.',
     features: [
-      'Impact sound reduction underfoot',
-      'Evens out minor substrate variation',
-      'Recovers after compression',
-      'Broadloom widths, cut to length',
+      'Provides cushioning and walking comfort',
+      'Helps reduce impact noise and sound transmission',
+      'Supports thermal insulation',
+      'Helps protect the floor covering from wear',
+      'Creates a smooth, stable underlay surface',
+      'Lightweight, durable and easy to install',
     ],
     applications: [
       'Carpet and rug underlay',
-      'Laminate and engineered wood underlay',
-      'Vinyl and LVT cushioning layers',
-      'Acoustic underlay in apartments',
+      'Laminate, vinyl and wooden flooring',
+      'Commercial and residential flooring',
+      'Offices, hotels and exhibition spaces',
+      'Other interior floor-covering applications',
     ],
     seo: {
       title: 'Flooring Underlay Felt | Kiran Nonwovens',
       metaDescription:
-        'Nonwoven flooring underlay felt for carpet, laminate and vinyl. Impact sound reduction and substrate levelling, up to 5.2 m wide.',
+        'Nonwoven flooring underlay for carpet, laminate, vinyl and wooden floors. Cushions underfoot, reduces impact noise and smooths minor subfloor irregularities.',
     },
   }),
   product({
@@ -539,23 +607,27 @@ export const products = [
     slug: 'multi-colour-needle-punched-felt',
     category: 'industrial',
     shortDescription:
-      'Needle punched felt produced in a range of colours for visible, decorative and craft-facing applications.',
+      'Needle-punched felt in a wide range of colours — soft, durable and smoothly finished, for decorative, craft, footwear, automotive, furniture and industrial use.',
     features: [
-      'Colour run to order',
-      'Even shade across the roll width',
-      'Plain and marl effects',
-      'Shade card — [pending from Sir]',
+      'Available in a wide variety of vibrant colours',
+      'Soft, durable and lightweight',
+      'Uniform thickness and smooth surface',
+      'Good shape retention and abrasion resistance',
+      'Easy to cut, stitch, laminate, print and die-cut',
+      'Customised GSM, thickness, width and colour options',
     ],
     applications: [
-      'Display, exhibition and event surfaces',
-      'Craft, hobby and stationery felt',
-      'Decorative wall and panel covering',
-      'Retail fixture and POS lining',
+      'Craft and decorative items',
+      'Bags and footwear lining',
+      'Furniture padding and automotive interiors',
+      'Wall panels and packaging',
+      'Toys, garment accessories and promotional products',
     ],
+    specs: { colour: 'Single, multi-colour or matched to your shade' },
     seo: {
       title: 'Multi-Colour Needle Punched Felt | Kiran Nonwovens',
       metaDescription:
-        'Coloured needle punched felt for display, exhibition, craft and decorative use. Even shade across full roll width, colour run to order.',
+        'Coloured needle punched felt for craft, décor, bags, footwear lining, furniture padding and automotive interiors. Cuts, prints, embosses and die-cuts cleanly.',
     },
   }),
   product({
@@ -563,23 +635,27 @@ export const products = [
     slug: 'customised-nonwoven-solutions',
     category: 'industrial',
     shortDescription:
-      "Tell us the GSM, width, fibre and colour you need and we develop the material for it — this is where anything outside the standard range starts.",
+      'Needle-punched nonwovens developed to your specification — GSM, thickness, width, density, fibre blend, colour, surface finish, strength, softness and roll length, all tailored to the product.',
     features: [
-      'Developed to your specification',
-      'Fibre blends matched to the application',
-      'Any GSM within 100–1200',
-      'Slit and cut to your working width',
+      'GSM, thickness, density and width to specification',
+      'Polyester, polypropylene, viscose, recycled or blended fibres',
+      'Single colour, multi-colour or a matched shade',
+      'Soft, firm, smooth, dense or resilient fabric feel',
+      'Custom roll length and packaging',
+      'Surface finishing, lamination, embossing and bonding compatibility',
+      'Application-specific strength, permeability and cushioning',
     ],
     applications: [
-      'New application development',
-      'Replacing an imported material locally',
-      'Non-standard width or GSM requirements',
-      'Private-label and OEM supply',
+      'Automotive, footwear, furniture and luggage',
+      'Packaging, filtration and insulation',
+      'Medical padding and geotextiles',
+      'Drainage, agriculture and construction',
+      'Industrial components, crafts and décor',
     ],
     seo: {
       title: 'Customised Nonwoven Solutions | Kiran Nonwovens',
       metaDescription:
-        'Custom needle punched and thermal bonded nonwovens developed to your GSM, width, fibre and colour. Tell us the specification and we build to it.',
+        'Custom needle punched nonwovens built to your GSM, thickness, density, fibre blend, colour and finish — for cushioning, filtration, insulation, support or drainage.',
     },
   }),
 ];

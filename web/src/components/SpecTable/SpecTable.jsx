@@ -1,22 +1,23 @@
+import { PLANT } from '@/data/catalog';
 import styles from './SpecTable.module.css';
 
 /**
  * The specification table, as real HTML text — never an image. This is the
  * page's most valuable indexable content, so it stays crawlable and selectable.
  *
- * A spec Sir has not confirmed renders as an italic "To be confirmed" rather
- * than a guessed number.
+ * Two honesty rules live here:
+ *  - A spec nobody has supplied renders as an italic "To be confirmed" rather
+ *    than a guessed number.
+ *  - A value that is the plant-wide default rather than a figure confirmed for
+ *    this product carries a caveat saying so.
  */
-const TBD = (
-  <td className={styles.tbd}>To be confirmed</td>
-);
-
 function Row({ label, value, caveat }) {
+  const empty = value === null || value === undefined || value === '';
   return (
     <tr>
       <th scope="row">{label}</th>
-      {value === null || value === undefined || value === '' ? (
-        TBD
+      {empty ? (
+        <td className={styles.tbd}>To be confirmed</td>
       ) : (
         <td>
           {value}
@@ -27,13 +28,23 @@ function Row({ label, value, caveat }) {
   );
 }
 
-export default function SpecTable({ specs, specsConfirmed = false, caption }) {
+const sameList = (a = [], b = []) =>
+  a.length === b.length && a.every((v, i) => v === b[i]);
+
+export default function SpecTable({
+  specs,
+  /** True once a GSM range has been confirmed for this specific product. */
+  gsmConfirmed = false,
+  caption,
+}) {
   const gsm =
     specs.gsmMin != null && specs.gsmMax != null
       ? `${specs.gsmMin} – ${specs.gsmMax}`
       : null;
 
   const fibre = specs.fibre?.length ? specs.fibre.join(', ') : null;
+  // Only caveat the fibre when it is still the untouched plant-wide list.
+  const fibreIsPlantDefault = sameList(specs.fibre, PLANT.fibres);
 
   return (
     <div className={styles.scroller}>
@@ -45,18 +56,18 @@ export default function SpecTable({ specs, specsConfirmed = false, caption }) {
             label="Fibre"
             value={fibre}
             caveat={
-              specsConfirmed
-                ? null
-                : 'Full plant range — per-product fibre to be confirmed.'
+              fibreIsPlantDefault
+                ? 'Full plant range — tell us the application and we will advise.'
+                : null
             }
           />
           <Row
             label="GSM"
             value={gsm}
             caveat={
-              specsConfirmed
+              gsmConfirmed
                 ? null
-                : 'Plant capability — per-product range to be confirmed.'
+                : 'Plant capability — made to the GSM your application needs.'
             }
           />
           <Row label="Thickness" value={specs.thickness} />

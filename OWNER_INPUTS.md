@@ -47,52 +47,77 @@ Downloads tab on every product, and the "Quality & certifications" section of
 `downloads: [{ label, url }]` to the relevant entries in
 `web/src/data/catalog.js` and re-run `npm run seed`.
 
-## 7. Per-product thickness, roll length and colour
-**Blocks:** three rows of every product's spec table, which read
-"To be confirmed" today.
-**Where:** `specs.thickness`, `specs.rollLength`, `specs.colour` in
-`web/src/data/catalog.js`. They are `null` on purpose — no number has been
-estimated.
+## 7. ~~Per-product thickness, roll length and colour~~ ✅ ANSWERED
 
-## 8. Per-product GSM range
-The plant-wide range (100–1200 GSM) is applied to every product, flagged
-`specsConfirmed: false`. The spec table and the Spec Finder both say on screen
-that the figure is plant capability, not a per-product range.
-**Blocks:** meaningful GSM filtering in the Spec Finder.
-**Where:** set real `specs.gsmMin` / `specs.gsmMax` per product in
-`web/src/data/catalog.js`, then flip `specsConfirmed: true`. The caveats
-disappear automatically once it is `true`.
+The product-description document answers this: every product is offered in
+"customised GSM, thickness, width and colour". There is no fixed figure to
+state, so the spec table now reads **"Made to requirement"** on those rows
+instead of "To be confirmed".
 
-## 9. Per-product fibre
-Same treatment: every product lists the full plant fibre range except the PP
-geotextile, whose fibre is stated in its own name. Covered by the same
-`specsConfirmed` flag as item 8.
+Multi-Colour Needle Punched Felt additionally shows "Single, multi-colour or
+matched to your shade". A printed **shade card** would still be useful if one
+exists — that is the only colour item left.
+
+## 8. Per-product GSM range — partly open
+Every product is made across the plant's full 100–1200 GSM capability, so
+products carry `gsmConfirmed: false` and the spec table says "Plant capability
+— made to the GSM your application needs."
+
+That is accurate and probably final. **Only** if a product actually has a fixed
+range worth publishing (e.g. shoulder pad is only ever made 150–400 GSM), set
+`specs.gsmMin` / `specs.gsmMax` in `web/src/data/catalog.js` and flip
+`gsmConfirmed: true`.
+
+## 9. ~~Per-product fibre~~ ✅ MOSTLY ANSWERED
+
+Taken from the product document. Eight products now name their own fibre:
+
+| Product | Fibre |
+| --- | --- |
+| PP Geotextile Fabric | Polypropylene |
+| Pipeline & Cable Protection Geotextile | Polypropylene or polyester |
+| Automotive Needle Punched Felt | Polyester + polypropylene |
+| NVH & Sound Insulation Fabric | Polyester + polypropylene |
+| Acoustic & Thermal Insulation Felt | Polyester + polypropylene |
+| Shoulder Pad Nonwoven Fabric | Polyester |
+| Shoe Lining Nonwoven Fabric | Polyester |
+| Carpet Backing Felt | Polyester + polypropylene |
+
+The remaining eight say only "synthetic fibres" or "customised fibre
+composition" in the document, so they still show the full plant range with a
+caveat. Name the fibre for any of them and the caveat disappears by itself.
 
 ## 10. Global presence figures
 Years in manufacturing, export countries, tons produced annually — all showing
 `[X]` on the home page.
 **Where:** `PRESENCE` in `web/src/lib/site.js`.
 
-## 11. Company copy
-The Overview text on each of the 4 business areas, and the Company overview,
-History, Technology and Quality sections of `/about`.
+## 11. Company copy — the last big text gap
+The product document covers the products, not the company. Still bracketed on
+the site:
+
+- The **Overview** tab on each of the 4 business areas
+- `/about` — Company overview, History, Technology narrative, Quality
+
 **Where:** `overview` on each business area in `web/src/data/catalog.js`, and
 `web/src/app/about/page.js`. The Technology section already states the real
 plant capability; only the narrative around it is missing.
 
-## 12. Final SEO copy — needs sign-off, not authoring
-Unlike the items above, this one is **already written and working**: every page
-has a unique title and meta description, and every product has a draft short
-description, feature list and application list.
+## 12. ~~Product copy~~ ✅ SUPPLIED — please just proof-read
 
-That draft copy is derived from the product's own name and the plant's stated
-capability (a "Drainage & Soil Erosion Control Geotextile" is described as
-doing drainage and erosion control). It states nothing about Kiran Nonwovens
-specifically — no claims, certifications, tolerances or performance figures.
+All 16 products now carry the company's own descriptions, features and
+applications from the product-description PDF. They were edited only for the
+web: sentence case, consistent British spelling (`-ise`), and the applications
+paragraph split into a list. Nothing was added.
 
-Every product carries `draft: true` in `web/src/data/catalog.js`. Please read
-through and correct it, then set `draft: false`. The flag is there to make it
-obvious which copy has been signed off.
+`draft` is now `false` on every product. A quick proof-read before launch is
+still worth doing.
+
+**One thing to confirm:** the document describes *Filter Geo Bag Felt* as a
+**dust-collection / baghouse air-filtration** material (cement plants,
+woodworking, food processing), not a civil-works geotextile. The document files
+it under the Geotextile heading, so the site keeps it under Geotextile — but if
+it belongs under Industrial & Others instead, say so and it moves.
 
 ---
 

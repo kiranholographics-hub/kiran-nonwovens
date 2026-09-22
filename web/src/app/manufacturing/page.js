@@ -61,7 +61,7 @@ export default function ManufacturingPage() {
           <div style={{ marginTop: 14 }}>
             <SpecTable
               specs={CAPABILITY}
-              specsConfirmed
+              gsmConfirmed
               caption="Kiran Nonwovens manufacturing capability"
             />
           </div>
