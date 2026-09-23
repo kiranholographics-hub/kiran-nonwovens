@@ -1,0 +1,36 @@
+.about__block {
+  padding-top: 8px;
+}
+
+.about__grid {
+  display: grid;
+  gap: 32px;
+}
+
+.about__grid > * {
+  min-width: 0;
+}
+
+@media (min-width: 960px) {
+  .about__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+  }
+}
+
+.about__body h3 {
+  margin-top: 32px;
+  scroll-margin-top: calc(var(--header-h) + 20px);
+}
+
+.about__body h2 {
+  scroll-margin-top: calc(var(--header-h) + 20px);
+}
+
+.about__body p {
+  color: var(--muted);
+}
+
+.about__image {
+  min-height: 320px;
+}

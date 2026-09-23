@@ -1,0 +1,29 @@
+{
+  "name": "kiran-nonwovens-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "React (Vite) client for the Kiran Nonwovens B2B export site.",
+  "scripts": {
+    "dev": "vite --port 3100",
+    "build": "vite build && node scripts/prerender.mjs",
+    "build:spa": "vite build",
+    "preview": "vite preview --port 3100",
+    "lint": "eslint .",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "^9",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7",
+    "globals": "^16",
+    "vite": "^8.3.0"
+  }
+}

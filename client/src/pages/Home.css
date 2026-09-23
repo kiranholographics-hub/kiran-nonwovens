@@ -1,0 +1,94 @@
+.home__hero {
+  border-bottom: 1px solid var(--line);
+}
+
+/* The hero is full-bleed rather than inside .wrap, so unlike the shared
+   .split__text (which sits in a wrapper that already supplies the left
+   gutter) it needs padding on both sides. Scoped to beat that rule on
+   specificity rather than relying on stylesheet order. */
+.home__hero .home__hero-text {
+  padding: 44px var(--gutter) 40px;
+}
+
+@media (min-width: 900px) {
+  .home__hero .home__hero-text {
+    padding: 0 56px;
+  }
+  .home__hero {
+    min-height: 480px;
+  }
+}
+
+.home__num {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.home__hero-image {
+  min-height: 280px;
+}
+
+/* ── Looking for something else ───────────────────────────────── */
+.home__other {
+  background: var(--forest-deep);
+  color: var(--cream);
+  padding: 50px 0;
+}
+
+.home__other-inner {
+  display: grid;
+  gap: 18px;
+}
+
+@media (min-width: 860px) {
+  .home__other-inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+.home__other h2 {
+  margin-bottom: 6px;
+}
+
+.home__other p {
+  color: var(--on-dark);
+  max-width: 58ch;
+  margin: 0;
+}
+
+/* ── Global presence ──────────────────────────────────────────── */
+.home__presence {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.home__presence-row {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .home__presence-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home__presence b {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+}
+
+.home__presence small {
+  color: var(--muted);
+}
+
+.home__featured {
+  margin-top: 20px;
+}

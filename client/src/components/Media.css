@@ -1,0 +1,43 @@
+.media {
+  position: relative;
+  overflow: hidden;
+  background: var(--forest);
+  color: #dfe7de;
+}
+
+.media--light {
+  background: linear-gradient(160deg, var(--sand), #ddd2ba);
+  border: 1px solid var(--line);
+}
+
+.media__texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.media__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media__label {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  font-size: var(--fs-tiny);
+  background: rgba(0, 0, 0, 0.29);
+  color: #eef3ed;
+  padding: 5px 10px;
+  border-radius: 20px;
+  max-width: calc(100% - 32px);
+}
+
+.media--light .media__label {
+  background: rgba(19, 42, 32, 0.12);
+  color: var(--muted);
+}

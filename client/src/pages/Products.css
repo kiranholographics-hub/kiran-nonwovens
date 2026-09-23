@@ -1,0 +1,12 @@
+.products__group {
+  padding: 36px 0;
+}
+
+.products__group h2 {
+  margin: 0;
+  scroll-margin-top: calc(var(--header-h) + 20px);
+}
+
+.products__grid {
+  margin-top: 18px;
+}

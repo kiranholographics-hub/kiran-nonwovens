@@ -11,41 +11,41 @@ Each item says exactly where to put the answer.
 
 ## 1. Domain & hosting
 **Blocks:** canonical URLs, `sitemap.xml`, `robots.txt`, OG tags.
-**Where:** `NEXT_PUBLIC_SITE_URL` in `web/.env.local` (see `web/.env.example`).
+**Where:** `VITE_SITE_URL` in `client/.env.local` (see `client/.env.example`).
 Currently `http://localhost:3100`. One value; it flows everywhere.
 
 ## 2. Logo
 **Blocks:** header wordmark, browser tab icon.
-**Where:** `web/src/components/Header/Header.jsx` (the `.logo` block — text
-wordmark stand-in today) and `web/src/app/icon.svg` (placeholder mark).
+**Where:** `client/src/components/Header.jsx` (the `.logo` block — text
+wordmark stand-in today) and `client/public/icon.svg` (placeholder mark).
 
 ## 3. Contact details
 Address, phone, WhatsApp, email, working hours.
 **Blocks:** footer, `/contact` page.
-**Where:** `CONTACT` in `web/src/lib/site.js`. The address placeholder carries
+**Where:** `CONTACT` in `client/src/lib.js`. The address placeholder carries
 the Jaipur address from the theme demo marked "to confirm" — please confirm or
 correct it.
 
 ## 4. Plant photos & video
 **Blocks:** home hero, `/about`, `/manufacturing`, `/contact`.
-**Where:** drop files at `web/public/images/hero/plant.jpg`,
+**Where:** drop files at `client/public/images/hero/plant.jpg`,
 `images/plant/overview.jpg`, `images/plant/line.jpg`,
 `images/plant/entrance.jpg`, then set `IMAGES_READY = true` in
-`web/src/lib/images.js`.
+`client/src/lib.js`.
 
 ## 5. Product & business-area photos
 **Blocks:** all 16 product pages, 4 business-area pages, every card.
-**Where:** `web/public/images/products/<product-slug>.jpg` and
-`web/public/images/business-areas/<area-slug>.jpg`. The slugs are already in
-`web/src/data/catalog.js`; same `IMAGES_READY` switch.
+**Where:** `client/public/images/products/<product-slug>.jpg` and
+`client/public/images/business-areas/<area-slug>.jpg`. The slugs are already in
+`client/src/data/catalog.js`; same `IMAGES_READY` switch.
 
 ## 6. Certifications & test reports
 **Blocks:** the Downloads tab on Geotextile and Industrial business areas, the
 Downloads tab on every product, and the "Quality & certifications" section of
 `/about`. All currently say the files are pending.
-**Where:** put PDFs in `web/public/downloads/`, then add
+**Where:** put PDFs in `client/public/downloads/`, then add
 `downloads: [{ label, url }]` to the relevant entries in
-`web/src/data/catalog.js` and re-run `npm run seed`.
+`client/src/data/catalog.js` and re-run `npm run seed`.
 
 ## 7. ~~Per-product thickness, roll length and colour~~ ✅ ANSWERED
 
@@ -65,7 +65,7 @@ products carry `gsmConfirmed: false` and the spec table says "Plant capability
 
 That is accurate and probably final. **Only** if a product actually has a fixed
 range worth publishing (e.g. shoulder pad is only ever made 150–400 GSM), set
-`specs.gsmMin` / `specs.gsmMax` in `web/src/data/catalog.js` and flip
+`specs.gsmMin` / `specs.gsmMax` in `client/src/data/catalog.js` and flip
 `gsmConfirmed: true`.
 
 ## 9. ~~Per-product fibre~~ ✅ MOSTLY ANSWERED
@@ -90,7 +90,7 @@ caveat. Name the fibre for any of them and the caveat disappears by itself.
 ## 10. Global presence figures
 Years in manufacturing, export countries, tons produced annually — all showing
 `[X]` on the home page.
-**Where:** `PRESENCE` in `web/src/lib/site.js`.
+**Where:** `PRESENCE` in `client/src/lib.js`.
 
 ## 11. Company copy — the last big text gap
 The product document covers the products, not the company. Still bracketed on
@@ -99,8 +99,8 @@ the site:
 - The **Overview** tab on each of the 4 business areas
 - `/about` — Company overview, History, Technology narrative, Quality
 
-**Where:** `overview` on each business area in `web/src/data/catalog.js`, and
-`web/src/app/about/page.js`. The Technology section already states the real
+**Where:** `overview` on each business area in `client/src/data/catalog.js`, and
+`client/src/pages/About.jsx`. The Technology section already states the real
 plant capability; only the narrative around it is missing.
 
 ## 12. ~~Product copy~~ ✅ SUPPLIED — please just proof-read

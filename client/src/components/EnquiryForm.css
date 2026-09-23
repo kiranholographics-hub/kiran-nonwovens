@@ -1,0 +1,96 @@
+.enquiry {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+
+.enquiry__fields {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+@media (min-width: 640px) {
+  .enquiry__fields--two {
+    grid-template-columns: 1fr 1fr;
+  }
+  .enquiry__fields--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.enquiry__full {
+  grid-column: 1 / -1;
+}
+
+.enquiry__label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--muted);
+}
+
+.enquiry__req {
+  color: var(--rust);
+}
+
+.enquiry__input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  border-radius: 2px;
+  min-height: 44px;
+}
+
+.enquiry__textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.enquiry__input[aria-invalid='true'] {
+  border-color: var(--rust);
+}
+
+.enquiry__error {
+  display: block;
+  color: var(--rust);
+  font-size: var(--fs-tiny);
+  margin-top: 4px;
+}
+
+.enquiry__group {
+  border: 0;
+  padding: 0;
+  margin: 0 0 4px;
+}
+
+.enquiry__legend {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.enquiry__hint {
+  font-size: var(--fs-tiny);
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+/* Honeypot — off-screen, never shown to a real buyer. */
+.enquiry__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.enquiry__status {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 2px solid var(--rust);
+  font-size: var(--fs-small);
+}

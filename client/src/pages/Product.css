@@ -1,0 +1,52 @@
+.product__grid {
+  display: grid;
+  gap: 32px;
+  padding-bottom: 8px;
+}
+
+/* Grid children default to min-width:auto, so a wide child (the spec table)
+   would stretch the column past the viewport instead of scrolling inside its
+   own container. */
+.product__grid > * {
+  min-width: 0;
+}
+
+@media (min-width: 960px) {
+  .product__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+  }
+}
+
+.product__image {
+  min-height: 320px;
+}
+
+@media (min-width: 960px) {
+  /* The picture column ends long before the specs do; sticking it keeps the
+     editorial split intact as you read. */
+  .product__image {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+  }
+}
+
+.product__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 22px;
+  list-style: none;
+}
+
+.product__chips li {
+  border: 1px solid var(--line);
+  padding: 6px 13px;
+  font-size: 0.86rem;
+  border-radius: 20px;
+  color: var(--muted);
+}
+
+.product__related {
+  margin-top: 18px;
+}

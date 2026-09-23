@@ -1,0 +1,38 @@
+# Kiran Nonwovens — Apache / Hostinger
+#
+# The build prerenders a real HTML page per route at <route>/index.html. Serve
+# that file for a clean URL, so crawlers and first loads get the page's own
+# markup, title and description rather than the home page's.
+#
+# Only URLs with no prerendered page fall through to the SPA shell, which is
+# what makes an unknown path still render the in-app 404.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Never rewrite a request for a file that exists (assets, sitemap, robots).
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # /products  ->  /products/index.html, when that page was prerendered.
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.*?)/?$ /$1/index.html [L]
+
+  # Anything else: the SPA shell handles it (and shows the 404 page).
+  RewriteRule ^ /index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Hashed asset filenames change on every build, so they can cache hard.
+  <FilesMatch "\.(js|css|woff2?|svg|png|jpe?g|webp|avif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # HTML must not be cached hard, or a deploy leaves stale pages behind.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+ErrorDocument 404 /404.html
