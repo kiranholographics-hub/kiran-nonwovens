@@ -31,6 +31,13 @@ export default function Product() {
   }
 
   const area = areaName(product.category);
+
+  // Full copy from the company's product-description document. The first
+  // paragraph leads the page; the rest reads as the overview below it.
+  const paragraphs = product.description?.length
+    ? product.description
+    : [product.shortDescription];
+  const [leadParagraph, ...moreParagraphs] = paragraphs;
   const related = productsIn(product.category)
     .filter((p) => p.slug !== product.slug)
     .slice(0, 3);
@@ -139,7 +146,7 @@ export default function Product() {
           <div>
             <p className="kicker">{area}</p>
             <h1 className="page-title">{product.name}</h1>
-            <p className="lead">{product.shortDescription}</p>
+            <p className="lead">{leadParagraph}</p>
 
             <ul className="product__chips">
               {chips.map((chip) => (
@@ -162,14 +169,31 @@ export default function Product() {
         </div>
       </div>
 
-      <section className="block">
+      {moreParagraphs.length ? (
+        <section className="block product__overview">
+          <div className="wrap">
+            <div className="narrow">
+              <p className="eyebrow">Overview</p>
+              <h2>About {product.name}</h2>
+              {moreParagraphs.map((text) => (
+                <p key={text.slice(0, 32)}>{text}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section className={`block${moreParagraphs.length ? ' block--sand' : ''}`}>
         <div className="wrap">
-          <h2>Features</h2>
+          <h2>{product.featuresLabel || 'Features'}</h2>
           <RuledList items={product.features} />
         </div>
       </section>
 
-      <section className="block block--sand" id="enquiry">
+      <section
+        className={`block${moreParagraphs.length ? '' : ' block--sand'}`}
+        id="enquiry"
+      >
         <div className="wrap">
           <div className="narrow">
             <p className="eyebrow">Enquiry</p>
@@ -183,7 +207,7 @@ export default function Product() {
       </section>
 
       {related.length ? (
-        <section className="block">
+        <section className={`block${moreParagraphs.length ? ' block--sand' : ''}`}>
           <div className="wrap">
             <div className="section-head">
               <h2>More in {area}</h2>

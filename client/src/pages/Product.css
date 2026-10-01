@@ -50,3 +50,7 @@
 .product__related {
   margin-top: 18px;
 }
+
+.product__overview p {
+  margin-top: 14px;
+}

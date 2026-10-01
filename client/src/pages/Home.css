@@ -10,12 +10,27 @@
   padding: 44px var(--gutter) 40px;
 }
 
+/* Desktop: the text column lines up with the header logo and every .wrap
+   section below it, while the photo still bleeds to the right edge.
+   Columns: [margin] [text] [photo inside wrap] [margin]. The two margins
+   grow equally past the 1180px wrap, so the text starts exactly where the
+   logo does at any screen width. */
 @media (min-width: 900px) {
-  .home__hero .home__hero-text {
-    padding: 0 56px;
+  .home__hero .split {
+    grid-template-columns:
+      minmax(var(--gutter), 1fr)
+      minmax(0, calc((var(--wrap) - 2 * var(--gutter)) * 0.52))
+      minmax(0, calc((var(--wrap) - 2 * var(--gutter)) * 0.48))
+      minmax(var(--gutter), 1fr);
+    min-height: 500px;
   }
-  .home__hero {
-    min-height: 480px;
+  .home__hero .home__hero-text {
+    grid-column: 2;
+    padding: 56px 48px 56px 0;
+  }
+  .home__hero .home__hero-image {
+    grid-column: 3 / 5;
+    min-height: 100%;
   }
 }
 

@@ -63,3 +63,12 @@
   flex-wrap: wrap;
   gap: 6px 16px;
 }
+
+.footer__mark {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 14px;
+}

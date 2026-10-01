@@ -15,15 +15,30 @@
 }
 
 .header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: 1.15rem;
+  line-height: 1.15;
   text-decoration: none;
   color: var(--ink);
   white-space: nowrap;
 }
 
-/* PLACEHOLDER: real logo pending — this is a wordmark stand-in. */
+/* The mark sits on its own white tile — the artwork has a white ground, so
+   the tile makes that edge deliberate instead of a box on cream. */
+.header__mark {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  object-fit: contain;
+}
+
 .header__logo small {
   display: block;
   font-family: var(--font-sans);

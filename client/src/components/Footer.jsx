@@ -11,10 +11,19 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer__grid">
           <div>
+            <img
+              src="/images/brand/logo-mark.webp"
+              alt=""
+              width="56"
+              height="56"
+              className="footer__mark"
+              loading="lazy"
+            />
             <h2>{SITE.name}</h2>
             <p className="footer__intro">
-              Needle punched and thermal bonded nonwovens — 100–1200 GSM, roll
-              widths to 5.2 m, made to your specification.
+              Nonwoven solutions for a better tomorrow. Needle punched and
+              thermal bonded nonwovens — 100–1200 GSM, roll widths to 5.2 m,
+              made to your specification.
             </p>
           </div>
 

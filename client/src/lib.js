@@ -18,9 +18,11 @@ export const SITE = {
 /** PLACEHOLDER — contact details pending from Sir. */
 export const CONTACT = {
   address: '[Plot No. 15, Ram Krishna Marg, Sodala, Jaipur — to confirm]',
-  phone: '[Phone — pending]',
+  phone: '+91 78781 09226',
+  phoneHref: 'tel:+917878109226',
   whatsapp: '[WhatsApp — pending]',
-  email: '[Email — pending]',
+  email: 'kirannonwovens@gmail.com',
+  emailHref: 'mailto:kirannonwovens@gmail.com',
   hours: '[Working hours — pending]',
 };
 

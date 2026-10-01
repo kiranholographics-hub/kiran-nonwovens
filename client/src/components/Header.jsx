@@ -92,9 +92,20 @@ export default function Header() {
     <header className="header">
       <div className="wrap header__bar">
         <Link to="/" className="header__logo">
-          Kiran Nonwovens
-          {/* PLACEHOLDER — real logo pending from Sir */}
-          <small>Nonwoven felt &amp; geotextiles</small>
+          {/* Company logo mark. alt is empty on purpose: the wordmark next to
+              it already gives the link its name, so screen readers don't
+              hear "Kiran Nonwovens" twice. */}
+          <img
+            src="/images/brand/logo-mark.webp"
+            alt=""
+            width="44"
+            height="44"
+            className="header__mark"
+          />
+          <span className="header__wordmark">
+            Kiran Nonwovens
+            <small>Nonwoven felt &amp; geotextiles</small>
+          </span>
         </Link>
 
         <nav
