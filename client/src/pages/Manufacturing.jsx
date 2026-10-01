@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
-import PageHero from '../components/PageHero.jsx';
+import HeroScreen from '../components/HeroScreen.jsx';
 import SpecTable from '../components/SpecTable.jsx';
 import FeatureGrid from '../components/FeatureGrid.jsx';
 import { RuledList } from '../components/TabPanel.jsx';
-import PlaceholderNote from '../components/PlaceholderNote.jsx';
+import Note from '../components/Note.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { PLANT } from '../data/catalog.js';
 import Faq from '../components/Faq.jsx';
@@ -75,15 +75,22 @@ export default function Manufacturing() {
         ]}
       />
 
-      <PageHero
-        trail={[{ to: '/', label: 'Home' }, { label: 'Manufacturing' }]}
-        title="Manufacturing"
-        lead="What the plant can produce, in plain numbers — the starting point for any specification conversation."
+      <HeroScreen
         video={VIDEOS.manufacturing}
-        full
-      />
+        variant={2}
+        eyebrow="Manufacturing"
+        foot={`${PLANT.processLabel} · ${PLANT.gsmLabel} GSM · Rolls ${PLANT.widthLabel}`}
+        scrollHref="#capability"
+      >
+        <a href="#capability" className="btn btn--light">
+          See our capability
+        </a>
+        <Link to="/contact#enquiry" className="btn btn--ghost-light">
+          Send an enquiry
+        </Link>
+      </HeroScreen>
 
-      <section className="block block--sand">
+      <section className="block block--sand" id="capability">
         <div className="wrap">
           <p className="eyebrow">Capability</p>
           <h2>At a glance</h2>
@@ -94,11 +101,11 @@ export default function Manufacturing() {
               caption="Kiran Nonwovens manufacturing capability"
             />
           </div>
-          <PlaceholderNote>
+          <Note>
             Thickness, roll length and colour are set per order to your
             requirement, so they are quoted with each enquiry rather than as a
             single fixed figure.
-          </PlaceholderNote>
+          </Note>
         </div>
       </section>
 

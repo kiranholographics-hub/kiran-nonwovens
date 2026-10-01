@@ -22,7 +22,9 @@ import { applyHead, isServer } from '../head.js';
  *   image        social-share image path or URL; defaults to SITE.ogImage.
  *   type         'website' (default) or 'article'.
  *   article      { published, modified } ISO dates, for type="article".
- *   noindex      keep the page out of search results (used by the 404).
+ *   noindex      keep the page out of search results (used by the 404). Setting
+ *                VITE_NOINDEX=true at build time does this for every page —
+ *                for a staging copy that must not be indexed.
  */
 export default function Seo({
   title,
@@ -32,8 +34,9 @@ export default function Seo({
   image,
   type = 'website',
   article,
-  noindex = false,
+  noindex: noindexProp = false,
 }) {
+  const noindex = noindexProp || import.meta.env.VITE_NOINDEX === 'true';
   // Catalogue titles already end in the company name — sometimes after a pipe,
   // sometimes after a dash — so only append it when it is not there already.
   const trimmed = title?.trim();

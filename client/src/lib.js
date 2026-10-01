@@ -66,67 +66,76 @@ export const isPlaceholder = (value) =>
 export const IMAGES_READY = false;
 
 /**
+ * Hero photos — the page banners (Business Areas, Products, About,
+ * Manufacturing, product and category pages) can show either a still photo or
+ * a looping video. Photos are the lighter, faster choice for inner pages; the
+ * home page is where video earns its weight.
+ *
+ * While this is `false`, every banner paints the theme texture. To go live,
+ * drop the photo files into client/public/images/hero/ at the paths below (see
+ * public/images/hero/README.md), then flip this to `true`. A banner whose file
+ * is missing falls back to the texture instead of breaking.
+ */
+export const HERO_PHOTOS_READY = false;
+
+/**
  * Video switch — the same idea as IMAGES_READY, for the cinematic backdrops.
  *
- * While this is `false`, every video slot paints the theme's texture with a
- * caption naming the clip that belongs there. To go live: drop the files into
- * client/public/videos/ at the paths in VIDEOS below (see
- * public/videos/README.md for size and format notes), then flip this to
- * `true`. A slot whose file is missing simply falls back to its poster/texture.
+ * While this is `false`, every video slot paints a photo (if HERO_PHOTOS_READY)
+ * or the theme texture. To go live: drop the files into client/public/videos/
+ * at the paths in VIDEOS below (see public/videos/README.md for size and
+ * format notes), then flip this to `true`. A slot whose file is missing simply
+ * falls back to its photo / texture.
  */
-export const VIDEOS_READY = false;
+export const VIDEOS_READY = true;
 
-/** One entry per backdrop. `mp4` is required, `webm` and `poster` optional. */
+/**
+ * The small "— pending" captions that name which photo or clip belongs in a
+ * slot. They are a build-time aid for the team, so they are off by default and
+ * the site looks finished. Put VITE_SHOW_PLACEHOLDER_LABELS=true in
+ * client/.env.local to see them again.
+ */
+export const SHOW_PLACEHOLDER_LABELS =
+  import.meta.env.VITE_SHOW_PLACEHOLDER_LABELS === 'true';
+
+/** One entry per banner. `poster` is the still photo, `mp4`/`webm` the video. */
 export const VIDEOS = {
-  /** Live: the company's own hero film, in two cuts — landscape for desktop,
-   *  portrait for phones. `ready: true` switches this one video on without
-   *  waiting for VIDEOS_READY (the other clips are still to come). */
   hero: {
-    ready: true,
-    mp4: '/videos/hero-desktop.mp4',
-    mobileMp4: '/videos/hero-mobile.mp4',
-    poster: '/videos/hero-desktop.webp',
-    mobilePoster: '/videos/hero-mobile.webp',
-    label: 'Hero video — fibre and felt close-ups',
+    mp4: '/videos/hero.mp4',
+    webm: '/videos/hero.webm',
+    poster: '/images/hero/home.jpg',
+    label: 'Home hero — needle punching line, fibre close-ups',
   },
-  /** Live: the finished-rolls / warehouse end of the production film. Used
-   *  for the closing band on Home and the line band on Manufacturing. */
   cta: {
-    ready: true,
-    mp4: '/videos/closing-desktop.mp4',
-    mobileMp4: '/videos/closing-mobile.mp4',
-    poster: '/videos/closing-desktop.webp',
-    mobilePoster: '/videos/closing-mobile.webp',
-    label: 'Closing video — finished rolls, dispatch',
+    mp4: '/videos/cta.mp4',
+    webm: '/videos/cta.webm',
+    poster: '/images/hero/closing.jpg',
+    label: 'Home closing banner — finished rolls, dispatch',
+  },
+  businessAreas: {
+    mp4: '/videos/business-areas.mp4',
+    poster: '/images/hero/business-areas.jpg',
+    label: 'Business Areas banner — rolls across the four industries',
   },
   products: {
     mp4: '/videos/products.mp4',
-    poster: '/images/hero/products-poster.jpg',
-    label: 'Products banner video — felt close-ups',
+    poster: '/images/hero/products.jpg',
+    label: 'Products banner — felt close-ups',
   },
   product: {
     mp4: '/videos/product.mp4',
-    poster: '/images/hero/products-poster.jpg',
-    label: 'Product banner video — felt close-up',
+    poster: '/images/hero/products.jpg',
+    label: 'Product banner — felt close-up',
   },
   about: {
     mp4: '/videos/about.mp4',
-    poster: '/images/plant/overview.jpg',
-    label: 'About banner video — plant walk-through',
+    poster: '/images/hero/about.jpg',
+    label: 'About banner — plant walk-through',
   },
-  /** Live: the company's production-line film, landscape + portrait cuts. */
   manufacturing: {
-    ready: true,
-    mp4: '/videos/manufacturing-desktop.mp4',
-    mobileMp4: '/videos/manufacturing-mobile.mp4',
-    poster: '/videos/manufacturing-desktop.webp',
-    mobilePoster: '/videos/manufacturing-mobile.webp',
-    label: 'Manufacturing banner video — production line',
-  },
-  contact: {
-    mp4: '/videos/contact.mp4',
-    poster: '/images/plant/entrance.jpg',
-    label: 'Contact banner video — plant / office',
+    mp4: '/videos/manufacturing.mp4',
+    poster: '/images/hero/manufacturing.jpg',
+    label: 'Manufacturing banner — production line',
   },
 };
 

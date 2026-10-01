@@ -13,7 +13,8 @@ cta.mp4  (+ cta.webm)       Home closing banner
 products.mp4                /products banner
 about.mp4                   /about banner
 manufacturing.mp4           /manufacturing banner
-contact.mp4                 /contact banner
+business-areas.mp4          /business-areas banner
+product.mp4                 single product pages banner
 business-areas/<slug>.mp4   one per business area page (slug = catalog.js)
 ```
 

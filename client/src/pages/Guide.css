@@ -1,8 +1,6 @@
 .guide__layout {
   display: grid;
   gap: 40px;
-  /* One column that may shrink below its content on phones — without this a
-     wide table in a guide pushed the whole page sideways. */
   grid-template-columns: minmax(0, 1fr);
 }
 

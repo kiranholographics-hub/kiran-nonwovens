@@ -21,7 +21,7 @@
 import { build } from 'vite';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { mkdir, readFile, writeFile, rm } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, rm, readdir } from 'node:fs/promises';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..');
@@ -42,14 +42,17 @@ const STATIC_ROUTES = [
   { url: '/manufacturing', priority: '0.7' },
   { url: '/contact', priority: '0.6' },
   { url: '/guides', priority: '0.7' },
-  { url: '/privacy', priority: '0.3' },
+  { url: '/privacy', priority: '0.2' },
 ];
 
 async function loadCatalogue() {
   const mod = await import(
     pathToFileURL(path.join(root, 'src/data/catalog.js')).href
   );
-  return mod;
+  const g = await import(
+    pathToFileURL(path.join(root, 'src/data/guides.js')).href
+  );
+  return { ...mod, guides: g.guides };
 }
 
 /** Every URL the site has, derived from the catalogue — never hand-listed. */
@@ -81,13 +84,33 @@ async function buildSsrBundle() {
   });
 }
 
-function inject(template, { html, head }, route) {
-  // data-route tells main.jsx which URL this markup was rendered for, so it
-  // only hydrates matching HTML (see main.jsx).
-  let out = template.replace(
-    '<div id="root"></div>',
-    `<div id="root" data-route="${route}">${html}</div>`,
-  );
+/** <link rel="preload"> tags for the fonts every page paints above the fold
+ *  (the headline serif and the three sans weights). Without them the browser
+ *  finds the fonts only after parsing the CSS, paints the fallback first and
+ *  then shifts the text when the real font arrives — a layout shift on phones.
+ *  File names are hashed by Vite, so they are read from dist/assets. */
+let fontPreloads = '';
+async function findFontPreloads() {
+  const files = await readdir(path.join(dist, 'assets'));
+  const wanted = [
+    /^fraunces-latin-opsz-normal-.*\.woff2$/,
+    /^ibm-plex-sans-latin-400-normal-.*\.woff2$/,
+    /^ibm-plex-sans-latin-500-normal-.*\.woff2$/,
+    /^ibm-plex-sans-latin-600-normal-.*\.woff2$/,
+  ];
+  fontPreloads = wanted
+    .map((re) => files.find((f) => re.test(f)))
+    .filter(Boolean)
+    .map(
+      (f) =>
+        `<link rel="preload" href="/assets/${f}" as="font" type="font/woff2" crossorigin>`
+    )
+    .join('\n    ');
+}
+
+function inject(template, { html, head }) {
+  let out = template.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
+  if (fontPreloads) out = out.replace('</head>', `  ${fontPreloads}\n  </head>`);
   if (head) {
     // The page supplies its own title/description, so drop the shell's
     // defaults rather than shipping two of each.
@@ -103,11 +126,7 @@ const xmlEscape = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 async function run() {
-  // Buyer's guides are their own data file; each gets a prerendered page.
-  const { guides } = await import(
-    pathToFileURL(path.join(root, 'src/data/guides.js')).href
-  );
-  const catalogue = { ...(await loadCatalogue()), guides };
+  const catalogue = await loadCatalogue();
   const routes = allRoutes(catalogue);
 
   console.log(`[prerender] building SSR bundle…`);
@@ -117,10 +136,11 @@ async function run() {
     pathToFileURL(path.join(ssrDist, 'entry-server.js')).href
   );
 
+  await findFontPreloads();
   const template = await readFile(path.join(dist, 'index.html'), 'utf8');
 
   for (const { url } of routes) {
-    const html = inject(template, render(url), url);
+    const html = inject(template, render(url));
     const outDir = url === '/' ? dist : path.join(dist, url);
     await mkdir(outDir, { recursive: true });
     await writeFile(path.join(outDir, 'index.html'), html, 'utf8');
@@ -128,7 +148,7 @@ async function run() {
   console.log(`[prerender] wrote ${routes.length} pages`);
 
   // A 404 that is still a real page, for hosts that serve one.
-  const notFound = inject(template, render('/__not-found__'), '*');
+  const notFound = inject(template, render('/__not-found__'));
   await writeFile(path.join(dist, '404.html'), notFound, 'utf8');
 
   const lastmod = new Date().toISOString().slice(0, 10);
@@ -152,7 +172,10 @@ async function run() {
 
   await writeFile(
     path.join(dist, 'robots.txt'),
-    `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
+    process.env.VITE_NOINDEX === 'true'
+      ? // Staging copy: ask every crawler to stay away.
+        `User-agent: *\nDisallow: /\n`
+      : `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
     'utf8'
   );
 

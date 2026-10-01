@@ -121,8 +121,10 @@ for (const route of routes) {
   check(h1s === 1, `${route} has ${h1s} <h1> elements (expected 1)`);
   check(
     route === '/'
-      ? html.includes('home__hero')
-      : html.includes('page-hero') || route.startsWith('/products/'),
+      ? html.includes('hero-screen')
+      : html.includes('page-hero') ||
+          html.includes('hero-screen') ||
+          route.startsWith('/products/'),
     `${route} is missing its banner`
   );
 

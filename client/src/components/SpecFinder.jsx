@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PLANT } from '../data/catalog.js';
 import { useCatalogue } from '../CatalogueContext.jsx';
-import PlaceholderNote from './PlaceholderNote.jsx';
+import Note from './Note.jsx';
 import './SpecFinder.css';
 
 const ANY = '';
@@ -122,12 +122,12 @@ export default function SpecFinder() {
       ) : null}
 
       {anyUnconfirmed ? (
-        <PlaceholderNote>
+        <Note>
           These materials are made to order, so results are matched against the
           plant&apos;s full {PLANT.gsmLabel} GSM capability rather than a fixed
           per-product range. Send an enquiry with the GSM you need and we will
           confirm it.
-        </PlaceholderNote>
+        </Note>
       ) : null}
     </>
   );

@@ -33,10 +33,11 @@ export default function BusinessAreas() {
         trail={[{ to: '/', label: 'Home' }, { label: 'Business Areas' }]}
         title="Business Areas"
         lead="The same four industries run through this site twice — here as the story of what we do for each, and under Products as the materials themselves."
-        video={VIDEOS.products}
+        video={VIDEOS.businessAreas}
       />
       <section className="block">
         <div className="wrap">
+          <h2 className="sr-only">Our four business areas</h2>
           <BusinessAreaGrid>
             {businessAreas.map((area, i) => (
               <BusinessAreaCard key={area.slug} area={area} index={i} />

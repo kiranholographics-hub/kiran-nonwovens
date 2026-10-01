@@ -1,28 +1,28 @@
-import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
+import Reveal from '../components/Reveal.jsx';
 import VideoBackdrop from '../components/VideoBackdrop.jsx';
-import StatsBand from '../components/StatsBand.jsx';
+import HeroScreen from '../components/HeroScreen.jsx';
 import HorizontalProcess from '../components/HorizontalProcess.jsx';
+import StatsBand from '../components/StatsBand.jsx';
 import SpecFinder from '../components/SpecFinder.jsx';
 import BusinessAreaCard, {
   BusinessAreaGrid,
 } from '../components/BusinessAreaCard.jsx';
 import ProductCard, { ProductGrid } from '../components/ProductCard.jsx';
-import FeatureGrid from '../components/FeatureGrid.jsx';
-import Reveal from '../components/Reveal.jsx';
 import Faq from '../components/Faq.jsx';
+import FeatureGrid from '../components/FeatureGrid.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { PLANT } from '../data/catalog.js';
 import { guides } from '../data/guides.js';
 import { HOME_FAQ, plain } from '../data/seo.js';
 import {
   PRESENCE,
+  isPlaceholder,
   SITE,
   VIDEOS,
   faqLd,
-  isPlaceholder,
   organizationLd,
   websiteLd,
 } from '../lib.js';
@@ -35,38 +35,8 @@ const STATS = [
   { value: 'PP · PET · Viscose', label: 'Virgin, recycled, blends' },
 ];
 
-/** From fibre to finished roll — general needle-punch / thermal-bond process
- *  steps plus the plant's own capability figures. Nothing else is claimed. */
-const PROCESS = [
-  {
-    title: 'Fibre selection',
-    text: 'Polyester, PP (virgin and recycled), viscose or a custom blend — chosen for what the material has to do.',
-    tag: 'Fibre',
-  },
-  {
-    title: 'Carding & web forming',
-    text: 'Fibres are opened, blended and carded into an even web, layered to the weight the order calls for.',
-    tag: `${PLANT.gsmLabel} GSM`,
-  },
-  {
-    title: 'Needle punching',
-    text: 'Barbed needles entangle the web into a strong, dimensionally stable felt — density and thickness are set here.',
-    tag: 'Needle punch',
-  },
-  {
-    title: 'Thermal bonding',
-    text: 'Where softness and loft matter, heat fuses low-melt fibres to lock the structure without adhesives.',
-    tag: 'Thermal bond',
-  },
-  {
-    title: 'Finished rolls',
-    text: `Wound to the agreed width and roll length — widths of ${PLANT.widthLabel} — ready for cutting, laminating or moulding on your line.`,
-    tag: PLANT.widthLabel,
-  },
-];
-
-/** Every point is drawn from the plant capability and the company's
- *  product-description document. */
+/** Every point below is drawn from the plant capability and the company's
+ *  product-description document — nothing is claimed that those don't say. */
 const WHY = [
   {
     title: 'Made to your specification',
@@ -86,45 +56,44 @@ const WHY = [
   },
 ];
 
+/** The process, in the order a roll is made. Each line restates what the
+ *  About / Manufacturing pages and the product document already say. */
+const STEPS = [
+  {
+    title: 'Fibre',
+    text: 'Polyester, PP (virgin or recycled), viscose or a custom blend — chosen for the job the felt has to do.',
+    tag: 'PP · PET · Viscose',
+  },
+  {
+    title: 'Web forming',
+    text: 'Fibre is carded into a web, the base of every roll and the starting point for the width you need.',
+    tag: `Rolls ${PLANT.widthLabel}`,
+  },
+  {
+    title: 'Needle punching',
+    text: 'Barbed needles entangle the web into a strong, dimensionally stable felt. Density and thickness are set here.',
+    tag: `${PLANT.gsmLabel} GSM`,
+  },
+  {
+    title: 'Thermal bonding',
+    text: 'Heat fuses low-melt fibres to lock the structure without adhesives — a lighter, loftier material.',
+    tag: 'No adhesives',
+  },
+  {
+    title: 'Finish & colour',
+    text: 'Colour and surface finish are set to your requirement, and the fabric stays ready for lamination, embossing and bonding.',
+    tag: 'Colour to order',
+  },
+  {
+    title: 'Rolled for export',
+    text: 'Roll length and packaging are made to requirement, and the material ships from India to buyers abroad.',
+    tag: 'Export supply',
+  },
+];
+
 export default function Home() {
   const { businessAreas, products, areaName } = useCatalogue();
-  const heroRef = useRef(null);
-
-  // One product from each of three industries — the breadth of the range.
-  const featured = businessAreas
-    .map((area) => products.find((p) => p.category === area.slug))
-    .filter(Boolean)
-    .slice(0, 3);
-
-  // Real figures only; the band stays hidden until one is filled in lib.js.
-  const presence = PRESENCE.filter((item) => !isPlaceholder(item.value));
-
-  // Hero parallax: --hero-p runs 0 → 1 as the hero scrolls away. Home.css
-  // uses it to drift the film and fade the copy. Written straight to the
-  // element in a rAF, so scrolling never re-renders the page.
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el) return undefined;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return undefined;
-    }
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const h = el.offsetHeight || 1;
-      const p = Math.min(Math.max(window.scrollY / h, 0), 1);
-      el.style.setProperty('--hero-p', p.toFixed(3));
-    };
-    const onScroll = () => {
-      if (!frame) frame = requestAnimationFrame(update);
-    };
-    update();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      if (frame) cancelAnimationFrame(frame);
-    };
-  }, []);
+  const featured = products.slice(0, 3);
 
   return (
     <>
@@ -139,79 +108,52 @@ export default function Home() {
         ]}
       />
 
-      <section className="home__hero" ref={heroRef}>
-        <VideoBackdrop
-          video={VIDEOS.hero}
-          variant={1}
-          eager
-          className="home__hero-media"
-        />
-        <div className="home__hero-shade" aria-hidden="true" />
-        {/* Plain, film-first hero (the Kiran Global Exports layout): just a
-            brand line, two buttons, a tagline and a scroll cue. The page
-            heading stays in the HTML for search engines and screen readers,
-            but is not shown over the film. */}
-        <div className="home__hero-inner">
-          <div className="home__hero-copy">
-            <h1 className="sr-only">
-              Kiran Nonwovens — needle punched and thermal bonded nonwoven felt
-              and geotextile manufacturer
-            </h1>
-            <p className="home__hero-brand">Kiran Nonwovens</p>
-            <div className="cta-row home__hero-ctas">
-              <Link to="/products" className="btn btn--light">
-                Explore products
-              </Link>
-              <Link to="/contact#enquiry" className="btn btn--ghost-light">
-                Contact our export team
-              </Link>
-            </div>
-          </div>
-          <div className="home__hero-foot">
-            <span className="home__hero-tag">
-              Nonwoven solutions for a better tomorrow
-            </span>
-            <a href="#intro" className="home__scroll">
-              <i aria-hidden="true" />
-              Scroll
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="block" id="intro">
-        <div className="wrap home__intro">
-          <Reveal>
-            <p className="eyebrow">Kiran Nonwovens</p>
-            <h2>Nonwovens made to the job they have to do.</h2>
-          </Reveal>
-          <Reveal delay={90}>
-            <p className="lead">
-              We manufacture needle punched and thermal bonded nonwoven fabrics
-              and felts — {products.length} standard products across{' '}
-              {businessAreas.length} industries, plus fully customised
-              development.
-            </p>
-            <p style={{ marginTop: 14 }}>
-              GSM, thickness, width, density, fibre blend, colour and roll
-              length are set for each order, so the material matches the
-              product it is going to become — a geotextile under a highway, an
-              acoustic liner in a car door or the shoulder of a tailored blazer.
-            </p>
-            <div className="cta-row">
-              <Link to="/about" className="btn">
-                About the company
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      {/* ── Hero: full-screen looping video, minimal text ───────── */}
+      <HeroScreen
+        video={VIDEOS.hero}
+        eyebrow="Nonwoven felt & geotextiles"
+        foot="Needle punched & thermal bonded nonwovens"
+        scrollHref="#intro"
+      >
+        <Link to="/products" className="btn btn--light">
+          Explore products
+        </Link>
+        <Link to="/contact#enquiry" className="btn btn--ghost-light">
+          Contact our export team
+        </Link>
+      </HeroScreen>
 
       <StatsBand stats={STATS} />
 
-      <HorizontalProcess title="From fibre to finished roll" steps={PROCESS} />
+      {/* ── Introduction ────────────────────────────────────────── */}
+      <section className="block" id="intro">
+        <div className="wrap home__intro">
+          <Reveal>
+            <h2>Needle punched and thermal bonded nonwovens, made to your specification.</h2>
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="lead">
+              Kiran Nonwovens manufactures nonwoven felt and geotextiles for
+              civil works, automotive, apparel and footwear, and industrial
+              use — {products.length} standard products across{' '}
+              {businessAreas.length} industries, plus fully customised
+              development. We work to specification rather than from a fixed
+              list, and supply export buyers from India.
+            </p>
+            <div className="cta-row">
+              <Link to="/about" className="btn">
+                About us
+              </Link>
+              <Link to="/manufacturing" className="btn">
+                Manufacturing
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
-      <section className="block home__areas">
+      {/* ── Business areas ──────────────────────────────────────── */}
+      <section className="home__areas">
         <div className="wrap">
           <div className="section-head">
             <div>
@@ -219,7 +161,7 @@ export default function Home() {
               <h2>Business Areas</h2>
             </div>
             <Link to="/business-areas" className="section-link">
-              All business areas →
+              All business areas
             </Link>
           </div>
           <BusinessAreaGrid>
@@ -230,6 +172,10 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Process: pinned, scrolls sideways ───────────────────── */}
+      <HorizontalProcess title="From fibre to finished felt." steps={STEPS} />
+
+      {/* ── Spec finder ─────────────────────────────────────────── */}
       <section className="block block--sand" id="spec-finder">
         <div className="wrap">
           <p className="eyebrow">Find your material</p>
@@ -238,16 +184,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Why ─────────────────────────────────────────────────── */}
       <section className="block">
         <div className="wrap">
-          <p className="eyebrow">Nonwoven solutions for a better tomorrow</p>
           <h2>Why Kiran Nonwovens</h2>
-          <Reveal>
-            <FeatureGrid items={WHY} />
-          </Reveal>
+          <FeatureGrid items={WHY} numbered={false} />
         </div>
       </section>
 
+      {/* ── Featured materials ──────────────────────────────────── */}
       <section className="block home__featured-block">
         <div className="wrap">
           <div className="section-head">
@@ -256,7 +201,7 @@ export default function Home() {
               <h2>Featured materials</h2>
             </div>
             <Link to="/products" className="section-link">
-              All products →
+              All products
             </Link>
           </div>
           <div className="home__featured">
@@ -275,10 +220,11 @@ export default function Home() {
         </div>
       </section>
 
-      {presence.length ? (
+      {/* ── Global presence — shown only once the figures are confirmed ── */}
+      {PRESENCE.some((item) => isPlaceholder(item.value)) ? null : (
         <section className="home__presence">
           <div className="wrap home__presence-row">
-            {presence.map((item) => (
+            {PRESENCE.map((item) => (
               <div key={item.label}>
                 <b>{item.value}</b>
                 <small>{item.label}</small>
@@ -286,10 +232,43 @@ export default function Home() {
             ))}
           </div>
         </section>
-      ) : null}
+      )}
 
+      {/* ── Buyer's guides ──────────────────────────────────────── */}
+      <section className="block block--sand">
+        <div className="wrap">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">Before you specify</p>
+              <h2>Buyer’s guides</h2>
+            </div>
+            <Link to="/guides" className="section-link">
+              All guides
+            </Link>
+          </div>
+          <ul className="home__guides">
+            {guides.slice(0, 3).map((g) => (
+              <li key={g.slug}>
+                <Link to={`/guides/${g.slug}`}>
+                  <span>{g.readMins} min read</span>
+                  <strong>{g.title}</strong>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── FAQ ─────────────────────────────────────────────────── */}
+      <section className="block">
+        <div className="wrap">
+          <Faq items={HOME_FAQ} title="Common questions from buyers" id="home-faq" />
+        </div>
+      </section>
+
+      {/* ── Closing video band ──────────────────────────────────── */}
       <section className="home__closing">
-        <VideoBackdrop video={VIDEOS.cta} variant={2} />
+        <VideoBackdrop video={VIDEOS.manufacturing} variant={2} />
         <div className="home__closing-shade" aria-hidden="true" />
         <div className="wrap home__closing-inner">
           <h2>Looking for something else?</h2>
@@ -306,41 +285,9 @@ export default function Home() {
               Customised solutions
             </Link>
             <Link to="/contact#enquiry" className="btn btn--ghost-light">
-              Send an enquiry
+              Contact our export team
             </Link>
           </div>
-        </div>
-      </section>
-
-      {guides.length ? (
-        <section className="block">
-          <div className="wrap">
-            <div className="section-head">
-              <div>
-                <p className="eyebrow">For buyers</p>
-                <h2>Buyer&apos;s guides</h2>
-              </div>
-              <Link to="/guides" className="section-link">
-                All guides →
-              </Link>
-            </div>
-            <ul className="home__guides">
-              {guides.slice(0, 3).map((g) => (
-                <li key={g.slug}>
-                  <Link to={`/guides/${g.slug}`}>
-                    <span>Guide</span>
-                    <strong>{g.title}</strong>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ) : null}
-
-      <section className="block block--sand">
-        <div className="wrap">
-          <Faq items={HOME_FAQ} title="Common questions" id="home-faq" />
         </div>
       </section>
     </>

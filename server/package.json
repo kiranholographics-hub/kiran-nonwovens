@@ -9,13 +9,17 @@
     "dev": "node --watch index.js",
     "start": "node index.js",
     "seed": "node seed/seed.js",
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "mail:test": "node scripts/test-mail.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.10.1",
-    "nodemailer": "^7.0.10"
+    "nodemailer": "^10.0.13"
+  },
+  "devDependencies": {
+    "smtp-server": "^3.13.6"
   }
 }

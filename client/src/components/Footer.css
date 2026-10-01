@@ -91,3 +91,11 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+.footer__note {
+  margin: 0;
+  padding: 0 0 26px;
+  font-size: var(--fs-tiny);
+  color: rgba(200, 211, 198, 0.7);
+  max-width: none;
+}

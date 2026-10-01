@@ -3,6 +3,13 @@ import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './App.jsx';
+// Fonts are bundled with the site (no request to Google at page load): faster
+// first paint, works offline in dev, and no visitor IP is sent to a third party.
+import '@fontsource-variable/fraunces/opsz.css';
+import '@fontsource/ibm-plex-sans/latin-400.css';
+import '@fontsource/ibm-plex-sans/latin-500.css';
+import '@fontsource/ibm-plex-sans/latin-600.css';
+import '@fontsource/ibm-plex-sans/latin-700.css';
 import './styles/variables.css';
 import './styles/reset.css';
 import './styles/global.css';
@@ -17,21 +24,10 @@ const tree = (
 
 const container = document.getElementById('root');
 
-// The build prerenders every route to static HTML and stamps the route it
-// rendered on #root (data-route). Hydrate only when that markup belongs to the
-// URL being viewed ("*" is the prerendered 404 page, which matches any unknown
-// URL). Otherwise — dev server, or a host that served another page's HTML —
-// start clean, so React never tries to hydrate mismatched markup.
-const normalise = (p) => (p.length > 1 ? p.replace(/\/+$/, '') : p);
-const renderedFor = container.dataset.route;
-const matches =
-  renderedFor === '*' ||
-  (renderedFor &&
-    normalise(renderedFor) === normalise(window.location.pathname));
-
-if (container.hasChildNodes() && matches) {
+// The build prerenders every route to static HTML, so in production there is
+// already markup to hydrate. In dev the container is empty and we mount fresh.
+if (container.hasChildNodes()) {
   hydrateRoot(container, tree);
 } else {
-  container.textContent = '';
   createRoot(container).render(tree);
 }

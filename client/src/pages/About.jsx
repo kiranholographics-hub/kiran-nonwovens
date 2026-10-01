@@ -4,10 +4,11 @@ import Seo from '../components/Seo.jsx';
 import Media from '../components/Media.jsx';
 import PageHero from '../components/PageHero.jsx';
 import Reveal from '../components/Reveal.jsx';
+import { HISTORY } from '../data/about.js';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { PLANT } from '../data/catalog.js';
 import { PAGE_SEO } from '../data/seo.js';
-import { VIDEOS, breadcrumbLd, organizationLd } from '../lib.js';
+import { VIDEOS, breadcrumbLd, SITE } from '../lib.js';
 import './About.css';
 
 /**
@@ -26,8 +27,14 @@ export default function About() {
         description={PAGE_SEO.about.description}
         path="/about"
         jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'AboutPage',
+            name: 'About Kiran Nonwovens',
+            url: `${SITE.url}/about`,
+            about: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+          },
           breadcrumbLd([{ to: '/', label: 'Home' }, { label: 'About Us' }]),
-          organizationLd(),
         ]}
       />
 
@@ -36,6 +43,7 @@ export default function About() {
         title="About Us"
         lead="Nonwoven solutions for a better tomorrow."
         video={VIDEOS.about}
+        variant={2}
       />
 
       <section className="block about__block">
@@ -69,9 +77,14 @@ export default function About() {
                 ))}
               </ul>
 
-              {/* History goes here once the company supplies the founding
-                  year and timeline — add an <h3 id="history"> section and
-                  restore the History link in Header.jsx ABOUT_LINKS. */}
+              {HISTORY.trim() ? (
+                <>
+                  <h3 id="history">History</h3>
+                  {HISTORY.split(/\n\s*\n/).map((para) => (
+                    <p key={para.slice(0, 40)}>{para}</p>
+                  ))}
+                </>
+              ) : null}
 
               <h3 id="technology">Technology</h3>
               <p>
@@ -89,7 +102,7 @@ export default function About() {
                 <Link to="/manufacturing">See full manufacturing capability →</Link>
               </p>
 
-              <h3 id="quality">Quality &amp; certifications</h3>
+              <h3 id="quality">Quality &amp; samples</h3>
               <p>
                 Every order is produced against the specification agreed with
                 the buyer — GSM, thickness, width, colour and roll length — and
@@ -97,7 +110,17 @@ export default function About() {
                 requested before bulk orders so the material can be tried in
                 your own process.
               </p>
-              {/* Certifications list goes here once supplied. */}
+              <p>
+                New to specifying nonwovens? Start with our{' '}
+                <Link to="/guides/needle-punched-vs-thermal-bonded-nonwoven">
+                  needle punched vs thermal bonded guide
+                </Link>{' '}
+                or the{' '}
+                <Link to="/guides/how-to-request-a-nonwoven-felt-quote">
+                  quote request checklist
+                </Link>
+                .
+              </p>
 
               <div className="cta-row">
                 <Link to="/contact#enquiry" className="btn btn--fill">
@@ -109,11 +132,11 @@ export default function About() {
               </div>
             </div>
 
-            <Reveal className="about__aside" delay={90}>
+            <Reveal delay={120} className="about__aside">
               <Media
                 className="about__image"
                 src="/images/plant/overview.jpg"
-                alt="Kiran Nonwovens plant"
+                alt="Kiran Nonwovens plant — needle punched nonwoven production"
                 variant={2}
                 label="Plant photography — pending"
               />

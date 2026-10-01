@@ -2,16 +2,18 @@ import { Link } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
-import PlaceholderNote from '../components/PlaceholderNote.jsx';
-import { CONTACT, VIDEOS, breadcrumbLd } from '../lib.js';
+import { CONTACT, SITE, breadcrumbLd } from '../lib.js';
 import './Privacy.css';
 
 /**
  * A plain-language privacy notice that states only what the site actually
  * does: the enquiry form's fields, where they go, and that there are no
  * analytics or advertising cookies. If analytics, a chat widget or a mailing
- * list is ever added, this page has to change with it.
+ * list is ever added, this page has to change with it (and the "Last updated"
+ * date below).
  */
+const UPDATED = '1 October 2026';
+
 export default function Privacy() {
   const trail = [{ to: '/', label: 'Home' }, { label: 'Privacy' }];
   return (
@@ -26,12 +28,24 @@ export default function Privacy() {
         trail={trail}
         title="Privacy notice"
         lead="What we collect when you send an enquiry, what we do with it, and how to ask us to remove it."
-        video={VIDEOS.contact}
-        variant={2}
+        plain
       />
 
       <section className="block">
         <div className="wrap privacy">
+          <p>
+            <small>Last updated: {UPDATED}</small>
+          </p>
+
+          <h2>Who we are</h2>
+          <p>
+            This website is run by {SITE.name}, a manufacturer of needle
+            punched and thermal bonded nonwoven felt and geotextiles. In this
+            notice, “we” means {SITE.name}. You can reach us at{' '}
+            <a href={CONTACT.emailHref}>{CONTACT.email}</a> or by post at{' '}
+            {CONTACT.address}.
+          </p>
+
           <h2>What we collect</h2>
           <p>
             Only what you type into the enquiry form: your name, email address,
@@ -57,28 +71,27 @@ export default function Privacy() {
             notice will be updated first.
           </p>
 
+          <h2>Who can see it</h2>
+          <p>
+            Our export team. Enquiries are held in a database and sent by email
+            through service providers that help us run the website; they handle
+            the data only on our behalf. We share an enquiry with anyone else
+            only if the law requires it.
+          </p>
+
           <h2>How long we keep it</h2>
           <p>
-            We keep an enquiry for as long as it is needed to deal with your
-            request and any resulting business relationship, and delete it on
-            request.
+            For as long as it is needed to deal with your request and any
+            resulting business relationship, and then we delete it. You can ask
+            us to delete it sooner.
           </p>
 
           <h2>Your choices</h2>
           <p>
             You can ask us to show you what we hold about you, correct it, or
-            delete it. Email{' '}
-            <a href={CONTACT.emailHref}>{CONTACT.email}</a> from the address you
-            used to enquire, and we will act on it.
+            delete it. Email <a href={CONTACT.emailHref}>{CONTACT.email}</a>{' '}
+            from the address you used to enquire, and we will act on it.
           </p>
-
-          <PlaceholderNote>
-            Draft for review: the company should confirm this wording — in
-            particular the retention period, the legal entity that is
-            responsible for the data, and any requirements for the countries
-            you sell into — before launch. This is a starting text, not legal
-            advice.
-          </PlaceholderNote>
 
           <p className="privacy__back">
             <Link to="/contact#enquiry">Send an enquiry</Link>

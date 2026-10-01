@@ -3,16 +3,16 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import Media from '../components/Media.jsx';
 import PageHero from '../components/PageHero.jsx';
+import Reveal from '../components/Reveal.jsx';
 import SpecTable from '../components/SpecTable.jsx';
 import TabPanel, { RuledList } from '../components/TabPanel.jsx';
 import EnquiryForm from '../components/EnquiryForm.jsx';
 import StickyQuote from '../components/StickyQuote.jsx';
 import ProductCard, { ProductGrid } from '../components/ProductCard.jsx';
-import PlaceholderNote from '../components/PlaceholderNote.jsx';
-import Reveal from '../components/Reveal.jsx';
-import Faq from '../components/Faq.jsx';
+import Note from '../components/Note.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { PLANT } from '../data/catalog.js';
+import Faq from '../components/Faq.jsx';
 import { productFaq, plain } from '../data/seo.js';
 import { SITE, VIDEOS, breadcrumbLd, faqLd } from '../lib.js';
 import NotFound from './NotFound.jsx';
@@ -67,15 +67,15 @@ export default function Product() {
             caption={`Specifications for ${product.name}`}
           />
           {product.specNote ? (
-            <PlaceholderNote>{product.specNote}</PlaceholderNote>
+            <Note>{product.specNote}</Note>
           ) : null}
           {!product.gsmConfirmed ? (
-            <PlaceholderNote>
+            <Note>
               This material is made to order across the plant&apos;s full{' '}
               {PLANT.gsmLabel} GSM range. Tell us the GSM, thickness, width and
               colour your application needs and we will confirm exact figures
               with your quote.
-            </PlaceholderNote>
+            </Note>
           ) : null}
         </>
       ),
@@ -85,43 +85,47 @@ export default function Product() {
       label: 'Applications',
       content: <RuledList items={product.applications} />,
     },
-    {
-      id: 'downloads',
-      label: 'Downloads',
-      content: product.downloads?.length ? (
-        <RuledList
-          items={product.downloads.map((d) => (
-            <a key={d.url} href={d.url}>
-              {d.label}
-            </a>
-          ))}
-        />
-      ) : (
-        <div className="narrow">
-          <p>
-            Technical datasheets and test reports for {product.name} are
-            shared on request. Tell us what you need and we will send it with
-            your quote.
-          </p>
-          <div className="cta-row">
-            <a href="#enquiry" className="btn">
-              Request documents
-            </a>
-          </div>
-        </div>
-      ),
-    },
+    // The Downloads tab only exists once there is something to download.
+    ...(product.downloads?.length
+      ? [
+          {
+            id: 'downloads',
+            label: 'Downloads',
+            content: (
+              <RuledList
+                items={product.downloads.map((d) => (
+                  <a key={d.url} href={d.url}>
+                    {d.label}
+                  </a>
+                ))}
+              />
+            ),
+          },
+        ]
+      : []),
   ];
 
+  // Structured data, built only from what we actually know: the product's own
+  // copy and the plant capability. No price, rating or stock is claimed.
+  const faqs = productFaq(product);
+  const specProps = [
+    product.specs?.process && ['Process', product.specs.process],
+    product.specs?.gsmMin != null && [
+      'GSM range',
+      `${product.specs.gsmMin}–${product.specs.gsmMax}`,
+    ],
+    product.specs?.width && ['Roll width', product.specs.width],
+    product.specs?.fibre && [
+      'Fibre',
+      [].concat(product.specs.fibre).join(', '),
+    ],
+  ].filter(Boolean);
   const trail = [
     { to: '/', label: 'Home' },
     { to: '/products', label: 'Products' },
     { to: `/products/${product.category}`, label: area },
     { label: product.name },
   ];
-  const faqs = productFaq(product);
-
-  // Structured data, built only from what we actually know.
   const productLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -130,7 +134,18 @@ export default function Product() {
     category: area,
     url: `${SITE.url}/products/${product.category}/${product.slug}`,
     brand: { '@type': 'Brand', name: SITE.name },
+    manufacturer: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+    additionalProperty: specProps.map(([name, value]) => ({
+      '@type': 'PropertyValue',
+      name,
+      value,
+    })),
   };
+  const jsonLd = [
+    productLd,
+    breadcrumbLd(trail),
+    faqLd(faqs.map((f) => ({ q: f.q, a: plain(f.a) }))),
+  ];
 
   return (
     <>
@@ -138,19 +153,14 @@ export default function Product() {
         title={product.seo?.title || product.name}
         description={product.seo?.metaDescription || product.shortDescription}
         path={`/products/${product.category}/${product.slug}`}
-        jsonLd={[
-          productLd,
-          breadcrumbLd(trail),
-          ...(faqs.length
-            ? [faqLd(faqs.map((f) => ({ q: f.q, a: plain(f.a) })))]
-            : []),
-        ]}
+        jsonLd={jsonLd}
       />
 
       <PageHero
         trail={trail}
         kicker={area}
         title={product.name}
+        lead={leadParagraph}
         video={VIDEOS.product}
         variant={2}
       >
@@ -163,26 +173,26 @@ export default function Product() {
       </PageHero>
 
       <section className="block product__main">
-        <div className="wrap product__grid">
-          <Media
-            className="product__image"
-            src={product.images?.[0]}
-            alt={product.name}
-            variant={2}
-            label={`${product.name} photography — pending`}
-          />
+        <div className="wrap">
+          <div className="product__grid">
+            <Media
+              className="product__image"
+              src={product.images?.[0]}
+              alt={`${product.name} — nonwoven roll by Kiran Nonwovens`}
+              variant={2}
+              label={`${product.name} photography — pending`}
+            />
 
-          <div>
-            <p className="lead">{leadParagraph}</p>
+            <div>
+              <ul className="product__chips" aria-label="Key figures">
+                {chips.map((chip) => (
+                  <li key={chip}>{chip}</li>
+                ))}
+              </ul>
 
-            <ul className="product__chips" style={{ marginTop: 18 }}>
-              {chips.map((chip) => (
-                <li key={chip}>{chip}</li>
-              ))}
-            </ul>
-
-            <h2 className="sr-only">Product details</h2>
-            <TabPanel tabs={tabs} deepLink />
+              <h2 className="sr-only">Product details</h2>
+              <TabPanel tabs={tabs} deepLink />
+            </div>
           </div>
         </div>
       </section>
@@ -208,6 +218,16 @@ export default function Product() {
         </div>
       </section>
 
+      <section className="block">
+        <div className="wrap">
+          <Faq
+            items={faqs}
+            title={`${product.name}: common questions`}
+            id="product-faq"
+          />
+        </div>
+      </section>
+
       <section
         className={`block${moreParagraphs.length ? '' : ' block--sand'}`}
         id="enquiry"
@@ -230,7 +250,7 @@ export default function Product() {
             <div className="section-head">
               <h2>More in {area}</h2>
               <Link to={`/products/${product.category}`} className="section-link">
-                All {area} products →
+                All {area} products
               </Link>
             </div>
             <div className="product__related">
@@ -242,18 +262,6 @@ export default function Product() {
                 ))}
               </ProductGrid>
             </div>
-          </div>
-        </section>
-      ) : null}
-
-      {faqs.length ? (
-        <section className="block">
-          <div className="wrap">
-            <Faq
-              items={faqs}
-              title={`${product.name}: common questions`}
-              id="product-faq"
-            />
           </div>
         </section>
       ) : null}

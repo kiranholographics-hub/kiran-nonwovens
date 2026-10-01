@@ -21,6 +21,33 @@ function getTransporter() {
   return transporter;
 }
 
+/** True when both the SMTP host and the recipient are set. */
+export function mailConfigured() {
+  return Boolean(process.env.SMTP_HOST && process.env.ENQUIRY_TO);
+}
+
+/**
+ * Checks the SMTP settings by actually logging in to the mail server (no email
+ * is sent). Used at start-up and by `npm run mail:test`, so a wrong password or
+ * port shows up immediately instead of enquiries silently arriving without an
+ * email.
+ */
+export async function verifyMail() {
+  if (!mailConfigured()) {
+    return {
+      ok: false,
+      configured: false,
+      reason: 'SMTP_HOST and ENQUIRY_TO are not both set in .env',
+    };
+  }
+  try {
+    await getTransporter().verify();
+    return { ok: true, configured: true };
+  } catch (err) {
+    return { ok: false, configured: true, reason: err.message };
+  }
+}
+
 const ROWS = [
   ['Name', 'name'],
   ['Company', 'company'],

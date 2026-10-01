@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCatalogue } from '../CatalogueContext.jsx';
+import { HISTORY } from '../data/about.js';
 import './Header.css';
 
 const ABOUT_LINKS = [
   { to: '/about', label: 'Company overview' },
+  // History only appears once the story is supplied (see data/about.js).
+  ...(HISTORY.trim() ? [{ to: '/about#history', label: 'History' }] : []),
   { to: '/about#technology', label: 'Technology' },
-  { to: '/about#quality', label: 'Quality & certifications' },
+  { to: '/about#quality', label: 'Quality & samples' },
 ];
 
 const CONTACT_LINKS = [
@@ -24,6 +27,11 @@ const CONTACT_LINKS = [
  * that both opened on hover and toggled on click closed itself the moment a
  * mouse user clicked the thing they had just hovered.)
  */
+/** Pages that open on a light (cream) header instead of a dark banner. Their
+ *  navbar is still transparent at the top, but keeps dark type so it can be
+ *  read. Every other page opens on a dark banner, so its type turns white. */
+const LIGHT_PAGES = new Set(['/contact', '/privacy']);
+
 export default function Header() {
   const { businessAreas, productsIn } = useCatalogue();
   const [open, setOpen] = useState(null);
@@ -31,23 +39,18 @@ export default function Header() {
   const { pathname } = useLocation();
   const navRef = useRef(null);
 
-  // Every page opens on a dark film / banner (the home hero or PageHero), so
-  // the header floats clear over it with light text, and turns into a frosted
-  // cream bar once the visitor scrolls — the same behaviour as the Kiran
-  // Global Exports site. If a page is ever added without a dark banner, list
-  // its path here so it gets the solid bar from the start.
-  const SOLID_PATHS = [];
-  const overlay = !SOLID_PATHS.includes(pathname);
+  // Every page starts with a fully transparent navbar over its opening banner;
+  // it turns solid once you scroll (or open a menu).
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    if (!overlay) return undefined;
-    const check = () => setScrolled(window.scrollY > 40);
-    check();
-    window.addEventListener('scroll', check, { passive: true });
-    return () => window.removeEventListener('scroll', check);
-  }, [overlay]);
-  // An open menu always gets the solid bar, so its panel stays readable.
-  const clear = overlay && !scrolled && !open && !drawer;
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  const light = LIGHT_PAGES.has(pathname.replace(/\/$/, '') || '/');
+  const clear = !scrolled && !open && !drawer;
+  const stateClass = clear ? (light ? ' header--clear' : ' header--overlay') : '';
 
   // Any navigation closes everything. Adjusting during render rather than in
   // an effect means the menu is never painted open on the page you moved to.
@@ -106,11 +109,7 @@ export default function Header() {
     ) : null;
 
   return (
-    <header
-      className={`header${overlay ? ' header--overlay' : ''}${
-        clear ? ' header--clear' : ''
-      }`}
-    >
+    <header className={`header${stateClass}`}>
       <div className="wrap header__bar">
         <Link to="/" className="header__logo">
           {/* Company logo mark. alt is empty on purpose: the wordmark next to

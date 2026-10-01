@@ -110,7 +110,7 @@ export default function Guide() {
                         <tr>
                           {s.table.head.map((h, i) => (
                             <th key={i} scope="col">
-                              {h}
+                              {h || <span className="sr-only">Feature</span>}
                             </th>
                           ))}
                         </tr>

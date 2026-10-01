@@ -3,14 +3,13 @@ import VideoBackdrop from './VideoBackdrop.jsx';
 import './PageHero.css';
 
 /**
- * The dark banner every inner page opens with: video (or poster / texture)
- * backdrop, breadcrumb trail, title, lead and optional buttons.
+ * The banner every inner page opens with: video / photo / texture backdrop,
+ * breadcrumb trail, title, lead and optional buttons.
+ *
+ * `plain` drops the backdrop for a quiet header on the cream page background —
+ * used where a photo would add nothing (Contact, Privacy).
  *
  * `trail` is the same [{ to?, label }] shape <Breadcrumbs> takes.
- *
- * `full` makes it a full-screen, film-first banner like the home hero: the
- * visible breadcrumb is dropped (the page still sends BreadcrumbList data to
- * Google) and the title + lead sit low and near the left edge.
  */
 export default function PageHero({
   trail = [],
@@ -19,15 +18,19 @@ export default function PageHero({
   lead,
   video,
   variant = 1,
+  plain = false,
   children,
-  full = false,
 }) {
   return (
-    <section className={`page-hero${full ? ' page-hero--full' : ''}`}>
-      <VideoBackdrop video={video} variant={variant} eager />
-      <div className="page-hero__shade" aria-hidden="true" />
+    <section className={`page-hero${plain ? ' page-hero--plain' : ''}`}>
+      {plain ? null : (
+        <>
+          <VideoBackdrop video={video} variant={variant} eager />
+          <div className="page-hero__shade" aria-hidden="true" />
+        </>
+      )}
       <div className="wrap page-hero__inner">
-        {trail.length && !full ? (
+        {trail.length ? (
           <nav className="page-hero__crumbs" aria-label="Breadcrumb">
             <ol>
               {trail.map((item, i) => (

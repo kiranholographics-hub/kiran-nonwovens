@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useCatalogue } from '../CatalogueContext.jsx';
-import { CONTACT, SITE, isPlaceholder } from '../lib.js';
+import { CONTACT, SITE } from '../lib.js';
 import './Footer.css';
+
+/** Set to false once the site carries only real photographs and footage of
+ *  Kiran Nonwovens' own products and plant. */
+const ILLUSTRATIVE_IMAGERY = true;
 
 export default function Footer() {
   const { businessAreas } = useCatalogue();
@@ -52,19 +56,16 @@ export default function Footer() {
             <h2>Company</h2>
             <Link to="/about">About Us</Link>
             <Link to="/manufacturing">Manufacturing</Link>
-            <Link to="/guides">Buyer&apos;s guides</Link>
+            <Link to="/guides">Buyer’s guides</Link>
             <Link to="/contact">Contact</Link>
           </div>
 
           <div>
             <h2>Reach us</h2>
             <Link to="/contact#enquiry">Send an enquiry</Link>
-            <a className="footer__detail" href={CONTACT.phoneHref}>
-              {CONTACT.phone}
-            </a>
-            <a className="footer__detail" href={CONTACT.emailHref}>
-              {CONTACT.email}
-            </a>
+            {/* PLACEHOLDERS — contact details pending from Sir */}
+            <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
+            <a href={CONTACT.emailHref}>{CONTACT.email}</a>
           </div>
         </div>
 
@@ -72,13 +73,19 @@ export default function Footer() {
           <span>
             © {new Date().getFullYear()} {SITE.name}
           </span>
-          {isPlaceholder(CONTACT.address) ? null : (
-            <span>{CONTACT.address}</span>
-          )}
-          <Link to="/privacy" className="footer__legal">
-            Privacy policy
-          </Link>
+          <span>
+            <Link to="/privacy" className="footer__legal">
+              Privacy notice
+            </Link>
+          </span>
+          <span>{CONTACT.address}</span>
         </div>
+        {ILLUSTRATIVE_IMAGERY ? (
+          <p className="footer__note">
+            Images and videos on this site are for illustration; actual
+            products and facilities may vary.
+          </p>
+        ) : null}
       </div>
     </footer>
   );

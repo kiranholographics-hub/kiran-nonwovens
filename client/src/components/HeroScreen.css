@@ -1,0 +1,168 @@
+.hero-screen {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  /* Pull up under the sticky navbar so the video runs behind it. */
+  margin-top: calc((var(--header-h) + 1px) * -1);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  color: var(--cream);
+  background: var(--forest-deep);
+}
+
+.hero-screen__media {
+  transform: translate3d(0, calc(var(--hero-p, 0) * 9%), 0) scale(1.06);
+  will-change: transform;
+}
+
+/* Light touch: the clip should stay the star. A dark band under the navbar and
+   one along the bottom keep the white text readable on any footage. */
+.hero-screen__shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to bottom, rgba(11, 25, 18, 0.5) 0%, rgba(11, 25, 18, 0) 24%),
+    linear-gradient(to top, rgba(11, 25, 18, 0.9) 0%, rgba(11, 25, 18, 0.6) 30%, rgba(11, 25, 18, 0) 66%);
+}
+
+.hero-screen .hero-screen__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  /* Text hugs the screen's left and right edges (the navbar stays in the
+     centred container), as on the reference site. */
+  max-width: none;
+  padding-left: clamp(24px, 4.2vw, 80px);
+  padding-right: clamp(24px, 4.2vw, 80px);
+  padding-top: calc(var(--header-h) + 40px);
+  padding-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(36px, 7vh, 72px);
+}
+
+.hero-screen__copy {
+  opacity: calc(1 - var(--hero-p, 0) * 1.6);
+  transform: translate3d(0, calc(var(--hero-p, 0) * -30px), 0);
+}
+
+/* The page's <h1>, styled as a small tracked label with a rust rule before it. */
+.hero-screen__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 26px;
+  font-family: var(--font-sans);
+  font-size: clamp(0.78rem, 1.3vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--rust-on-dark);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+
+.hero-screen__line {
+  flex: none;
+  width: 30px;
+  height: 1px;
+  background: var(--rust-on-dark);
+}
+
+.hero-screen .cta-row {
+  margin-top: 0;
+}
+
+.hero-screen .btn {
+  min-height: 54px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.hero-screen__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero-screen__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-screen__tag i {
+  flex: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--rust-on-dark);
+}
+
+.hero-screen__scroll {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-screen__scroll i {
+  display: block;
+  width: 1px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-screen__scroll i::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 45%;
+  background: var(--rust-on-dark);
+  animation: hero-screen-cue 2.2s var(--ease) infinite;
+}
+
+@keyframes hero-screen-cue {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(240%);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-screen .cta-row .btn {
+    width: 100%;
+  }
+  .hero-screen__tag {
+    letter-spacing: 0.14em;
+    max-width: 70%;
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-screen__media,
+  .hero-screen__copy {
+    transform: none;
+    opacity: 1;
+  }
+  .hero-screen__scroll i::after {
+    animation: none;
+  }
+}

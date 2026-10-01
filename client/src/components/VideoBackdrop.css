@@ -1,9 +1,8 @@
 .vbd {
   position: absolute;
   inset: 0;
-  /* Below the section's shade (z-index -1). Every section that holds a
-     backdrop sets isolation: isolate, so this never drops behind the page.
-     Without it the film painted OVER the shade and washed out the text. */
+  /* Behind the dark shade (z-index -1) that every banner lays over it. The
+     parent banners use `isolation: isolate`, so this stays inside them. */
   z-index: -2;
   overflow: hidden;
   background:
@@ -11,12 +10,30 @@
     linear-gradient(160deg, var(--forest) 0%, var(--forest-deep) 100%);
 }
 
+.vbd picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.vbd__poster,
 .vbd__video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* The clip sits over the poster and fades in once it is really playing, so
+   there is never a black flash while it loads. */
+.vbd__video {
+  opacity: 0;
+  transition: opacity 0.9s var(--ease);
+}
+
+.vbd__video.is-playing {
+  opacity: 1;
 }
 
 /* Placeholder: the woven texture, drifting slowly so the slot still feels alive. */
@@ -56,8 +73,10 @@
   }
 }
 
-/* Placeholder caption: banners now run up under the header, so the caption
-   keeps the default top offset (just below the header). */
+/* Placeholder caption: inner-page banners start below the header already. */
+.page-hero .vbd__label {
+  top: 16px;
+}
 
 @media (max-width: 700px) {
   .vbd__label {
