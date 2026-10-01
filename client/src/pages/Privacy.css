@@ -1,0 +1,30 @@
+.privacy {
+  max-width: 760px;
+  margin-left: max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter)));
+  margin-right: auto;
+}
+
+.privacy h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  margin: 40px 0 12px;
+}
+
+.privacy h2:first-child {
+  margin-top: 0;
+}
+
+.privacy p {
+  font-size: 1.06rem;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  max-width: 68ch;
+}
+
+.privacy a {
+  color: var(--rust);
+  text-underline-offset: 3px;
+}
+
+.privacy__back {
+  margin-top: 32px;
+}

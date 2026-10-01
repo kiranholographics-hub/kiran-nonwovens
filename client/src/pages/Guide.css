@@ -1,0 +1,202 @@
+.guide__layout {
+  display: grid;
+  gap: 40px;
+  /* One column that may shrink below its content on phones — without this a
+     wide table in a guide pushed the whole page sideways. */
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.guide__layout > * {
+  min-width: 0;
+}
+
+@media (min-width: 960px) {
+  .guide__layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 72px;
+    align-items: start;
+  }
+}
+
+/* Contents list: sticks beside the article on wide screens so a reader can
+   jump between sections of a long guide. */
+.guide__toc {
+  font-size: var(--fs-small);
+}
+
+@media (min-width: 960px) {
+  .guide__toc {
+    position: sticky;
+    top: calc(var(--header-h) + 28px);
+  }
+}
+
+.guide__toc p {
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--rust);
+  margin-bottom: 12px;
+}
+
+.guide__toc ol {
+  list-style: none;
+  border-left: 1px solid var(--line);
+}
+
+.guide__toc a {
+  display: block;
+  padding: 7px 0 7px 16px;
+  margin-left: -1px;
+  border-left: 1px solid transparent;
+  text-decoration: none;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.guide__toc a:hover {
+  color: var(--rust);
+  border-left-color: var(--rust);
+}
+
+.guide__body {
+  max-width: 760px;
+}
+
+.guide__section {
+  margin-bottom: 44px;
+}
+
+.guide__section h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 16px;
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+
+.guide__section p {
+  font-size: 1.06rem;
+  line-height: 1.8;
+  color: var(--ink);
+  margin-bottom: 16px;
+  max-width: 68ch;
+}
+
+.guide__section a,
+.guide__next a:not(.btn),
+.guide__more a {
+  color: var(--rust);
+  text-underline-offset: 3px;
+}
+
+.guide__list {
+  list-style: none;
+  margin: 4px 0 18px;
+  border-top: 1px solid var(--line);
+}
+
+.guide__list li {
+  position: relative;
+  padding: 11px 0 11px 22px;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.6;
+}
+
+.guide__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 22px;
+  width: 9px;
+  height: 1.5px;
+  background: var(--rust);
+}
+
+.guide__table {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  margin: 6px 0 18px;
+}
+
+.guide__table table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.guide__table th,
+.guide__table td {
+  padding: 13px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.guide__table thead th {
+  background: var(--sand);
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.guide__table tbody th {
+  color: var(--muted);
+  font-weight: 500;
+  width: 24%;
+}
+
+.guide__table tbody tr:last-child th,
+.guide__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.guide__faq {
+  margin-top: 56px;
+}
+
+.guide__related {
+  margin-top: 24px;
+}
+
+.guide__next-row {
+  display: grid;
+  gap: 40px;
+}
+
+@media (min-width: 900px) {
+  .guide__next-row {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 72px;
+  }
+}
+
+.guide__next h2 {
+  margin-bottom: 12px;
+}
+
+.guide__next p {
+  color: var(--muted);
+}
+
+.guide__more ul {
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.guide__more li {
+  border-bottom: 1px solid var(--line);
+}
+
+.guide__more a {
+  display: block;
+  padding: 14px 0;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.guide__more a:hover {
+  color: var(--rust);
+}

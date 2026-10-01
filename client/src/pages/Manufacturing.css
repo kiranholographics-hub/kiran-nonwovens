@@ -1,0 +1,66 @@
+/* Production-line band: a video (or texture) with a caption, not a boxed photo. */
+.mfg__line {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(280px, 46vh, 460px);
+  display: flex;
+  align-items: flex-end;
+  color: var(--cream);
+}
+
+.mfg__line-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(11, 25, 18, 0.8), rgba(11, 25, 18, 0.05) 60%);
+}
+
+.mfg__line-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 28px;
+}
+
+.mfg__line-cap {
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--on-dark);
+}
+
+/* Processes: the one dark block on this page, echoing the home page's process band. */
+.mfg__processes {
+  background: var(--forest-deep);
+  color: var(--cream);
+  padding: var(--section-y) 0;
+}
+
+.mfg__processes h2 {
+  color: #fff;
+}
+
+.mfg__processes .eyebrow {
+  color: var(--rust-on-dark);
+}
+
+.mfg__processes .feature-grid {
+  border-top-color: var(--rule-on-dark);
+}
+
+.mfg__processes .feature-grid__item {
+  border-bottom-color: var(--rule-on-dark);
+}
+
+.mfg__processes .feature-grid__num {
+  color: var(--rust-on-dark);
+}
+
+.mfg__processes .feature-grid__item h3 {
+  color: #fff;
+}
+
+.mfg__processes .feature-grid__item p {
+  color: var(--on-dark);
+}

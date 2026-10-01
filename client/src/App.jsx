@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import TextureDefs from './components/TextureDefs.jsx';
+import ScrollProgress from './components/ScrollProgress.jsx';
 import { CatalogueProvider } from './CatalogueContext.jsx';
 
 import Home from './pages/Home.jsx';
@@ -15,6 +16,9 @@ import Product from './pages/Product.jsx';
 import About from './pages/About.jsx';
 import Manufacturing from './pages/Manufacturing.jsx';
 import Contact from './pages/Contact.jsx';
+import Guides from './pages/Guides.jsx';
+import Guide from './pages/Guide.jsx';
+import Privacy from './pages/Privacy.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 /** Router keeps scroll position between pages otherwise; anchors still work. */
@@ -35,6 +39,7 @@ export default function App() {
       </a>
       <TextureDefs />
       <ScrollToTop />
+      <ScrollProgress />
       <Header />
       <main id="main">
         <Routes>
@@ -46,6 +51,9 @@ export default function App() {
           <Route path="/products/:category/:slug" element={<Product />} />
           <Route path="/about" element={<About />} />
           <Route path="/manufacturing" element={<Manufacturing />} />
+          <Route path="/guides" element={<Guides />} />
+          <Route path="/guides/:slug" element={<Guide />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

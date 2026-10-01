@@ -19,6 +19,7 @@
   width: 38%;
   color: var(--muted);
   font-weight: 500;
+  font-size: var(--fs-small);
 }
 
 .spec-table tbody tr:last-child th,

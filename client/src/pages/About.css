@@ -1,5 +1,5 @@
 .about__block {
-  padding-top: 8px;
+  padding-top: calc(var(--section-y) * 0.7);
 }
 
 .about__grid {
@@ -19,7 +19,10 @@
 }
 
 .about__body h3 {
-  margin-top: 32px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 44px;
+  margin-bottom: 10px;
   scroll-margin-top: calc(var(--header-h) + 20px);
 }
 
@@ -29,10 +32,22 @@
 
 .about__body p {
   color: var(--muted);
+  line-height: 1.75;
 }
 
 .about__image {
-  min-height: 320px;
+  min-height: 360px;
+}
+
+/* The photograph stays in view while the long copy scrolls past it. */
+@media (min-width: 960px) {
+  .about__aside {
+    position: sticky;
+    top: calc(var(--header-h) + 28px);
+  }
+  .about__image {
+    min-height: 480px;
+  }
 }
 
 .about__body p + p {

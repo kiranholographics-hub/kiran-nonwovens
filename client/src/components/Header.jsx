@@ -5,7 +5,6 @@ import './Header.css';
 
 const ABOUT_LINKS = [
   { to: '/about', label: 'Company overview' },
-  { to: '/about#history', label: 'History' },
   { to: '/about#technology', label: 'Technology' },
   { to: '/about#quality', label: 'Quality & certifications' },
 ];
@@ -31,6 +30,24 @@ export default function Header() {
   const [drawer, setDrawer] = useState(false);
   const { pathname } = useLocation();
   const navRef = useRef(null);
+
+  // Every page opens on a dark film / banner (the home hero or PageHero), so
+  // the header floats clear over it with light text, and turns into a frosted
+  // cream bar once the visitor scrolls — the same behaviour as the Kiran
+  // Global Exports site. If a page is ever added without a dark banner, list
+  // its path here so it gets the solid bar from the start.
+  const SOLID_PATHS = [];
+  const overlay = !SOLID_PATHS.includes(pathname);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    if (!overlay) return undefined;
+    const check = () => setScrolled(window.scrollY > 40);
+    check();
+    window.addEventListener('scroll', check, { passive: true });
+    return () => window.removeEventListener('scroll', check);
+  }, [overlay]);
+  // An open menu always gets the solid bar, so its panel stays readable.
+  const clear = overlay && !scrolled && !open && !drawer;
 
   // Any navigation closes everything. Adjusting during render rather than in
   // an effect means the menu is never painted open on the page you moved to.
@@ -89,7 +106,11 @@ export default function Header() {
     ) : null;
 
   return (
-    <header className="header">
+    <header
+      className={`header${overlay ? ' header--overlay' : ''}${
+        clear ? ' header--clear' : ''
+      }`}
+    >
       <div className="wrap header__bar">
         <Link to="/" className="header__logo">
           {/* Company logo mark. alt is empty on purpose: the wordmark next to

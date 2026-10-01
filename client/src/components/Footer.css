@@ -1,14 +1,13 @@
 .footer {
   background: var(--forest-deep);
   color: var(--on-dark);
-  padding: 40px 0 0;
-  font-size: 0.9rem;
-  border-top: 1px solid var(--rule-on-dark);
+  padding: clamp(56px, 8vw, 96px) 0 0;
+  font-size: 0.92rem;
 }
 
 .footer__grid {
   display: grid;
-  gap: 26px;
+  gap: 36px 28px;
   grid-template-columns: 1fr;
 }
 
@@ -20,55 +19,75 @@
 
 @media (min-width: 1000px) {
   .footer__grid {
-    grid-template-columns: 1.4fr repeat(4, 1fr);
+    grid-template-columns: 1.5fr repeat(4, 1fr);
   }
 }
 
+.footer__brand {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Column titles: small tracked caps, as in the reference footer. */
 .footer h2 {
   color: var(--on-dark-strong);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 600;
-  margin-bottom: 8px;
-  font-size: 1rem;
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
 .footer a {
   display: block;
   text-decoration: none;
-  padding: 4px 0;
+  padding: 5px 0;
   color: var(--on-dark);
+  transition: color 0.2s var(--ease);
 }
 
 .footer a:hover {
-  color: var(--on-dark-strong);
-  text-decoration: underline;
+  color: var(--rust-on-dark);
 }
 
 .footer__intro {
-  max-width: 34ch;
+  max-width: 36ch;
   margin-bottom: 10px;
+  line-height: 1.7;
 }
 
 .footer__detail {
   display: block;
-  padding: 4px 0;
+  padding: 5px 0;
 }
 
 .footer__copy {
   border-top: 1px solid var(--rule-on-dark);
-  margin-top: 28px;
-  padding: 14px 0 22px;
+  margin-top: 48px;
+  padding: 18px 0 26px;
   font-size: var(--fs-tiny);
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 16px;
+  justify-content: space-between;
+  gap: 6px 24px;
 }
 
 .footer__mark {
   display: block;
   width: 56px;
   height: 56px;
-  border-radius: 12px;
+  border-radius: 4px;
   background: #fff;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.footer a.footer__legal {
+  display: inline;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

@@ -1,6 +1,6 @@
 .product-grid {
   display: grid;
-  gap: 22px;
+  gap: 32px 24px;
   grid-template-columns: 1fr;
 }
 
@@ -22,13 +22,35 @@
   display: block;
 }
 
+.product-card .media {
+  overflow: hidden;
+}
+
+.product-card .media__img,
+.product-card .media__texture {
+  transition: transform 0.9s var(--ease-out);
+}
+
+.product-card:hover .media__img,
+.product-card:hover .media__texture {
+  transform: scale(1.05);
+}
+
 .product-card__body {
-  padding: 12px 2px;
+  padding: 16px 2px 4px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+  transition: border-color 0.3s var(--ease);
+}
+
+.product-card:hover .product-card__body {
+  border-bottom-color: var(--rust);
 }
 
 .product-card__body h3 {
-  font-size: 1.02rem;
-  margin-bottom: 2px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 4px;
   transition: color 0.2s var(--ease);
 }
 
@@ -44,7 +66,7 @@
 /* ── List variant ─────────────────────────────────────────────── */
 .product-list {
   border-top: 1px solid var(--line);
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .product-list__row {
@@ -52,15 +74,20 @@
   grid-template-columns: 1fr auto;
   gap: 14px;
   align-items: baseline;
-  padding: 18px 0;
+  padding: 22px 0;
   border-bottom: 1px solid var(--line);
   text-decoration: none;
   color: inherit;
+  transition: padding-left 0.3s var(--ease-out);
+}
+
+.product-list__row:hover {
+  padding-left: 12px;
 }
 
 .product-list__row h3 {
   margin: 0;
-  font-size: 1.02rem;
+  font-size: 1.2rem;
   font-weight: 500;
   transition: color 0.2s var(--ease);
 }
@@ -72,14 +99,31 @@
 .product-list__row small {
   color: var(--muted);
   display: block;
-  font-size: 0.87rem;
-  margin-top: 3px;
+  font-size: 0.9rem;
+  margin-top: 4px;
   max-width: 70ch;
 }
 
 .product-list__cta {
-  font-size: 0.84rem;
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
   color: var(--forest);
   font-weight: 600;
   white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card .media__img,
+  .product-card .media__texture,
+  .product-list__row {
+    transition: none;
+  }
+  .product-card:hover .media__img,
+  .product-card:hover .media__texture {
+    transform: none;
+  }
+  .product-list__row:hover {
+    padding-left: 0;
+  }
 }

@@ -16,6 +16,7 @@ import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 import { products, businessAreas } from '../src/data/catalog.js';
+import { guides } from '../src/data/guides.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(here, '../dist');
@@ -40,6 +41,9 @@ const routes = [
   '/about',
   '/manufacturing',
   '/contact',
+  '/guides',
+  '/privacy',
+  ...guides.map((g) => `/guides/${g.slug}`),
   ...businessAreas.map((b) => `/business-areas/${b.slug}`),
   ...businessAreas.map((b) => `/products/${b.slug}`),
   ...products.map((p) => `/products/${p.category}/${p.slug}`),
@@ -82,6 +86,46 @@ for (const route of routes) {
     `${route} left its <title> inside the body`
   );
 
+  // ── SEO checks ──────────────────────────────────────────────────────────
+  const head = headOf(html);
+  const types = [...head.matchAll(/"@type":"([A-Za-z]+)"/g)].map((m) => m[1]);
+  check(title.length <= 65, `${route} title is ${title.length} chars (max 65): ${title}`);
+  check(
+    desc.length >= 90 && desc.length <= 165,
+    `${route} description is ${desc.length} chars (want 90–165)`
+  );
+  check(!/pending|\[x\]|to confirm/i.test(title + desc), `${route} title/description leaks placeholder text`);
+  check(/property="og:image" content="[^"]+\/images\/og-default\.jpg"/.test(head) || /property="og:image"/.test(head), `${route} has no og:image`);
+  check(/name="twitter:image"/.test(head), `${route} has no twitter:image`);
+  check(/name="robots"/.test(head), `${route} has no robots meta`);
+  if (route !== '/') {
+    check(types.includes('BreadcrumbList'), `${route} has no BreadcrumbList schema`);
+  }
+  if (route === '/') {
+    check(types.includes('Organization') && types.includes('WebSite'), `/ is missing Organization/WebSite schema`);
+  }
+  if (route.startsWith('/guides/')) {
+    check(types.includes('Article'), `${route} has no Article schema`);
+  }
+  // Every page that shows an FAQ must also ship it as FAQPage schema.
+  const hasFaq = html.includes('class="faq"');
+  check(!hasFaq || types.includes('FAQPage'), `${route} shows an FAQ but has no FAQPage schema`);
+  // Category pages were thin before; they now carry a buyer's guide + FAQ.
+  if (/^\/products\/[a-z-]+$/.test(route)) {
+    check(hasFaq, `${route} category page has no FAQ`);
+  }
+
+  // Redesign checks: every page has exactly one <h1>, and the banner that
+  // carries it is in the static HTML (crawlers see it before any JS runs).
+  const h1s = (html.match(/<h1[\s>]/g) || []).length;
+  check(h1s === 1, `${route} has ${h1s} <h1> elements (expected 1)`);
+  check(
+    route === '/'
+      ? html.includes('home__hero')
+      : html.includes('page-hero') || route.startsWith('/products/'),
+    `${route} is missing its banner`
+  );
+
   if (titles.has(title))
     check(false, `duplicate <title> on ${route} and ${titles.get(title)}`);
   titles.set(title, route);
@@ -89,6 +133,16 @@ for (const route of routes) {
     check(false, `duplicate description on ${route} and ${descs.get(desc)}`);
   descs.set(desc, route);
 }
+
+// Guides: real length, real headings, links into the catalogue.
+for (const g of guides) {
+  const gh = await readFile(path.join(dist, 'guides', g.slug, 'index.html'), 'utf8');
+  const words = gh.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+  check(words > 700, `guide ${g.slug} has only ${words} words in its HTML`);
+  check(/href="\/products\//.test(gh), `guide ${g.slug} does not link to any product`);
+}
+const nf = await readFile(path.join(dist, '404.html'), 'utf8');
+check(/name="robots" content="noindex/.test(nf), '404.html is not noindex');
 
 console.log(`  unique titles: ${titles.size}/${routes.length}`);
 

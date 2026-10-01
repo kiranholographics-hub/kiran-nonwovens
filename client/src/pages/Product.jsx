@@ -2,16 +2,19 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
 import Media from '../components/Media.jsx';
-import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import PageHero from '../components/PageHero.jsx';
 import SpecTable from '../components/SpecTable.jsx';
 import TabPanel, { RuledList } from '../components/TabPanel.jsx';
 import EnquiryForm from '../components/EnquiryForm.jsx';
 import StickyQuote from '../components/StickyQuote.jsx';
 import ProductCard, { ProductGrid } from '../components/ProductCard.jsx';
 import PlaceholderNote from '../components/PlaceholderNote.jsx';
+import Reveal from '../components/Reveal.jsx';
+import Faq from '../components/Faq.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { PLANT } from '../data/catalog.js';
-import { SITE } from '../lib.js';
+import { productFaq, plain } from '../data/seo.js';
+import { SITE, VIDEOS, breadcrumbLd, faqLd } from '../lib.js';
 import NotFound from './NotFound.jsx';
 import './Product.css';
 
@@ -95,18 +98,31 @@ export default function Product() {
         />
       ) : (
         <div className="narrow">
-          <p>Datasheet, test report and certificates for {product.name}.</p>
-          <PlaceholderNote>
-            Downloads are pending — no datasheets or test reports have been
-            supplied yet. Ask us and we will send what you need directly.
-          </PlaceholderNote>
+          <p>
+            Technical datasheets and test reports for {product.name} are
+            shared on request. Tell us what you need and we will send it with
+            your quote.
+          </p>
+          <div className="cta-row">
+            <a href="#enquiry" className="btn">
+              Request documents
+            </a>
+          </div>
         </div>
       ),
     },
   ];
 
+  const trail = [
+    { to: '/', label: 'Home' },
+    { to: '/products', label: 'Products' },
+    { to: `/products/${product.category}`, label: area },
+    { label: product.name },
+  ];
+  const faqs = productFaq(product);
+
   // Structured data, built only from what we actually know.
-  const jsonLd = {
+  const productLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.name,
@@ -122,52 +138,54 @@ export default function Product() {
         title={product.seo?.title || product.name}
         description={product.seo?.metaDescription || product.shortDescription}
         path={`/products/${product.category}/${product.slug}`}
-        jsonLd={jsonLd}
+        jsonLd={[
+          productLd,
+          breadcrumbLd(trail),
+          ...(faqs.length
+            ? [faqLd(faqs.map((f) => ({ q: f.q, a: plain(f.a) })))]
+            : []),
+        ]}
       />
 
-      <div className="wrap">
-        <Breadcrumbs
-          trail={[
-            { to: '/', label: 'Home' },
-            { to: '/products', label: 'Products' },
-            { to: `/products/${product.category}`, label: area },
-            { label: product.name },
-          ]}
-        />
+      <PageHero
+        trail={trail}
+        kicker={area}
+        title={product.name}
+        video={VIDEOS.product}
+        variant={2}
+      >
+        <a href="#enquiry" className="btn btn--light">
+          Get quote
+        </a>
+        <Link to="/contact#enquiry" className="btn btn--ghost-light">
+          Request a sample
+        </Link>
+      </PageHero>
 
-        <div className="product__grid">
+      <section className="block product__main">
+        <div className="wrap product__grid">
           <Media
             className="product__image"
             src={product.images?.[0]}
+            alt={product.name}
             variant={2}
             label={`${product.name} photography — pending`}
           />
 
           <div>
-            <p className="kicker">{area}</p>
-            <h1 className="page-title">{product.name}</h1>
             <p className="lead">{leadParagraph}</p>
 
-            <ul className="product__chips">
+            <ul className="product__chips" style={{ marginTop: 18 }}>
               {chips.map((chip) => (
                 <li key={chip}>{chip}</li>
               ))}
             </ul>
 
-            <div className="cta-row">
-              <a href="#enquiry" className="btn btn--fill">
-                Get quote
-              </a>
-              <Link to="/contact#enquiry" className="btn">
-                Request a sample
-              </Link>
-            </div>
-
             <h2 className="sr-only">Product details</h2>
             <TabPanel tabs={tabs} deepLink />
           </div>
         </div>
-      </div>
+      </section>
 
       {moreParagraphs.length ? (
         <section className="block product__overview">
@@ -218,10 +236,24 @@ export default function Product() {
             <div className="product__related">
               <ProductGrid>
                 {related.map((p, i) => (
-                  <ProductCard key={p.slug} product={p} variant={(i % 2) + 1} />
+                  <Reveal key={p.slug} delay={i * 90}>
+                    <ProductCard product={p} variant={(i % 2) + 1} />
+                  </Reveal>
                 ))}
               </ProductGrid>
             </div>
+          </div>
+        </section>
+      ) : null}
+
+      {faqs.length ? (
+        <section className="block">
+          <div className="wrap">
+            <Faq
+              items={faqs}
+              title={`${product.name}: common questions`}
+              id="product-faq"
+            />
           </div>
         </section>
       ) : null}

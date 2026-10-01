@@ -1,7 +1,10 @@
 .product__grid {
   display: grid;
   gap: 32px;
-  padding-bottom: 8px;
+}
+
+.product__main {
+  padding-bottom: calc(var(--section-y) * 0.6);
 }
 
 /* Grid children default to min-width:auto, so a wide child (the spec table)
@@ -35,15 +38,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 16px 0 22px;
+  margin: 0 0 8px;
   list-style: none;
 }
 
 .product__chips li {
   border: 1px solid var(--line);
-  padding: 6px 13px;
-  font-size: 0.86rem;
-  border-radius: 20px;
+  padding: 7px 14px;
+  font-size: var(--fs-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 0;
   color: var(--muted);
 }
 
@@ -53,4 +59,9 @@
 
 .product__overview p {
   margin-top: 14px;
+}
+
+/* The spec block above already ends with generous space; don't double it. */
+.product__main + .product__overview {
+  padding-top: calc(var(--section-y) * 0.25);
 }

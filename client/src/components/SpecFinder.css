@@ -22,7 +22,9 @@
 }
 
 .finder__field label {
-  font-size: 0.82rem;
+  font-size: var(--fs-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   font-weight: 600;
   color: var(--muted);
 }
@@ -31,7 +33,7 @@
   padding: 11px 12px;
   border: 1px solid var(--line);
   background: var(--cream);
-  border-radius: 2px;
+  border-radius: 0;
   min-height: var(--tap);
 }
 
@@ -72,7 +74,7 @@
 
 .finder__results h3 {
   margin: 0;
-  font-size: 1.02rem;
+  font-size: 1.15rem;
   font-weight: 500;
   transition: color 0.2s var(--ease);
 }
@@ -91,7 +93,9 @@
 .finder__go {
   color: var(--rust);
   font-weight: 600;
-  font-size: 0.86rem;
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -104,6 +108,9 @@
   display: inline-block;
   margin-top: 16px;
   font-weight: 600;
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
   color: var(--rust);
   text-decoration: none;
 }

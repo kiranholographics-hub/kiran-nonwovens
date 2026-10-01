@@ -12,10 +12,11 @@ h1,
 h2,
 h3,
 h4 {
+  text-wrap: balance; /* no lonely last word on a headline */
   font-family: var(--font-serif);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.18;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.14;
 }
 
 h1 {
@@ -27,6 +28,7 @@ h2 {
 }
 h3 {
   font-size: var(--fs-h3);
+  font-weight: 600;
 }
 
 p {
@@ -50,7 +52,7 @@ a {
 }
 
 .block {
-  padding: 56px 0;
+  padding: var(--section-y) 0;
 }
 
 .block--sand {
@@ -58,11 +60,13 @@ a {
 }
 
 .eyebrow {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--muted);
-  font-size: 1.02rem;
-  margin-bottom: 6px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 14px;
 }
 
 .section-head {
@@ -70,39 +74,51 @@ a {
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 10px 24px;
+  margin-bottom: 8px;
 }
 
 .section-link {
+  font-size: var(--fs-label);
   font-weight: 600;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
   color: var(--rust);
   text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
 }
 
 .section-link:hover {
-  text-decoration: underline;
+  color: var(--forest);
 }
 
 .narrow {
   max-width: 780px;
 }
 
-/* ── Pill buttons ─────────────────────────────────────────────── */
+/* ── Buttons — square, thin-ruled, tracked caps ───────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--forest);
+  border: 1px solid var(--forest);
   background: none;
   color: var(--forest);
+  font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 0.92rem;
-  padding: 12px 22px;
-  border-radius: 30px;
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  padding: 14px 26px;
+  border-radius: 0;
   text-decoration: none;
   min-height: var(--tap);
   cursor: pointer;
-  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+  transition:
+    background 0.25s var(--ease),
+    color 0.25s var(--ease),
+    border-color 0.25s var(--ease);
 }
 
 .btn:hover {
@@ -122,22 +138,36 @@ a {
 }
 
 .btn--light {
-  background: var(--sand);
+  background: var(--cream);
   color: var(--forest-deep);
-  border-color: var(--sand);
+  border-color: var(--cream);
 }
 
 .btn--light:hover {
-  background: var(--cream);
+  background: transparent;
   border-color: var(--cream);
+  color: var(--cream);
+}
+
+/* Over video / dark photography */
+.btn--ghost-light {
+  background: rgba(11, 25, 18, 0.25);
+  color: var(--cream);
+  border-color: rgba(247, 243, 234, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+.btn--ghost-light:hover {
+  background: var(--cream);
   color: var(--forest-deep);
+  border-color: var(--cream);
 }
 
 .cta-row {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: 24px;
 }
 
 /* ── Accessibility helpers ────────────────────────────────────── */
@@ -170,7 +200,7 @@ a {
   left: 0;
 }
 
-/* ── Split hero, shared by home / business area / category ────── */
+/* ── Split layout (still used by a few inner sections) ────────── */
 .split {
   display: grid;
   grid-template-columns: 1fr;
@@ -201,11 +231,13 @@ a {
 }
 
 .kicker {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 8px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 12px;
 }
 
 .page-title {
@@ -214,6 +246,32 @@ a {
 
 .lead {
   color: var(--muted);
-  font-size: 1.05rem;
-  max-width: 48ch;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  max-width: 52ch;
+}
+
+/* ── Scroll reveal (see components/Reveal.jsx) ────────────────── */
+/* Content is visible by default so prerendered HTML and no-JS visitors see
+   everything; Reveal only hides an element after mount, and only when it is
+   still below the fold. */
+.reveal {
+  transition:
+    opacity 0.9s var(--ease-out),
+    transform 0.9s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal--hidden {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal--hidden {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

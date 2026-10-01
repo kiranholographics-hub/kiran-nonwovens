@@ -1,0 +1,125 @@
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  color: var(--cream);
+  /* Runs up under the clear header, so the film fills the top of the page
+     (the header floats over it; see Header.css .header--clear). */
+  margin-top: calc((var(--header-h) + 1px) * -1);
+  min-height: calc(clamp(360px, 52vh, 520px) + var(--header-h));
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.page-hero__shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, rgba(11, 25, 18, 0.88) 0%, rgba(11, 25, 18, 0.45) 55%, rgba(11, 25, 18, 0.2) 100%),
+    /* Deeper on the left, where the title and lead sit — real footage has
+       bright whites (fibre, rolls) that washed the text out. */
+    linear-gradient(to right, rgba(11, 25, 18, 0.8) 0%, rgba(11, 25, 18, 0.58) 45%, rgba(11, 25, 18, 0.12) 78%, transparent 90%);
+}
+
+.page-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: calc(var(--header-h) + 72px);
+  padding-bottom: clamp(36px, 6vw, 64px);
+}
+
+.page-hero h1 {
+  font-size: var(--fs-h1);
+  color: #fff;
+  max-width: 18ch;
+}
+
+.page-hero__kicker {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--rust-on-dark);
+  margin-bottom: 14px;
+}
+
+.page-hero__lead {
+  margin-top: 16px;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--on-dark);
+  max-width: 54ch;
+}
+
+.page-hero__crumbs {
+  font-size: var(--fs-small);
+  margin-bottom: 22px;
+}
+
+.page-hero__crumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.page-hero__crumbs li::after {
+  content: '/';
+  margin-left: 6px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.page-hero__crumbs li:last-child::after {
+  content: '';
+}
+
+.page-hero__crumbs a {
+  color: var(--on-dark);
+  text-decoration: none;
+}
+
+.page-hero__crumbs a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.page-hero__crumbs [aria-current] {
+  color: #fff;
+}
+
+/* Phones: the text covers most of the banner, and real footage can be
+   bright (white fibre, lit factory floors) — darken it evenly so the title
+   and lead always read. */
+@media (max-width: 899px) {
+  .page-hero__shade {
+    background: linear-gradient(
+      to top,
+      rgba(11, 25, 18, 0.9) 0%,
+      rgba(11, 25, 18, 0.62) 60%,
+      rgba(11, 25, 18, 0.4) 100%
+    );
+  }
+}
+
+/* ── Full-screen variant (Manufacturing): film first, like the home hero ── */
+.page-hero--full {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.page-hero--full .page-hero__inner {
+  max-width: none;
+  padding-left: clamp(24px, 4.2vw, 80px);
+  padding-right: clamp(24px, 4.2vw, 80px);
+  padding-bottom: clamp(48px, 10vh, 110px);
+}
+
+/* Lighter shade — only the foot, where the title and line sit, plus a touch
+   at the top for the clear header. */
+.page-hero--full .page-hero__shade {
+  background:
+    linear-gradient(to top, rgba(11, 25, 18, 0.82) 0%, rgba(11, 25, 18, 0.38) 34%, transparent 60%),
+    linear-gradient(to bottom, rgba(11, 25, 18, 0.4) 0%, transparent 22%);
+}

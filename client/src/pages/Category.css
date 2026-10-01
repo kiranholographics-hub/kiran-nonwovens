@@ -1,3 +1,23 @@
-.category__hero {
-  min-height: 260px;
+.category__guide {
+  display: grid;
+  gap: 20px 72px;
+}
+
+@media (min-width: 900px) {
+  .category__guide {
+    grid-template-columns: 1fr 1.2fr;
+    align-items: start;
+  }
+}
+
+.category__guide p {
+  color: var(--ink);
+  font-size: 1.06rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.category__guide a {
+  color: var(--rust);
+  text-underline-offset: 3px;
 }

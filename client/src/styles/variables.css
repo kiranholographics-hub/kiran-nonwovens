@@ -1,17 +1,19 @@
 /*
- * Kiran Nonwovens — "Editorial Split" design tokens.
- * Palette and type taken verbatim from the approved theme demo.
+ * Kiran Nonwovens — design tokens.
+ * Palette and fonts are unchanged from the approved "Editorial Split" theme;
+ * only scale, spacing and motion were extended for the cinematic redesign.
  */
 :root {
   /* ── Palette ───────────────────────────────────────────────── */
   --forest: #132a20; /* primary / dark */
-  --forest-deep: #0b1912; /* footer, dark CTA band */
+  --forest-deep: #0b1912; /* footer, dark bands, video overlays */
   --cream: #f7f3ea; /* page background */
   --sand: #ede5d3; /* alt section background */
   --line: #d8cfb8; /* borders, rules */
   --ink: #1b2a21; /* body text */
-  --muted: #5e6b5f; /* secondary text */
-  --rust: #b4592f; /* accent — links, active states, CTA highlights */
+  --muted: #56635a; /* secondary text — AA (≥ 4.5:1) on cream and sand */
+  --rust: #a34d27; /* accent — links, active states, CTA highlights. Was #b4592f; darkened a touch so small rust text reaches WCAG AA (4.5:1) on cream and sand. */
+  --rust-on-dark: #e0916a; /* the same rust, lightened to read on forest/video */
 
   /* On-dark text */
   --on-dark: #c8d3c6;
@@ -19,23 +21,34 @@
   --rule-on-dark: rgba(255, 255, 255, 0.19);
 
   /* ── Type ──────────────────────────────────────────────────── */
-  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Fraunces Variable', Fraunces, Georgia, 'Times New Roman', serif;
   --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
 
+  --fs-hero: clamp(2.7rem, 7.4vw, 6rem);
   --fs-display: clamp(2.1rem, 6.2vw, 3.6rem);
-  --fs-h1: clamp(1.9rem, 5vw, 3rem);
-  --fs-h2: clamp(1.5rem, 3.8vw, 2.1rem);
-  --fs-h3: 1.1rem;
+  --fs-h1: clamp(2.2rem, 5.6vw, 3.9rem);
+  --fs-h2: clamp(1.7rem, 4vw, 2.7rem);
+  --fs-h3: 1.15rem;
   --fs-body: 1rem;
   --fs-small: 0.88rem;
   --fs-tiny: 0.82rem;
+  --fs-label: 0.72rem; /* nav, buttons, small tracked labels */
+  --track-label: 0.14em;
 
   /* ── Layout ────────────────────────────────────────────────── */
-  --wrap: 1180px;
+  --wrap: 1240px;
   --gutter: 24px;
-  --header-h: 66px;
+  --header-h: 76px;
   --tap: 46px; /* minimum touch target */
+  --section-y: clamp(64px, 9vw, 120px);
 
   /* ── Motion ────────────────────────────────────────────────── */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 900px) {
+  :root {
+    --gutter: 40px;
+  }
 }

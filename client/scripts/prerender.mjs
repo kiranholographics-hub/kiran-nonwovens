@@ -41,6 +41,8 @@ const STATIC_ROUTES = [
   { url: '/about', priority: '0.6' },
   { url: '/manufacturing', priority: '0.7' },
   { url: '/contact', priority: '0.6' },
+  { url: '/guides', priority: '0.7' },
+  { url: '/privacy', priority: '0.3' },
 ];
 
 async function loadCatalogue() {
@@ -51,7 +53,7 @@ async function loadCatalogue() {
 }
 
 /** Every URL the site has, derived from the catalogue — never hand-listed. */
-function allRoutes({ businessAreas, products }) {
+function allRoutes({ businessAreas, products, guides = [] }) {
   const areaRoutes = businessAreas.flatMap((a) => [
     { url: `/business-areas/${a.slug}`, priority: '0.8' },
     { url: `/products/${a.slug}`, priority: '0.8' },
@@ -60,7 +62,11 @@ function allRoutes({ businessAreas, products }) {
     url: `/products/${p.category}/${p.slug}`,
     priority: '0.9',
   }));
-  return [...STATIC_ROUTES, ...areaRoutes, ...productRoutes];
+  const guideRoutes = guides.map((g) => ({
+    url: `/guides/${g.slug}`,
+    priority: '0.7',
+  }));
+  return [...STATIC_ROUTES, ...areaRoutes, ...productRoutes, ...guideRoutes];
 }
 
 async function buildSsrBundle() {
@@ -75,8 +81,13 @@ async function buildSsrBundle() {
   });
 }
 
-function inject(template, { html, head }) {
-  let out = template.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
+function inject(template, { html, head }, route) {
+  // data-route tells main.jsx which URL this markup was rendered for, so it
+  // only hydrates matching HTML (see main.jsx).
+  let out = template.replace(
+    '<div id="root"></div>',
+    `<div id="root" data-route="${route}">${html}</div>`,
+  );
   if (head) {
     // The page supplies its own title/description, so drop the shell's
     // defaults rather than shipping two of each.
@@ -92,7 +103,11 @@ const xmlEscape = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 async function run() {
-  const catalogue = await loadCatalogue();
+  // Buyer's guides are their own data file; each gets a prerendered page.
+  const { guides } = await import(
+    pathToFileURL(path.join(root, 'src/data/guides.js')).href
+  );
+  const catalogue = { ...(await loadCatalogue()), guides };
   const routes = allRoutes(catalogue);
 
   console.log(`[prerender] building SSR bundle…`);
@@ -105,7 +120,7 @@ async function run() {
   const template = await readFile(path.join(dist, 'index.html'), 'utf8');
 
   for (const { url } of routes) {
-    const html = inject(template, render(url));
+    const html = inject(template, render(url), url);
     const outDir = url === '/' ? dist : path.join(dist, url);
     await mkdir(outDir, { recursive: true });
     await writeFile(path.join(outDir, 'index.html'), html, 'utf8');
@@ -113,7 +128,7 @@ async function run() {
   console.log(`[prerender] wrote ${routes.length} pages`);
 
   // A 404 that is still a real page, for hosts that serve one.
-  const notFound = inject(template, render('/__not-found__'));
+  const notFound = inject(template, render('/__not-found__'), '*');
   await writeFile(path.join(dist, '404.html'), notFound, 'utf8');
 
   const lastmod = new Date().toISOString().slice(0, 10);

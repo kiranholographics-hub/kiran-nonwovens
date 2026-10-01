@@ -1,34 +1,49 @@
 import Seo from '../components/Seo.jsx';
-import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import PageHero from '../components/PageHero.jsx';
 import BusinessAreaCard, {
   BusinessAreaGrid,
 } from '../components/BusinessAreaCard.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
+import { PAGE_SEO } from '../data/seo.js';
+import { VIDEOS, breadcrumbLd, collectionLd } from '../lib.js';
 
 export default function BusinessAreas() {
   const { businessAreas } = useCatalogue();
 
   return (
-    <div className="wrap">
+    <>
       <Seo
-        title="Business Areas"
-        description="The four industries Kiran Nonwovens supplies: geotextile, automotive, apparel & footwear, and industrial applications."
+        title={PAGE_SEO.businessAreas.title}
+        description={PAGE_SEO.businessAreas.description}
         path="/business-areas"
+        jsonLd={[
+          breadcrumbLd([{ to: '/', label: 'Home' }, { label: 'Business Areas' }]),
+          collectionLd({
+            name: 'Business areas',
+            description: PAGE_SEO.businessAreas.description,
+            path: '/business-areas',
+            items: businessAreas.map((a) => ({
+              name: a.name,
+              path: `/business-areas/${a.slug}`,
+            })),
+          }),
+        ]}
       />
-      <Breadcrumbs
+      <PageHero
         trail={[{ to: '/', label: 'Home' }, { label: 'Business Areas' }]}
+        title="Business Areas"
+        lead="The same four industries run through this site twice — here as the story of what we do for each, and under Products as the materials themselves."
+        video={VIDEOS.products}
       />
-      <h1 className="page-title">Business Areas</h1>
-      <p className="lead">
-        The same four industries run through this site twice — here as the story
-        of what we do for each, and under Products as the materials themselves.
-      </p>
-      <BusinessAreaGrid>
-        {businessAreas.map((area) => (
-          <BusinessAreaCard key={area.slug} area={area} />
-        ))}
-      </BusinessAreaGrid>
-      <div style={{ height: 56 }} />
-    </div>
+      <section className="block">
+        <div className="wrap">
+          <BusinessAreaGrid>
+            {businessAreas.map((area, i) => (
+              <BusinessAreaCard key={area.slug} area={area} index={i} />
+            ))}
+          </BusinessAreaGrid>
+        </div>
+      </section>
+    </>
   );
 }

@@ -1,90 +1,170 @@
+/* ── Hero ────────────────────────────────────────────────────── */
 .home__hero {
-  border-bottom: 1px solid var(--line);
-}
-
-/* The hero is full-bleed rather than inside .wrap, so unlike the shared
-   .split__text (which sits in a wrapper that already supplies the left
-   gutter) it needs padding on both sides. Scoped to beat that rule on
-   specificity rather than relying on stylesheet order. */
-.home__hero .home__hero-text {
-  padding: 44px var(--gutter) 40px;
-}
-
-/* Desktop: the text column lines up with the header logo and every .wrap
-   section below it, while the photo still bleeds to the right edge.
-   Columns: [margin] [text] [photo inside wrap] [margin]. The two margins
-   grow equally past the 1180px wrap, so the text starts exactly where the
-   logo does at any screen width. */
-@media (min-width: 900px) {
-  .home__hero .split {
-    grid-template-columns:
-      minmax(var(--gutter), 1fr)
-      minmax(0, calc((var(--wrap) - 2 * var(--gutter)) * 0.52))
-      minmax(0, calc((var(--wrap) - 2 * var(--gutter)) * 0.48))
-      minmax(var(--gutter), 1fr);
-    min-height: 500px;
-  }
-  .home__hero .home__hero-text {
-    grid-column: 2;
-    padding: 56px 48px 56px 0;
-  }
-  .home__hero .home__hero-image {
-    grid-column: 3 / 5;
-    min-height: 100%;
-  }
-}
-
-.home__num {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
-.home__hero-image {
-  min-height: 280px;
-}
-
-/* ── Looking for something else ───────────────────────────────── */
-.home__other {
-  background: var(--forest-deep);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  /* Pull up under the sticky header so the video runs behind the nav. */
+  margin-top: calc((var(--header-h) + 1px) * -1);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
   color: var(--cream);
-  padding: 50px 0;
 }
 
-.home__other-inner {
-  display: grid;
-  gap: 18px;
+.home__hero-media {
+  transform: translate3d(0, calc(var(--hero-p, 0) * 9%), 0) scale(1.06);
+  will-change: transform;
 }
 
-@media (min-width: 860px) {
-  .home__other-inner {
-    grid-template-columns: 1fr auto;
-    align-items: center;
+.home__hero-media .vbd__label {
+  right: calc(var(--gutter) + 5vw);
+}
+
+.home__hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, rgba(11, 25, 18, 0.9) 0%, rgba(11, 25, 18, 0.45) 38%, rgba(11, 25, 18, 0.1) 70%),
+    linear-gradient(to right, rgba(11, 25, 18, 0.68) 0%, rgba(11, 25, 18, 0.3) 45%, transparent 70%);
+}
+
+.home__hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: calc(var(--header-h) + 40px);
+  padding-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 8vh, 88px);
+}
+
+.home__hero-copy {
+  opacity: calc(1 - var(--hero-p, 0) * 1.5);
+  transform: translate3d(0, calc(var(--hero-p, 0) * -36px), 0);
+}
+
+.home__hero h1 {
+  font-size: var(--fs-hero);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: #fff;
+  max-width: 12ch;
+}
+
+.home__hero-lead {
+  margin-top: 22px;
+  font-size: clamp(1.02rem, 1.6vw, 1.22rem);
+  line-height: 1.65;
+  color: var(--on-dark);
+  max-width: 50ch;
+}
+
+.home__hero-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.home__scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home__scroll i {
+  display: block;
+  width: 1px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.home__scroll i::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 45%;
+  background: var(--rust-on-dark);
+  animation: home-scroll-cue 2.2s var(--ease) infinite;
+}
+
+@keyframes home-scroll-cue {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(240%);
   }
 }
 
-.home__other h2 {
-  margin-bottom: 6px;
+@media (prefers-reduced-motion: reduce) {
+  .home__hero-media,
+  .home__hero-copy {
+    transform: none;
+    opacity: 1;
+  }
+  .home__scroll i::after {
+    animation: none;
+  }
 }
 
-.home__other p {
-  color: var(--on-dark);
-  max-width: 58ch;
-  margin: 0;
+/* ── Intro ───────────────────────────────────────────────────── */
+.home__intro {
+  display: grid;
+  gap: 28px 64px;
+  align-items: start;
 }
 
-/* ── Global presence ──────────────────────────────────────────── */
+@media (min-width: 900px) {
+  .home__intro {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.home__intro h2 {
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  line-height: 1.08;
+  max-width: 16ch;
+}
+
+/* ── Business areas ──────────────────────────────────────────── */
+.home__areas {
+  padding-bottom: var(--section-y);
+}
+
+/* ── Featured ────────────────────────────────────────────────── */
+.home__featured-block {
+  padding-top: 0;
+}
+
+.home__featured {
+  margin-top: 32px;
+}
+
+/* ── Global presence ─────────────────────────────────────────── */
 .home__presence {
-  padding: 40px 0;
+  padding: 48px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
 .home__presence-row {
   display: grid;
-  gap: 22px;
+  gap: 26px;
   grid-template-columns: 1fr;
 }
 
@@ -97,13 +177,213 @@
 .home__presence b {
   display: block;
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 2.2rem;
+  font-weight: 500;
 }
 
 .home__presence small {
   color: var(--muted);
 }
 
-.home__featured {
-  margin-top: 20px;
+/* ── Closing video band ──────────────────────────────────────── */
+.home__closing {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--cream);
+  min-height: clamp(460px, 70vh, 680px);
+  display: flex;
+  align-items: center;
+}
+
+.home__closing-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to right, rgba(11, 25, 18, 0.85) 0%, rgba(11, 25, 18, 0.35) 65%, rgba(11, 25, 18, 0.2) 100%);
+}
+
+.home__closing-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.home__closing h2 {
+  font-size: clamp(2.2rem, 5.4vw, 4rem);
+  color: #fff;
+  max-width: 14ch;
+  margin-bottom: 18px;
+}
+
+.home__closing p {
+  color: var(--on-dark);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 48ch;
+}
+
+/* ── Buyer's guides teaser ───────────────────────────────────── */
+.home__guides {
+  list-style: none;
+  display: grid;
+  gap: 0;
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+@media (min-width: 900px) {
+  .home__guides {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+  }
+}
+
+.home__guides a {
+  display: block;
+  height: 100%;
+  padding: 26px 0 28px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+}
+
+.home__guides span {
+  display: block;
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--rust);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.home__guides strong {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.3;
+  transition: color 0.2s var(--ease);
+}
+
+.home__guides a:hover strong {
+  color: var(--rust);
+}
+
+/* Kicker over the dark hero film — the light rust reads on video. */
+.home__hero .home__hero-kicker {
+  color: var(--rust-on-dark);
+  margin-bottom: 18px;
+}
+
+.home__hero .cta-row {
+  margin-top: 30px;
+}
+
+/* Phones: the portrait film is busier behind the text, so darken it a little
+   more where the copy sits. */
+@media (max-width: 899px) {
+  .home__hero-shade {
+    background:
+      linear-gradient(to top, rgba(11, 25, 18, 0.92) 0%, rgba(11, 25, 18, 0.62) 55%, rgba(11, 25, 18, 0.25) 100%);
+  }
+}
+
+/* ── Plain hero (Kiran Global Exports layout) ─────────────────────────────
+   Film first: a small brand line, two buttons, a tagline bottom-left and the
+   scroll cue bottom-right. Full-width padding rather than the 1180px wrap, so
+   the copy sits near the left edge like the KGE site. These rules come last
+   so they override the earlier hero styles above. */
+.home__hero-inner {
+  max-width: none;
+  padding-left: clamp(24px, 4.2vw, 80px);
+  padding-right: clamp(24px, 4.2vw, 80px);
+  padding-bottom: clamp(24px, 4vh, 40px);
+  gap: clamp(40px, 8vh, 80px);
+}
+
+.home__hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--rust-on-dark);
+}
+
+.home__hero-brand::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  flex: none;
+}
+
+.home__hero .home__hero-ctas {
+  margin-top: 30px;
+  gap: 20px;
+}
+
+@media (min-width: 700px) {
+  .home__hero-ctas .btn {
+    padding: 18px 32px;
+    letter-spacing: 0.2em;
+  }
+}
+
+.home__hero-foot {
+  align-items: flex-end;
+}
+
+.home__hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.home__hero-tag::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--rust-on-dark);
+  flex: none;
+}
+
+/* Scroll cue: a thin line with the word under it, bottom-right. */
+.home__scroll {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 0.3em;
+}
+
+.home__scroll i {
+  height: 56px;
+}
+
+/* Less text over the film, so a lighter shade: dark only at the foot (for the
+   buttons and tagline) and a touch at the top (for the clear header). */
+.home__hero-shade {
+  background:
+    linear-gradient(to top, rgba(11, 25, 18, 0.78) 0%, rgba(11, 25, 18, 0.3) 32%, transparent 58%),
+    linear-gradient(to bottom, rgba(11, 25, 18, 0.4) 0%, transparent 22%);
+}
+
+@media (max-width: 899px) {
+  .home__hero-shade {
+    background:
+      linear-gradient(to top, rgba(11, 25, 18, 0.85) 0%, rgba(11, 25, 18, 0.35) 40%, transparent 65%),
+      linear-gradient(to bottom, rgba(11, 25, 18, 0.45) 0%, transparent 24%);
+  }
+  .home__hero-tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+  }
 }

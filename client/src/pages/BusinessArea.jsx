@@ -1,13 +1,13 @@
 import { Link, useParams } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
-import Media from '../components/Media.jsx';
-import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import PageHero from '../components/PageHero.jsx';
 import TabPanel, { RuledList } from '../components/TabPanel.jsx';
 import { ProductList } from '../components/ProductCard.jsx';
 import PlaceholderNote from '../components/PlaceholderNote.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
-import { isPlaceholder } from '../lib.js';
+import { areaVideo, breadcrumbLd, isPlaceholder } from '../lib.js';
+import { PLANT } from '../data/catalog.js';
 import NotFound from './NotFound.jsx';
 import './BusinessArea.css';
 
@@ -19,27 +19,72 @@ export default function BusinessArea() {
   if (!area) return <NotFound />;
 
   const products = productsIn(area.slug);
+  const trail = [
+    { to: '/', label: 'Home' },
+    { to: '/business-areas', label: 'Business Areas' },
+    { label: area.name },
+  ];
+
+  // Fibres actually offered across this area's products, in plant order.
+  const areaFibres = PLANT.fibres.filter((f) =>
+    products.some((p) => p.specs?.fibre?.includes(f)),
+  );
 
   const tabs = [
     {
       id: 'overview',
       label: 'Overview',
       content: (
-        <div className="narrow ba-page__overview">
-          {/* Stored as one string (paragraphs split by a blank line) so the
+        <div className="ba-page__overview-grid">
+          <div className="ba-page__overview">
+            {/* Stored as one string (paragraphs split by a blank line) so the
               Mongo schema can stay a plain String. */}
-          {String(area.overview || '')
-            .split(/\n\s*\n/)
-            .filter(Boolean)
-            .map((para) => (
-              <p key={para.slice(0, 32)}>{para}</p>
-            ))}
-          {isPlaceholder(area.overview) ? (
-            <PlaceholderNote>
-              This overview is a placeholder — the final copy for {area.name} is
-              still to come from the company.
-            </PlaceholderNote>
-          ) : null}
+            {String(area.overview || '')
+              .split(/\n\s*\n/)
+              .filter(Boolean)
+              .map((para) => (
+                <p key={para.slice(0, 32)}>{para}</p>
+              ))}
+            {isPlaceholder(area.overview) ? (
+              <PlaceholderNote>
+                This overview is a placeholder — the final copy for {area.name}{' '}
+                is still to come from the company.
+              </PlaceholderNote>
+            ) : null}
+          </div>
+          <aside
+            className="ba-page__facts"
+            aria-label={`${area.name} at a glance`}
+          >
+            <p className="eyebrow">At a glance</p>
+            <dl>
+              <div>
+                <dt>Products</dt>
+                <dd>{products.length}</dd>
+              </div>
+              <div>
+                <dt>GSM range</dt>
+                <dd>{PLANT.gsmLabel}</dd>
+              </div>
+              <div>
+                <dt>Roll width</dt>
+                <dd>{PLANT.widthLabel}</dd>
+              </div>
+              <div>
+                <dt>Process</dt>
+                <dd>{PLANT.processLabel}</dd>
+              </div>
+              {areaFibres.length ? (
+                <div>
+                  <dt>Fibres</dt>
+                  <dd>{areaFibres.join(', ')}</dd>
+                </div>
+              ) : null}
+            </dl>
+            <Link to="/contact#enquiry" className="btn btn--fill">
+              Request a quote
+            </Link>
+          </aside>
         </div>
       ),
     },
@@ -65,13 +110,14 @@ export default function BusinessArea() {
       ) : (
         <div className="narrow">
           <p>
-            Brochures, datasheets and test reports for {area.name} will be
-            published here.
+            Brochures, datasheets and test reports for our {area.name} range are
+            shared on request.
           </p>
-          <PlaceholderNote>
-            Downloads are pending — certifications and test reports have not
-            been supplied yet.
-          </PlaceholderNote>
+          <div className="cta-row">
+            <Link to="/contact#enquiry" className="btn">
+              Request documents
+            </Link>
+          </div>
         </div>
       ),
     });
@@ -83,38 +129,23 @@ export default function BusinessArea() {
         title={area.seo?.title || `${area.name} — Business Area`}
         description={area.seo?.metaDescription || area.blurb}
         path={`/business-areas/${area.slug}`}
+        jsonLd={breadcrumbLd(trail)}
       />
 
-      <div className="wrap">
-        <Breadcrumbs
-          trail={[
-            { to: '/', label: 'Home' },
-            { to: '/business-areas', label: 'Business Areas' },
-            { label: area.name },
-          ]}
-        />
-        <div className="split">
-          <div className="split__text">
-            <p className="kicker">Business Area</p>
-            <h1 className="page-title">{area.name}</h1>
-            <p className="lead">{area.blurb}</p>
-            <div className="cta-row">
-              <Link to={`/products/${area.slug}`} className="btn btn--fill">
-                View products in {area.name}
-              </Link>
-              <Link to="/contact#enquiry" className="btn">
-                Get quote
-              </Link>
-            </div>
-          </div>
-          <Media
-            className="ba-page__hero"
-            src={area.images?.[0]}
-            variant={1}
-            label={`${area.name} photography — pending`}
-          />
-        </div>
-      </div>
+      <PageHero
+        trail={trail}
+        kicker="Business Area"
+        title={area.name}
+        lead={area.blurb}
+        video={areaVideo(area.slug, area.name)}
+      >
+        <Link to={`/products/${area.slug}`} className="btn btn--light">
+          View products in {area.name}
+        </Link>
+        <Link to="/contact#enquiry" className="btn btn--ghost-light">
+          Get quote
+        </Link>
+      </PageHero>
 
       <section className="block">
         <div className="wrap">

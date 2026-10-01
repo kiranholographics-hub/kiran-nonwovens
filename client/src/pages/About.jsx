@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
 import Media from '../components/Media.jsx';
-import Breadcrumbs from '../components/Breadcrumbs.jsx';
-import PlaceholderNote from '../components/PlaceholderNote.jsx';
+import PageHero from '../components/PageHero.jsx';
+import Reveal from '../components/Reveal.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { PLANT } from '../data/catalog.js';
+import { PAGE_SEO } from '../data/seo.js';
+import { VIDEOS, breadcrumbLd, organizationLd } from '../lib.js';
 import './About.css';
 
 /**
@@ -20,16 +22,21 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About Us"
-        description="Kiran Nonwovens manufactures needle punched and thermal bonded nonwoven felt and geotextiles, made to specification for civil works, automotive, apparel, footwear, medical and industrial use."
+        title={PAGE_SEO.about.title}
+        description={PAGE_SEO.about.description}
         path="/about"
+        jsonLd={[
+          breadcrumbLd([{ to: '/', label: 'Home' }, { label: 'About Us' }]),
+          organizationLd(),
+        ]}
       />
 
-      <div className="wrap">
-        <Breadcrumbs trail={[{ to: '/', label: 'Home' }, { label: 'About Us' }]} />
-        <h1 className="page-title">About Us</h1>
-        <p className="lead">Nonwoven solutions for a better tomorrow.</p>
-      </div>
+      <PageHero
+        trail={[{ to: '/', label: 'Home' }, { label: 'About Us' }]}
+        title="About Us"
+        lead="Nonwoven solutions for a better tomorrow."
+        video={VIDEOS.about}
+      />
 
       <section className="block about__block">
         <div className="wrap">
@@ -62,11 +69,9 @@ export default function About() {
                 ))}
               </ul>
 
-              <h3 id="history">History</h3>
-              <p>
-                [Founding story and timeline — pending from Sir. Year founded,
-                how the plant grew, when export supply began.]
-              </p>
+              {/* History goes here once the company supplies the founding
+                  year and timeline — add an <h3 id="history"> section and
+                  restore the History link in Header.jsx ABOUT_LINKS. */}
 
               <h3 id="technology">Technology</h3>
               <p>
@@ -92,10 +97,7 @@ export default function About() {
                 requested before bulk orders so the material can be tried in
                 your own process.
               </p>
-              <PlaceholderNote>
-                Certifications and test reports are pending from the company
-                and will be listed here once supplied.
-              </PlaceholderNote>
+              {/* Certifications list goes here once supplied. */}
 
               <div className="cta-row">
                 <Link to="/contact#enquiry" className="btn btn--fill">
@@ -107,12 +109,15 @@ export default function About() {
               </div>
             </div>
 
-            <Media
-              className="about__image"
-              src="/images/plant/overview.jpg"
-              variant={2}
-              label="Plant photography — pending"
-            />
+            <Reveal className="about__aside" delay={90}>
+              <Media
+                className="about__image"
+                src="/images/plant/overview.jpg"
+                alt="Kiran Nonwovens plant"
+                variant={2}
+                label="Plant photography — pending"
+              />
+            </Reveal>
           </div>
         </div>
       </section>

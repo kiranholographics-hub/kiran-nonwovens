@@ -1,13 +1,17 @@
 import { Link } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
-import Media from '../components/Media.jsx';
-import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import PageHero from '../components/PageHero.jsx';
 import SpecTable from '../components/SpecTable.jsx';
 import FeatureGrid from '../components/FeatureGrid.jsx';
 import { RuledList } from '../components/TabPanel.jsx';
 import PlaceholderNote from '../components/PlaceholderNote.jsx';
+import Reveal from '../components/Reveal.jsx';
 import { PLANT } from '../data/catalog.js';
+import Faq from '../components/Faq.jsx';
+import { MANUFACTURING_FAQ, PAGE_SEO, plain } from '../data/seo.js';
+import { VIDEOS, breadcrumbLd, faqLd } from '../lib.js';
+import './Manufacturing.css';
 
 const CAPABILITY = {
   process: PLANT.processLabel,
@@ -62,32 +66,22 @@ export default function Manufacturing() {
   return (
     <>
       <Seo
-        title="Manufacturing"
-        description="Kiran Nonwovens manufacturing capability: needle punch and thermal bonding, roll widths 5.0–5.2 m, 100–1200 GSM, in polyester, PP (virgin and recycled), viscose and custom blends."
+        title={PAGE_SEO.manufacturing.title}
+        description={PAGE_SEO.manufacturing.description}
         path="/manufacturing"
+        jsonLd={[
+          breadcrumbLd([{ to: '/', label: 'Home' }, { label: 'Manufacturing' }]),
+          faqLd(MANUFACTURING_FAQ.map((f) => ({ q: f.q, a: plain(f.a) }))),
+        ]}
       />
 
-      <div className="wrap">
-        <Breadcrumbs
-          trail={[{ to: '/', label: 'Home' }, { label: 'Manufacturing' }]}
-        />
-        <h1 className="page-title">Manufacturing</h1>
-        <p className="lead">
-          What the plant can produce, in plain numbers — the starting point for
-          any specification conversation.
-        </p>
-      </div>
-
-      <section className="block">
-        <div className="wrap">
-          <Media
-            src="/images/plant/line.jpg"
-            variant={1}
-            minHeight={320}
-            label="Production line photography / video — pending"
-          />
-        </div>
-      </section>
+      <PageHero
+        trail={[{ to: '/', label: 'Home' }, { label: 'Manufacturing' }]}
+        title="Manufacturing"
+        lead="What the plant can produce, in plain numbers — the starting point for any specification conversation."
+        video={VIDEOS.manufacturing}
+        full
+      />
 
       <section className="block block--sand">
         <div className="wrap">
@@ -108,11 +102,13 @@ export default function Manufacturing() {
         </div>
       </section>
 
-      <section className="block">
+      <section className="mfg__processes">
         <div className="wrap">
           <p className="eyebrow">How it is made</p>
           <h2>Processes</h2>
-          <FeatureGrid items={PROCESSES} columns={3} />
+          <Reveal>
+            <FeatureGrid items={PROCESSES} columns={3} />
+          </Reveal>
         </div>
       </section>
 
@@ -148,6 +144,16 @@ export default function Manufacturing() {
               See the product range
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="block block--sand">
+        <div className="wrap">
+          <Faq
+            items={MANUFACTURING_FAQ}
+            title="Manufacturing: common questions"
+            id="mfg-faq"
+          />
         </div>
       </section>
     </>

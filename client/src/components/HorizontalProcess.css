@@ -1,0 +1,154 @@
+.hp {
+  background: var(--forest-deep);
+  color: var(--cream);
+  position: relative;
+}
+
+.hp__stage {
+  padding: var(--section-y) 0;
+}
+
+.hp--pinned .hp__stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  padding: calc(var(--header-h) + 24px) 0 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.hp__head,
+.hp__rail {
+  width: 100%;
+}
+
+.hp__head h2 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  color: #fff;
+  max-width: 14ch;
+}
+
+.hp__rail {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 36px;
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hp--pinned .hp__rail {
+  margin-top: 0;
+}
+
+.hp__rail-line {
+  position: relative;
+  flex: 1;
+  height: 1px;
+  background: var(--rule-on-dark);
+}
+
+.hp__rail-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--rust-on-dark);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* ── Track ───────────────────────────────────────────────────── */
+/* Default (phones, reduced motion): a snap-aligned row you swipe. */
+.hp__track {
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 28px var(--gutter) 8px;
+  margin-top: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+
+.hp__step {
+  flex: 0 0 min(82vw, 340px);
+  scroll-snap-align: start;
+  position: relative;
+  padding: 34px 28px 30px;
+  border-left: 1px solid var(--rule-on-dark);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hp__step:last-child {
+  border-right: 1px solid var(--rule-on-dark);
+}
+
+/* Watermark step number. Generated content, so it is decoration only —
+   screen readers get the list's own numbering. */
+.hp__step::after {
+  content: attr(data-num);
+  font-family: var(--font-serif);
+  font-size: 4.4rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.09);
+  position: absolute;
+  right: 22px;
+  bottom: 14px;
+  pointer-events: none;
+}
+
+.hp__step h3 {
+  font-size: 1.45rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.hp__step p {
+  color: var(--on-dark);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  max-width: 30ch;
+}
+
+.hp__tag {
+  margin-top: auto;
+  padding-top: 22px;
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--rust-on-dark);
+}
+
+/* Pinned desktop mode: the track moves with scroll, not with a scrollbar. */
+.hp--pinned .hp__track {
+  overflow: visible;
+  scroll-snap-type: none;
+  padding: 0;
+  margin: 0;
+  /* Start aligned with the page gutter, and leave room after the last card. */
+  padding-left: max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter)));
+  padding-right: max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter)));
+  will-change: transform;
+  width: max-content;
+  max-width: none;
+}
+
+.hp--pinned .hp__step {
+  flex-basis: 380px;
+  min-height: 340px;
+}
+
+/* JS-free, fully visible fallback on wide screens (pre-hydration). */
+@media (min-width: 900px) and (prefers-reduced-motion: reduce) {
+  .hp__step {
+    flex-basis: 340px;
+  }
+}

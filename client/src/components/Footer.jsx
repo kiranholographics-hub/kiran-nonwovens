@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useCatalogue } from '../CatalogueContext.jsx';
-import { CONTACT, SITE } from '../lib.js';
+import { CONTACT, SITE, isPlaceholder } from '../lib.js';
 import './Footer.css';
 
 export default function Footer() {
@@ -19,7 +19,7 @@ export default function Footer() {
               className="footer__mark"
               loading="lazy"
             />
-            <h2>{SITE.name}</h2>
+            <p className="footer__brand">{SITE.name}</p>
             <p className="footer__intro">
               Nonwoven solutions for a better tomorrow. Needle punched and
               thermal bonded nonwovens — 100–1200 GSM, roll widths to 5.2 m,
@@ -52,15 +52,19 @@ export default function Footer() {
             <h2>Company</h2>
             <Link to="/about">About Us</Link>
             <Link to="/manufacturing">Manufacturing</Link>
+            <Link to="/guides">Buyer&apos;s guides</Link>
             <Link to="/contact">Contact</Link>
           </div>
 
           <div>
             <h2>Reach us</h2>
             <Link to="/contact#enquiry">Send an enquiry</Link>
-            {/* PLACEHOLDERS — contact details pending from Sir */}
-            <span className="footer__detail">{CONTACT.phone}</span>
-            <span className="footer__detail">{CONTACT.email}</span>
+            <a className="footer__detail" href={CONTACT.phoneHref}>
+              {CONTACT.phone}
+            </a>
+            <a className="footer__detail" href={CONTACT.emailHref}>
+              {CONTACT.email}
+            </a>
           </div>
         </div>
 
@@ -68,7 +72,12 @@ export default function Footer() {
           <span>
             © {new Date().getFullYear()} {SITE.name}
           </span>
-          <span>{CONTACT.address}</span>
+          {isPlaceholder(CONTACT.address) ? null : (
+            <span>{CONTACT.address}</span>
+          )}
+          <Link to="/privacy" className="footer__legal">
+            Privacy policy
+          </Link>
         </div>
       </div>
     </footer>

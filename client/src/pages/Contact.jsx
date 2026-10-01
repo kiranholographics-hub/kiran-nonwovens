@@ -1,10 +1,18 @@
 import Seo from '../components/Seo.jsx';
 import Media from '../components/Media.jsx';
-import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import PageHero from '../components/PageHero.jsx';
+import Faq from '../components/Faq.jsx';
 import EnquiryForm from '../components/EnquiryForm.jsx';
-import PlaceholderNote from '../components/PlaceholderNote.jsx';
 import { RuledList } from '../components/TabPanel.jsx';
-import { CONTACT } from '../lib.js';
+import { CONTACT_FAQ, PAGE_SEO, plain } from '../data/seo.js';
+import {
+  CONTACT,
+  VIDEOS,
+  breadcrumbLd,
+  faqLd,
+  isPlaceholder,
+  organizationLd,
+} from '../lib.js';
 import './Contact.css';
 
 /** What lets the export team quote on the first reply. */
@@ -19,29 +27,35 @@ const CHECKLIST = [
 
 const DETAILS = [
   ['Address', CONTACT.address],
-  ['Phone', CONTACT.phone],
+  ['Phone', CONTACT.phone, CONTACT.phoneHref],
   ['WhatsApp', CONTACT.whatsapp],
-  ['Email', CONTACT.email],
+  ['Email', CONTACT.email, CONTACT.emailHref],
   ['Hours', CONTACT.hours],
-];
+  // Rows still holding a [bracketed placeholder] in lib.js stay hidden, so
+  // buyers never see "pending" text. Fill the value in lib.js and the row
+  // appears on its own.
+].filter(([, value]) => value && !isPlaceholder(value));
 
 export default function Contact() {
   return (
     <>
       <Seo
-        title="Contact & Enquiry"
-        description="Send Kiran Nonwovens a specification-based enquiry — fibre, GSM, width, thickness, colour and quantity — and our export team will come back with a quote."
+        title={PAGE_SEO.contact.title}
+        description={PAGE_SEO.contact.description}
         path="/contact"
+        jsonLd={[
+          breadcrumbLd([{ to: '/', label: 'Home' }, { label: 'Contact' }]),
+          organizationLd(),
+          faqLd(CONTACT_FAQ.map((f) => ({ q: f.q, a: plain(f.a) }))),
+        ]}
       />
 
-      <div className="wrap">
-        <Breadcrumbs trail={[{ to: '/', label: 'Home' }, { label: 'Contact' }]} />
-        <h1 className="page-title">Contact &amp; enquiry</h1>
-        <p className="lead">
-          Tell us the material you need — fibre, GSM, width and quantity — and
-          our export team will come back with specifications and pricing.
-        </p>
-      </div>
+      <PageHero
+        trail={[{ to: '/', label: 'Home' }, { label: 'Contact' }]}
+        title="Contact & enquiry"
+        lead="Tell us the material you need — fibre, GSM, width and quantity — and our export team will come back with specifications and pricing."
+        video={VIDEOS.contact}
+      />
 
       <section className="block contact__block" id="enquiry">
         <div className="wrap contact__layout">
@@ -50,16 +64,13 @@ export default function Contact() {
           <div>
             <h2>Reach us</h2>
             <dl className="contact__details">
-              {DETAILS.map(([label, value]) => (
+              {DETAILS.map(([label, value, href]) => (
                 <div key={label}>
                   <dt>{label}</dt>
-                  <dd>{value}</dd>
+                  <dd>{href ? <a href={href}>{value}</a> : value}</dd>
                 </div>
               ))}
             </dl>
-            <PlaceholderNote>
-              Contact details are placeholders until the company confirms them.
-            </PlaceholderNote>
             <div className="contact__checklist">
               <h2>For the fastest quote</h2>
               <p>Tell us as much of this as you can:</p>
@@ -79,6 +90,12 @@ export default function Contact() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="block block--sand">
+        <div className="wrap">
+          <Faq items={CONTACT_FAQ} title="Before you enquire" id="contact-faq" />
         </div>
       </section>
     </>

@@ -5,3 +5,58 @@
 .ba-page__overview p + p {
   margin-top: 14px;
 }
+
+.ba-page__overview-grid {
+  display: grid;
+  gap: 32px;
+}
+
+.ba-page__overview-grid > * {
+  min-width: 0;
+}
+
+@media (min-width: 960px) {
+  .ba-page__overview-grid {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.ba-page__overview {
+  max-width: 68ch;
+}
+
+.ba-page__facts {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  padding: 22px 22px 24px;
+}
+
+@media (min-width: 960px) {
+  .ba-page__facts {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+  }
+}
+
+.ba-page__facts dl {
+  margin: 6px 0 18px;
+  border-top: 1px solid var(--line);
+}
+
+.ba-page__facts dl > div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.93rem;
+}
+
+.ba-page__facts dt {
+  color: var(--muted);
+}
+
+.ba-page__facts dd {
+  margin: 0;
+}

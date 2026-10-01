@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { PLANT } from '../data/catalog.js';
 import { postEnquiry } from '../api/client.js';
+import { CONTACT } from '../lib.js';
 import './EnquiryForm.css';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -204,7 +205,9 @@ export default function EnquiryForm({
 
       {state === 'error' && serverError ? (
         <p className="enquiry__status" role="alert">
-          {serverError}
+          {serverError} You can also reach us directly at{' '}
+          <a href={CONTACT.emailHref}>{CONTACT.email}</a> or{' '}
+          <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>.
         </p>
       ) : null}
     </form>

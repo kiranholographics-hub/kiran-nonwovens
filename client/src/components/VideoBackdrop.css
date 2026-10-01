@@ -1,0 +1,76 @@
+.vbd {
+  position: absolute;
+  inset: 0;
+  /* Below the section's shade (z-index -1). Every section that holds a
+     backdrop sets isolation: isolate, so this never drops behind the page.
+     Without it the film painted OVER the shade and washed out the text. */
+  z-index: -2;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 20% 10%, #20402f 0%, transparent 60%),
+    linear-gradient(160deg, var(--forest) 0%, var(--forest-deep) 100%);
+}
+
+.vbd__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder: the woven texture, drifting slowly so the slot still feels alive. */
+.vbd__texture {
+  position: absolute;
+  inset: -6%;
+  width: 112%;
+  height: 112%;
+  opacity: 0.85;
+  animation: vbd-drift 28s ease-in-out infinite alternate;
+}
+
+@keyframes vbd-drift {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1.02);
+  }
+  to {
+    transform: translate3d(2%, 1.5%, 0) scale(1.08);
+  }
+}
+
+.vbd__label {
+  position: absolute;
+  right: var(--gutter);
+  top: calc(var(--header-h) + 14px);
+  font-size: var(--fs-tiny);
+  background: rgba(0, 0, 0, 0.32);
+  color: #eef3ed;
+  padding: 5px 12px;
+  border-radius: 20px;
+  max-width: calc(100% - 2 * var(--gutter));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vbd__texture {
+    animation: none;
+  }
+}
+
+/* Placeholder caption: banners now run up under the header, so the caption
+   keeps the default top offset (just below the header). */
+
+@media (max-width: 700px) {
+  .vbd__label {
+    right: var(--gutter) !important;
+    left: var(--gutter);
+    text-align: center;
+  }
+}
+
+/* Placeholder captions are only a build-time aid; on phones they collide with
+   the breadcrumb, so inner-page banners drop them there. */
+@media (max-width: 700px) {
+  .page-hero .vbd__label {
+    display: none;
+  }
+}

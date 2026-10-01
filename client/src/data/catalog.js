@@ -177,7 +177,7 @@ export const businessAreas = [
     productsSeo: {
       title: 'Industrial Products',
       metaDescription:
-        'Seven industrial nonwovens: orthopaedic cast padding, carpet backing, packaging protection, luggage support, flooring underlay, coloured felt and custom development.',
+        'Seven industrial nonwovens: orthopaedic cast padding, carpet backing, packaging felt, luggage support, flooring underlay, coloured felt and custom development.',
     },
     seo: {
       title: 'Industrial Nonwoven Felt — Kiran Nonwovens',
@@ -256,7 +256,7 @@ export const products = [
     seo: {
       title: 'PP Geotextile Fabric for Civil Works | Kiran Nonwovens',
       metaDescription:
-        'Needle punched PP geotextile for roads, embankments, subgrades and drainage — separation, filtration and reinforcement in one layer. Customised GSM, width and roll length.',
+        'Needle punched PP geotextile for roads, embankments and subgrades: separation, filtration and reinforcement. Custom GSM, width and roll length.',
     },
   }),
   product({
@@ -291,7 +291,7 @@ export const products = [
       'Erosion-control projects',
     ],
     seo: {
-      title: 'Geotextile Fabric for Drainage and Soil Erosion Control | Kiran Nonwovens',
+      title: 'Drainage & Erosion Control Geotextile | Kiran Nonwovens',
       metaDescription:
         'Permeable needle punched geotextile for French drains, perforated-pipe wrapping, slope protection and erosion control. Fast water flow with soil retention.',
     },
@@ -327,7 +327,7 @@ export const products = [
     seo: {
       title: 'Needle-Punched Felt for Filter Geo Bags | Kiran Nonwovens',
       metaDescription:
-        'Needle punched filter felt for dust-collector bags and baghouse systems in cement, mineral, woodworking and food-processing plants. Made to your temperature and dust type.',
+        'Needle punched filter felt for dust-collector bags and baghouse systems in cement, mineral, wood and food plants. Made to your temperature and dust type.',
     },
   }),
   product({
@@ -364,7 +364,7 @@ export const products = [
     seo: {
       title: 'Pipeline and Cable Protection Geotextile | Kiran Nonwovens',
       metaDescription:
-        'Needle punched geotextile protecting buried pipelines, sewer lines and telecom cables from puncture, abrasion and backfill damage. PP or polyester, customised GSM.',
+        'Needle punched geotextile protecting buried pipelines, sewers and telecom cables from puncture, abrasion and backfill damage. PP or polyester, custom GSM.',
     },
   }),
 
@@ -480,7 +480,7 @@ export const products = [
     seo: {
       title: 'NVH and Sound Insulation Nonwoven Fabric | Kiran Nonwovens',
       metaDescription:
-        'Needle punched NVH fabric controlling noise, vibration and harshness in automotive, industrial and appliance builds. Tuned for sound absorption, density and weight.',
+        'Needle punched NVH fabric that controls noise, vibration and harshness in automotive, industrial and appliance builds. Tuned for absorption and weight.',
     },
   }),
 
@@ -806,9 +806,9 @@ export const products = [
       'Other specialised applications',
     ],
     seo: {
-      title: 'Customized Nonwoven Fabric for Specialized Applications | Kiran Nonwovens',
+      title: 'Custom Nonwoven Fabric Manufacturer | Kiran Nonwovens',
       metaDescription:
-        'Custom needle punched nonwovens built to your GSM, thickness, density, fibre blend, colour and finish — for cushioning, filtration, insulation, support or drainage.',
+        'Custom needle punched nonwovens built to your GSM, thickness, density, fibre blend, colour and finish, for cushioning, filtration, insulation or drainage.',
     },
   }),
 ];

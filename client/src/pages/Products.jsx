@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
-import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import PageHero from '../components/PageHero.jsx';
+import Reveal from '../components/Reveal.jsx';
 import ProductCard, { ProductGrid } from '../components/ProductCard.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
+import { PAGE_SEO } from '../data/seo.js';
+import { VIDEOS, breadcrumbLd, collectionLd } from '../lib.js';
 import './Products.css';
 
 export default function Products() {
@@ -12,18 +15,31 @@ export default function Products() {
   return (
     <>
       <Seo
-        title="Products"
-        description="The full Kiran Nonwovens range — geotextiles, automotive felt, apparel and footwear nonwovens, and industrial felt. Needle punched and thermal bonded, 100–1200 GSM."
+        title={PAGE_SEO.products.title}
+        description={PAGE_SEO.products.description}
         path="/products"
+        jsonLd={[
+          breadcrumbLd([{ to: '/', label: 'Home' }, { label: 'Products' }]),
+          collectionLd({
+            name: 'Kiran Nonwovens products',
+            description: PAGE_SEO.products.description,
+            path: '/products',
+            items: businessAreas.flatMap((a) =>
+              productsIn(a.slug).map((p) => ({
+                name: p.name,
+                path: `/products/${p.category}/${p.slug}`,
+              }))
+            ),
+          }),
+        ]}
       />
 
-      <div className="wrap">
-        <Breadcrumbs trail={[{ to: '/', label: 'Home' }, { label: 'Products' }]} />
-        <h1 className="page-title">Products</h1>
-        <p className="lead">
-          Every material we make, grouped by the industry it was built for.
-        </p>
-      </div>
+      <PageHero
+        trail={[{ to: '/', label: 'Home' }, { label: 'Products' }]}
+        title="Products"
+        lead="Every material we make, grouped by the industry it was built for."
+        video={VIDEOS.products}
+      />
 
       {businessAreas.map((area, i) => {
         const inArea = productsIn(area.slug);
@@ -43,11 +59,9 @@ export default function Products() {
               <div className="products__grid">
                 <ProductGrid>
                   {inArea.map((product, n) => (
-                    <ProductCard
-                      key={product.slug}
-                      product={product}
-                      variant={(n % 2) + 1}
-                    />
+                    <Reveal key={product.slug} delay={(n % 3) * 90}>
+                      <ProductCard product={product} variant={(n % 2) + 1} />
+                    </Reveal>
                   ))}
                 </ProductGrid>
               </div>

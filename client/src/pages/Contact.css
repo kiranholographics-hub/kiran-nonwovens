@@ -1,10 +1,10 @@
 .contact__block {
-  padding-top: 20px;
+  padding-top: calc(var(--section-y) * 0.7);
 }
 
 .contact__layout {
   display: grid;
-  gap: 32px;
+  gap: 48px;
 }
 
 .contact__layout > * {
@@ -32,8 +32,10 @@
 }
 
 .contact__details dt {
-  color: var(--muted);
-  font-size: var(--fs-small);
+  color: var(--rust);
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
   font-weight: 600;
 }
 

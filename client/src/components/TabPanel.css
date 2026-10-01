@@ -23,6 +23,15 @@
   border-bottom-color: var(--rust);
 }
 
+/* Small phones: tighten the tabs so all three (Specifications /
+   Applications / Downloads) fit without a hidden sideways scroll. */
+@media (max-width: 480px) {
+  .tabs__tab {
+    padding: 12px 11px;
+    font-size: 0.9rem;
+  }
+}
+
 .tabs__panel {
   padding: 26px 0;
 }

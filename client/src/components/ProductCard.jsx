@@ -14,9 +14,10 @@ export default function ProductCard({ product, areaName, variant = 1 }) {
     >
       <Media
         src={product.images?.[0]}
+        alt={product.name}
         tone="light"
         variant={variant}
-        ratio="5 / 4"
+        ratio="4 / 5"
         label={`${product.name} photo`}
       />
       <div className="product-card__body">
