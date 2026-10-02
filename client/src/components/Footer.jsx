@@ -57,6 +57,7 @@ export default function Footer() {
             <h2>Company</h2>
             <Link to="/about">About Us</Link>
             <Link to="/manufacturing">Manufacturing</Link>
+            <Link to="/exports">Exports</Link>
             <Link to="/guides">Buyer’s guides</Link>
             <Link to="/contact">Contact</Link>
           </div>

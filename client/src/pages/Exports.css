@@ -1,0 +1,80 @@
+.exports__lead {
+  margin-top: 8px;
+  max-width: 62ch;
+}
+
+.exports__intro {
+  max-width: 72ch;
+  display: grid;
+  gap: 16px;
+}
+
+.exports__regions {
+  display: grid;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+@media (min-width: 900px) {
+  .exports__regions {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 56px;
+  }
+}
+
+.exports__region h3 {
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 8px;
+}
+
+.exports__region ul,
+.exports__areas {
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.exports__region li,
+.exports__areas li {
+  border-bottom: 1px solid var(--line);
+}
+
+.exports__region a,
+.exports__areas a {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 0;
+  min-height: 44px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.exports__region a span,
+.exports__areas a span {
+  font-size: var(--fs-small, 0.9rem);
+  opacity: 0.75;
+}
+
+.exports__areas {
+  margin-top: 24px;
+}
+
+@media (min-width: 800px) {
+  .exports__areas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 48px;
+  }
+}
+
+.exports__cta .cta-row {
+  margin-top: 20px;
+}
+
+.exports__more {
+  margin-top: 28px;
+  font-size: var(--fs-small, 0.9rem);
+}

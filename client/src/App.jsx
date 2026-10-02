@@ -16,6 +16,8 @@ import Product from './pages/Product.jsx';
 import About from './pages/About.jsx';
 import Manufacturing from './pages/Manufacturing.jsx';
 import Contact from './pages/Contact.jsx';
+import Exports from './pages/Exports.jsx';
+import ExportMarket from './pages/ExportMarket.jsx';
 import Guides from './pages/Guides.jsx';
 import Guide from './pages/Guide.jsx';
 import Privacy from './pages/Privacy.jsx';
@@ -51,6 +53,8 @@ export default function App() {
           <Route path="/products/:category/:slug" element={<Product />} />
           <Route path="/about" element={<About />} />
           <Route path="/manufacturing" element={<Manufacturing />} />
+          <Route path="/exports" element={<Exports />} />
+          <Route path="/exports/:slug" element={<ExportMarket />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/:slug" element={<Guide />} />
           <Route path="/privacy" element={<Privacy />} />
