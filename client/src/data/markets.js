@@ -335,7 +335,7 @@ export const STATIC_MARKETS = [
 ];
 
 /* ── Markets managed in the /hq panel ─────────────────────────────────────
- * The 26 markets above are always part of the site. The panel can pause or
+ * The 27 markets above are always part of the site. The panel can pause or
  * draft one (it then disappears at the next build), change an active one's
  * region, ports or note, and add markets of its own, which get plain, honest
  * defaults. Deleting a built-in market in the panel does not remove it; pause
@@ -371,7 +371,7 @@ const hidden = new Set(
   )
 );
 
-/** The 26 built-in markets always stay, unless the panel has paused or drafted
+/** The 27 built-in markets always stay, unless the panel has paused or drafted
  *  one. A market the panel has active replaces the built-in entry's ports,
  *  region and note; a market that is only in the panel is added. */
 export const markets = [
@@ -396,7 +396,7 @@ export const marketSeo = (m) => ({
 export const EXPORT_SEO = {
   title: 'Exports: Nonwoven Felt from India',
   description:
-    'Exports of needle punched and thermal bonded nonwoven felt and geotextile from India to 26 markets. Specification, sampling, production, packing and shipping.',
+    'Exports of needle punched and thermal bonded nonwoven felt and geotextile from India to 27 markets. Specification, sampling, production, packing and shipping.',
 };
 
 /** The export process, shown on the hub and on every market page. */

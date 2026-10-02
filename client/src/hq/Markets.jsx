@@ -95,7 +95,7 @@ export default function Markets({ regions = [] }) {
           </table>
           {data && !data.length ? (
             <p className="hq__empty">
-              No markets yet. The site shows its 26 built-in markets until you add some here. Run{' '}
+              No markets yet. The site shows its 27 built-in markets until you add some here. Run{' '}
               <code>npm run seed:markets</code> in the server folder to load them all.
             </p>
           ) : null}

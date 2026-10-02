@@ -77,14 +77,14 @@ API under `/api/admin/*`.
 
 If any of the three is missing the panel stays switched off.
 
-**Load the 26 export markets so you can edit them** (optional):
+**Load the 27 export markets so you can edit them** (optional):
 `npm run seed:markets`. It is safe to run again.
 
 **What is live and what needs a rebuild:** Enquiries and Visitors are live.
 Markets, Updates, Pages, Testimonials, Team and Certifications are downloaded
 when the website is built (`npm run build` in `client`, which reads
 `VITE_API_URL`), so they appear on the site after you rebuild and upload it.
-The 26 built-in markets always stay on the site unless you pause them in the
+The 27 built-in markets always stay on the site unless you pause them in the
 panel. If the API cannot be reached at build time, the site builds from its
 built-in content.
 
