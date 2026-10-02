@@ -4,6 +4,8 @@ import cors from 'cors';
 import productRoutes from './routes/products.js';
 import businessAreaRoutes from './routes/businessAreas.js';
 import enquiryRoutes from './routes/enquiries.js';
+import adminRoutes from './routes/admin.js';
+import publicRoutes from './routes/public.js';
 import { dbReady } from './db.js';
 import { rateLimit } from './middleware/rateLimit.js';
 
@@ -38,7 +40,8 @@ export function createApp() {
   app.use(
     cors({
       origin: allowed.length ? allowed : true,
-      methods: ['GET', 'POST'],
+      methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
     })
   );
 
@@ -68,6 +71,8 @@ export function createApp() {
   app.use('/api/products', productRoutes);
   app.use('/api/business-areas', businessAreaRoutes);
   app.use('/api/enquiries', enquiryRoutes);
+  app.use('/api/public', publicRoutes);
+  app.use('/api/admin', adminRoutes);
 
   app.use((_req, res) => res.status(404).json({ error: 'Not found' }));
 

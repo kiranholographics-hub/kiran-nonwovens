@@ -21,6 +21,13 @@ const enquirySchema = new mongoose.Schema(
     /** Which page the enquiry came from, for attribution. */
     source: { type: String, default: '', trim: true },
     notified: { type: Boolean, default: false },
+    /** Worked from the /hq panel. */
+    status: {
+      type: String,
+      enum: ['new', 'contacted', 'quoted', 'closed'],
+      default: 'new',
+    },
+    note: { type: String, default: '', trim: true, maxlength: 2000 },
   },
   { timestamps: { createdAt: 'createdAt', updatedAt: false } }
 );

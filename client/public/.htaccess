@@ -26,6 +26,9 @@
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(.*?)/?$ /$1/index.html [L]
 
+  # The admin panel is a single-page app: /hq and /hq/... all load the shell.
+  RewriteRule ^hq(/.*)?$ /index.html [L]
+
   # Anything else is a real 404: the prerendered 404.html (ErrorDocument below)
   # is served with an HTTP 404 status, so it is not a soft 404.
   RewriteRule ^ - [R=404,L]

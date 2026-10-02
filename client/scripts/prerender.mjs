@@ -56,11 +56,27 @@ async function loadCatalogue() {
   const m = await import(
     pathToFileURL(path.join(root, 'src/data/markets.js')).href
   );
-  return { ...mod, guides: g.guides, markets: m.markets };
+  const c = await import(
+    pathToFileURL(path.join(root, 'src/data/content.js')).href
+  );
+  return {
+    ...mod,
+    guides: g.guides,
+    markets: m.markets,
+    updates: c.updates,
+    customPages: c.customPages,
+  };
 }
 
 /** Every URL the site has, derived from the catalogue — never hand-listed. */
-function allRoutes({ businessAreas, products, guides = [], markets = [] }) {
+function allRoutes({
+  businessAreas,
+  products,
+  guides = [],
+  markets = [],
+  updates = [],
+  customPages = [],
+}) {
   const areaRoutes = businessAreas.flatMap((a) => [
     { url: `/business-areas/${a.slug}`, priority: '0.8' },
     { url: `/products/${a.slug}`, priority: '0.8' },
@@ -77,8 +93,18 @@ function allRoutes({ businessAreas, products, guides = [], markets = [] }) {
     url: `/exports/${m.slug}`,
     priority: '0.7',
   }));
+  const updateRoutes = [
+    ...(updates.length ? [{ url: '/updates', priority: '0.6' }] : []),
+    ...updates.map((u) => ({ url: `/updates/${u.slug}`, priority: '0.6' })),
+  ];
+  const pageRoutes = customPages.map((p) => ({
+    url: `/pages/${p.slug}`,
+    priority: '0.5',
+  }));
   return [
     ...STATIC_ROUTES,
+    ...updateRoutes,
+    ...pageRoutes,
     ...areaRoutes,
     ...productRoutes,
     ...guideRoutes,
@@ -189,7 +215,7 @@ async function run() {
     process.env.VITE_NOINDEX === 'true'
       ? // Staging copy: ask every crawler to stay away.
         `User-agent: *\nDisallow: /\n`
-      : `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
+      : `User-agent: *\nDisallow: /hq\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
     'utf8'
   );
 

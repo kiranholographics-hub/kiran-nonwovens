@@ -9,6 +9,8 @@
     "dev": "node --watch index.js",
     "start": "node index.js",
     "seed": "node seed/seed.js",
+    "seed:markets": "node scripts/seed-markets.js",
+    "admin:hash": "node scripts/hash-password.js",
     "test": "node --test test/*.test.mjs",
     "mail:test": "node scripts/test-mail.js"
   },

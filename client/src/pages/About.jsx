@@ -8,6 +8,7 @@ import { HISTORY } from '../data/about.js';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { PLANT } from '../data/catalog.js';
 import { PARTNER } from '../data/locations.js';
+import { team, certifications } from '../data/content.js';
 import { PAGE_SEO } from '../data/seo.js';
 import { VIDEOS, breadcrumbLd, SITE } from '../lib.js';
 import './About.css';
@@ -112,6 +113,36 @@ export default function About() {
                   View on Google Maps →
                 </a>
               </p>
+
+              {certifications.length ? (
+                <>
+                  <h3 id="certifications">Certifications</h3>
+                  <ul className="about__areas">
+                    {certifications.map((c) => (
+                      <li key={c.name}>
+                        <strong>{c.name}</strong>
+                        <span>
+                          {[c.issuer, c.description].filter(Boolean).join(' — ')}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
+
+              {team.length ? (
+                <>
+                  <h3 id="team">Our team</h3>
+                  <ul className="about__areas">
+                    {team.map((m) => (
+                      <li key={m.name}>
+                        <strong>{m.name}</strong>
+                        <span>{[m.role, m.bio].filter(Boolean).join(' — ')}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
 
               <h3 id="quality">Quality &amp; samples</h3>
               <p>

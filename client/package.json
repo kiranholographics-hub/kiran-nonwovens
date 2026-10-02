@@ -5,11 +5,15 @@
   "type": "module",
   "description": "React (Vite) client for the Kiran Nonwovens B2B export site.",
   "scripts": {
+    "predev": "node scripts/fetch-content.mjs",
     "dev": "vite --port 3100",
+    "prebuild": "node scripts/fetch-content.mjs",
     "build": "vite build && node scripts/prerender.mjs",
     "build:spa": "vite build",
     "preview": "vite preview --port 3100",
+    "prelint": "node scripts/fetch-content.mjs",
     "lint": "eslint .",
+    "presmoke": "node scripts/fetch-content.mjs",
     "smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {

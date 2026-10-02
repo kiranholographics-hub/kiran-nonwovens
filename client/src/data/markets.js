@@ -23,6 +23,8 @@
  *   asks      What buyers there usually ask first (standard / labelling point)
  */
 
+import remote from './remote.generated.js';
+
 export const REGIONS = [
   'North America',
   'South America',
@@ -32,7 +34,7 @@ export const REGIONS = [
   'Africa',
 ];
 
-export const markets = [
+export const STATIC_MARKETS = [
   {
     slug: 'usa-nonwoven-felt-supplier',
     name: 'United States',
@@ -331,6 +333,55 @@ export const markets = [
     asks: 'the GSM and puncture resistance the application needs, and which port serves the site',
   },
 ];
+
+/* ── Markets managed in the /hq panel ─────────────────────────────────────
+ * The 26 markets above are always part of the site. The panel can pause or
+ * draft one (it then disappears at the next build), change an active one's
+ * region, ports or note, and add markets of its own, which get plain, honest
+ * defaults. Deleting a built-in market in the panel does not remove it; pause
+ * it instead. */
+const SUFFIX = '-nonwoven-felt-supplier';
+const ALL_AREAS = ['geotextile', 'automotive', 'apparel-footwear', 'industrial'];
+
+const fromPanel = (r) => {
+  const base = STATIC_MARKETS.find((m) => m.slug === `${r.slug}${SUFFIX}`);
+  const ports = Array.isArray(r.ports) && r.ports.length ? r.ports : base?.ports ?? [];
+  return {
+    slug: `${r.slug}${SUFFIX}`,
+    name: r.name,
+    short: base?.short ?? r.name,
+    buyers: base?.buyers ?? `${r.name} importers`,
+    region: REGIONS.includes(r.region) ? r.region : base?.region ?? 'Europe',
+    ports,
+    focus: base?.focus ?? ALL_AREAS,
+    note:
+      r.note ||
+      base?.note ||
+      `Buyers in ${r.name} source needle punched and thermal bonded nonwoven felt and geotextile, made to specification and shipped from India.`,
+    asks:
+      base?.asks ??
+      'the specification, destination port and documentation their order needs',
+  };
+};
+
+const panelMarkets = Array.isArray(remote.markets) ? remote.markets : [];
+const hidden = new Set(
+  (Array.isArray(remote.hiddenMarkets) ? remote.hiddenMarkets : []).map(
+    (slug) => `${slug}${SUFFIX}`
+  )
+);
+
+/** The 26 built-in markets always stay, unless the panel has paused or drafted
+ *  one. A market the panel has active replaces the built-in entry's ports,
+ *  region and note; a market that is only in the panel is added. */
+export const markets = [
+  ...STATIC_MARKETS.filter(
+    (m) =>
+      !hidden.has(m.slug) &&
+      !panelMarkets.some((r) => `${r.slug}${SUFFIX}` === m.slug)
+  ),
+  ...panelMarkets.map(fromPanel),
+].sort((a, b) => a.name.localeCompare(b.name));
 
 export const marketBySlug = (slug) => markets.find((m) => m.slug === slug);
 

@@ -8,11 +8,12 @@ import './Privacy.css';
 /**
  * A plain-language privacy notice that states only what the site actually
  * does: the enquiry form's fields, where they go, and that there are no
- * analytics or advertising cookies. If analytics, a chat widget or a mailing
+ * cookies and no third-party analytics (page views are counted on our own
+ * server without cookies or IP addresses). If analytics, a chat widget or a mailing
  * list is ever added, this page has to change with it (and the "Last updated"
  * date below).
  */
-const UPDATED = '1 October 2026';
+const UPDATED = '2 October 2026';
 
 export default function Privacy() {
   const trail = [{ to: '/', label: 'Home' }, { label: 'Privacy' }];
@@ -66,9 +67,15 @@ export default function Privacy() {
 
           <h2>Cookies and tracking</h2>
           <p>
-            This site does not use advertising or analytics cookies, and it
-            does not load third-party scripts or fonts. If that changes, this
-            notice will be updated first.
+            This site does not use cookies and does not load third-party
+            scripts or fonts. It counts page views on its own server so we can
+            see which pages are read: for each view we keep the page address,
+            the website you came from, whether you used a phone or a computer,
+            and a one-way code made from your connection and browser details
+            that changes every day. We do not store your IP address, and the
+            code cannot be used to identify you or to follow you from one day
+            to the next. These counts are deleted after 180 days. If your
+            browser sends a Do Not Track signal, nothing is counted.
           </p>
 
           <h2>Who can see it</h2>

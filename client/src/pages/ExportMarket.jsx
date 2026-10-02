@@ -44,7 +44,9 @@ export default function ExportMarket() {
   const faqs = [
     {
       q: `Which ports do you ship to in ${market.name}?`,
-      a: `We coordinate shipment to your port of choice. Buyers in ${market.name} commonly use ${list(market.ports)}. Tell us the destination port with your enquiry and we will confirm how the order ships.`,
+      a: market.ports.length
+        ? `We coordinate shipment to your port of choice. Buyers in ${market.name} commonly use ${list(market.ports)}. Tell us the destination port with your enquiry and we will confirm how the order ships.`
+        : `We coordinate shipment to your port of choice in ${market.name}. Tell us the destination port with your enquiry and we will confirm how the order ships.`,
     },
     {
       q: `What do ${market.short} buyers usually need settled first?`,
@@ -101,9 +103,11 @@ export default function ExportMarket() {
             it, so a question about the material is answered by the people who
             make it.
           </p>
-          <p>
-            Typical discharge ports in {market.name}: {list(market.ports)}.
-          </p>
+          {market.ports.length ? (
+            <p>
+              Typical discharge ports in {market.name}: {list(market.ports)}.
+            </p>
+          ) : null}
         </div>
       </section>
 
