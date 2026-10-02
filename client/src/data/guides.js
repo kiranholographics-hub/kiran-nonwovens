@@ -65,7 +65,7 @@ export const guides = [
       {
         h: 'What Kiran Nonwovens makes',
         p: [
-          'Kiran Nonwovens produces both needle punched and thermal bonded nonwovens, from 100 to 1200 GSM in roll widths of 5.0–5.2 m. Needle punching is the process behind our [geotextiles](/products/geotextile), automotive felt and most of the range; see [how it is made](/manufacturing) for the plant capability.',
+          'Kiran Nonwovens produces both needle punched and thermal bonded nonwovens, from 100 to 1200 GSM in roll widths of 5.0–5.2 m. Needle punching is the process behind our [geotextiles](/products/geotextile), automotive felt and most of the range; see [how it is made](/manufacturing) for the manufacturing capability.',
         ],
       },
     ],
@@ -105,7 +105,7 @@ export const guides = [
         h: 'What GSM means',
         p: [
           'GSM stands for grams per square metre: the weight of one square metre of the fabric. A 200 GSM felt weighs 200 grams for every square metre of roll. It is a measure of weight, not of thickness.',
-          'Kiran Nonwovens makes nonwovens across a 100–1200 GSM range, so the same plant covers light linings and padding as well as heavy felt and geotextile.',
+          'Kiran Nonwovens makes nonwovens across a 100–1200 GSM range, so the same production range covers light linings and padding as well as heavy felt and geotextile.',
         ],
       },
       {

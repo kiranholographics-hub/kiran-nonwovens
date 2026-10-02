@@ -118,3 +118,16 @@
   border-radius: 2px;
   font-weight: 600;
 }
+
+.footer__partner {
+  margin: 14px 0 0;
+  font-size: var(--fs-small, 0.9rem);
+  line-height: 1.55;
+  color: rgba(200, 211, 198, 0.85);
+  max-width: 38ch;
+}
+
+.footer__partner strong {
+  color: var(--cream);
+  font-weight: 600;
+}

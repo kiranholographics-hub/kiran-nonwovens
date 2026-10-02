@@ -7,6 +7,7 @@ import Reveal from '../components/Reveal.jsx';
 import { HISTORY } from '../data/about.js';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { PLANT } from '../data/catalog.js';
+import { PARTNER } from '../data/locations.js';
 import { PAGE_SEO } from '../data/seo.js';
 import { VIDEOS, breadcrumbLd, SITE } from '../lib.js';
 import './About.css';
@@ -52,8 +53,9 @@ export default function About() {
             <div className="about__body">
               <h2 id="overview">Company overview</h2>
               <p>
-                Kiran Nonwovens manufactures needle punched and thermal bonded
-                nonwoven fabrics and felts. Our materials go into roads and
+                Kiran Nonwovens supplies needle punched and thermal bonded
+                nonwoven fabrics and felts, manufactured with our partner{' '}
+                {PARTNER.name}. Our materials go into roads and
                 drainage systems, vehicle interiors, garments and footwear,
                 medical padding, flooring, packaging and luggage —{' '}
                 {products.length} standard products across{' '}
@@ -102,6 +104,15 @@ export default function About() {
                 <Link to="/manufacturing">See full manufacturing capability →</Link>
               </p>
 
+              <h3 id="partner">Our manufacturing partner</h3>
+              <p>{PARTNER.description}</p>
+              <p>
+                <strong>Factory:</strong> {PARTNER.address}.{' '}
+                <a href={PARTNER.mapUrl} target="_blank" rel="noopener noreferrer">
+                  View on Google Maps →
+                </a>
+              </p>
+
               <h3 id="quality">Quality &amp; samples</h3>
               <p>
                 Every order is produced against the specification agreed with
@@ -136,9 +147,9 @@ export default function About() {
               <Media
                 className="about__image"
                 src="/images/plant/overview.jpg"
-                alt="Kiran Nonwovens plant — needle punched nonwoven production"
+                alt="Needle punched nonwoven production at our manufacturing partner’s factory"
                 variant={2}
-                label="Plant photography — pending"
+                label="Factory photography — pending"
               />
             </Reveal>
           </div>

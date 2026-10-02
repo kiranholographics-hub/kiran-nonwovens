@@ -6,7 +6,7 @@ import { RuledList } from '../components/TabPanel.jsx';
 import Faq from '../components/Faq.jsx';
 import { CONTACT_FAQ, PAGE_SEO, plain } from '../data/seo.js';
 import { CONTACT, SITE, breadcrumbLd, faqLd, isPlaceholder } from '../lib.js';
-import { FACTORY } from '../data/locations.js';
+import { PARTNER } from '../data/locations.js';
 import './Contact.css';
 
 /** What lets the export team quote on the first reply. */
@@ -28,12 +28,14 @@ const whatsappHref = isPlaceholder(CONTACT.whatsapp)
 const DETAILS = [
   ['Office', CONTACT.address],
   [
-    'Factory',
+    'Manufacturing partner',
     <>
-      {FACTORY.address}
+      {PARTNER.name}
       <br />
-      <a href={FACTORY.mapUrl} target="_blank" rel="noopener noreferrer">
-        View the factory on Google Maps
+      Factory: {PARTNER.address}
+      <br />
+      <a href={PARTNER.mapUrl} target="_blank" rel="noopener noreferrer">
+        View the partner factory on Google Maps
       </a>
     </>,
   ],
@@ -108,10 +110,10 @@ export default function Contact() {
             <div className="contact__photo">
               <Media
                 src="/images/plant/entrance.jpg"
-                alt="Kiran Nonwovens plant and office"
+                alt="Kiran Nonwovens office, Jaipur"
                 variant={2}
                 minHeight={200}
-                label="Plant / office photo — pending"
+                label="Office photo — pending"
               />
             </div>
           </div>

@@ -8,6 +8,7 @@ import { RuledList } from '../components/TabPanel.jsx';
 import Note from '../components/Note.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { PLANT } from '../data/catalog.js';
+import { PARTNER } from '../data/locations.js';
 import Faq from '../components/Faq.jsx';
 import { MANUFACTURING_FAQ, PAGE_SEO, plain } from '../data/seo.js';
 import { VIDEOS, breadcrumbLd, faqLd } from '../lib.js';
@@ -116,6 +117,20 @@ export default function Manufacturing() {
           <Reveal>
             <FeatureGrid items={PROCESSES} columns={3} />
           </Reveal>
+        </div>
+      </section>
+
+      <section className="block">
+        <div className="wrap">
+          <p className="eyebrow">Where it is made</p>
+          <h2>Our manufacturing partner</h2>
+          <p style={{ marginTop: 8 }}>{PARTNER.description}</p>
+          <p style={{ marginTop: 8 }}>
+            <strong>Factory:</strong> {PARTNER.address}.{' '}
+            <a href={PARTNER.mapUrl} target="_blank" rel="noopener noreferrer">
+              View on Google Maps →
+            </a>
+          </p>
         </div>
       </section>
 
