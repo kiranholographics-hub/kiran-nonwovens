@@ -4,8 +4,7 @@
 # that file for a clean URL, so crawlers and first loads get the page's own
 # markup, title and description rather than the home page's.
 #
-# Only URLs with no prerendered page fall through to the SPA shell, which is
-# what makes an unknown path still render the in-app 404.
+# URLs with no prerendered page get the 404 page with a real 404 status.
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -27,8 +26,9 @@
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(.*?)/?$ /$1/index.html [L]
 
-  # Anything else: the SPA shell handles it (and shows the 404 page).
-  RewriteRule ^ /index.html [L]
+  # Anything else is a real 404: the prerendered 404.html (ErrorDocument below)
+  # is served with an HTTP 404 status, so it is not a soft 404.
+  RewriteRule ^ - [R=404,L]
 </IfModule>
 
 # Compress text assets (HTML, CSS, JS, JSON, SVG, XML) on the way out.

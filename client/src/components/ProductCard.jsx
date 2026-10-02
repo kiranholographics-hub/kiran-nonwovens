@@ -14,7 +14,7 @@ export default function ProductCard({ product, areaName, variant = 1 }) {
     >
       <Media
         src={product.images?.[0]}
-        alt=""
+        alt={`${product.name} — Kiran Nonwovens`}
         tone="light"
         variant={variant}
         ratio="5 / 4"

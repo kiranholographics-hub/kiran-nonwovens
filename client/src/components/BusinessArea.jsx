@@ -110,6 +110,7 @@ export default function BusinessArea() {
           <Media
             className="ba-page__hero"
             src={area.images?.[0]}
+            alt={`${area.name} nonwoven felt applications`}
             variant={1}
             label={`${area.name} photography — pending`}
           />
