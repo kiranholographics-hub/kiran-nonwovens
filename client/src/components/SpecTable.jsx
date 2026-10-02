@@ -52,7 +52,7 @@ export default function SpecTable({ specs, gsmConfirmed = false, caption }) {
             value={fibre}
             caveat={
               fibreIsPlantDefault
-                ? 'Full plant range — tell us the application and we will advise.'
+                ? 'Full production range — tell us the application and we will advise.'
                 : null
             }
           />
@@ -62,7 +62,7 @@ export default function SpecTable({ specs, gsmConfirmed = false, caption }) {
             caveat={
               gsmConfirmed
                 ? null
-                : 'Plant capability — made to the GSM your application needs.'
+                : 'Production capability — made to the GSM your application needs.'
             }
           />
           <Row label="Thickness" value={specs.thickness} />

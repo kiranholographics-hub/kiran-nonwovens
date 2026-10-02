@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FACTORY } from '../data/locations.js';
+import { PARTNER } from '../data/locations.js';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { CONTACT, SITE } from '../lib.js';
 import './Footer.css';
@@ -25,6 +25,10 @@ export default function Footer() {
               Nonwoven solutions for a better tomorrow. Needle punched and
               thermal bonded nonwovens — 100–1200 GSM, roll widths to 5.2 m,
               made to your specification.
+            </p>
+            <p className="footer__partner">
+              <strong>Manufacturing partner: {PARTNER.name}.</strong>{' '}
+              {PARTNER.short}
             </p>
           </div>
 
@@ -66,9 +70,6 @@ export default function Footer() {
               WhatsApp us
             </a>
             <a href={CONTACT.emailHref}>{CONTACT.email}</a>
-            <a href={FACTORY.mapUrl} target="_blank" rel="noopener noreferrer">
-              Factory on Google Maps
-            </a>
             <address className="footer__address">
               {CONTACT.address}
             </address>
@@ -79,6 +80,9 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               Get directions →
+            </a>
+            <a href={PARTNER.mapUrl} target="_blank" rel="noopener noreferrer">
+              Partner factory on Google Maps
             </a>
           </div>
         </div>

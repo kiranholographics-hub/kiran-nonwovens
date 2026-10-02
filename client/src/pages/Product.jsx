@@ -71,7 +71,7 @@ export default function Product() {
           ) : null}
           {!product.gsmConfirmed ? (
             <Note>
-              This material is made to order across the plant&apos;s full{' '}
+              This material is made to order across our full{' '}
               {PLANT.gsmLabel} GSM range. Tell us the GSM, thickness, width and
               colour your application needs and we will confirm exact figures
               with your quote.

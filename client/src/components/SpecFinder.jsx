@@ -124,7 +124,7 @@ export default function SpecFinder() {
       {anyUnconfirmed ? (
         <Note>
           These materials are made to order, so results are matched against the
-          plant&apos;s full {PLANT.gsmLabel} GSM capability rather than a fixed
+          full {PLANT.gsmLabel} GSM production capability rather than a fixed
           per-product range. Send an enquiry with the GSM you need and we will
           confirm it.
         </Note>

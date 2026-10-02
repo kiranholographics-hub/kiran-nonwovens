@@ -176,7 +176,7 @@ export const MANUFACTURING_FAQ = [
     a: 'Needle punching entangles a fibre web mechanically with barbed needles, giving a dense, dimensionally stable felt. Thermal bonding fuses low-melt fibre with heat, giving a lighter, loftier material. See the [full comparison](/guides/needle-punched-vs-thermal-bonded-nonwoven).',
   },
   {
-    q: 'What roll widths and GSM can the plant produce?',
+    q: 'What roll widths and GSM can you produce?',
     a: 'Roll widths of 5.0–5.2 m and a 100–1200 GSM range.',
   },
   {
