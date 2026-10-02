@@ -16,6 +16,7 @@ import FeatureGrid from '../components/FeatureGrid.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { PLANT } from '../data/catalog.js';
 import { guides } from '../data/guides.js';
+import { testimonials } from '../data/content.js';
 import { HOME_FAQ, plain } from '../data/seo.js';
 import {
   PRESENCE,
@@ -258,6 +259,29 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      {/* ── Buyer testimonials: only once some are published in /hq ── */}
+      {testimonials.length ? (
+        <section className="block block--sand">
+          <div className="wrap">
+            <p className="eyebrow">Buyers</p>
+            <h2>What buyers say.</h2>
+            <ul className="home__quotes">
+              {testimonials.map((t) => (
+                <li key={`${t.name}-${t.quote.slice(0, 20)}`}>
+                  <blockquote>{t.quote}</blockquote>
+                  <p>
+                    <strong>{t.name}</strong>
+                    {[t.role, t.company, t.country].filter(Boolean).length
+                      ? `, ${[t.role, t.company, t.country].filter(Boolean).join(', ')}`
+                      : ''}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
 
       {/* ── FAQ ─────────────────────────────────────────────────── */}
       <section className="block">

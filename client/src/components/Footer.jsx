@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { PARTNER } from '../data/locations.js';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { CONTACT, SITE } from '../lib.js';
+import { customPages, updates } from '../data/content.js';
 import './Footer.css';
 
 export default function Footer() {
@@ -58,6 +59,12 @@ export default function Footer() {
             <Link to="/about">About Us</Link>
             <Link to="/manufacturing">Manufacturing</Link>
             <Link to="/exports">Exports</Link>
+            {updates.length ? <Link to="/updates">Updates</Link> : null}
+            {customPages.map((p) => (
+              <Link key={p.slug} to={`/pages/${p.slug}`}>
+                {p.title}
+              </Link>
+            ))}
             <Link to="/guides">Buyer’s guides</Link>
             <Link to="/contact">Contact</Link>
           </div>

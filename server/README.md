@@ -60,3 +60,39 @@ are worth knowing:
 - `draft` — `true` while the copy is awaiting sign-off.
 
 See `../OWNER_INPUTS.md`.
+
+## Admin panel (/hq)
+
+The website has an admin panel at `https://<your site>/hq` (Markets, Enquiries,
+Visitors, Updates, Pages, Testimonials, Team, Certifications). It talks to this
+API under `/api/admin/*`.
+
+**Set up the login (once):**
+
+1. `cd server && npm run admin:hash -- "a long password of your own"`
+2. Put the three printed lines (`ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH`,
+   `ADMIN_TOKEN_SECRET`) in the server's environment (Render/Railway or
+   `server/.env`) and restart the API.
+3. Open `/hq` on the website and sign in.
+
+If any of the three is missing the panel stays switched off.
+
+**Load the 26 export markets so you can edit them** (optional):
+`npm run seed:markets`. It is safe to run again.
+
+**What is live and what needs a rebuild:** Enquiries and Visitors are live.
+Markets, Updates, Pages, Testimonials, Team and Certifications are downloaded
+when the website is built (`npm run build` in `client`, which reads
+`VITE_API_URL`), so they appear on the site after you rebuild and upload it.
+The 26 built-in markets always stay on the site unless you pause them in the
+panel. If the API cannot be reached at build time, the site builds from its
+built-in content.
+
+**Routes**
+
+| Route | Who | What |
+|---|---|---|
+| `POST /api/admin/login` | anyone (rate-limited) | returns a 12-hour token |
+| `/api/admin/*` | signed-in owner | markets, enquiries, visits, pages, updates, testimonials, team, certifications |
+| `GET /api/public/content` | anyone | what is published, for the website build |
+| `POST /api/public/visit` | the website | counts a page view (no cookie, no IP stored) |

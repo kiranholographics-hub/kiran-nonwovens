@@ -271,3 +271,29 @@
 .home__guides a:hover strong {
   color: var(--rust);
 }
+
+.home__quotes {
+  list-style: none;
+  display: grid;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+@media (min-width: 900px) {
+  .home__quotes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 56px;
+  }
+}
+
+.home__quotes blockquote {
+  font-family: var(--font-display, inherit);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.home__quotes p {
+  font-size: var(--fs-small, 0.9rem);
+  opacity: 0.8;
+}

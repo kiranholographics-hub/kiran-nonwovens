@@ -18,6 +18,7 @@ import { fileURLToPath } from 'node:url';
 import { products, businessAreas } from '../src/data/catalog.js';
 import { guides } from '../src/data/guides.js';
 import { markets } from '../src/data/markets.js';
+import { updates, customPages } from '../src/data/content.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(here, '../dist');
@@ -47,6 +48,9 @@ const routes = [
   '/privacy',
   ...guides.map((g) => `/guides/${g.slug}`),
   ...markets.map((m) => `/exports/${m.slug}`),
+  ...(updates.length ? ['/updates'] : []),
+  ...updates.map((u) => `/updates/${u.slug}`),
+  ...customPages.map((p) => `/pages/${p.slug}`),
   ...businessAreas.map((b) => `/business-areas/${b.slug}`),
   ...businessAreas.map((b) => `/products/${b.slug}`),
   ...products.map((p) => `/products/${p.category}/${p.slug}`),
@@ -94,7 +98,7 @@ for (const route of routes) {
   const types = [...head.matchAll(/"@type":"([A-Za-z]+)"/g)].map((m) => m[1]);
   check(title.length <= 65, `${route} title is ${title.length} chars (max 65): ${title}`);
   check(
-    desc.length >= 90 && desc.length <= 165,
+    desc.length <= 165 && (desc.length >= 90 || /^\/(updates|pages)\//.test(route)),
     `${route} description is ${desc.length} chars (want 90–165)`
   );
   check(!/pending|\[x\]|to confirm/i.test(title + desc), `${route} title/description leaks placeholder text`);

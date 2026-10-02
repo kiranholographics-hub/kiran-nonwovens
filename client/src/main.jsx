@@ -26,7 +26,16 @@ const container = document.getElementById('root');
 
 // The build prerenders every route to static HTML, so in production there is
 // already markup to hydrate. In dev the container is empty and we mount fresh.
-if (container.hasChildNodes()) {
+const isHq = /^\/hq(\/|$)/.test(window.location.pathname);
+
+if (isHq) {
+  // The server answers /hq with the home page's prerendered HTML (it is the
+  // only shell there is). The admin panel is client-only, so drop that markup
+  // and the home page's head tags instead of hydrating over them.
+  container.replaceChildren();
+  document.querySelectorAll('[data-seo], link[rel="canonical"]').forEach((el) => el.remove());
+  createRoot(container).render(tree);
+} else if (container.hasChildNodes()) {
   hydrateRoot(container, tree);
 } else {
   createRoot(container).render(tree);

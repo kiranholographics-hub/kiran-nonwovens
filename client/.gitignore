@@ -4,3 +4,4 @@ dist-ssr/
 .env
 .env.local
 *.log
+src/data/remote.generated.js
