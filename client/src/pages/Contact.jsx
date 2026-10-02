@@ -24,7 +24,7 @@ const CHECKLIST = [
 // the real value is set in lib.js. A real WhatsApp number becomes a chat link.
 const whatsappHref = isPlaceholder(CONTACT.whatsapp)
   ? undefined
-  : `https://wa.me/${String(CONTACT.whatsapp).replace(/\D/g, '')}`;
+  : CONTACT.whatsappHref;
 const DETAILS = [
   ['Office', CONTACT.address],
   [
@@ -83,6 +83,18 @@ export default function Contact() {
                 </div>
               ))}
             </dl>
+            {whatsappHref ? (
+              <p>
+                <a
+                  className="btn btn--fill"
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Chat on WhatsApp
+                </a>
+              </p>
+            ) : null}
             <div className="contact__checklist">
               <h2>For the fastest quote</h2>
               <p>Tell us as much of this as you can:</p>

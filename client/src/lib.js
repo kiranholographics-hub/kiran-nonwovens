@@ -17,7 +17,7 @@ export const SITE = {
   ogImage: '/images/og-default.jpg',
   locale: 'en_IN',
   description:
-    'Needle punched and thermal bonded nonwoven felt and geotextiles for civil, automotive, apparel and industrial use. 100–1200 GSM, up to 5.2 m wide. Export from India.',
+    'Nonwoven felt & geotextile manufacturer in Jaipur. Needle punched and thermal bonded, 100–1200 GSM, up to 5.2 m wide. Made to spec, exported worldwide.',
 };
 
 /** Contact details. Address, phone and email are confirmed; the WhatsApp
@@ -35,7 +35,8 @@ export const CONTACT = {
   },
   phone: '+91 78781 09226',
   phoneHref: 'tel:+917878109226',
-  whatsapp: '[WhatsApp — pending]',
+  whatsapp: '+91 78781 09226',
+  whatsappHref: 'https://wa.me/917878109226',
   email: 'kirannonwovens@gmail.com',
   emailHref: 'mailto:kirannonwovens@gmail.com',
   hours: '[Working hours — pending]',

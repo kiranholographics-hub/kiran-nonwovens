@@ -66,6 +66,9 @@ export default function Footer() {
             <Link to="/contact#enquiry">Send an enquiry</Link>
             {/* PLACEHOLDERS — contact details pending from Sir */}
             <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
+            <a href={CONTACT.whatsappHref} target="_blank" rel="noopener noreferrer">
+              WhatsApp us
+            </a>
             <a href={CONTACT.emailHref}>{CONTACT.email}</a>
             <a href={FACTORY.mapUrl} target="_blank" rel="noopener noreferrer">
               Factory on Google Maps
