@@ -134,7 +134,19 @@ router.get('/visits', handle(async (_req, res) => {
     { $project: { views: 1, visitors: { $size: '$visitors' } } },
     { $sort: { _id: 1 } },
   ]);
+  const total = await Visit.countDocuments();
+  const countries = (
+    await Visit.aggregate([
+      { $group: { _id: '$country', views: { $sum: 1 } } },
+      { $sort: { views: -1 } },
+      { $limit: 25 },
+    ])
+  ).map((r) => ({ country: r._id || 'Unknown', views: r.views }));
+  const topCountry = countries.find((c) => c.country !== 'Unknown')?.country || '';
   res.json({
+    total,
+    countries,
+    topCountry,
     today: await count(d1),
     week: await count(d7),
     month: await count(d30),

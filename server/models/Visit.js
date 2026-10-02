@@ -10,9 +10,11 @@ const visitSchema = new mongoose.Schema(
     path: { type: String, required: true, maxlength: 200 },
     referrer: { type: String, default: '', maxlength: 120 },
     device: { type: String, enum: ['mobile', 'desktop'], default: 'desktop' },
+    /** Looked up from the IP on the server (offline database); the IP itself is never stored. */
+    country: { type: String, default: '', maxlength: 80 },
     visitor: { type: String, required: true },
     day: { type: String, required: true },
-    createdAt: { type: Date, default: Date.now, expires: 60 * 60 * 24 * 180 },
+    createdAt: { type: Date, default: Date.now, expires: 60 * 60 * 24 * 730 },
   },
   { versionKey: false }
 );

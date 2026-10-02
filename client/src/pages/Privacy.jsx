@@ -71,10 +71,12 @@ export default function Privacy() {
             scripts or fonts. It counts page views on its own server so we can
             see which pages are read: for each view we keep the page address,
             the website you came from, whether you used a phone or a computer,
-            and a one-way code made from your connection and browser details
-            that changes every day. We do not store your IP address, and the
-            code cannot be used to identify you or to follow you from one day
-            to the next. These counts are deleted after 180 days. If your
+            the country (worked out from your IP address on our own server,
+            which does not send it to anyone else), and a one-way code made
+            from your connection and browser details that changes every day.
+            We do not store your IP address, and the code cannot be used to
+            identify you or to follow you from one day to the next. These
+            counts are deleted after two years. If your
             browser sends a Do Not Track signal, nothing is counted.
           </p>
 

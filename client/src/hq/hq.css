@@ -132,3 +132,15 @@
   .hq__card { padding: 18px; }
   .hq__enq-head { flex-wrap: wrap; }
 }
+
+.hq__stats--3 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.hq__stats--3 > div { padding: 28px 32px; }
+
+.hq__top { display: flex; flex-direction: column; gap: 4px; border-top: 3px solid var(--hq-line); }
+.hq__top h2 { font-size: 2rem; margin: 0; }
+.hq__top span { color: var(--hq-mute); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.hq__share { display: flex; align-items: center; gap: 12px; min-width: 200px; }
+.hq__bar { flex: 1; height: 14px; background: #f1ebe0; border-radius: 2px; overflow: hidden; }
+.hq__bar i { display: block; height: 100%; background: #e0c9bb; }
+.hq__share b { width: 38px; text-align: right; font-size: 0.85rem; }
