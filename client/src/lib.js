@@ -39,6 +39,12 @@ export const CONTACT = {
   whatsappHref: 'https://wa.me/917878109226',
   email: 'kirannonwovens@gmail.com',
   emailHref: 'mailto:kirannonwovens@gmail.com',
+  /** Opens Google Maps directions to the office. */
+  mapUrl:
+    'https://www.google.com/maps/dir/?api=1&destination=' +
+    encodeURIComponent(
+      '221-C, Frontier Colony, Adarsh Nagar, Jaipur, Rajasthan 302004'
+    ),
   hours: '[Working hours — pending]',
 };
 

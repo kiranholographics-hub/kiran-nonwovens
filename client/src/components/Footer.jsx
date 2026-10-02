@@ -4,10 +4,6 @@ import { useCatalogue } from '../CatalogueContext.jsx';
 import { CONTACT, SITE } from '../lib.js';
 import './Footer.css';
 
-/** Set to false once the site carries only real photographs and footage of
- *  Kiran Nonwovens' own products and plant. */
-const ILLUSTRATIVE_IMAGERY = true;
-
 export default function Footer() {
   const { businessAreas } = useCatalogue();
 
@@ -73,26 +69,29 @@ export default function Footer() {
             <a href={FACTORY.mapUrl} target="_blank" rel="noopener noreferrer">
               Factory on Google Maps
             </a>
+            <address className="footer__address">
+              {CONTACT.address}
+            </address>
+            <a
+              className="footer__directions"
+              href={CONTACT.mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get directions →
+            </a>
           </div>
         </div>
 
         <div className="footer__copy">
           <span>
-            © {new Date().getFullYear()} {SITE.name}
-          </span>
-          <span>
+            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+            {' · '}
             <Link to="/privacy" className="footer__legal">
               Privacy notice
             </Link>
           </span>
-          <span>{CONTACT.address}</span>
         </div>
-        {ILLUSTRATIVE_IMAGERY ? (
-          <p className="footer__note">
-            Images and videos on this site are for illustration; actual
-            products and facilities may vary.
-          </p>
-        ) : null}
       </div>
     </footer>
   );

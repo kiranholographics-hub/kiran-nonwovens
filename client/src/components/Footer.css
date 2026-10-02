@@ -72,7 +72,8 @@
   font-size: var(--fs-tiny);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   gap: 6px 24px;
 }
 
@@ -98,4 +99,22 @@
   font-size: var(--fs-tiny);
   color: rgba(200, 211, 198, 0.7);
   max-width: none;
+}
+
+.footer__address {
+  font-style: normal;
+  font-size: var(--fs-small, 0.9rem);
+  line-height: 1.5;
+  color: rgba(200, 211, 198, 0.85);
+  margin: 6px 0 12px;
+  max-width: 28ch;
+}
+
+.footer a.footer__directions {
+  display: inline-block;
+  padding: 10px 16px;
+  min-height: 44px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font-weight: 600;
 }

@@ -113,6 +113,39 @@ function Backdrop({
     return () => io.disconnect();
   }, [showVideo, layout]);
 
+  // Browsers only autoplay a clip that is muted *as an attribute*, and React
+  // sets `muted` as a property after the element exists, so a first load can be
+  // refused. Mute it by hand and start it explicitly; if the browser still says
+  // no (data-saver, power-saving), retry when enough data arrived and on the
+  // first touch or click.
+  useEffect(() => {
+    const v = ref.current?.querySelector('video');
+    if (!v) return undefined;
+    v.defaultMuted = true;
+    v.muted = true;
+    v.setAttribute('muted', '');
+    v.setAttribute('playsinline', '');
+    const start = () => {
+      if (v.paused) v.play().catch(() => {});
+    };
+    start();
+    v.addEventListener('loadeddata', start);
+    v.addEventListener('canplay', start);
+    const events = ['touchstart', 'pointerdown', 'scroll', 'keydown'];
+    const once = () => {
+      start();
+      events.forEach((e) => window.removeEventListener(e, once));
+    };
+    events.forEach((e) =>
+      window.addEventListener(e, once, { passive: true, once: true })
+    );
+    return () => {
+      v.removeEventListener('loadeddata', start);
+      v.removeEventListener('canplay', start);
+      events.forEach((e) => window.removeEventListener(e, once));
+    };
+  }, [showVideo, layout]);
+
   const fail = () => {
     setVideoFailed(true);
     onVideoFailed?.();
