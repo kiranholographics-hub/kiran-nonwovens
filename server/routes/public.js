@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import { Router } from 'express';
 
 import { dbReady } from '../db.js';
+import { countryOf } from '../geo.js';
 import { rateLimit } from '../middleware/rateLimit.js';
 import Market from '../models/Market.js';
 import Visit from '../models/Visit.js';
@@ -71,6 +72,7 @@ router.post(
         path,
         referrer,
         device: /mobi|android|iphone|ipad/i.test(ua) ? 'mobile' : 'desktop',
+        country: countryOf(req.ip),
         visitor,
         day,
       });
