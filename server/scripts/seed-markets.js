@@ -1,4 +1,4 @@
-// Loads the 26 export markets from the website's data file into MongoDB, so
+// Loads the 27 export markets from the website's data file into MongoDB, so
 // they can be managed in the /hq panel. Safe to run again: existing markets
 // (matched by slug) are left alone.
 //
