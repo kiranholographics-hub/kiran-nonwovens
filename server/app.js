@@ -6,7 +6,7 @@ import businessAreaRoutes from './routes/businessAreas.js';
 import enquiryRoutes from './routes/enquiries.js';
 import adminRoutes from './routes/admin.js';
 import publicRoutes from './routes/public.js';
-import { dbReady } from './db.js';
+import { dbReady, waitForDb } from './db.js';
 import { rateLimit } from './middleware/rateLimit.js';
 
 export function createApp() {
@@ -44,6 +44,13 @@ export function createApp() {
       allowedHeaders: ['Content-Type', 'Authorization'],
     })
   );
+
+  // Give a freshly started app a moment to reach the database before any API
+  // route (health included) decides it is unavailable.
+  app.use('/api', async (_req, _res, next) => {
+    await waitForDb();
+    next();
+  });
 
   app.get('/api/health', (_req, res) =>
     res.json({ ok: true, db: dbReady() ? 'connected' : 'disconnected' })
