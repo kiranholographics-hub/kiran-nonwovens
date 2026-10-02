@@ -1,0 +1,37 @@
+.body-text {
+  max-width: 72ch;
+  display: grid;
+  gap: 16px;
+}
+
+.body-text h2 {
+  margin-top: 16px;
+}
+
+.body-text h3 {
+  margin-top: 8px;
+}
+
+.body-text ul,
+.body-text ol {
+  padding-left: 1.4em;
+  display: grid;
+  gap: 6px;
+}
+
+.body-text figure {
+  margin: 8px 0;
+}
+
+.body-text img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.body-text figcaption {
+  margin-top: 6px;
+  font-size: var(--fs-small, 0.9rem);
+  opacity: 0.7;
+}

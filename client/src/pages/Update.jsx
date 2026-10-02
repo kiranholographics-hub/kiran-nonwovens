@@ -2,8 +2,8 @@ import { Link, useParams } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
-import RichText from '../components/RichText.jsx';
-import { paragraphs, updateBySlug } from '../data/content.js';
+import Body from '../components/Body.jsx';
+import { plainText, updateBySlug } from '../data/content.js';
 import { SITE, VIDEOS, breadcrumbLd } from '../lib.js';
 import NotFound from './NotFound.jsx';
 
@@ -20,8 +20,7 @@ export default function Update() {
     { to: '/updates', label: 'Updates' },
     { label: update.title },
   ];
-  const text = paragraphs(update.body);
-  const description = clip(update.excerpt || text[0] || update.title, 160);
+  const description = clip(update.excerpt || plainText(update.body) || update.title, 160);
 
   return (
     <>
@@ -53,12 +52,15 @@ export default function Update() {
         variant={1}
       />
       <article className="block">
-        <div className="wrap exports__intro">
-          {text.map((p) => (
-            <p key={p.slice(0, 40)}>
-              <RichText text={p} />
-            </p>
-          ))}
+        <div className="wrap exports__intro" style={{ maxWidth: "none" }}>
+          {/^(\/(?!\/)|https:\/\/)/.test(update.coverImage || '') ? (
+            <img
+              src={update.coverImage}
+              alt={update.title}
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          ) : null}
+          <Body text={update.body} />
           <p>
             <Link to="/updates">All updates</Link> ·{' '}
             <Link to="/contact#enquiry">Send an enquiry</Link>

@@ -26,6 +26,9 @@ export function createApp() {
     next();
   });
 
+  // The admin panel sends whole pages of text, so it gets a larger limit; every
+  // other route keeps the small one.
+  app.use('/api/admin', express.json({ limit: '256kb' }));
   app.use(express.json({ limit: '64kb' }));
 
   const allowed = (process.env.CORS_ORIGIN || '')
@@ -41,7 +44,7 @@ export function createApp() {
     cors({
       origin: allowed.length ? allowed : true,
       methods: ['GET', 'POST', 'PATCH', 'DELETE'],
-      allowedHeaders: ['Content-Type', 'Authorization'],
+      allowedHeaders: ['Content-Type', 'Authorization', 'X-Filename'],
     })
   );
 

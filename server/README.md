@@ -96,3 +96,15 @@ built-in content.
 | `/api/admin/*` | signed-in owner | markets, enquiries, visits, pages, updates, testimonials, team, certifications |
 | `GET /api/public/content` | anyone | what is published, for the website build |
 | `POST /api/public/visit` | the website | counts a page view (no cookie, no IP stored) |
+
+### Pages and Updates text
+
+The text boxes for Pages and Updates take a small markup (the panel has a
+toolbar for it): `## Heading`, `### Sub-heading`, `- bullet`, `1. numbered`,
+`**bold**`, `[text](/page)` or `[text](https://…)`, and `![description](image
+address)`. A blank line starts a new paragraph. Nothing is treated as HTML.
+
+Images are uploaded from the same toolbar (JPEG, PNG or WebP, up to 3 MB). They
+are stored in MongoDB and served from `GET /api/public/media/<id>`, so they
+survive redeploys. The file's first bytes are checked, so SVG and other
+non-image uploads are refused.

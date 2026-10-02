@@ -2,8 +2,8 @@ import { Link, useParams } from 'react-router-dom';
 
 import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
-import RichText from '../components/RichText.jsx';
-import { customPageBySlug, paragraphs } from '../data/content.js';
+import Body from '../components/Body.jsx';
+import { customPageBySlug, plainText } from '../data/content.js';
 import { VIDEOS, breadcrumbLd } from '../lib.js';
 import NotFound from './NotFound.jsx';
 import './Exports.css';
@@ -17,24 +17,19 @@ export default function CustomPage() {
   if (!page) return <NotFound />;
 
   const trail = [{ to: '/', label: 'Home' }, { label: page.title }];
-  const text = paragraphs(page.body);
 
   return (
     <>
       <Seo
         title={clip(page.title, 46)}
-        description={clip(page.metaDescription || text[0] || page.title, 160)}
+        description={clip(page.metaDescription || plainText(page.body) || page.title, 160)}
         path={`/pages/${page.slug}`}
         jsonLd={[breadcrumbLd(trail)]}
       />
       <PageHero trail={trail} title={page.title} video={VIDEOS.about} variant={1} />
       <section className="block">
-        <div className="wrap exports__intro">
-          {text.map((p) => (
-            <p key={p.slice(0, 40)}>
-              <RichText text={p} />
-            </p>
-          ))}
+        <div className="wrap exports__intro" style={{ maxWidth: "none" }}>
+          <Body text={page.body} />
           <p>
             <Link to="/contact#enquiry">Send an enquiry</Link>
           </p>

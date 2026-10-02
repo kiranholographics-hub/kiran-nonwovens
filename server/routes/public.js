@@ -5,6 +5,7 @@ import { dbReady } from '../db.js';
 import { countryOf } from '../geo.js';
 import { rateLimit } from '../middleware/rateLimit.js';
 import Market from '../models/Market.js';
+import Media from '../models/Media.js';
 import Visit from '../models/Visit.js';
 import * as C from '../models/content.js';
 
@@ -37,6 +38,23 @@ router.get('/content', needDb, async (_req, res, next) => {
       team: team.map(strip),
       certifications: certifications.map(strip),
     });
+  } catch (err) {
+    next(err);
+  }
+});
+
+/** An image uploaded in the panel. Public, cached for a year (the id never changes). */
+router.get('/media/:id', needDb, async (req, res, next) => {
+  try {
+    if (!/^[a-f0-9]{24}$/i.test(req.params.id)) return res.status(404).end();
+    const doc = await Media.findById(req.params.id);
+    if (!doc) return res.status(404).end();
+    res.set({
+      'Content-Type': doc.contentType,
+      'Cache-Control': 'public, max-age=31536000, immutable',
+      'Content-Security-Policy': "default-src 'none'; img-src 'self'",
+    });
+    res.send(Buffer.from(doc.data));
   } catch (err) {
     next(err);
   }
