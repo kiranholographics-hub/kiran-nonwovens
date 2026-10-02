@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 
 import { products, businessAreas } from '../src/data/catalog.js';
 import { guides } from '../src/data/guides.js';
+import { markets } from '../src/data/markets.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(here, '../dist');
@@ -42,8 +43,10 @@ const routes = [
   '/manufacturing',
   '/contact',
   '/guides',
+  '/exports',
   '/privacy',
   ...guides.map((g) => `/guides/${g.slug}`),
+  ...markets.map((m) => `/exports/${m.slug}`),
   ...businessAreas.map((b) => `/business-areas/${b.slug}`),
   ...businessAreas.map((b) => `/products/${b.slug}`),
   ...products.map((p) => `/products/${p.category}/${p.slug}`),

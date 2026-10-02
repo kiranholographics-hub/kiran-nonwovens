@@ -41,6 +41,7 @@ const STATIC_ROUTES = [
   { url: '/about', priority: '0.6' },
   { url: '/manufacturing', priority: '0.7' },
   { url: '/contact', priority: '0.6' },
+  { url: '/exports', priority: '0.8' },
   { url: '/guides', priority: '0.7' },
   { url: '/privacy', priority: '0.2' },
 ];
@@ -52,11 +53,14 @@ async function loadCatalogue() {
   const g = await import(
     pathToFileURL(path.join(root, 'src/data/guides.js')).href
   );
-  return { ...mod, guides: g.guides };
+  const m = await import(
+    pathToFileURL(path.join(root, 'src/data/markets.js')).href
+  );
+  return { ...mod, guides: g.guides, markets: m.markets };
 }
 
 /** Every URL the site has, derived from the catalogue — never hand-listed. */
-function allRoutes({ businessAreas, products, guides = [] }) {
+function allRoutes({ businessAreas, products, guides = [], markets = [] }) {
   const areaRoutes = businessAreas.flatMap((a) => [
     { url: `/business-areas/${a.slug}`, priority: '0.8' },
     { url: `/products/${a.slug}`, priority: '0.8' },
@@ -69,7 +73,17 @@ function allRoutes({ businessAreas, products, guides = [] }) {
     url: `/guides/${g.slug}`,
     priority: '0.7',
   }));
-  return [...STATIC_ROUTES, ...areaRoutes, ...productRoutes, ...guideRoutes];
+  const marketRoutes = markets.map((m) => ({
+    url: `/exports/${m.slug}`,
+    priority: '0.7',
+  }));
+  return [
+    ...STATIC_ROUTES,
+    ...areaRoutes,
+    ...productRoutes,
+    ...guideRoutes,
+    ...marketRoutes,
+  ];
 }
 
 async function buildSsrBundle() {

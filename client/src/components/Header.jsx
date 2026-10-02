@@ -200,6 +200,10 @@ export default function Header() {
             Manufacturing
           </Link>
 
+          <Link to="/exports" className="header__link">
+            Exports
+          </Link>
+
           <div className="header__item" onMouseEnter={() => setOpen('contact')}>
             {trigger('contact', '/contact', 'Contact')}
             {simplePanel('contact', CONTACT_LINKS)}
@@ -245,6 +249,7 @@ export default function Header() {
 
           <Link to="/about">About Us</Link>
           <Link to="/manufacturing">Manufacturing</Link>
+          <Link to="/exports">Exports</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/contact#enquiry" className="btn btn--fill header__drawer-cta">
             Get quote
