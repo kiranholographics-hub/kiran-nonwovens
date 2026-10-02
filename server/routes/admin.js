@@ -3,6 +3,9 @@ import { Router } from 'express';
 import { adminConfigured, checkLogin, requireAdmin, signToken } from '../auth.js';
 import { dbReady } from '../db.js';
 import { rateLimit } from '../middleware/rateLimit.js';
+import express from 'express';
+import { MAX_IMAGE_BYTES, sniffImage } from '../media.js';
+import Media from '../models/Media.js';
 import Enquiry from '../models/Enquiry.js';
 import Market, { REGIONS } from '../models/Market.js';
 import Visit from '../models/Visit.js';
@@ -158,6 +161,40 @@ router.get('/visits', handle(async (_req, res) => {
     ]),
     series: series.map((r) => ({ day: r._id, views: r.views, visitors: r.visitors })),
   });
+}));
+
+/* ── Images ──────────────────────────────────────────────────────────── */
+router.get('/media', handle(async (_req, res) => {
+  const rows = await Media.find().select('-data').sort({ createdAt: -1 }).limit(200);
+  res.json(rows);
+}));
+router.post(
+  '/media',
+  express.raw({ type: ['image/jpeg', 'image/png', 'image/webp'], limit: MAX_IMAGE_BYTES }),
+  handle(async (req, res) => {
+    const kind = sniffImage(req.body);
+    if (!kind) {
+      return res.status(400).json({ error: 'Upload a JPEG, PNG or WebP image (up to 3 MB).' });
+    }
+    let name = '';
+    try {
+      name = decodeURIComponent(req.get('x-filename') || '');
+    } catch {
+      /* keep it empty */
+    }
+    const doc = await Media.create({
+      name: text(name, 120),
+      contentType: kind,
+      size: req.body.length,
+      data: req.body,
+    });
+    res.status(201).json({ id: String(doc._id), name: doc.name, size: doc.size, contentType: kind });
+  })
+);
+router.delete('/media/:id', handle(async (req, res) => {
+  if (!isId(req.params.id)) return res.status(404).json({ error: 'Not found' });
+  await Media.findByIdAndDelete(req.params.id);
+  res.json({ ok: true });
 }));
 
 /* ── Content (pages, updates, testimonials, team, certifications) ───── */

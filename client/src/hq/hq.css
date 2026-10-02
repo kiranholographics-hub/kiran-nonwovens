@@ -144,3 +144,15 @@
 .hq__bar { flex: 1; height: 14px; background: #f1ebe0; border-radius: 2px; overflow: hidden; }
 .hq__bar i { display: block; height: 100%; background: #e0c9bb; }
 .hq__share b { width: 38px; text-align: right; font-size: 0.85rem; }
+
+.hq__rich { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.hq__rich-label { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--hq-mute); }
+.hq__toolbar { display: flex; flex-wrap: wrap; gap: 6px; }
+.hq__tool { background: var(--hq-card); border: 1px solid var(--hq-line); min-height: 44px; min-width: 44px; padding: 0 14px; cursor: pointer; font: inherit; font-weight: 600; }
+.hq__tool:disabled { opacity: 0.5; cursor: default; }
+.hq__tool--preview { margin-left: auto; }
+.hq__tool--preview.is-on { background: var(--hq-ink); color: #fff; border-color: var(--hq-ink); }
+.hq__preview { background: #fff; border: 1px solid var(--hq-line); padding: 24px; min-height: 200px; }
+.hq__preview .body-text { max-width: none; }
+.hq__rich-msg { color: var(--hq-green); }
+.hq__rich-help { line-height: 1.8; }

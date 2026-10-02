@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { api } from './api.js';
+import RichField from './RichField.jsx';
 import useLoad from './useLoad.js';
 
 const slugify = (s) =>
@@ -10,7 +11,7 @@ export const SECTIONS = {
   updates: {
     title: 'Updates',
     one: 'update',
-    help: 'News posts, shown at /updates and linked in the footer once one is published. Separate paragraphs with a blank line. Link to a page with [text](/products).',
+    help: 'News posts, shown at /updates and linked in the footer once one is published. Use the toolbar for headings, bullet lists, bold, links and images.',
     url: (r) => `/updates/${r.slug}`,
     summary: (r) => r.title,
     sub: (r) => (r.publishedAt ? String(r.publishedAt).slice(0, 10) : ''),
@@ -18,14 +19,14 @@ export const SECTIONS = {
       { k: 'title', label: 'Title', required: true, slugFrom: true },
       { k: 'slug', label: 'URL slug', required: true },
       { k: 'excerpt', label: 'Short summary (shown in the list and search results)', type: 'textarea', rows: 2, max: 300 },
-      { k: 'body', label: 'Text', type: 'textarea', rows: 10, required: true },
+      { k: 'body', label: 'Text', type: 'rich', rows: 12, required: true },
       { k: 'publishedAt', label: 'Publish date', type: 'date' },
     ],
   },
   pages: {
     title: 'Pages',
     one: 'page',
-    help: 'Extra pages of your own, shown at /pages/<slug> and linked in the footer. Separate paragraphs with a blank line.',
+    help: 'Extra pages of your own, shown at /pages/<slug> and linked in the footer. Use the toolbar for headings, bullet lists, bold, links and images.',
     url: (r) => `/pages/${r.slug}`,
     summary: (r) => r.title,
     sub: (r) => `/pages/${r.slug}`,
@@ -33,7 +34,7 @@ export const SECTIONS = {
       { k: 'title', label: 'Title', required: true, slugFrom: true },
       { k: 'slug', label: 'URL slug', required: true },
       { k: 'metaDescription', label: 'Search description (up to 165 characters)', type: 'textarea', rows: 2, max: 165 },
-      { k: 'body', label: 'Text', type: 'textarea', rows: 12, required: true },
+      { k: 'body', label: 'Text', type: 'rich', rows: 14, required: true },
     ],
   },
   testimonials: {
@@ -142,7 +143,9 @@ function Manager({ kind, cfg }) {
       {editing ? (
         <form className="hq__card hq__form" onSubmit={save}>
           <h2>{editing === 'new' ? `New ${cfg.one}` : `Edit ${cfg.one}`}</h2>
-          {cfg.fields.map((f) => (
+          {cfg.fields.map((f) => f.type === 'rich' ? (
+            <RichField key={f.k} label={f.label} rows={f.rows} required={f.required} value={form[f.k]} onChange={(v) => setForm({ ...form, [f.k]: v })} />
+          ) : (
             <label key={f.k}>
               {f.label}
               {f.type === 'textarea' ? (
