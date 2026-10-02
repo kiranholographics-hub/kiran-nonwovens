@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FACTORY } from '../data/locations.js';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { CONTACT, SITE } from '../lib.js';
 import './Footer.css';
@@ -66,6 +67,9 @@ export default function Footer() {
             {/* PLACEHOLDERS — contact details pending from Sir */}
             <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
             <a href={CONTACT.emailHref}>{CONTACT.email}</a>
+            <a href={FACTORY.mapUrl} target="_blank" rel="noopener noreferrer">
+              Factory on Google Maps
+            </a>
           </div>
         </div>
 

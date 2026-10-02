@@ -6,6 +6,7 @@ import { RuledList } from '../components/TabPanel.jsx';
 import Faq from '../components/Faq.jsx';
 import { CONTACT_FAQ, PAGE_SEO, plain } from '../data/seo.js';
 import { CONTACT, SITE, breadcrumbLd, faqLd, isPlaceholder } from '../lib.js';
+import { FACTORY } from '../data/locations.js';
 import './Contact.css';
 
 /** What lets the export team quote on the first reply. */
@@ -25,7 +26,17 @@ const whatsappHref = isPlaceholder(CONTACT.whatsapp)
   ? undefined
   : `https://wa.me/${String(CONTACT.whatsapp).replace(/\D/g, '')}`;
 const DETAILS = [
-  ['Address', CONTACT.address],
+  ['Office', CONTACT.address],
+  [
+    'Factory',
+    <>
+      {FACTORY.address}
+      <br />
+      <a href={FACTORY.mapUrl} target="_blank" rel="noopener noreferrer">
+        View the factory on Google Maps
+      </a>
+    </>,
+  ],
   ['Phone', CONTACT.phone, CONTACT.phoneHref],
   ['WhatsApp', CONTACT.whatsapp, whatsappHref],
   ['Email', CONTACT.email, CONTACT.emailHref],
