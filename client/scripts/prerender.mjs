@@ -18,7 +18,7 @@
  * tree (see src/head.js) and entry-server hands them back separately, so they
  * go straight into <head> and the client hydrates markup it agrees with.
  */
-import { build } from 'vite';
+import { build, loadEnv } from 'vite';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { mkdir, readFile, writeFile, rm, readdir } from 'node:fs/promises';
@@ -28,10 +28,24 @@ const root = path.resolve(here, '..');
 const dist = path.join(root, 'dist');
 const ssrDist = path.join(root, 'dist-ssr');
 
-const SITE_URL = (process.env.VITE_SITE_URL || 'http://localhost:3100').replace(
-  /\/$/,
-  ''
-);
+// The public address, for sitemap.xml and robots.txt. Vite reads client/.env.production
+// for the app's own tags (canonicals, og:url), but this plain Node script does not,
+// so it reads the same files through Vite's loadEnv. A real shell variable still wins.
+const env = { ...loadEnv('production', root, 'VITE_'), ...process.env };
+const SITE_URL = (env.VITE_SITE_URL || 'http://localhost:3100').replace(/\/$/, '');
+
+// A sitemap that points at localhost is silently useless to Google, so a build
+// without the real address is stopped here instead of being uploaded by mistake.
+if (/localhost|127\.0\.0\.1/.test(SITE_URL) && process.env.ALLOW_LOCAL_BUILD !== '1') {
+  console.error(
+    `\n[prerender] VITE_SITE_URL is "${SITE_URL}", so sitemap.xml and robots.txt would point at localhost.\n` +
+      `Put this in client/.env.production and build again:\n\n` +
+      `  VITE_SITE_URL=https://kirannonwovens.com\n` +
+      `  VITE_API_URL=https://api.kirannonwovens.com\n\n` +
+      `(For a throw-away local test build only, run with ALLOW_LOCAL_BUILD=1.)\n`
+  );
+  process.exit(1);
+}
 
 /** Static routes, with the sitemap priority each deserves. */
 const STATIC_ROUTES = [
