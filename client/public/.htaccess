@@ -10,16 +10,36 @@
   RewriteEngine On
   RewriteBase /
 
-  # ── Once the real domain is live ────────────────────────────────────
-  # Send everything to https and to ONE hostname, so Google sees one site
-  # (not http/https × www/non-www). Replace example.com, then uncomment.
-  # RewriteCond %{HTTPS} off [OR]
-  # RewriteCond %{HTTP_HOST} !^example\.com$ [NC]
-  # RewriteRule ^ https://example.com%{REQUEST_URI} [L,R=301]
+  # ── One site, one origin ────────────────────────────────────────────
+  # Send everything to https and to the bare hostname, so Google sees one
+  # site rather than http/https x www/non-www. kirannonwovens.com is the
+  # Search Console property and the host every canonical tag names.
+  #
+  # The X-Forwarded-Proto check matters on shared hosting: when TLS is
+  # terminated at a proxy in front of Apache, %{HTTPS} reads "off" even on an
+  # https request, and a redirect to https would then loop forever.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://kirannonwovens.com%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTP_HOST} !^kirannonwovens\.com$ [NC]
+  RewriteRule ^ https://kirannonwovens.com%{REQUEST_URI} [L,R=301]
+
+  # ── One address per page ────────────────────────────────────────────
+  # Every page lives at a directory (/guides/x/index.html), and Apache's
+  # default is to 301 a directory URL to its trailing-slash form. That sent
+  # every clean URL away from the exact address the canonical tag, the
+  # sitemap and every internal link use, so the whole sitemap redirected and
+  # each canonical pointed at a redirect. Serve the clean URL directly, and
+  # send the trailing-slash form to it instead.
+  DirectorySlash Off
+
+  # /guides/x/  ->  /guides/x   (301, so the duplicate drops out of the index)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.+)/$ /$1 [L,R=301]
 
   # Never rewrite a request for a file that exists (assets, sitemap, robots).
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
   # /products  ->  /products/index.html, when that page was prerendered.
