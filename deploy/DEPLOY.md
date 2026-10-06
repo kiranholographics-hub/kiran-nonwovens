@@ -13,7 +13,14 @@ Database (MongoDB Atlas) pehle se cloud par hai, uski alag hosting nahi chahiye.
 
 ## Pehle ye 4 cheezein tay karo
 
-1. **Domain naam** (jaise `www.kirannonwovens.com`) aur uska DNS kiske paas hai.
+1. **Domain naam** — `kirannonwovens.com`, **bina `www` ke**.
+
+   Ye ek hi naam har jagah chalna chahiye: Search Console ki property, har
+   page ka canonical tag, sitemap.xml, aur `client/public/.htaccess` ka
+   redirect — sab isi par set hain. `www` wala pata bhi isi par 301 ho jata
+   hai. Agar build mein galti se `www` daal diya, to har canonical ek aise
+   URL par point karega jo khud redirect karta hai — Google ko ulta signal
+   jata hai. `node scripts/predeploy.mjs` ye galti pakad kar build rok dega.
 2. **Website kahan hosting hogi** (Hostinger jaisi normal hosting chalegi).
 3. **API kahan hosting hogi** — sabse aasan: **Render.com** (Web Service) ya **Railway**. Ya ek **VPS** (neeche Raasta B).
 4. API ke liye ek **subdomain** (jaise `api.kirannonwovens.com`).
@@ -35,7 +42,7 @@ Atlas → **Network Access** → **Add IP Address**. Render ke IP badalte rehte 
    - **Environment Variable** `NODE_VERSION` = `22`
 4. **Environment** mein `deploy/server.env.production.example` ki saari lines apne asli values ke saath daalo. Sabse zaroori:
    - `MONGODB_URI` (database ka naam `kiran-nonwovens` hi ho)
-   - `CORS_ORIGIN` = website ka address, jaise `https://www.kirannonwovens.com`
+   - `CORS_ORIGIN` = website ka address, jaise `https://kirannonwovens.com`
    - `SMTP_*` aur `ENQUIRY_TO` (email ke liye)
 5. Deploy karo. Render ek address dega, jaise `https://kiran-api.onrender.com`. Browser mein `.../api/health` kholo. `{"ok":true,"db":"connected"}` aana chahiye.
 6. **Custom domain:** Render → Settings → Custom Domains → `api.kirannonwovens.com` jodo, aur Render jo CNAME bataye wo apne DNS mein daalo. (Render par free plan kuch der idle rehne par so jata hai, to pehli enquiry dheere ho sakti hai. Live site ke liye paid plan lo.)
@@ -45,7 +52,7 @@ Apne computer par, `client` folder mein:
 
 1. `client\.env.production` naam ki file banao (`deploy\client.env.production.example` ko copy karke) aur sahi values daalo:
    ```
-   VITE_SITE_URL=https://www.kirannonwovens.com
+   VITE_SITE_URL=https://kirannonwovens.com
    VITE_API_URL=https://api.kirannonwovens.com
    ```
 2. `src\lib.js` mein `VIDEOS_READY = true` hona chahiye (varna video nahi chalegi).
