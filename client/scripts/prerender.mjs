@@ -22,6 +22,8 @@ import { build, loadEnv } from 'vite';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { mkdir, readFile, writeFile, rm, readdir } from 'node:fs/promises';
+import { statSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..');
@@ -47,18 +49,56 @@ if (/localhost|127\.0\.0\.1/.test(SITE_URL) && process.env.ALLOW_LOCAL_BUILD !==
   process.exit(1);
 }
 
-/** Static routes, with the sitemap priority each deserves. */
+/**
+ * Static routes, with the sitemap priority each deserves and the file whose
+ * last change is that page's real last-modified date (see `lastModified`).
+ */
 const STATIC_ROUTES = [
-  { url: '/', priority: '1.0' },
-  { url: '/business-areas', priority: '0.8' },
-  { url: '/products', priority: '0.9' },
-  { url: '/about', priority: '0.6' },
-  { url: '/manufacturing', priority: '0.7' },
-  { url: '/contact', priority: '0.6' },
-  { url: '/exports', priority: '0.8' },
-  { url: '/guides', priority: '0.7' },
-  { url: '/privacy', priority: '0.2' },
+  { url: '/', priority: '1.0', src: 'src/pages/Home.jsx' },
+  { url: '/business-areas', priority: '0.8', src: 'src/pages/BusinessAreas.jsx' },
+  { url: '/products', priority: '0.9', src: 'src/pages/Products.jsx' },
+  { url: '/about', priority: '0.6', src: 'src/pages/About.jsx' },
+  { url: '/manufacturing', priority: '0.7', src: 'src/pages/Manufacturing.jsx' },
+  { url: '/contact', priority: '0.6', src: 'src/pages/Contact.jsx' },
+  { url: '/exports', priority: '0.8', src: 'src/pages/Exports.jsx' },
+  { url: '/guides', priority: '0.7', src: 'src/pages/Guides.jsx' },
+  { url: '/privacy', priority: '0.2', src: 'src/pages/Privacy.jsx' },
 ];
+
+/**
+ * A page's <lastmod> is the last commit that touched the file its content
+ * comes from — not the build date.
+ *
+ * Stamping every URL with "today" on each build tells search engines nothing:
+ * once the dates move for pages that did not change, the signal is treated as
+ * unreliable and ignored, and the recrawl priority it is meant to give up with
+ * it. Falling back to the file's mtime keeps a checkout without git history
+ * working.
+ */
+const buildDate = new Date().toISOString().slice(0, 10);
+const lastmodCache = new Map();
+function lastModified(relPath) {
+  if (!relPath) return buildDate;
+  if (lastmodCache.has(relPath)) return lastmodCache.get(relPath);
+  let date = buildDate;
+  try {
+    const out = execFileSync(
+      'git',
+      ['log', '-1', '--format=%cs', '--', relPath],
+      { cwd: root, encoding: 'utf8' }
+    ).trim();
+    if (/^\d{4}-\d{2}-\d{2}$/.test(out)) date = out;
+    else date = statSync(path.join(root, relPath)).mtime.toISOString().slice(0, 10);
+  } catch {
+    try {
+      date = statSync(path.join(root, relPath)).mtime.toISOString().slice(0, 10);
+    } catch {
+      /* keep the build date */
+    }
+  }
+  lastmodCache.set(relPath, date);
+  return date;
+}
 
 async function loadCatalogue() {
   const mod = await import(
@@ -91,29 +131,38 @@ function allRoutes({
   updates = [],
   customPages = [],
 }) {
+  const CATALOG = 'src/data/catalog.js';
+  const GUIDES = 'src/data/guides.js';
+  const MARKETS = 'src/data/markets.js';
+  const CONTENT = 'src/data/content.js';
+
   const areaRoutes = businessAreas.flatMap((a) => [
-    { url: `/business-areas/${a.slug}`, priority: '0.8' },
-    { url: `/products/${a.slug}`, priority: '0.8' },
+    { url: `/business-areas/${a.slug}`, priority: '0.8', src: CATALOG },
+    { url: `/products/${a.slug}`, priority: '0.8', src: CATALOG },
   ]);
   const productRoutes = products.map((p) => ({
     url: `/products/${p.category}/${p.slug}`,
     priority: '0.9',
+    src: CATALOG,
   }));
   const guideRoutes = guides.map((g) => ({
     url: `/guides/${g.slug}`,
     priority: '0.7',
+    src: GUIDES,
   }));
   const marketRoutes = markets.map((m) => ({
     url: `/exports/${m.slug}`,
     priority: '0.7',
+    src: MARKETS,
   }));
   const updateRoutes = [
-    ...(updates.length ? [{ url: '/updates', priority: '0.6' }] : []),
-    ...updates.map((u) => ({ url: `/updates/${u.slug}`, priority: '0.6' })),
+    ...(updates.length ? [{ url: '/updates', priority: '0.6', src: CONTENT }] : []),
+    ...updates.map((u) => ({ url: `/updates/${u.slug}`, priority: '0.6', src: CONTENT })),
   ];
   const pageRoutes = customPages.map((p) => ({
     url: `/pages/${p.slug}`,
     priority: '0.5',
+    src: CONTENT,
   }));
   return [
     ...STATIC_ROUTES,
@@ -205,16 +254,15 @@ async function run() {
   const notFound = inject(template, render('/__not-found__'));
   await writeFile(path.join(dist, '404.html'), notFound, 'utf8');
 
-  const lastmod = new Date().toISOString().slice(0, 10);
   const sitemap =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     routes
       .map(
-        ({ url, priority }) =>
+        ({ url, priority, src }) =>
           `  <url>\n` +
           `    <loc>${xmlEscape(SITE_URL + url)}</loc>\n` +
-          `    <lastmod>${lastmod}</lastmod>\n` +
+          `    <lastmod>${lastModified(src)}</lastmod>\n` +
           `    <changefreq>monthly</changefreq>\n` +
           `    <priority>${priority}</priority>\n` +
           `  </url>`
