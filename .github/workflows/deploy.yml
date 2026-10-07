@@ -46,6 +46,8 @@ jobs:
       VITE_API_URL: https://api.kirannonwovens.com
     steps:
       - name: Check the FTP settings exist
+        # Runs before checkout, so the "client" folder does not exist yet.
+        working-directory: .
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
