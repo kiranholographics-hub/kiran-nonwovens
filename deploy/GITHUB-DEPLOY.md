@@ -47,7 +47,7 @@ baad** bhi bas **Run workflow** dabao: build ke time panel ka data download hota
 |---|---|
 | `The secret FTP_... is not set` | Upar ke step 2 mein wo secret daalo. |
 | `530 Login failed` | Username/password galat. hPanel mein FTP password dobara set karke secret badlo. |
-| Certificate / TLS ka error | Server ka certificate naam FTP host se match nahi karta. Variable `FTP_VERIFY_CERT` = `false` (thoda kam surakshit, par password phir bhi encrypted jaata hai). |
+| Certificate / TLS ka error | Host agar IP address hai to workflow sirf naam ka check chhodta hai (certificate khud phir bhi verify hota hai). Phir bhi "not trusted" jaisa error aaye to variable `FTP_VERIFY_CERT` = `false` (thoda kam surakshit, par password phir bhi encrypted jaata hai). |
 | FTPS support nahi | Variable `FTP_TLS` = `false`. **Dhyan:** tab password bina encryption ke jaata hai; pehle hosting se FTPS chalu karwane ki koshish karo. |
 | Files galat jagah (`public_html/public_html`) | Variable `FTP_DIR` set karo (jaise `/public_html` ya `/`). |
 | Live check: "bundle" mismatch | Upload poora nahi hua ya CDN/cache purana de raha hai. Kuch minute baad dobara Run workflow. |
