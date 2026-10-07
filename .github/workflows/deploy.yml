@@ -1,0 +1,132 @@
+# Builds the website and uploads client/dist to Hostinger over FTP, then checks
+# the LIVE site. The API (server/) is NOT touched here: Hostinger deploys that
+# by itself from GitHub.
+#
+# Run it from  GitHub -> Actions -> "Deploy website" -> Run workflow.
+# To deploy automatically after every merge that changes client/, set the
+# repository variable AUTO_DEPLOY to "true".
+#
+# One-time setup is in deploy/GITHUB-DEPLOY.md (three secrets: FTP_SERVER,
+# FTP_USERNAME, FTP_PASSWORD).
+name: Deploy website
+
+on:
+  workflow_dispatch:
+    inputs:
+      indexnow:
+        description: "After the live checks pass, also ping Bing/Yandex (IndexNow) with every URL"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - "client/**"
+      - ".github/workflows/deploy.yml"
+
+# Never run two deploys at once.
+concurrency:
+  group: deploy-website
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    # The manual button always works; a push only deploys when AUTO_DEPLOY is "true".
+    if: github.event_name == 'workflow_dispatch' || vars.AUTO_DEPLOY == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: client
+    env:
+      # The public address and the API the site talks to. Not secrets.
+      VITE_SITE_URL: https://kirannonwovens.com
+      VITE_API_URL: https://api.kirannonwovens.com
+    steps:
+      - name: Check the FTP settings exist
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          missing=0
+          for v in FTP_SERVER FTP_USERNAME FTP_PASSWORD; do
+            if [ -z "${!v}" ]; then
+              echo "::error::The secret $v is not set. Add it in the repository: Settings -> Secrets and variables -> Actions."
+              missing=1
+            fi
+          done
+          exit $missing
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      # Stops a build that would go live pointing at localhost or the wrong host.
+      - name: Pre-deploy check
+        run: node scripts/predeploy.mjs
+
+      - name: Build (prerenders every page)
+        run: npm run build
+
+      - name: Smoke test the build
+        run: npm run smoke
+
+      - name: Check the build has the files the server needs
+        run: |
+          test -f dist/.htaccess || { echo "::error::dist/.htaccess is missing"; exit 1; }
+          test -f dist/sitemap.xml || { echo "::error::dist/sitemap.xml is missing"; exit 1; }
+          ls dist/*.txt | grep -Eq '/[0-9a-f]{32}\.txt$' || { echo "::error::the IndexNow key file is missing from dist/"; exit 1; }
+          if grep -q localhost dist/sitemap.xml dist/robots.txt; then echo "::error::sitemap or robots.txt mention localhost"; exit 1; fi
+
+      - name: Upload dist/ over FTP
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          # Optional repository variables:
+          #   FTP_DIR          the web folder on the server (default: auto, /public_html or /)
+          #   FTP_VERIFY_CERT  "false" only if the server's certificate name does not match
+          #   FTP_TLS          "false" only if the host cannot do FTPS (sends the password unencrypted)
+          FTP_DIR: ${{ vars.FTP_DIR }}
+          FTP_VERIFY_CERT: ${{ vars.FTP_VERIFY_CERT }}
+          FTP_TLS: ${{ vars.FTP_TLS }}
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lftp
+
+          TLS="${FTP_TLS:-true}"
+          VERIFY="${FTP_VERIFY_CERT:-true}"
+          SET="set ftp:ssl-force $TLS; set ftp:ssl-protect-data $TLS; set ssl:verify-certificate $VERIFY; set net:max-retries 3; set net:timeout 30; set cmd:fail-exit true;"
+          lf() { lftp -u "$FTP_USERNAME,$FTP_PASSWORD" -e "$SET $1; quit" "$FTP_SERVER"; }
+
+          ROOT="${FTP_DIR:-}"
+          if [ -z "$ROOT" ]; then
+            # Some FTP logins start above public_html, some inside it.
+            if lf "cls -1 /" | grep -Eq '^/?public_html/?$'; then ROOT=/public_html; else ROOT=/; fi
+          fi
+          echo "Uploading dist/ to $ROOT on the server"
+
+          # Mirror up, never delete: files that are not in dist/ (for example the
+          # Google verification file) are left alone. Hidden files (.htaccess) are included.
+          lf "mirror -R --parallel=4 --no-perms --verbose=1 dist/ $ROOT"
+          echo "Upload finished."
+
+      - name: Check the live site
+        run: |
+          sleep 15
+          node scripts/verify-live.mjs
+
+      - name: Ping IndexNow (Bing, Yandex)
+        if: github.event_name == 'workflow_dispatch' && inputs.indexnow
+        run: npm run indexnow

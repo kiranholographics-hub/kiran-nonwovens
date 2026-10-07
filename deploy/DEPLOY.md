@@ -157,3 +157,9 @@ Agar asli domain se pehle kisi test address par daalna ho, to `client\.env.produ
 | Form chalta hai par email nahi aati | Server ke log mein `[mail]` line dekho; `node scripts/test-mail.js` chalao. |
 | Pages par `/products` seedha kholne par 404 | `.htaccess` upload nahi hui (hidden file) ya nginx config nahi lagi. |
 | Video nahi chalti | `VIDEOS_READY = true` aur `public/videos/` ki 4 files `dist` mein hain? Build dobara karo. |
+
+---
+
+## Automatic deploy (GitHub Actions)
+
+Website ko `dist` zip karke hand se upload karne ki jagah `deploy/GITHUB-DEPLOY.md` wala workflow use kar sakte ho (build + FTP upload + live check).
