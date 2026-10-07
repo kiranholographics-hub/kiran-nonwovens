@@ -15,7 +15,7 @@
  * Node.
  */
 
-export const GUIDES_PUBLISHED = '2026-09-30';
+export const GUIDES_PUBLISHED = '2026-10-07';
 
 export const guides = [
   {
@@ -508,6 +508,93 @@ export const guides = [
       'automotive/automotive-needle-punched-felt',
     ],
     relatedGuides: ['gsm-in-nonwoven-fabric', 'polyester-vs-polypropylene-nonwoven'],
+  },
+
+  {
+    slug: 'needle-punched-nonwoven-manufacturer-india',
+    title: 'Buying needle punched nonwoven from India: what to check in a manufacturer',
+    seoTitle: 'Nonwoven Felt Manufacturer India: Checklist',
+    description:
+      'How importers can evaluate a needle punched nonwoven felt or geotextile maker in India: range, made-to-order, samples, testing and export paperwork.',
+    readMins: 5,
+    intro:
+      'India has many needle punched nonwoven makers, from small mills to large plants. For an importer, the useful question is not who is biggest but who can make your specification, repeatably, and ship it with the right paperwork. This checklist covers what to ask before you place a first order.',
+    sections: [
+      {
+        h: 'Start with the range, not the brochure',
+        p: [
+          'Check that the maker produces the construction you need: needle punched or thermal bonded, the fibre (polyester, polypropylene, viscose or a blend), and the GSM and width range. At Kiran Nonwovens the range runs from 100 to 1200 GSM in roll widths of 5.0–5.2 m — see [needle punched vs thermal bonded](/guides/needle-punched-vs-thermal-bonded-nonwoven) if you are still choosing a construction.',
+        ],
+      },
+      {
+        h: 'Can they make to your specification?',
+        p: [
+          'Standard grades suit many buyers, but automotive, filtration, geotextile and footwear applications often need a custom GSM, thickness or fibre blend. Ask whether the plant produces to order, and what they need from you to quote — our [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) shows the details that matter.',
+        ],
+      },
+      {
+        h: 'Ask for samples and test your own process',
+        p: [
+          'A sample run through your own cutting, laminating, moulding or installation tells you more than a datasheet. Ask whether samples are available and what they cover.',
+        ],
+      },
+      {
+        h: 'Understand who actually makes the material',
+        p: [
+          'Some exporters trade, some manufacture, and some work with a manufacturing partner. All can be valid, but you should know which applies. Kiran Nonwovens exports material made at the plant of its manufacturing partner, Miracle Nonwoven Industries — details are on our [manufacturing page](/manufacturing).',
+        ],
+      },
+      {
+        h: 'Test reports and standards',
+        p: [
+          'Tell the supplier early which tests or standards your market requires, for example GSM, thickness, tensile, permeability or flammability figures. Ask which reports can be provided with a shipment, and confirm anything that matters for your tender.',
+        ],
+      },
+      {
+        h: 'Export paperwork and packing',
+        p: [
+          'Confirm the documents you need, how rolls are packed for sea or air freight, and the delivery terms you prefer. Felt and nonwovens fall under chapter 56 of the Harmonized System; confirm the exact code with your customs broker.',
+        ],
+      },
+      {
+        h: 'A short list to take into your first call',
+        list: [
+          'Which constructions and fibres can you make?',
+          'What GSM and width range, and can it be customised?',
+          'Do you supply samples before a bulk order?',
+          'Who manufactures the material, and where?',
+          'Which test reports can you provide?',
+          'What export documents and packing do you provide?',
+        ],
+        p: [
+          'To start, send your specification through the [enquiry form](/contact#enquiry) and our export team will reply with specifications and pricing.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What should I check before buying nonwoven felt from India?',
+        a: 'The construction and fibre range, whether the plant makes to your specification, sample availability, test reports for your market, who manufactures the material, and export paperwork and packing.',
+      },
+      {
+        q: 'Does Kiran Nonwovens make to order?',
+        a: 'Yes. Material is produced to the buyer’s specification across 100–1200 GSM and roll widths of 5.0–5.2 m.',
+      },
+      {
+        q: 'Who manufactures the material?',
+        a: 'Kiran Nonwovens exports material made at the plant of its manufacturing partner, Miracle Nonwoven Industries.',
+      },
+      {
+        q: 'Can I get a sample first?',
+        a: 'Samples are available on request so you can test the material in your own process before a bulk order.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/customised-nonwoven-solutions',
+      'automotive/automotive-needle-punched-felt',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+    ],
+    relatedGuides: ['how-to-request-a-nonwoven-felt-quote', 'gsm-in-nonwoven-fabric'],
   },
 ];
 
