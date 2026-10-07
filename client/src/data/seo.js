@@ -259,6 +259,17 @@ export function productFaq(product) {
     });
   }
 
+  const guideLink = {
+    geotextile: 'Read our [geotextile for road construction guide](/guides/geotextile-for-road-construction) and the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+    automotive: 'Read our [automotive NVH felt guide](/guides/automotive-nvh-felt-guide).',
+  }[product.category];
+  if (guideLink) {
+    faqs.push({
+      q: `Where can I learn more about choosing ${product.name}?`,
+      a: guideLink,
+    });
+  }
+
   faqs.push({
     q: `Can I get a sample or a custom specification of ${product.name}?`,
     a: 'Yes. Samples are available on request, and GSM, thickness, width, colour and roll length can be customised. Use the enquiry form on this page, or see [how to request a quote](/guides/how-to-request-a-nonwoven-felt-quote).',
