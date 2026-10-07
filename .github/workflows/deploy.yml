@@ -107,6 +107,14 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq lftp
 
+          # A secret pasted with a trailing space or line break is a common reason for
+          # "530 Login incorrect": drop CR/LF and surrounding spaces, and say what we see
+          # (lengths only, never the values).
+          trim() { printf '%s' "$1" | tr -d '\r\n' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'; }
+          FTP_SERVER="$(trim "$FTP_SERVER")"; FTP_USERNAME="$(trim "$FTP_USERNAME")"; FTP_PASSWORD="$(trim "$FTP_PASSWORD")"
+          echo "Using FTP username of ${#FTP_USERNAME} characters and a password of ${#FTP_PASSWORD} characters."
+          case "$FTP_USERNAME$FTP_PASSWORD" in *,*) echo "::warning::The username or password contains a comma, which can confuse FTP tools. Prefer letters and digits only for the FTP password." ;; esac
+
           TLS="${FTP_TLS:-true}"
           VERIFY="${FTP_VERIFY_CERT:-true}"
           # A certificate is issued to a name, never to an IP address, so when the
@@ -129,7 +137,10 @@ jobs:
 
           # Mirror up, never delete: files that are not in dist/ (for example the
           # Google verification file) are left alone. Hidden files (.htaccess) are included.
-          lf "mirror -R --parallel=4 --no-perms --verbose=1 dist/ $ROOT"
+          if ! lf "mirror -R --parallel=4 --no-perms --verbose=1 dist/ $ROOT"; then
+            echo "::error::The FTP upload failed. If the log says 530 Login incorrect, the FTP_USERNAME or FTP_PASSWORD secret does not match the FTP account in hPanel (Files -> FTP Accounts). Set a new password there and update the secret."
+            exit 1
+          fi
           echo "Upload finished."
 
       - name: Check the live site
