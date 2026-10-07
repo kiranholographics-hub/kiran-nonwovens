@@ -109,7 +109,15 @@ jobs:
 
           TLS="${FTP_TLS:-true}"
           VERIFY="${FTP_VERIFY_CERT:-true}"
-          SET="set ftp:ssl-force $TLS; set ftp:ssl-protect-data $TLS; set ssl:verify-certificate $VERIFY; set net:max-retries 3; set net:timeout 30; set cmd:fail-exit true;"
+          # A certificate is issued to a name, never to an IP address, so when the
+          # host is given as an IP only the name check is skipped; the certificate
+          # itself is still verified. (FTP_VERIFY_CERT=false turns everything off.)
+          CHECK_HOST=yes
+          if echo "$FTP_SERVER" | grep -Eq '^(ftps?://)?[0-9]{1,3}(\.[0-9]{1,3}){3}(:[0-9]+)?/?$'; then
+            CHECK_HOST=no
+            echo "FTP host is an IP address: skipping the hostname check only."
+          fi
+          SET="set ftp:ssl-force $TLS; set ftp:ssl-protect-data $TLS; set ssl:verify-certificate $VERIFY; set ssl:check-hostname $CHECK_HOST; set net:max-retries 3; set net:timeout 30; set cmd:fail-exit true;"
           lf() { lftp -u "$FTP_USERNAME,$FTP_PASSWORD" -e "$SET $1; quit" "$FTP_SERVER"; }
 
           ROOT="${FTP_DIR:-}"
