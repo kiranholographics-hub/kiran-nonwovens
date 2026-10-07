@@ -2,9 +2,11 @@
 # the LIVE site. The API (server/) is NOT touched here: Hostinger deploys that
 # by itself from GitHub.
 #
-# Run it from  GitHub -> Actions -> "Deploy website" -> Run workflow.
-# To deploy automatically after every merge that changes client/, set the
-# repository variable AUTO_DEPLOY to "true".
+# Every merge to main that changes client/ deploys automatically. To switch
+# that off, set the repository variable AUTO_DEPLOY to "false". The manual
+# button (GitHub -> Actions -> "Deploy website" -> Run workflow) always works,
+# and is how to publish changes made in the /hq panel (Markets, Pages,
+# Updates...), which are downloaded at build time and do not touch git.
 #
 # One-time setup is in deploy/GITHUB-DEPLOY.md (three secrets: FTP_SERVER,
 # FTP_USERNAME, FTP_PASSWORD).
@@ -33,8 +35,8 @@ permissions:
 
 jobs:
   deploy:
-    # The manual button always works; a push only deploys when AUTO_DEPLOY is "true".
-    if: github.event_name == 'workflow_dispatch' || vars.AUTO_DEPLOY == 'true'
+    # The manual button always works; a push deploys unless AUTO_DEPLOY is "false".
+    if: github.event_name == 'workflow_dispatch' || vars.AUTO_DEPLOY != 'false'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     defaults:
