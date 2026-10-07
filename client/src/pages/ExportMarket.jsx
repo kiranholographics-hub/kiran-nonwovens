@@ -39,7 +39,9 @@ export default function ExportMarket() {
   const areas = market.focus
     .map((s) => businessAreas.find((a) => a.slug === s))
     .filter(Boolean);
-  const others = marketsIn(market.region).filter((m) => m.slug !== market.slug);
+  const sameRegion = marketsIn(market.region).filter((m) => m.slug !== market.slug);
+  // A region with a single market (Africa) would otherwise be a dead end.
+  const others = sameRegion.length ? sameRegion : marketsIn('Middle East').slice(0, 3);
 
   const faqs = [
     {
@@ -166,7 +168,7 @@ export default function ExportMarket() {
           </div>
           {others.length ? (
             <p className="exports__more">
-              Also in {market.region}:{' '}
+              {sameRegion.length ? `Also in ${market.region}:` : 'Also supplying:'}{' '}
               {others.map((m, i) => (
                 <span key={m.slug}>
                   {i ? ', ' : ''}

@@ -88,7 +88,7 @@ export const guides = [
       'automotive/automotive-needle-punched-felt',
       'industrial/customised-nonwoven-solutions',
     ],
-    relatedGuides: ['polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric'],
+    relatedGuides: ['needle-punched-nonwoven-manufacturer-india', 'gsm-in-nonwoven-fabric'],
   },
 
   {
@@ -162,7 +162,7 @@ export const guides = [
       'industrial/packaging-protective-felt',
       'apparel-footwear/shoulder-pad-nonwoven-fabric',
     ],
-    relatedGuides: ['how-to-request-a-nonwoven-felt-quote', 'needle-punched-vs-thermal-bonded-nonwoven'],
+    relatedGuides: ['hs-code-nonwoven-felt-geotextile', 'needle-punched-vs-thermal-bonded-nonwoven'],
   },
 
   {
@@ -246,7 +246,7 @@ export const guides = [
       'geotextile/drainage-soil-erosion-control-geotextile',
       'geotextile/pipeline-cable-protection-geotextile',
     ],
-    relatedGuides: ['polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric'],
+    relatedGuides: ['geotextile-for-road-construction', 'polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric'],
   },
 
   {
@@ -507,7 +507,7 @@ export const guides = [
       'geotextile/pp-geotextile-fabric-for-civil-works',
       'automotive/automotive-needle-punched-felt',
     ],
-    relatedGuides: ['gsm-in-nonwoven-fabric', 'polyester-vs-polypropylene-nonwoven'],
+    relatedGuides: ['hs-code-nonwoven-felt-geotextile', 'gsm-in-nonwoven-fabric', 'polyester-vs-polypropylene-nonwoven'],
   },
 
   {
@@ -595,6 +595,167 @@ export const guides = [
       'geotextile/pp-geotextile-fabric-for-civil-works',
     ],
     relatedGuides: ['how-to-request-a-nonwoven-felt-quote', 'gsm-in-nonwoven-fabric'],
+  },
+
+  {
+    slug: 'hs-code-nonwoven-felt-geotextile',
+    title: 'HS code for nonwoven felt and geotextile: a guide for importers',
+    seoTitle: 'HS Code for Nonwoven Felt and Geotextile',
+    description:
+      'How nonwoven fabric, needle punched felt and geotextile are classified under HS chapter 56, and what to tell your supplier and customs broker before you order.',
+    readMins: 4,
+    intro:
+      'Importers often start by searching for an HS code. Nonwovens and felt sit in chapter 56 of the Harmonized System, and the right code depends on how the fabric is made and how it is finished. This guide explains the logic so you can brief your supplier and your customs broker correctly.',
+    sections: [
+      {
+        h: 'Where nonwovens sit in the HS',
+        p: [
+          'Felt is classified in heading 5602 and nonwovens in heading 5603, both in chapter 56. Which heading applies depends mainly on how the fabric is bonded and on whether it is coated, covered or laminated.',
+          'Geotextiles do not have a heading of their own. A nonwoven geotextile is normally classified by its construction, in the same chapter. The final code for your shipment is decided by your customs authority, so confirm it with your customs broker before you order.',
+        ],
+      },
+      {
+        h: 'What decides the code',
+        list: [
+          'Construction — needle punched, thermal bonded, spunbond or other',
+          'Fibre — polyester, polypropylene, viscose or a blend',
+          'Weight — GSM can move a product between sub-headings',
+          'Finish — whether it is plain, impregnated, coated or laminated',
+          'End use — only where the tariff text of your country specifies it',
+        ],
+        p: [
+          'See [needle punched vs thermal bonded](/guides/needle-punched-vs-thermal-bonded-nonwoven) for how the constructions differ, and [GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric) for the weight.',
+        ],
+      },
+      {
+        h: 'Codes differ by country',
+        p: [
+          'The first six digits are shared worldwide. Beyond that, each country adds its own digits, duty rates and rules, so the code on a shipment to the UAE can differ from one to Germany or the USA. Always check the tariff of your own country.',
+        ],
+      },
+      {
+        h: 'What to tell your supplier',
+        list: [
+          'The HS code you intend to use, if you already have one',
+          'The construction, fibre, GSM and width you need',
+          'Whether the fabric is plain or coated',
+          'Any test reports or documents your customs office asks for',
+        ],
+        p: [
+          'Our [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) lists every detail that helps. Send your specification through the [enquiry form](/contact#enquiry) and our export team replies with specifications and pricing.',
+        ],
+      },
+      {
+        h: 'Do not rely on a code alone',
+        p: [
+          'Two products under the same code can be very different. A code tells customs what to charge, not whether the material suits your job. Specify the fabric by construction, fibre, GSM, width and application, and use the code for paperwork.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the HS code for needle punched nonwoven felt?',
+        a: 'Felt falls under heading 5602 and nonwovens under heading 5603 of chapter 56. The exact code depends on the construction and finish, so confirm it with your customs broker.',
+      },
+      {
+        q: 'Is there a separate HS code for geotextile?',
+        a: 'Geotextile has no heading of its own. A nonwoven geotextile is classified by its construction, in chapter 56. Confirm the code for your country with your customs broker.',
+      },
+      {
+        q: 'Do HS codes differ between countries?',
+        a: 'The first six digits are common worldwide. Each country adds its own digits and duty rates, so check your national tariff.',
+      },
+      {
+        q: 'Can you tell me which code to use?',
+        a: 'The final classification is decided by your customs authority. We supply the specification of the material, and you confirm the code with your customs broker.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/customised-nonwoven-solutions',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'automotive/automotive-needle-punched-felt',
+    ],
+    relatedGuides: ['how-to-request-a-nonwoven-felt-quote', 'needle-punched-nonwoven-manufacturer-india'],
+  },
+
+  {
+    slug: 'geotextile-for-road-construction',
+    title: 'Geotextile for road construction: where it goes and what it does',
+    seoTitle: 'Geotextile for Road Construction: Uses',
+    description:
+      'How nonwoven geotextile is used under roads and pavements: separation, filtration and drainage over soft subgrade, and what to specify when you order.',
+    readMins: 5,
+    intro:
+      'On a soft or wet subgrade, stone and soil mix under traffic and the road loses its thickness. A nonwoven geotextile placed between them keeps the layers apart and lets water through. This guide covers where it goes in a road, what it does, and what to settle before you order.',
+    sections: [
+      {
+        h: 'The problem it solves',
+        p: [
+          'Without a barrier, the fine soil of a weak subgrade works up into the aggregate while stone presses down into the soil. Over time the base thins, water collects, and the surface rutts or cracks.',
+        ],
+      },
+      {
+        h: 'Where geotextile goes in a road',
+        list: [
+          'Between the subgrade and the aggregate base — separation and filtration',
+          'Around edge and subsurface drains — filtration, so drains do not clog with fines',
+          'Under embankments and on slopes — separation and erosion control',
+          'Beneath railway ballast and haul roads — keeping the layers apart under heavy loads',
+        ],
+        p: [
+          'These jobs are described in more detail in our [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+        ],
+      },
+      {
+        h: 'Separation, filtration and drainage',
+        p: [
+          'Needle punched geotextile is a thick, felt-like fabric. It separates two soil layers, lets water pass while holding fine soil back, and carries some water along its plane. Our [PP geotextile for civil works](/products/geotextile/pp-geotextile-fabric-for-civil-works) is made for this role, and [drainage and erosion control geotextile](/products/geotextile/drainage-soil-erosion-control-geotextile) suits drains and slopes.',
+        ],
+      },
+      {
+        h: 'What to specify when you order',
+        list: [
+          'Function — separation, filtration, drainage or a combination',
+          'Fibre — PP (virgin or recycled) or polyester; see [polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven)',
+          'GSM and thickness, as set by your project design',
+          'Roll width and length, so overlaps and waste fit your layout',
+          'Any strength or permeability figure your project design requires',
+        ],
+        p: [
+          'Follow the project engineer’s installation details for overlaps and cover. Geotextile is normally covered soon after it is laid; confirm exposure limits with the supplier.',
+        ],
+      },
+      {
+        h: 'Ordering for a road project',
+        p: [
+          'Material is made to order across a 100–1200 GSM range and roll widths of 5.0–5.2 m. Share your application, GSM, quantity and destination port through the [enquiry form](/contact#enquiry), or read our [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) first. Samples are available on request.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why use geotextile under a road?',
+        a: 'It keeps a soft subgrade and the aggregate above it from mixing, lets water drain through, and helps the road keep its designed thickness.',
+      },
+      {
+        q: 'Which geotextile is used for roads?',
+        a: 'Needle punched nonwoven geotextile made from polypropylene or polyester is commonly used. The GSM and fibre depend on the project design.',
+      },
+      {
+        q: 'What roll width do you supply?',
+        a: 'Roll widths of 5.0–5.2 m, with GSM, thickness and roll length set to the project requirement.',
+      },
+      {
+        q: 'Can I get a sample first?',
+        a: 'Yes. Samples are available on request, so you can check the material before a bulk order.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['nonwoven-geotextile-guide', 'how-to-request-a-nonwoven-felt-quote'],
   },
 ];
 
