@@ -23,8 +23,10 @@ Hostinger usse khud GitHub se deploy karta hai.
 - **Manual:** GitHub -> **Actions** -> **Deploy website** -> **Run workflow**.
   "Ping IndexNow" ka tick tab lagao jab live checks pass hone par Bing/Yandex ko
   bhi batana ho.
-- **Apne aap (optional):** repo -> Settings -> Variables -> Actions -> naya
-  variable `AUTO_DEPLOY` = `true`. Tab `client/` badalne wala har merge deploy hoga.
+- **Apne aap (default):** `client/` badalne wala har merge `main` mein khud deploy hota hai.
+  Band karna ho: repo -> Settings -> Secrets and variables -> Actions -> **Variables** ->
+  naya variable `AUTO_DEPLOY` = `false`. (Server ke badlav `server/` se deploy nahi hote:
+  unhe Hostinger khud GitHub se uthata hai.)
 
 **Panel (/hq) mein Markets / Pages / Updates / Team / Testimonials badalne ke
 baad** bhi bas **Run workflow** dabao: build ke time panel ka data download hota hai.
