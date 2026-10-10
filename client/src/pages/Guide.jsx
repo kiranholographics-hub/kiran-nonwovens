@@ -31,6 +31,7 @@ export default function Guide() {
     { label: guide.title },
   ];
   const path = `/guides/${guide.slug}`;
+  const published = guide.published || GUIDES_PUBLISHED;
 
   const related = guide.relatedProducts
     .map((key) => products.find((p) => `${p.category}/${p.slug}` === key))
@@ -44,8 +45,8 @@ export default function Guide() {
     '@type': 'Article',
     headline: guide.title,
     description: guide.description,
-    datePublished: GUIDES_PUBLISHED,
-    dateModified: GUIDES_PUBLISHED,
+    datePublished: published,
+    dateModified: published,
     inLanguage: 'en',
     mainEntityOfPage: `${SITE.url}${path}`,
     image: `${SITE.url}${SITE.ogImage}`,
@@ -60,7 +61,7 @@ export default function Guide() {
         description={guide.description}
         path={path}
         type="article"
-        article={{ published: GUIDES_PUBLISHED, modified: GUIDES_PUBLISHED }}
+        article={{ published, modified: published }}
         jsonLd={[
           articleLd,
           breadcrumbLd(trail),

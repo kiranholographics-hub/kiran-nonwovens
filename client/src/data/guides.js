@@ -88,7 +88,11 @@ export const guides = [
       'automotive/automotive-needle-punched-felt',
       'industrial/customised-nonwoven-solutions',
     ],
-    relatedGuides: ['needle-punched-nonwoven-manufacturer-india', 'gsm-in-nonwoven-fabric'],
+    relatedGuides: [
+      'needle-punched-nonwoven-manufacturer-india',
+      'gsm-in-nonwoven-fabric',
+      'nonwoven-fabric-for-footwear-and-apparel',
+    ],
   },
 
   {
@@ -162,7 +166,11 @@ export const guides = [
       'industrial/packaging-protective-felt',
       'apparel-footwear/shoulder-pad-nonwoven-fabric',
     ],
-    relatedGuides: ['hs-code-nonwoven-felt-geotextile', 'needle-punched-vs-thermal-bonded-nonwoven'],
+    relatedGuides: [
+      'hs-code-nonwoven-felt-geotextile',
+      'needle-punched-vs-thermal-bonded-nonwoven',
+      'carpet-backing-and-underlay-felt',
+    ],
   },
 
   {
@@ -246,7 +254,12 @@ export const guides = [
       'geotextile/drainage-soil-erosion-control-geotextile',
       'geotextile/pipeline-cable-protection-geotextile',
     ],
-    relatedGuides: ['geotextile-for-road-construction', 'polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric'],
+    relatedGuides: [
+      'geotextile-for-road-construction',
+      'geotextile-for-drainage-and-erosion-control',
+      'polyester-vs-polypropylene-nonwoven',
+      'gsm-in-nonwoven-fabric',
+    ],
   },
 
   {
@@ -325,7 +338,11 @@ export const guides = [
       'apparel-footwear/shoe-lining-nonwoven-fabric',
       'industrial/multi-colour-needle-punched-felt',
     ],
-    relatedGuides: ['nonwoven-geotextile-guide', 'automotive-nvh-felt-guide'],
+    relatedGuides: [
+      'nonwoven-geotextile-guide',
+      'automotive-nvh-felt-guide',
+      'dust-collector-filter-bag-felt',
+    ],
   },
 
   {
@@ -411,7 +428,11 @@ export const guides = [
       'automotive/acoustic-thermal-insulation-felt',
       'automotive/automotive-needle-punched-felt',
     ],
-    relatedGuides: ['needle-punched-vs-thermal-bonded-nonwoven', 'polyester-vs-polypropylene-nonwoven'],
+    relatedGuides: [
+      'needle-punched-vs-thermal-bonded-nonwoven',
+      'polyester-vs-polypropylene-nonwoven',
+      'carpet-backing-and-underlay-felt',
+    ],
   },
 
   {
@@ -755,7 +776,460 @@ export const guides = [
       'geotextile/drainage-soil-erosion-control-geotextile',
       'geotextile/pipeline-cable-protection-geotextile',
     ],
-    relatedGuides: ['nonwoven-geotextile-guide', 'how-to-request-a-nonwoven-felt-quote'],
+    relatedGuides: [
+      'geotextile-for-drainage-and-erosion-control',
+      'nonwoven-geotextile-guide',
+      'how-to-request-a-nonwoven-felt-quote',
+    ],
+  },
+  {
+    slug: 'dust-collector-filter-bag-felt',
+    title: 'Filter felt for dust collector bags: how to choose the material',
+    seoTitle: 'Dust Collector Filter Bag Felt Guide',
+    description:
+      'How needle punched filter felt works in a baghouse, which fibre suits your gas temperature and dust, and what to settle before you order filter media.',
+    readMins: 6,
+    published: '2026-10-10',
+    intro:
+      'A dust collector only performs as well as the media inside it. This guide explains what a filter bag has to do, why needle punched felt is the usual media for pulse-jet and reverse-air collectors, and which decisions — fibre, weight, permeability, finish — have to be made before the felt is ordered.',
+    sections: [
+      {
+        h: 'What a filter bag actually has to do',
+        p: [
+          'Dust-laden gas is drawn through the fabric. Dust collects on the upstream face as a cake, the cleaned gas passes on, and the cake is knocked off periodically by a pulse of compressed air, by shaking or by reversing the flow. The fabric has to hold that cake, release it cleanly when cleaned, and survive the cycle thousands of times.',
+          'So the media is judged on four things at once: how much dust it stops, how freely air passes through it, how readily the cake releases, and how long it lasts at the operating temperature. Pushing one of those up usually pushes another down, which is why filter felt is specified rather than picked off a shelf.',
+        ],
+      },
+      {
+        h: 'Why needle punched felt is used as filter media',
+        p: [
+          'Needle punching entangles the fibres mechanically, with no binder and no weave. That gives a thick, three-dimensional structure with fibres running in every direction, so particles are captured through the depth of the fabric and not only at the surface. A woven cloth of the same weight has a far more open, regular pore structure.',
+          'The same process controls density directly: how heavily the web is needled sets how tight the felt is. For the difference between this and the other main bonding route, see [needle punched vs thermal bonded](/guides/needle-punched-vs-thermal-bonded-nonwoven).',
+        ],
+      },
+      {
+        h: 'Operating temperature decides the fibre first',
+        p: [
+          'Before weight or finish, settle the temperature of the gas stream — continuous and at peaks. Fibre choice follows from it, and a fibre run above its limit will fail whatever else is specified correctly.',
+        ],
+        table: {
+          head: ['Fibre', 'Commonly quoted continuous service range', 'Usually chosen for'],
+          rows: [
+            ['Polypropylene', 'Up to roughly 90 °C', 'Cold, wet and chemically aggressive gas streams'],
+            ['Polyester', 'Up to roughly 130–150 °C', 'General industrial dust collection — the most common choice'],
+            ['Acrylic (homopolymer)', 'Up to roughly 125 °C', 'Moist streams with acid present'],
+            ['Aramid', 'Up to roughly 200 °C', 'Hot gas, asphalt and foundry work'],
+            ['PPS', 'Up to roughly 190 °C', 'Hot gas with acid and moisture'],
+            ['PTFE and fibreglass', 'Roughly 250 °C and above', 'Incinerators, kilns and other high-temperature plant'],
+          ],
+        },
+      },
+      {
+        h: 'Reading that table honestly',
+        p: [
+          'The figures above are general industry reference points, not a product specification, and they move with moisture, acid and oxygen content in the gas. Confirm the limit for your own system against the collector manufacturer’s data before committing.',
+          'Kiran Nonwovens makes filter felt in polyester, PP (virgin and recycled), viscose and custom blends — which covers the cold and moderate-temperature range that most dust collection falls into. The high-temperature fibres are listed so you can see where the boundary lies; if your gas sits above the polyester range, say so in the enquiry rather than ordering to the limit.',
+        ],
+      },
+      {
+        h: 'Weight, density and air permeability',
+        p: [
+          'Media weight is quoted in GSM and sets the body of the felt. Industrial needle felt for dust collection is commonly supplied in the region of 400–550 GSM, with lighter and heavier constructions used where the duty calls for it. Our range runs from 100 to 1200 GSM, so the weight is a choice rather than a constraint — see [GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric) for how weight relates to thickness and density.',
+          'Air permeability — how much air passes through a given area at a given pressure — matters as much as weight. Too high, and fine dust drives into the felt and blinds it; too low, and the pressure drop across the collector climbs and the fan works harder. The target comes from the dust and the air-to-cloth ratio of your collector, so quote both when you ask for media.',
+        ],
+      },
+      {
+        h: 'Surface finishes and after-treatments',
+        list: [
+          'Singeing — burning off surface fibre so the cake releases more cleanly',
+          'Calendering and glazing — pressing the face to close it and smooth it',
+          'Heat setting — stabilising the felt so the bag holds its dimensions in service',
+          'Membrane lamination — a microporous film on the face for very fine dust',
+          'Water and oil repellent treatment — for damp or oily dust',
+          'Antistatic construction — where combustible dust is handled',
+        ],
+        p: [
+          'Not every finish suits every fibre or every duty, and some are a specialist conversion step rather than part of making the felt. Tell us the finish your system needs and we will confirm what can be supplied against your specification.',
+        ],
+      },
+      {
+        h: 'From roll stock to a finished bag',
+        p: [
+          'Kiran Nonwovens supplies the felt as roll stock, made to be cut, stitched and fabricated into bags and filtration components. If you convert media yourself, the practical questions are the ones your sewing line asks: bag diameter and length, top construction — snap band, flange or raw edge — bottom construction, seam type, and how the finished bag sits on the cage.',
+          'Width matters here too, because it decides how many bag blanks come off a roll and how much offcut you carry. Our rolls are produced at 5.0–5.2 m width, which can be cut down to the width your layout needs.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'Gas temperature — continuous and peak',
+          'Dust type, particle size and whether it is damp, oily, abrasive or combustible',
+          'Cleaning method — pulse jet, reverse air or shaker',
+          'Air-to-cloth ratio, or the collector make and model',
+          'Target GSM, thickness and air permeability, if your specification sets them',
+          'Finish required, and the roll width that suits your cutting layout',
+        ],
+        p: [
+          'If some of that is unknown, describe the plant and the dust and send a swatch of the media you use today. Send it through the [enquiry form](/contact#enquiry) and our team will recommend a construction; samples of [filter geo bag felt](/products/geotextile/filter-geo-bag-felt) are available on request so you can trial it before a bulk order.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What fabric is used for dust collector bags?',
+        a: 'Needle punched nonwoven felt is the usual media for pulse-jet and reverse-air collectors, because its depth structure captures dust through the fabric and releases the cake when cleaned. Polyester is the most common fibre for general industrial dust; polypropylene is used for cold, wet or chemically aggressive streams.',
+      },
+      {
+        q: 'What GSM is used for filter bag felt?',
+        a: 'Industrial filter felt is commonly supplied in the region of 400–550 GSM, but the right weight depends on the dust, the cleaning method and the pressure drop you can accept. We produce from 100 to 1200 GSM, so the construction is set to your duty rather than to a standard weight.',
+      },
+      {
+        q: 'Can polyester filter felt handle hot gas?',
+        a: 'Polyester is generally used up to roughly 130–150 °C continuous, and the real limit drops when the gas carries moisture or acid. Above that range a high-temperature fibre is needed. Tell us your continuous and peak temperatures and we will confirm whether the material we make suits the duty.',
+      },
+      {
+        q: 'Do you supply finished filter bags?',
+        a: 'We supply the felt as roll stock, suitable for further processing into filter bags and filtration components. It is made to be cut, stitched and fabricated, and can be cut to the width your conversion line needs.',
+      },
+      {
+        q: 'Can I test the media before ordering?',
+        a: 'Yes. Samples are available on request, so you can check permeability, handling and stitching in your own process first.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/filter-geo-bag-felt',
+      'industrial/customised-nonwoven-solutions',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+    ],
+    relatedGuides: ['polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric'],
+  },
+
+  {
+    slug: 'carpet-backing-and-underlay-felt',
+    title: 'Carpet backing and flooring underlay felt: a buyer’s guide',
+    seoTitle: 'Carpet Backing & Underlay Felt Guide',
+    description:
+      'The difference between carpet backing felt and flooring underlay, what each contributes to a floor, and how to specify weight, fibre and width when you order.',
+    readMins: 5,
+    published: '2026-10-10',
+    intro:
+      'Two of the largest uses for needle punched felt sit inside a floor, where nobody sees them: the backing laminated to a carpet, and the underlay rolled out beneath it. They are different jobs. This guide separates them and sets out what to specify for each.',
+    sections: [
+      {
+        h: 'Two jobs, one family of material',
+        p: [
+          'Carpet backing is part of the carpet. It is bonded to the carpet during manufacture and travels with it, giving the finished product stability, body and a consistent base for the adhesive or the fitting method.',
+          'Underlay is laid loose on the subfloor before the floor covering goes down. It is not part of the carpet, it can be replaced independently, and it is chosen for comfort, impact sound and for levelling out minor irregularities in the floor beneath.',
+        ],
+      },
+      {
+        h: 'Primary and secondary backing',
+        table: {
+          head: ['', 'Primary backing', 'Secondary backing'],
+          rows: [
+            ['Where it sits', 'The sheet the pile is tufted through', 'Laminated to the back of the tufted carpet'],
+            ['Main job', 'Carrying and holding the tufts in place', 'Dimensional stability, body and a fitting surface'],
+            ['What it must have', 'Consistent structure that needles and tufts cleanly', 'Strength, stability and a surface that bonds reliably'],
+            ['Typical nonwoven role', 'Light to medium weight felt', 'Medium to heavy weight felt'],
+          ],
+        },
+      },
+      {
+        h: 'What the felt contributes to a carpet',
+        list: [
+          'Dimensional stability, so the carpet keeps its shape and does not creep or curl',
+          'Body underfoot, which changes how the carpet feels in use',
+          'A uniform base that takes adhesive consistently across the roll',
+          'Help with sound absorption and impact noise within the floor build-up',
+          'Some thermal insulation, which makes a hard floor feel warmer',
+          'Protection for the pile from grit pressed up from the subfloor',
+        ],
+        p: [
+          'Our [carpet backing felt](/products/industrial/carpet-backing-felt) is made in polyester and PP for exactly this role, in wall-to-wall carpet, rugs, exhibition carpet, automotive carpet and floor mats.',
+        ],
+      },
+      {
+        h: 'Underlay: under carpet, laminate, vinyl and wood',
+        p: [
+          'An underlay has to do three unglamorous things well: cushion the step, take the edge off impact noise, and present a smooth, stable surface so small subfloor imperfections do not read through the finished floor. A needle punched felt does all three because the structure is compressible but recovers, and because the sheet is uniform across its width.',
+          'The same material suits carpet, laminate, vinyl and wooden flooring, in residential rooms, offices, hotels and exhibition spaces. Our [flooring underlay felt](/products/industrial/flooring-underlay-felt) is supplied in rolls that cut and lay flat.',
+        ],
+      },
+      {
+        h: 'A word about acoustic and thermal numbers',
+        p: [
+          'Felt helps reduce impact noise and adds thermal resistance, but a rating belongs to a whole floor assembly, not to a fabric. Impact sound performance depends on the subfloor, the fixing method, the floor covering and the detailing at the edges. If your project needs a stated figure, it has to come from a test on the assembly you are actually building.',
+          'What we can do is make the material to the weight, thickness and density your specifier asks for, and supply samples so the build-up can be tested as designed.',
+        ],
+      },
+      {
+        h: 'Choosing weight and fibre',
+        p: [
+          'Weight drives almost everything you feel in a floor: a heavier felt is firmer and more stable, a lighter one is softer and cheaper to ship. Backing for a commercial carpet and underlay for a hotel corridor sit at different points, and both are made to order across our 100–1200 GSM range. [GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric) explains how weight, thickness and density relate.',
+          'On fibre, polyester gives better resilience and recovery, which matters where a floor is walked on constantly; PP — virgin or recycled — is the economical choice and handles damp well. [Polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven) sets out the trade-off in full. Where the felt is visible, as in exhibition flooring, [multi-colour needle punched felt](/products/industrial/multi-colour-needle-punched-felt) is made to a colour.',
+        ],
+      },
+      {
+        h: 'What to settle before you order',
+        list: [
+          'Whether the felt is a carpet backing, an underlay, or both',
+          'GSM, thickness and density, or the performance the floor has to deliver',
+          'Fibre — polyester, PP (virgin or recycled) or a blend',
+          'Roll width and roll length, matched to your laminating line or to the room',
+          'Colour, where the material will be seen',
+          'How it will be processed — laminated, bonded, cut to size or supplied in full rolls',
+        ],
+        p: [
+          'Rolls are produced at 5.0–5.2 m width and can be cut down. Send the application and the figures you have through the [enquiry form](/contact#enquiry); samples are available on request so the material can be trialled in your own lamination or fitting process.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is carpet backing felt made of?',
+        a: 'Needle punched carpet backing felt is usually made from polyester, polypropylene or a blend of the two. Polyester gives better resilience and recovery; PP is the more economical option and handles damp well. We supply both, and blends.',
+      },
+      {
+        q: 'What is the difference between carpet backing and underlay?',
+        a: 'Backing is bonded to the carpet during manufacture and is part of the finished product. Underlay is laid separately on the subfloor before the covering goes down, and can be replaced on its own. Backing is specified for stability and bonding; underlay for comfort, impact sound and a smooth base.',
+      },
+      {
+        q: 'What GSM should I use for carpet backing or underlay?',
+        a: 'There is no single figure — a secondary backing for a commercial carpet and an underlay for a residential room sit at very different weights. Material is made to order from 100 to 1200 GSM, so tell us the application and the feel or stability you need and we will recommend a weight.',
+      },
+      {
+        q: 'Can nonwoven underlay go under laminate and vinyl?',
+        a: 'Yes. The same felt is used under carpet, laminate, vinyl and wooden flooring. Confirm thickness against the floor covering manufacturer’s installation instructions, since some systems set a limit on underlay thickness or compressibility.',
+      },
+      {
+        q: 'Can the felt be supplied in a colour or a cut width?',
+        a: 'Colour, GSM, thickness, width and roll length are all made to requirement. Rolls are produced at 5.0–5.2 m and can be cut down to the width your line or your layout needs.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/carpet-backing-felt',
+      'industrial/flooring-underlay-felt',
+      'industrial/multi-colour-needle-punched-felt',
+    ],
+    relatedGuides: ['gsm-in-nonwoven-fabric', 'polyester-vs-polypropylene-nonwoven'],
+  },
+
+  {
+    slug: 'nonwoven-fabric-for-footwear-and-apparel',
+    title: 'Nonwoven fabric for footwear and apparel: where it is used',
+    seoTitle: 'Nonwoven Fabric for Footwear & Apparel',
+    description:
+      'Where needle punched nonwoven goes in a shoe and in a garment — linings, insoles, toe puffs, heel counters and shoulder pads — and how to specify it.',
+    readMins: 5,
+    published: '2026-10-10',
+    intro:
+      'Most of the nonwoven in a shoe or a jacket is hidden. It lines, cushions, stiffens and holds a shape, and it has to survive cutting, stitching and lamination on the way there. This guide covers where the material sits in each product and what a buyer needs to settle before ordering.',
+    sections: [
+      {
+        h: 'Why nonwoven rather than woven',
+        p: [
+          'A nonwoven has no warp and weft, so it has no grain to line up and it does not fray at a cut edge. That makes it cheap to nest and cut, and it means a die-cut component holds its outline without an overlocked edge.',
+          'Needle punching also lets thickness and firmness be set by the process rather than by the yarn, so one fibre can produce a soft lining or a firm support simply by being needled differently. For how that compares with the other main route, see [needle punched vs thermal bonded](/guides/needle-punched-vs-thermal-bonded-nonwoven).',
+        ],
+      },
+      {
+        h: 'Inside a shoe: where the nonwoven goes',
+        list: [
+          'Inner lining — the face that sits against the foot, where softness and abrasion resistance matter',
+          'Shoe uppers — as a backing layer behind the visible material',
+          'Insoles — cushioning under the foot',
+          'Heel counters — holding the back of the shoe in shape',
+          'Toe-puff support — keeping the toe box from collapsing',
+          'Slipper lining — soft, light and inexpensive to cut',
+        ],
+        p: [
+          'The same material runs across sports, safety and casual footwear. Our [nonwoven shoe lining fabric](/products/apparel-footwear/shoe-lining-nonwoven-fabric) is a polyester needle punched felt made for these components.',
+        ],
+      },
+      {
+        h: 'What a footwear lining has to deliver',
+        p: [
+          'A lining fails in service in predictable ways: it wears through where the foot moves against it, it holds damp, or it packs down and loses its cushioning. So three properties get checked first — abrasion resistance at the contact face, breathability through the fabric, and recovery after repeated compression.',
+          'Polyester is the usual fibre here because it recovers well and resists abrasion, and because it is stable when laminated. Weight and thickness then tune the balance between a thin lining that keeps the shoe’s internal volume and a thicker one that cushions.',
+        ],
+      },
+      {
+        h: 'Inside a garment: shoulder pads and structure',
+        p: [
+          'A shoulder pad has the opposite problem to a lining. It is not hidden from the eye — its shape is the garment’s shape — so it has to hold a smooth, defined form through wear and cleaning without reading as bulk from the outside.',
+          'That calls for resilience rather than softness alone: the fabric must come back after being compressed, and it must not crease into a line that shows through the cloth. Our [shoulder pad nonwoven fabric](/products/apparel-footwear/shoulder-pad-nonwoven-fabric) is a lightweight polyester felt made for blazers, suits, coats, jackets, uniforms and ladies’ fashion garments.',
+        ],
+      },
+      {
+        h: 'Weight, thickness and colour',
+        p: [
+          'Footwear and apparel components live at the light end of the nonwoven range, where small changes in weight are felt immediately — in how a lining breathes, how a pad sits, how a stack of blanks cuts. Material is made to order, so weight and thickness are specified for the component rather than chosen from a stock list; [GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric) explains how the two relate.',
+          'Colour is a real consideration in these products, because a lining can be visible at the shoe’s opening and a pad can shadow through a pale garment. Colour, like weight and width, is set to requirement.',
+        ],
+      },
+      {
+        h: 'Processing: cutting, stitching, laminating, bonding',
+        p: [
+          'These components are rarely used as supplied. They are die-cut or cut on a cutter, stitched, laminated to foam or to a face fabric, and sometimes moulded or bonded into an assembly. A felt that behaves well in the roll can still misbehave on the line — fraying at a die edge, shifting under a laminating head, or shrinking with heat.',
+          'That is the strongest argument for sampling. Samples are available on request, and the useful test is not a handfeel but a short run through your own cutting, stitching and lamination steps.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The component — lining, insole, heel counter, toe puff, upper backing, shoulder pad or interlining',
+          'GSM and thickness, or a sample of the material you use today',
+          'Colour, and whether the component is visible in the finished product',
+          'Roll width, and whether you need it cut to a narrower width for your line',
+          'The processing it must survive — die cutting, stitching, lamination, moulding, bonding',
+          'Quantity per order or per month, and your destination country',
+        ],
+        p: [
+          'An existing swatch is worth more than a paragraph of description, so send one if you have it. Use the [enquiry form](/contact#enquiry), or read the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) first. Where no standard product fits, [customised nonwoven fabric](/products/industrial/customised-nonwoven-solutions) is developed to the application.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What fabric is used for shoe lining?',
+        a: 'Needle punched polyester nonwoven is widely used for shoe linings, insoles, heel counters and toe-puff support, because it is soft at the contact face, resists abrasion, and cuts and stitches without fraying. GSM, thickness and colour are made to the component.',
+      },
+      {
+        q: 'Is nonwoven shoe lining breathable?',
+        a: 'A needle punched felt is a porous structure, so air and moisture vapour pass through it. How freely depends on the weight and how heavily the web is needled — a lighter, more open felt breathes more than a dense one. Tell us what the component needs and we will set the construction accordingly.',
+      },
+      {
+        q: 'What GSM is used for shoulder pads?',
+        a: 'It depends on the garment and the shape being built — a soft summer jacket and a structured blazer need different material. Shoulder pad fabric sits at the lighter end of our 100–1200 GSM range and is produced to the weight and thickness your pattern requires.',
+      },
+      {
+        q: 'Can the fabric be laminated or bonded to other materials?',
+        a: 'Yes. These felts are made to be cut, stitched, laminated and bonded with other footwear and garment materials. Lamination behaviour depends on the fibre and the adhesive system, so trial a sample through your own process before committing.',
+      },
+      {
+        q: 'Can you supply it in our colour and cut width?',
+        a: 'Colour, GSM, thickness, width and roll length are all made to requirement. Rolls are produced at 5.0–5.2 m width and can be cut down for your cutting or lamination line.',
+      },
+    ],
+    relatedProducts: [
+      'apparel-footwear/shoe-lining-nonwoven-fabric',
+      'apparel-footwear/shoulder-pad-nonwoven-fabric',
+      'industrial/luggage-bag-support-felt',
+    ],
+    relatedGuides: ['gsm-in-nonwoven-fabric', 'needle-punched-vs-thermal-bonded-nonwoven'],
+  },
+
+  {
+    slug: 'geotextile-for-drainage-and-erosion-control',
+    title: 'Geotextile for drainage and erosion control: how to specify it',
+    seoTitle: 'Geotextile for Drainage & Erosion Control',
+    description:
+      'How nonwoven geotextile filters and drains in French drains, pipe wrapping, slopes and embankments — and what to settle before you order the fabric.',
+    readMins: 6,
+    published: '2026-10-10',
+    intro:
+      'Under a road, a geotextile mostly keeps two layers apart. In a drain or on a slope its job is different: water has to pass through it freely for years while the soil behind it stays put. This guide covers that filtration role, where the fabric goes, and what to specify.',
+    sections: [
+      {
+        h: 'Filtration and drainage, not just separation',
+        p: [
+          'A drainage geotextile does two things at once that pull against each other. It must be open enough that water moves through it without building pressure, and tight enough that fine soil particles do not wash through and silt up the drain behind it.',
+          'A needle punched nonwoven suits this because it is thick and three-dimensional. Water passes through the plane of the fabric and can also move along it, while the tangled fibre structure holds back fines. Separation is covered more broadly in our [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide); this page is about the filtering jobs.',
+        ],
+      },
+      {
+        h: 'Where drainage geotextile is used',
+        list: [
+          'French drains — lining the trench so the stone stays clean',
+          'Subsurface and trench drains under roads, yards and sports fields',
+          'Wrapping perforated pipe, so the perforations do not block with fines',
+          'Behind retaining walls, where water has to escape instead of loading the wall',
+          'Slope and embankment protection, under rock or soil cover',
+          'Canal, pond and reservoir banks',
+          'Rainwater-harvesting structures and landscaping and garden drainage',
+        ],
+        p: [
+          'Our [drainage and soil erosion control geotextile](/products/geotextile/drainage-soil-erosion-control-geotextile) is made for these applications, and [pipeline and cable protection geotextile](/products/geotextile/pipeline-cable-protection-geotextile) covers the related job of cushioning buried utilities against sharp backfill.',
+        ],
+      },
+      {
+        h: 'The filtration balance: retain soil, pass water',
+        p: [
+          'Two properties describe the balance. Permeability, usually expressed for geotextiles as permittivity, says how readily water crosses the fabric. Opening size — reported as apparent opening size or as O90 depending on the standard — says how large a particle can pass. A good filter has an opening size small enough to retain the soil it faces and a permeability comfortably higher than the soil’s own.',
+          'The numbers that matter follow from the soil, not from the fabric. Fine silts and clays need a tighter filter than a sandy gravel, and a project design will normally state the required values. Send those values with your enquiry; where a design has not set them, describe the soil and the drain and we will discuss what suits.',
+        ],
+      },
+      {
+        h: 'Wrapping a drain or a perforated pipe',
+        list: [
+          'Line the trench before the stone goes in, with enough fabric to fold over the top of the backfill',
+          'Lap joints generously — figures in the region of 300 mm are commonly specified, but the project detail governs',
+          'Keep soil, mud and site traffic off the fabric face while it is open',
+          'Lay it to the trench profile without stretching it taut across voids',
+          'Cover it soon after laying, rather than leaving the drain open for days',
+        ],
+        p: [
+          'Installation details are the engineer’s to set, and the figures above are general practice rather than a specification. Follow the drawings for your project.',
+        ],
+      },
+      {
+        h: 'Slopes, embankments and erosion control',
+        p: [
+          'On a slope the failure to prevent is washout: rainwater runs over or through the surface and carries soil with it. A geotextile placed under rock armour, gabions or a soil cover holds the ground surface together, lets water pass without pressure building behind the cover, and keeps the cover material from sinking into the soil.',
+          'The same reasoning applies on canal and pond banks, and behind retaining walls, where water that cannot escape becomes a load on the structure. The fabric has to survive placement — stone dropped on it, plant tracking over it — so weight is chosen for the installation as much as for the filtration.',
+        ],
+      },
+      {
+        h: 'Durability underground, and exposure above it',
+        p: [
+          'Polypropylene and polyester nonwovens are resistant to moisture, rot, biological attack and most soil chemistry, which is why they last in a buried drain. [Polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven) sets out how the two differ.',
+          'Sunlight is the one real weakness. Geotextiles lose strength with prolonged UV exposure, which is why they are specified to be covered soon after they are laid. If your programme means fabric will stay open for an extended period, say so when you enquire so it can be factored into the material and the handling.',
+        ],
+      },
+      {
+        h: 'What to settle before you order',
+        list: [
+          'The function — filtration, drainage, erosion control, or a combination',
+          'Soil type at the interface, and the water flow you expect',
+          'Any permeability, permittivity, opening size or strength value the design requires',
+          'GSM and thickness, as set by that design',
+          'Roll width and roll length, matched to the trench or slope layout so overlaps and waste work out',
+          'Fibre — PP (virgin or recycled) or polyester',
+          'Quantity, destination port and any test certificate your market requires',
+        ],
+        p: [
+          'Material is made to order from 100 to 1200 GSM in roll widths of 5.0–5.2 m. Send the application, the design values and the quantity through the [enquiry form](/contact#enquiry); samples are available on request. If you are also laying fabric under a carriageway, read [geotextile for road construction](/guides/geotextile-for-road-construction).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Which geotextile is used for a French drain?',
+        a: 'A needle punched nonwoven geotextile, because water passes through its thickness while the fibre structure holds fine soil back. The weight and opening size depend on the soil at the trench face and on the project design.',
+      },
+      {
+        q: 'Woven or nonwoven geotextile for drainage?',
+        a: 'Nonwoven, for drainage and filtration. A thick needle punched fabric lets water move through and along it, which is what a drain needs. Woven geotextiles are generally chosen where tensile strength and reinforcement matter more than flow.',
+      },
+      {
+        q: 'What GSM is needed for drainage geotextile?',
+        a: 'It follows from the soil, the flow and the installation conditions rather than from a standard figure, and a project design will usually state it. We produce from 100 to 1200 GSM to the specification you supply, and can discuss a weight if the design has not set one.',
+      },
+      {
+        q: 'Can geotextile be left exposed to sunlight?',
+        a: 'Only briefly. Prolonged UV exposure weakens the fabric, so geotextiles are normally specified to be covered soon after laying. If the fabric has to stay open for longer on your site, tell us when you enquire.',
+      },
+      {
+        q: 'How much overlap is needed at a joint?',
+        a: 'That is set by the project design. Figures in the region of 300 mm are commonly specified for drains, with more where the ground is soft or uneven, but follow the engineer’s detail for your site.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+    ],
+    relatedGuides: ['geotextile-for-road-construction', 'nonwoven-geotextile-guide'],
   },
 ];
 
