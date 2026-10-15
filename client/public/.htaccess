@@ -85,9 +85,14 @@
     Header set Cache-Control "public, max-age=2592000"
     Header set Accept-Ranges "bytes"
   </FilesMatch>
-  # HTML must not be cached hard, or a deploy leaves stale pages behind.
-  <FilesMatch "\.(html|webmanifest)$">
-    Header set Cache-Control "public, max-age=0, must-revalidate"
+  # HTML, the sitemap and robots.txt change on every deploy, so shared caches
+  # (a CDN or the host's page cache) must not hold them: "no-cache" makes them
+  # revalidate every time, and the LiteSpeed header tells Hostinger's own page
+  # cache the same. Without this a deploy can leave a stale sitemap or page
+  # live for a while, and Google reads the stale copy.
+  <FilesMatch "\.(html|webmanifest|xml|txt)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+    Header set X-LiteSpeed-Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
 
