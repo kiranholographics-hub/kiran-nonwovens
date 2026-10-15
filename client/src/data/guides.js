@@ -632,7 +632,7 @@ export const guides = [
         h: 'Where nonwovens sit in the HS',
         p: [
           'Felt is classified in heading 5602 and nonwovens in heading 5603, both in chapter 56. Which heading applies depends mainly on how the fabric is bonded and on whether it is coated, covered or laminated.',
-          'Geotextiles do not have a heading of their own. A nonwoven geotextile is normally classified by its construction, in the same chapter. The final code for your shipment is decided by your customs authority, so confirm it with your customs broker before you order.',
+          'Geotextiles do not have a heading of their own. A nonwoven geotextile is normally classified by its construction, in the same chapter. Needle punched polypropylene geotextile is often treated as needleloom felt under 5602.10, and US customs has issued rulings of that kind, while other constructions such as spunbond fall under 5603. The final code for your shipment is decided by your customs authority, so confirm it with your customs broker before you order.',
         ],
       },
       {
@@ -680,7 +680,7 @@ export const guides = [
       },
       {
         q: 'Is there a separate HS code for geotextile?',
-        a: 'Geotextile has no heading of its own. A nonwoven geotextile is classified by its construction, in chapter 56. Confirm the code for your country with your customs broker.',
+        a: 'Geotextile has no heading of its own. A needle punched geotextile is often classified as needleloom felt (5602.10) and other constructions as nonwovens (5603), both in chapter 56. Confirm the code for your country with your customs broker.',
       },
       {
         q: 'Do HS codes differ between countries?',
