@@ -13,9 +13,19 @@ import {
   marketsIn,
 } from '../data/markets.js';
 import { PARTNER } from '../data/locations.js';
+import { guideBySlug } from '../data/guides.js';
 import { VIDEOS, breadcrumbLd, faqLd } from '../lib.js';
 import NotFound from './NotFound.jsx';
 import './Exports.css';
+
+// Guides worth reading for each business area a market buys for.
+const GUIDES_FOR_AREA = {
+  geotextile: ['geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control'],
+  automotive: ['automotive-nvh-felt-guide'],
+  'apparel-footwear': ['nonwoven-fabric-for-footwear-and-apparel'],
+  industrial: ['dust-collector-filter-bag-felt', 'carpet-backing-and-underlay-felt'],
+};
+const ALWAYS_GUIDES = ['hs-code-nonwoven-felt-geotextile', 'how-to-request-a-nonwoven-felt-quote'];
 
 const list = (items) =>
   items.length <= 1
@@ -42,6 +52,11 @@ export default function ExportMarket() {
   const sameRegion = marketsIn(market.region).filter((m) => m.slug !== market.slug);
   // A region with a single market (Africa) would otherwise be a dead end.
   const others = sameRegion.length ? sameRegion : marketsIn('Middle East').slice(0, 3);
+
+  const guideSlugs = [
+    ...new Set([...market.focus.flatMap((f) => GUIDES_FOR_AREA[f] || []), ...ALWAYS_GUIDES]),
+  ];
+  const guides = guideSlugs.map(guideBySlug).filter(Boolean).slice(0, 8);
 
   const faqs = [
     {
@@ -130,7 +145,26 @@ export default function ExportMarket() {
         </div>
       </section>
 
-      <section className="block">
+      {guides.length ? (
+        <section className="block">
+          <div className="wrap">
+            <p className="eyebrow">Before you enquire</p>
+            <h2>Buyer guides for {market.name}.</h2>
+            <ul className="exports__areas">
+              {guides.map((g) => (
+                <li key={g.slug}>
+                  <Link to={`/guides/${g.slug}`}>
+                    <strong>{g.title}</strong>
+                    <span>{g.description}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
+      <section className="block block--sand">
         <div className="wrap">
           <p className="eyebrow">How we supply</p>
           <h2>Made to your specification.</h2>
