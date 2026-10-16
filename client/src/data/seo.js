@@ -262,7 +262,8 @@ export function productFaq(product) {
   const guideLink = {
     geotextile: 'Read our [geotextile for road construction guide](/guides/geotextile-for-road-construction), the [GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india), the [railway track guide](/guides/nonwoven-geotextile-for-railway-track-india) and the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
     automotive: 'Read our [automotive NVH felt guide](/guides/automotive-nvh-felt-guide).',
-  }[product.category];
+    castPadding: 'Read our [guide to nonwoven cast padding from India](/guides/orthopaedic-cast-padding-nonwoven-india).',
+  }[product.slug === 'orthopaedic-cast-padding' ? 'castPadding' : product.category];
   if (guideLink) {
     faqs.push({
       q: `Where can I learn more about choosing ${product.name}?`,
