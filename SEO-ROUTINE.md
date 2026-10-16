@@ -57,6 +57,9 @@ Skipped as too crowded: geobags, automotive felt India, HS-code India (data site
 ## "non woven manufacturers in India" (head keyword, 17 Oct 2026)
 Page one today: ANFA members list, IndiaMART, KK NonWovens, Scribd, a "Top 10" listicle, revenuebase, Singhal, NWFI, favouritehub. Mostly spunbond/PP sellers and directories. Our niche is needle punched and thermal bonded felt and geotextile, so we do not claim to be a spunbond maker. Work done: pillar guide /guides/nonwoven-manufacturers-in-india (process types, how to choose, honest about what we make), home title/description now carry "Nonwoven Manufacturer India", the pillar is linked from all country pages. This head term needs authority (links, listings); expect months, not weeks. Do not publish a "Top 10 manufacturers" list of named competitors (cannot verify the claims).
 
+## Export keyword research (16 Oct 2026)
+Overseas SERPs (UAE, Saudi Arabia, Australia): page one is local distributors and local manufacturers, which is hard for an Indian exporter; keep those pages, aim at "from India" long-tail. Africa and South Asia SERPs (Kenya, Nigeria, Nepal, Sri Lanka, Bangladesh) are Chinese factories, B2B portals and a few Indian sellers: weaker, closer to India, and infrastructure-driven. Work done: every country title now reads "Nonwoven Felt Supplier from India to <country>" and the H1 says "from India"; five new market pages added (Kenya, Nigeria, Nepal, Sri Lanka, Bangladesh). Pause any of them in /hq (Markets) if you do not want to sell there.
+
 ## Jo Claude nahi dekh sakta (aap paste karo)
 Search Console ke numbers, IndiaMART/TradeIndia/Google Business ke login, admin panel ka data.
 Wo ya to screenshot bhejo ya number paste karo.

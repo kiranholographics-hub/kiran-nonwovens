@@ -97,7 +97,7 @@ export default function ExportMarket() {
       <PageHero
         trail={trail}
         kicker={market.region}
-        title={`Nonwoven felt supplier for ${market.buyers}.`}
+        title={`Nonwoven felt supplier from India for ${market.buyers}.`}
         lead={`Needle punched and thermal bonded nonwoven felt and geotextile, 100–1200 GSM, made to your specification and shipped from India to ${market.name}.`}
         video={VIDEOS.about}
         variant={2}
