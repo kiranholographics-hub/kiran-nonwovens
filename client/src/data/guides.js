@@ -701,10 +701,10 @@ export const guides = [
 
   {
     slug: 'geotextile-for-road-construction',
-    title: 'Geotextile for road construction: where it goes and what it does',
-    seoTitle: 'Geotextile for Road Construction: Uses',
+    title: 'Geotextile for road construction in India: where it goes and what it does',
+    seoTitle: 'Geotextile for Road Construction in India',
     description:
-      'How nonwoven geotextile is used under roads and pavements: separation, filtration and drainage over soft subgrade, and what to specify when you order.',
+      'How nonwoven geotextile is used under roads in India: separation, filtration and drainage over soft subgrade and monsoon water, and what to specify.',
     readMins: 5,
     intro:
       'On a soft or wet subgrade, stone and soil mix under traffic and the road loses its thickness. A nonwoven geotextile placed between them keeps the layers apart and lets water through. This guide covers where it goes in a road, what it does, and what to settle before you order.',
@@ -724,7 +724,14 @@ export const guides = [
           'Beneath railway ballast and haul roads — keeping the layers apart under heavy loads',
         ],
         p: [
-          'These jobs are described in more detail in our [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+          'These jobs are described in more detail in our [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide). For track, see [nonwoven geotextile for railway track](/guides/nonwoven-geotextile-for-railway-track-india); for how to choose the weight, see [geotextile GSM for road construction](/guides/geotextile-gsm-for-road-construction-india).',
+        ],
+      },
+      {
+        h: 'Geotextile in Indian road projects',
+        p: [
+          'Soft or expansive subgrades, such as black cotton soil, and heavy monsoon rain make separation and drainage the main jobs a geotextile does on Indian roads, from rural access roads to highways and embankments.',
+          'On public works, the use of geosynthetics is normally set by the project’s technical specification, which commonly refers to the MoRTH specifications and IRC guidance on geosynthetics in pavements. Your project engineer decides which clauses and test values apply; confirm the current edition and send us the figures your specification requires.',
         ],
       },
       {
@@ -755,6 +762,10 @@ export const guides = [
     ],
     faqs: [
       {
+        q: 'Is geotextile used in road construction in India?',
+        a: 'Yes. It is used under pavements, behind drains, on embankments and on rural and haul roads, mainly for separation, filtration and drainage over soft subgrade. Your project specification sets the grade and test values.',
+      },
+      {
         q: 'Why use geotextile under a road?',
         a: 'It keeps a soft subgrade and the aggregate above it from mixing, lets water drain through, and helps the road keep its designed thickness.',
       },
@@ -777,9 +788,10 @@ export const guides = [
       'geotextile/pipeline-cable-protection-geotextile',
     ],
     relatedGuides: [
+      'geotextile-gsm-for-road-construction-india',
+      'nonwoven-geotextile-for-railway-track-india',
       'geotextile-for-drainage-and-erosion-control',
       'nonwoven-geotextile-guide',
-      'how-to-request-a-nonwoven-felt-quote',
     ],
   },
   {
@@ -1228,6 +1240,178 @@ export const guides = [
       'geotextile/drainage-soil-erosion-control-geotextile',
       'geotextile/pipeline-cable-protection-geotextile',
       'geotextile/pp-geotextile-fabric-for-civil-works',
+    ],
+    relatedGuides: ['geotextile-for-road-construction', 'nonwoven-geotextile-guide'],
+  },
+
+  {
+    slug: 'geotextile-gsm-for-road-construction-india',
+    title: 'Which GSM of nonwoven geotextile for road construction in India?',
+    seoTitle: 'Geotextile GSM for Road Construction India',
+    description:
+      'How to choose the GSM of a needle punched nonwoven geotextile for roads in India: what GSM tells you, what it does not, and what else to put in the specification.',
+    readMins: 6,
+    published: '2026-10-16',
+    intro:
+      'Buyers often ask for “150 GSM geotextile” as if the number settles the choice. GSM is the weight of the fabric per square metre, and it is a useful starting point, but the right grade for a road depends on the subgrade, the aggregate, the traffic and the specification your engineer works to. This guide explains what GSM does and does not tell you.',
+    sections: [
+      {
+        h: 'What GSM tells you',
+        p: [
+          'GSM is grams per square metre. In a needle punched nonwoven, more weight means more fibre, so a heavier fabric is generally thicker, stronger against puncture and better at carrying water along its own plane. Our [GSM guide](/guides/gsm-in-nonwoven-fabric) explains how it is measured.',
+          'It does not tell you the strength, the pore size or the permeability of the fabric. Two fabrics of the same GSM, made from different fibre or with different needling, can behave differently.',
+        ],
+      },
+      {
+        h: 'Indicative ranges, not a specification',
+        list: [
+          'Lighter grades, roughly 100–200 GSM — commonly seen for separation and filtration over a reasonably firm subgrade with fine, rounded aggregate',
+          'Mid grades, roughly 200–400 GSM — common where the subgrade is softer or wetter, or where drainage along the fabric matters',
+          'Heavier grades, 400 GSM and above — used where angular stone, heavy traffic or a risk of puncture and installation damage calls for a thicker, tougher fabric',
+        ],
+        p: [
+          'Treat these as the bands people usually discuss, not as design values. The grade for your road is set by the project design and the specification it cites.',
+        ],
+      },
+      {
+        h: 'What else belongs in the specification',
+        list: [
+          'Function — separation, filtration, drainage, protection or a combination',
+          'Fibre — PP (virgin or recycled) or polyester; see [polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven)',
+          'Strength and puncture figures your design requires',
+          'Permeability and pore size, so the fabric passes water but holds the soil',
+          'Thickness, roll width and roll length',
+        ],
+        p: [
+          'On Indian public works, the technical specification commonly refers to the MoRTH specifications and IRC guidance on geosynthetics. Your project engineer decides which clauses and test values apply; confirm the current edition and send us the figures your specification asks for.',
+        ],
+      },
+      {
+        h: 'Higher GSM is not always better',
+        p: [
+          'A heavier fabric costs more per square metre and can be harder to handle. On a firm subgrade with fine aggregate, a very heavy fabric adds cost without adding performance. Match the grade to the job instead of defaulting to the heaviest.',
+        ],
+      },
+      {
+        h: 'What we can supply',
+        p: [
+          'Needle punched nonwoven geotextile is made to order across a 100–1200 GSM range in roll widths of 5.0–5.2 m, in PP (virgin or recycled) or polyester. See our [PP geotextile for civil works](/products/geotextile/pp-geotextile-fabric-for-civil-works), and the wider guide to [geotextile for road construction in India](/guides/geotextile-for-road-construction).',
+          'Send the GSM and the test values your specification requires through the [enquiry form](/contact#enquiry), or read the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) first. Samples are available on request.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What GSM geotextile is used for roads?',
+        a: 'It depends on the subgrade, aggregate and traffic. Lighter grades of roughly 100–200 GSM are common for separation over firmer ground, and heavier grades are used on soft or wet subgrades or with angular stone. The project design and specification set the value.',
+      },
+      {
+        q: 'Is a higher GSM geotextile always better?',
+        a: 'No. A heavier fabric costs more and may add nothing on a firm subgrade. Choose the grade the design requires.',
+      },
+      {
+        q: 'Is GSM enough to specify a geotextile?',
+        a: 'No. Also give the function, fibre, strength and puncture figures, permeability, thickness and roll size your design requires.',
+      },
+      {
+        q: 'What GSM range can you supply?',
+        a: 'Needle punched nonwoven geotextile is made to order across 100–1200 GSM in roll widths of 5.0–5.2 m.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['geotextile-for-road-construction', 'gsm-in-nonwoven-fabric'],
+  },
+
+  {
+    slug: 'nonwoven-geotextile-for-railway-track-india',
+    title: 'Nonwoven geotextile for railway track in India: separation under ballast',
+    seoTitle: 'Nonwoven Geotextile for Railway Track India',
+    description:
+      'How a needle punched nonwoven geotextile separates ballast from subgrade on railway track in India, where it is laid, and what to specify before you order.',
+    readMins: 5,
+    published: '2026-10-16',
+    intro:
+      'Under a railway track, ballast sits on a formation of soil that is often softer and wetter than the stone above it. Without a barrier, fine soil is pumped up into the ballast under every passing train. A nonwoven geotextile keeps the layers apart and lets water drain. This guide covers where it is used and what to settle before you order.',
+    sections: [
+      {
+        h: 'The problem under the ballast',
+        p: [
+          'Trains load the track thousands of times a day. Where the formation is soft or wet, fine soil works up into the ballast as slurry, and the ballast works down into the soil. The ballast becomes fouled, drains poorly and loses the support it was laid to give, so the track needs more frequent attention.',
+        ],
+      },
+      {
+        h: 'What the geotextile does',
+        list: [
+          'Separation — keeps ballast or blanket stone from mixing with the subgrade',
+          'Filtration — lets water pass while holding fine soil back',
+          'Drainage — carries water out from under the track',
+          'Protection — cushions the formation against sharp stone',
+        ],
+        p: [
+          'These functions are described in our [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+        ],
+      },
+      {
+        h: 'Where it is used',
+        list: [
+          'Between the formation and the ballast or blanket layer on new track',
+          'In formation rehabilitation, where soft spots and mud pumping have developed',
+          'At level crossings, yards and sidings',
+          'Under industrial and port rail sidings',
+        ],
+      },
+      {
+        h: 'Why a thick, needle punched fabric',
+        p: [
+          'Stone ballast is angular and heavy, and it is placed with machinery. A thick needle punched nonwoven resists puncture and abrasion better than a thin fabric, and its felt-like structure drains well. Heavier grades are normally chosen for this duty; see our [GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india) for how weight relates to performance.',
+        ],
+      },
+      {
+        h: 'Specifications on Indian rail projects',
+        p: [
+          'Railway works are normally tendered against the owner’s specification. RDSO has issued a specification for nonwoven geotextile used as a separator and filter in track, and tenders may cite it or the project’s own technical requirements. The engineer decides which test values apply; confirm the current edition and send us the figures your tender asks for.',
+        ],
+      },
+      {
+        h: 'What to specify when you order',
+        list: [
+          'Function — separation, filtration, drainage or a combination',
+          'Fibre — PP (virgin or recycled) or polyester',
+          'GSM, thickness, and the strength and puncture values your specification requires',
+          'Roll width and length — we supply widths of 5.0–5.2 m',
+          'Overlap and cover, as set by the engineer; PP is sensitive to prolonged sunlight, so it is normally covered soon after it is laid',
+        ],
+        p: [
+          'Send your requirement through the [enquiry form](/contact#enquiry) or use the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote). Samples are available on request.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why use geotextile under railway ballast?',
+        a: 'It keeps ballast and the soft formation below from mixing, lets water drain, and helps the track hold its alignment between maintenance visits.',
+      },
+      {
+        q: 'Which geotextile is used under railway track?',
+        a: 'Thick needle punched nonwoven geotextile of polypropylene or polyester is commonly used. The grade is set by the project specification.',
+      },
+      {
+        q: 'Is there an Indian railway specification for nonwoven geotextile?',
+        a: 'RDSO has issued a specification for nonwoven geotextile used as a separator and filter in track. Confirm the current edition and the values your tender requires.',
+      },
+      {
+        q: 'What roll width do you supply?',
+        a: 'Roll widths of 5.0–5.2 m, with GSM, thickness and roll length set to the project requirement.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
     ],
     relatedGuides: ['geotextile-for-road-construction', 'nonwoven-geotextile-guide'],
   },

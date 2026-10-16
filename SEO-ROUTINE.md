@@ -47,6 +47,13 @@ enquiries badhna.
 - HS code nonwoven felt (56021000, 560314 ...): importers yahi dhundhte hain
 - country: "nonwoven felt supplier <country>", "geotextile supplier <country>"
 
+## India page-one targets (research 16 Oct 2026)
+Jaipur / "manufacturer India" keywords are owned by IndiaMART, JustDial and older Jaipur sites. Realistic page-one targets are informational long-tail where page one is small blogs and social posts:
+- geotextile for road construction India -> /guides/geotextile-for-road-construction
+- geotextile GSM for road construction India -> /guides/geotextile-gsm-for-road-construction-india
+- nonwoven geotextile for railway track India -> /guides/nonwoven-geotextile-for-railway-track-india
+Skipped as too crowded: geobags, automotive felt India, HS-code India (data sites), Jaipur-named keywords.
+
 ## Jo Claude nahi dekh sakta (aap paste karo)
 Search Console ke numbers, IndiaMART/TradeIndia/Google Business ke login, admin panel ka data.
 Wo ya to screenshot bhejo ya number paste karo.
