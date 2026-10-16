@@ -332,6 +332,61 @@ export const STATIC_MARKETS = [
     note: 'Mining, roads and civil works shape demand in South Africa, where geotextile and protective felt are the grades buyers ask about most.',
     asks: 'the GSM and puncture resistance the application needs, and which port serves the site',
   },
+  {
+    slug: 'kenya-nonwoven-felt-supplier',
+    name: 'Kenya',
+    short: 'Kenya',
+    buyers: 'Kenyan importers',
+    region: 'Africa',
+    ports: ['Mombasa'],
+    focus: ['geotextile', 'industrial'],
+    note: 'Road, rail and drainage projects in Kenya use geotextile, and sea cargo normally arrives through the port of Mombasa.',
+    asks: 'the GSM and roll width the project specifies, and how rolls are packed for the haul inland from Mombasa',
+  },
+  {
+    slug: 'nigeria-nonwoven-felt-supplier',
+    name: 'Nigeria',
+    short: 'Nigeria',
+    buyers: 'Nigerian importers',
+    region: 'Africa',
+    ports: ['Lagos (Apapa and Tin Can)', 'Onne'],
+    focus: ['geotextile', 'industrial'],
+    note: 'Road, drainage and erosion-control works in Nigeria use geotextile, and most sea cargo arrives through the Lagos ports or Onne.',
+    asks: 'the GSM and roll width the project specifies, and the documentation the destination port requires',
+  },
+  {
+    slug: 'nepal-nonwoven-felt-supplier',
+    name: 'Nepal',
+    short: 'Nepal',
+    buyers: 'Nepali importers',
+    region: 'Asia-Pacific',
+    ports: ['Kolkata / Haldia (transit)', 'Birgunj'],
+    focus: ['geotextile', 'industrial'],
+    note: 'Nepal is landlocked, so cargo from India moves overland, or by sea to Kolkata and then onward by road, which makes roll size and packing matter for the journey.',
+    asks: 'the roll size and packing that suit the overland route, and the transit documents the order needs',
+  },
+  {
+    slug: 'sri-lanka-nonwoven-felt-supplier',
+    name: 'Sri Lanka',
+    short: 'Sri Lanka',
+    buyers: 'Sri Lankan importers',
+    region: 'Asia-Pacific',
+    ports: ['Colombo'],
+    focus: ['geotextile', 'apparel-footwear', 'industrial'],
+    note: 'Civil works and a large apparel and footwear sector in Sri Lanka use geotextile and nonwoven components, with sea cargo normally arriving at Colombo.',
+    asks: 'the GSM, width and fibre the application needs, and the documentation for Colombo',
+  },
+  {
+    slug: 'bangladesh-nonwoven-felt-supplier',
+    name: 'Bangladesh',
+    short: 'Bangladesh',
+    buyers: 'Bangladeshi importers',
+    region: 'Asia-Pacific',
+    ports: ['Chattogram', 'Mongla'],
+    focus: ['geotextile', 'apparel-footwear', 'industrial'],
+    note: 'River, road and embankment works in Bangladesh use geotextile and its garment and footwear sector uses nonwoven components, with cargo arriving by sea at Chattogram or Mongla, or overland from India.',
+    asks: 'the GSM, width and fibre the application needs, and the route and documentation for the port or land border',
+  },
 ];
 
 /* ── Markets managed in the /hq panel ─────────────────────────────────────
@@ -388,15 +443,26 @@ export const marketBySlug = (slug) => markets.find((m) => m.slug === slug);
 export const marketsIn = (region) => markets.filter((m) => m.region === region);
 
 /** Page title (before the brand is appended) and meta description. */
-export const marketSeo = (m) => ({
-  title: `Nonwoven Felt Supplier for ${m.short}`,
-  description: `Nonwoven felt and geotextile supplier for ${m.buyers}. Needle punched and thermal bonded, 100–1200 GSM, made to specification, shipped from India.`,
-});
+/** Overseas buyers search "<product> supplier from India" and "<product> supplier <country>",
+ *  so the title carries both. The long form is used only when it fits the 65-character limit
+ *  once the brand suffix is added. */
+export const marketSeo = (m) => {
+  const long = `Nonwoven Felt Supplier from India to ${m.short}`;
+  const head = `Nonwoven felt and geotextile supplier from India for ${m.buyers}.`;
+  const tails = [
+    ' Needle punched, thermal bonded, 100–1200 GSM, made to specification. Samples on request.',
+    ' 100–1200 GSM, made to specification. Samples on request.',
+  ];
+  return {
+    title: long.length <= 47 ? long : `Nonwoven Felt from India to ${m.short}`,
+    description: head + (tails.find((t) => (head + t).length <= 160) || tails[1]),
+  };
+};
 
 export const EXPORT_SEO = {
   title: 'Exports: Nonwoven Felt from India',
   description:
-    'Exports of needle punched and thermal bonded nonwoven felt and geotextile from India to 27 markets. Specification, sampling, production, packing and shipping.',
+    `Exports of needle punched and thermal bonded nonwoven felt and geotextile from India to ${markets.length} markets. Specification, sampling, production, packing and shipping.`,
 };
 
 /** The export process, shown on the hub and on every market page. */
