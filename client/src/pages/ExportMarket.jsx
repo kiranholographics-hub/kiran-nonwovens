@@ -25,7 +25,7 @@ const GUIDES_FOR_AREA = {
   'apparel-footwear': ['nonwoven-fabric-for-footwear-and-apparel'],
   industrial: ['dust-collector-filter-bag-felt', 'carpet-backing-and-underlay-felt'],
 };
-const ALWAYS_GUIDES = ['hs-code-nonwoven-felt-geotextile', 'how-to-request-a-nonwoven-felt-quote'];
+const ALWAYS_GUIDES = ['nonwoven-manufacturers-in-india', 'hs-code-nonwoven-felt-geotextile', 'how-to-request-a-nonwoven-felt-quote'];
 
 const list = (items) =>
   items.length <= 1
@@ -56,7 +56,7 @@ export default function ExportMarket() {
   const guideSlugs = [
     ...new Set([...market.focus.flatMap((f) => GUIDES_FOR_AREA[f] || []), ...ALWAYS_GUIDES]),
   ];
-  const guides = guideSlugs.map(guideBySlug).filter(Boolean).slice(0, 10);
+  const guides = guideSlugs.map(guideBySlug).filter(Boolean).slice(0, 12);
 
   const faqs = [
     {

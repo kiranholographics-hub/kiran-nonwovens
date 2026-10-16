@@ -54,6 +54,9 @@ Jaipur / "manufacturer India" keywords are owned by IndiaMART, JustDial and olde
 - nonwoven geotextile for railway track India -> /guides/nonwoven-geotextile-for-railway-track-india
 Skipped as too crowded: geobags, automotive felt India, HS-code India (data sites), Jaipur-named keywords.
 
+## "non woven manufacturers in India" (head keyword, 17 Oct 2026)
+Page one today: ANFA members list, IndiaMART, KK NonWovens, Scribd, a "Top 10" listicle, revenuebase, Singhal, NWFI, favouritehub. Mostly spunbond/PP sellers and directories. Our niche is needle punched and thermal bonded felt and geotextile, so we do not claim to be a spunbond maker. Work done: pillar guide /guides/nonwoven-manufacturers-in-india (process types, how to choose, honest about what we make), home title/description now carry "Nonwoven Manufacturer India", the pillar is linked from all country pages. This head term needs authority (links, listings); expect months, not weeks. Do not publish a "Top 10 manufacturers" list of named competitors (cannot verify the claims).
+
 ## Jo Claude nahi dekh sakta (aap paste karo)
 Search Console ke numbers, IndiaMART/TradeIndia/Google Business ke login, admin panel ka data.
 Wo ya to screenshot bhejo ya number paste karo.
