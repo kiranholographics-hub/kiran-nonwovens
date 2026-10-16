@@ -788,9 +788,10 @@ export const guides = [
       'geotextile/pipeline-cable-protection-geotextile',
     ],
     relatedGuides: [
+      'geotextile-gsm-for-road-construction-india',
+      'nonwoven-geotextile-for-railway-track-india',
       'geotextile-for-drainage-and-erosion-control',
       'nonwoven-geotextile-guide',
-      'how-to-request-a-nonwoven-felt-quote',
     ],
   },
   {
