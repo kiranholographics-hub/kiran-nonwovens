@@ -89,7 +89,7 @@ export const guides = [
       'industrial/customised-nonwoven-solutions',
     ],
     relatedGuides: [
-      'needle-punched-nonwoven-manufacturer-india',
+      'nonwoven-manufacturers-in-india',
       'gsm-in-nonwoven-fabric',
       'nonwoven-fabric-for-footwear-and-apparel',
     ],
@@ -615,7 +615,7 @@ export const guides = [
       'automotive/automotive-needle-punched-felt',
       'geotextile/pp-geotextile-fabric-for-civil-works',
     ],
-    relatedGuides: ['how-to-request-a-nonwoven-felt-quote', 'gsm-in-nonwoven-fabric'],
+    relatedGuides: ['nonwoven-manufacturers-in-india', 'how-to-request-a-nonwoven-felt-quote', 'gsm-in-nonwoven-fabric'],
   },
 
   {
@@ -696,7 +696,7 @@ export const guides = [
       'geotextile/pp-geotextile-fabric-for-civil-works',
       'automotive/automotive-needle-punched-felt',
     ],
-    relatedGuides: ['how-to-request-a-nonwoven-felt-quote', 'needle-punched-nonwoven-manufacturer-india'],
+    relatedGuides: ['nonwoven-manufacturers-in-india', 'how-to-request-a-nonwoven-felt-quote', 'needle-punched-nonwoven-manufacturer-india'],
   },
 
   {
@@ -1414,6 +1414,101 @@ export const guides = [
       'geotextile/pipeline-cable-protection-geotextile',
     ],
     relatedGuides: ['geotextile-for-road-construction', 'nonwoven-geotextile-guide'],
+  },
+
+  {
+    slug: 'nonwoven-manufacturers-in-india',
+    title: 'Nonwoven manufacturers in India: types, uses and how to choose one',
+    seoTitle: 'Nonwoven Manufacturers in India: Buyer Guide',
+    description:
+      'Indian nonwoven manufacturers differ by process: spunbond, spunlace, meltblown, needle punched, thermal bonded. See which suits your use and how to choose one.',
+    readMins: 7,
+    published: '2026-10-17',
+    intro:
+      'Searching for “nonwoven manufacturers in India” returns very different companies: some make light spunbond for bags and hygiene, others make thick needle punched felt for geotextile, automotive and filtration. They are not interchangeable. This guide explains the main processes, what each is used for, and how to pick the right manufacturer for your product.',
+    sections: [
+      {
+        h: 'The main nonwoven processes',
+        list: [
+          'Spunbond — continuous filaments laid into a web and bonded; light, strong fabrics for bags, agriculture, hygiene and medical covers',
+          'Spunlace — fibres entangled with water jets; soft, drapable fabric used for wipes and medical products',
+          'Meltblown — very fine fibres; used where fine filtration is needed, for example in masks and filter layers',
+          'Needle punched — fibres entangled mechanically with barbed needles; thick, dense felt for geotextile, automotive, filtration and industrial use',
+          'Thermal bonded — a web of fibres with a low-melt component fused by heat; lighter, loftier material for insulation, linings and padding',
+        ],
+        p: [
+          'Most Indian manufacturers specialise in one or two of these. A company that is excellent at spunbond for carry bags is not necessarily the right source for a 600 GSM geotextile.',
+        ],
+      },
+      {
+        h: 'Match the process to your product',
+        list: [
+          'Thin, light, smooth fabric for bags, covers or hygiene — look for spunbond or spunlace producers',
+          'Fine filtration layers — look for meltblown producers',
+          'Thick felt, geotextile, automotive felt, filter felt or padding — look for needle punched producers',
+          'Light, lofty insulation or lining material — look for thermal bonded producers',
+        ],
+        p: [
+          'Kiran Nonwovens works in the last two groups: needle punched and thermal bonded felt and geotextile, in a 100–1200 GSM range and roll widths of 5.0–5.2 m. We do not make spunbond, spunlace or meltblown fabric, and we would rather say so than quote on something we cannot supply well.',
+        ],
+      },
+      {
+        h: 'What to check in any manufacturer',
+        list: [
+          'Does the plant make the construction you need, in your GSM and width?',
+          'Will it make to your specification, or only sell standard grades?',
+          'Can you get a sample to test in your own process?',
+          'Who actually makes the material, and where?',
+          'Which test reports can it provide for your market?',
+          'What export documents and packing does it provide?',
+        ],
+        p: [
+          'Our [buyer checklist for nonwoven manufacturers](/guides/needle-punched-nonwoven-manufacturer-india) goes through each point, and our [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) lists what to send so you get an accurate price the first time.',
+        ],
+      },
+      {
+        h: 'Where our material is made',
+        p: [
+          'Kiran Nonwovens exports material made at the plant of its manufacturing partner, Miracle Nonwoven Industries, in Phagi, Jaipur. You agree the specification with us, approve a sample, and the order is produced and shipped against it. See the [manufacturing page](/manufacturing) for the processes.',
+        ],
+      },
+      {
+        h: 'Where needle punched nonwoven is used',
+        p: [
+          'The main uses of the material we make are geotextile for roads, railways and drainage (see [geotextile for road construction in India](/guides/geotextile-for-road-construction)), automotive felt (see the [NVH felt guide](/guides/automotive-nvh-felt-guide)), filter felt (see the [dust collector felt guide](/guides/dust-collector-filter-bag-felt)), footwear and apparel components, flooring, packaging and medical padding.',
+        ],
+      },
+      {
+        h: 'Buying from India as an overseas importer',
+        p: [
+          'Confirm the construction, fibre, GSM and width first, then the paperwork: the HS code (see our [HS code guide](/guides/hs-code-nonwoven-felt-geotextile)), test reports your market asks for, and how the rolls are packed for sea or air freight. Send your specification through the [enquiry form](/contact#enquiry) and our export team replies with specifications and pricing. Samples are available on request.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What types of nonwoven fabric are made in India?',
+        a: 'Spunbond, spunlace, meltblown, needle punched and thermal bonded nonwovens are all made in India. Each suits different uses, and most manufacturers specialise in one or two processes.',
+      },
+      {
+        q: 'Which Indian manufacturer is the best for nonwoven fabric?',
+        a: 'There is no single best. The right one depends on the process, GSM, width and application you need. Check that the plant makes your construction, will make to your specification and can provide samples and test reports.',
+      },
+      {
+        q: 'What does Kiran Nonwovens make?',
+        a: 'Needle punched and thermal bonded nonwoven felt and geotextile, in a 100–1200 GSM range and roll widths of 5.0–5.2 m, made to the buyer’s specification. We do not make spunbond, spunlace or meltblown fabric.',
+      },
+      {
+        q: 'Do you export?',
+        a: 'Yes. Kiran Nonwovens supplies export buyers from India. Include your destination country in the enquiry so we can quote correctly.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/customised-nonwoven-solutions',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'automotive/automotive-needle-punched-felt',
+    ],
+    relatedGuides: ['needle-punched-nonwoven-manufacturer-india', 'needle-punched-vs-thermal-bonded-nonwoven'],
   },
 ];
 
