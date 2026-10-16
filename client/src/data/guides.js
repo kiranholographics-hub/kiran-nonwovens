@@ -1510,6 +1510,100 @@ export const guides = [
     ],
     relatedGuides: ['needle-punched-nonwoven-manufacturer-india', 'needle-punched-vs-thermal-bonded-nonwoven'],
   },
+
+  {
+    slug: 'orthopaedic-cast-padding-nonwoven-india',
+    title: 'Nonwoven orthopaedic cast padding from India: what to specify',
+    seoTitle: 'Nonwoven Orthopaedic Cast Padding India Guide',
+    description:
+      'What converters and importers should specify when buying nonwoven undercast padding from India: fibre, GSM, thickness, tearability, width and roll length.',
+    readMins: 5,
+    published: '2026-10-16',
+    intro:
+      'Undercast padding sits between the skin and a plaster or synthetic cast. It is a simple material, but small differences in fibre, weight and tearability decide whether it wraps smoothly and feels comfortable. This guide covers what to specify when you buy nonwoven cast padding as roll stock from an Indian supplier.',
+    sections: [
+      {
+        h: 'What cast padding has to do',
+        list: [
+          'Cushion the skin and bony points against the cast',
+          'Spread pressure evenly so the cast does not rub',
+          'Wrap and conform easily around a limb',
+          'Tear cleanly by hand when the clinician needs to cut a length',
+          'Stay in place while the cast material is applied over it',
+        ],
+        p: [
+          'A needle punched or thermal bonded nonwoven suits this job because it is soft, uniform and does not fray at the edge.',
+        ],
+      },
+      {
+        h: 'Fibre: viscose, polyester or a blend',
+        list: [
+          'Viscose — soft and absorbent, often chosen where comfort and moisture handling matter most',
+          'Polyester — resilient and quick to recover its loft; does not absorb moisture',
+          'Blends — balance softness, loft and cost',
+        ],
+        p: [
+          'Which one is right depends on your product and your market. See [polyester vs polypropylene nonwoven](/guides/polyester-vs-polypropylene-nonwoven) for how the synthetic fibres differ.',
+        ],
+      },
+      {
+        h: 'What to put in the specification',
+        list: [
+          'Fibre or blend',
+          'GSM and thickness — these set the cushioning',
+          'Tearability and softness, which you can judge on a sample',
+          'Colour — usually white',
+          'Roll width and length, so your slitting and rewinding line runs efficiently',
+          'The finished bandage widths you plan to cut, because they decide the slit width',
+        ],
+        p: [
+          'Our [GSM guide](/guides/gsm-in-nonwoven-fabric) explains how weight relates to thickness and feel.',
+        ],
+      },
+      {
+        h: 'Roll stock for converters',
+        p: [
+          'Most buyers convert the roll into finished padding rolls themselves: slitting, rewinding and packing. Ask for a roll width and length that match your equipment. Our [orthopaedic cast padding](/products/industrial/orthopaedic-cast-padding) is made to order in customised widths, thicknesses, GSM and roll lengths.',
+        ],
+      },
+      {
+        h: 'Medical-use requirements',
+        p: [
+          'We supply the nonwoven material. The requirements for the finished medical product, such as cleanliness, packaging and the regulatory status in your market, are for the converter and the market to settle. Tell us what you need early, and we will discuss what can be supplied before you order.',
+        ],
+      },
+      {
+        h: 'Sample first, then order',
+        p: [
+          'Padding is judged by hand, so test a sample before committing. Samples are available on request. Send your specification through the [enquiry form](/contact#enquiry), or use the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) so we can quote accurately the first time. For the wider picture of buying from India, see [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is nonwoven cast padding made from?',
+        a: 'Viscose, polyester or a blend of the two, formed into a soft nonwoven by needle punching or thermal bonding. The fibre is chosen for softness, loft and moisture handling.',
+      },
+      {
+        q: 'What should I check in a cast padding sample?',
+        a: 'Softness, how cleanly it tears by hand, how it wraps around a limb, and whether it holds its thickness.',
+      },
+      {
+        q: 'Can you supply cast padding in custom widths and GSM?',
+        a: 'Yes. It is made to order in customised widths, thicknesses, GSM and roll lengths.',
+      },
+      {
+        q: 'Is the material sold as a finished medical product?',
+        a: 'We supply the nonwoven material as roll stock. Requirements for the finished product are for the converter and the destination market, and we will discuss them before you order.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/orthopaedic-cast-padding',
+      'industrial/customised-nonwoven-solutions',
+      'industrial/packaging-protective-felt',
+    ],
+    relatedGuides: ['gsm-in-nonwoven-fabric', 'nonwoven-manufacturers-in-india'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;
