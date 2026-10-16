@@ -20,7 +20,7 @@ import './Exports.css';
 
 // Guides worth reading for each business area a market buys for.
 const GUIDES_FOR_AREA = {
-  geotextile: ['geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control'],
+  geotextile: ['geotextile-for-road-construction', 'geotextile-gsm-for-road-construction-india', 'nonwoven-geotextile-for-railway-track-india', 'geotextile-for-drainage-and-erosion-control'],
   automotive: ['automotive-nvh-felt-guide'],
   'apparel-footwear': ['nonwoven-fabric-for-footwear-and-apparel'],
   industrial: ['dust-collector-filter-bag-felt', 'carpet-backing-and-underlay-felt'],
@@ -56,7 +56,7 @@ export default function ExportMarket() {
   const guideSlugs = [
     ...new Set([...market.focus.flatMap((f) => GUIDES_FOR_AREA[f] || []), ...ALWAYS_GUIDES]),
   ];
-  const guides = guideSlugs.map(guideBySlug).filter(Boolean).slice(0, 8);
+  const guides = guideSlugs.map(guideBySlug).filter(Boolean).slice(0, 10);
 
   const faqs = [
     {
