@@ -701,10 +701,10 @@ export const guides = [
 
   {
     slug: 'geotextile-for-road-construction',
-    title: 'Geotextile for road construction: where it goes and what it does',
-    seoTitle: 'Geotextile for Road Construction: Uses',
+    title: 'Geotextile for road construction in India: where it goes and what it does',
+    seoTitle: 'Geotextile for Road Construction in India',
     description:
-      'How nonwoven geotextile is used under roads and pavements: separation, filtration and drainage over soft subgrade, and what to specify when you order.',
+      'How nonwoven geotextile is used under roads in India: separation, filtration and drainage over soft subgrade and monsoon water, and what to specify.',
     readMins: 5,
     intro:
       'On a soft or wet subgrade, stone and soil mix under traffic and the road loses its thickness. A nonwoven geotextile placed between them keeps the layers apart and lets water through. This guide covers where it goes in a road, what it does, and what to settle before you order.',
@@ -725,6 +725,13 @@ export const guides = [
         ],
         p: [
           'These jobs are described in more detail in our [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+        ],
+      },
+      {
+        h: 'Geotextile in Indian road projects',
+        p: [
+          'Soft or expansive subgrades, such as black cotton soil, and heavy monsoon rain make separation and drainage the main jobs a geotextile does on Indian roads, from rural access roads to highways and embankments.',
+          'On public works, the use of geosynthetics is normally set by the project’s technical specification, which commonly refers to the MoRTH specifications and IRC guidance on geosynthetics in pavements. Your project engineer decides which clauses and test values apply; confirm the current edition and send us the figures your specification requires.',
         ],
       },
       {
@@ -754,6 +761,10 @@ export const guides = [
       },
     ],
     faqs: [
+      {
+        q: 'Is geotextile used in road construction in India?',
+        a: 'Yes. It is used under pavements, behind drains, on embankments and on rural and haul roads, mainly for separation, filtration and drainage over soft subgrade. Your project specification sets the grade and test values.',
+      },
       {
         q: 'Why use geotextile under a road?',
         a: 'It keeps a soft subgrade and the aggregate above it from mixing, lets water drain through, and helps the road keep its designed thickness.',
