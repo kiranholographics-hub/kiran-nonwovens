@@ -1604,6 +1604,124 @@ export const guides = [
     ],
     relatedGuides: ['gsm-in-nonwoven-fabric', 'nonwoven-manufacturers-in-india'],
   },
+  {
+    slug: 'shoulder-pad-nonwoven-fabric-india',
+    title: 'Shoulder pad nonwoven fabric from India: how to specify it',
+    seoTitle: 'Shoulder Pad Nonwoven Fabric India Guide',
+    description:
+      'What garment makers and pad converters should specify when buying shoulder pad nonwoven fabric from India: fibre, weight, loft, colour and roll width.',
+    readMins: 5,
+    published: '2026-10-17',
+    intro:
+      'A shoulder pad is a small component that decides how a whole garment reads. Get the material wrong and the shoulder collapses after a season, or worse, shows a ridge through the cloth. This guide covers what the nonwoven has to do, and what to settle before you buy it as roll stock from India.',
+    sections: [
+      {
+        h: 'What the pad has to do',
+        list: [
+          'Build the shoulder line the pattern was cut for',
+          'Hold that shape through wear, pressing and cleaning',
+          'Stay invisible from outside — no ridge, no shadow, no crease line',
+          'Add as little weight and bulk as the look allows',
+          'Cut, stitch and laminate cleanly on a production line',
+        ],
+        p: [
+          'The last point matters more than it sounds. A fabric that feels right by hand can still fray at a die edge or shift under a laminating head, and that only shows up in a production run.',
+        ],
+      },
+      {
+        h: 'Nonwoven wadding, moulded foam and cut-and-sewn pads',
+        table: {
+          head: ['', 'Nonwoven wadding', 'Moulded foam', 'Cut-and-sewn layers'],
+          rows: [
+            ['How the pad is built', 'Layers of needle punched fabric cut to shape', 'Foam moulded to a shoulder form', 'Several fabric layers stitched together'],
+            ['Shape control', 'From the layering and the stitching', 'Built into the mould', 'From the pattern of each layer'],
+            ['Feel', 'Softer, more textile', 'Firmer, more uniform', 'Varies with the layers chosen'],
+            ['Breathability', 'Open fibre structure lets air through', 'Depends on the foam', 'Open, like the fabrics used'],
+            ['Usual fit', 'Tailoring, formal wear, uniforms', 'Structured and sportswear shapes', 'Tailoring where a specific profile is wanted'],
+          ],
+        },
+        p: [
+          'We supply the nonwoven fabric for the first and third routes. The finished pad is assembled by the garment maker or a pad converter.',
+        ],
+      },
+      {
+        h: 'Why polyester needle punched fabric',
+        p: [
+          'Polyester recovers its loft after being compressed, which is what keeps a shoulder from going flat after a few wearings. It does not absorb moisture, so it is stable through pressing and cleaning, and it holds up to lamination.',
+          'Needle punching sets the firmness through the process rather than the yarn, so the same fibre can give a soft, light wadding or a firmer support simply by being needled differently. See [needle punched vs thermal bonded](/guides/needle-punched-vs-thermal-bonded-nonwoven) for how the two main routes compare.',
+        ],
+      },
+      {
+        h: 'Weight, thickness and loft',
+        p: [
+          'Shoulder pad fabric sits at the light end of the nonwoven range, and small changes are felt immediately — in how the pad sits, how it presses, and how a stack of blanks cuts. A soft summer jacket and a structured blazer want different material, so weight and thickness are specified for the garment rather than picked from a stock list.',
+          'Material is made to order from 100 to 1200 GSM, which covers this end comfortably. [GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric) explains how weight, thickness and density relate.',
+        ],
+      },
+      {
+        h: 'Colour, and what shows through a pale cloth',
+        p: [
+          'White and ecru cover most work, but a pad under a pale or lightweight shell can shadow through, so the fabric is sometimes matched closer to the garment. Colour is made to requirement along with weight, thickness and width.',
+        ],
+      },
+      {
+        h: 'Cutting, stitching, laminating and pressing',
+        p: [
+          'Pads are die-cut or cut on a cutter, stitched, often laminated to foam or to a face fabric, and pressed. Each of those steps can expose a problem the roll does not show: a frayed die edge, slippage under the laminating head, or loss of loft under heat.',
+          'That is the argument for sampling. Samples are available on request, and the test worth doing is a short run through your own cutting, stitching, lamination and pressing — not a handfeel. Confirm your pressing conditions against the sample rather than against a figure on paper.',
+        ],
+      },
+      {
+        h: 'Buying the fabric from India',
+        p: [
+          'India has a deep garment manufacturing base, so most buyers for this material are garment factories and pad converters sourcing roll stock, not finished pads. What you are buying is the fabric; the pad is made on your line or your converter’s.',
+          'Kiran Nonwovens exports material made at the plant of its manufacturing partner, Miracle Nonwoven Industries — see the [manufacturing page](/manufacturing) for the processes. For the wider picture of sourcing nonwovens from India, read [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india).',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The garment — blazer, suit, coat, jacket, uniform or fashion piece — and the shoulder shape you are building',
+          'GSM and thickness, or a swatch of the material you use today',
+          'Colour, and whether the shell fabric is pale or lightweight',
+          'Roll width, and whether you need it cut narrower for your line',
+          'The processing it must survive — die cutting, stitching, lamination, pressing',
+          'Quantity per order or per month, and your destination country',
+        ],
+        p: [
+          'A swatch is worth more than a paragraph of description, so send one if you have it. Use the [enquiry form](/contact#enquiry), or read the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) first. Our [shoulder pad nonwoven fabric](/products/apparel-footwear/shoulder-pad-nonwoven-fabric) page lists the standard range, and where nothing standard fits, [customised nonwoven fabric](/products/industrial/customised-nonwoven-solutions) is developed to the application.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What fabric is used for shoulder pads?',
+        a: 'Needle punched polyester nonwoven is widely used, because it recovers its loft after compression, stays stable through pressing and cleaning, and cuts without fraying. GSM, thickness and colour are made to the garment.',
+      },
+      {
+        q: 'What GSM is used for shoulder pad fabric?',
+        a: 'It depends on the garment and the shape being built — a soft summer jacket and a structured blazer need different material. The fabric sits at the lighter end of our 100–1200 GSM range and is produced to the weight and thickness your pattern requires.',
+      },
+      {
+        q: 'What is the difference between nonwoven wadding and foam shoulder pads?',
+        a: 'Wadding pads are built from layers of nonwoven fabric cut to shape, so the shape comes from the layering and stitching, and the pad feels more textile. Foam pads are moulded to a form, so the shape is built into the mould and the feel is firmer. We supply the nonwoven fabric, not moulded foam.',
+      },
+      {
+        q: 'Do you supply finished shoulder pads?',
+        a: 'We supply the fabric as roll stock, made to be cut, stitched and laminated. The finished pad is assembled by the garment maker or a pad converter.',
+      },
+      {
+        q: 'Can you supply it in our colour and cut width?',
+        a: 'Colour, GSM, thickness, width and roll length are all made to requirement. Rolls are produced at 5.0–5.2 m width and can be cut down for your cutting or lamination line. Samples are available on request.',
+      },
+    ],
+    relatedProducts: [
+      'apparel-footwear/shoulder-pad-nonwoven-fabric',
+      'apparel-footwear/shoe-lining-nonwoven-fabric',
+      'industrial/customised-nonwoven-solutions',
+    ],
+    relatedGuides: ['nonwoven-fabric-for-footwear-and-apparel', 'gsm-in-nonwoven-fabric', 'nonwoven-manufacturers-in-india'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;
