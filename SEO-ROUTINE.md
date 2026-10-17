@@ -64,7 +64,7 @@ Overseas SERPs (UAE, Saudi Arabia, Australia): page one is local distributors an
 Each day ONE new guide page for a low-competition niche keyword, India angle, honest content only. Pick the next topic from the queue, check the SERP first (TinyFish search), write it in client/src/data/guides.js (copy an existing guide's shape; `published` = today), link it from the matching product FAQ (client/src/data/seo.js) and the country-page area map (client/src/pages/ExportMarket.jsx), build (ALLOW_LOCAL_BUILD=1 npm run build in client/), run `npm run smoke`, PR + merge, then verify live with a ?cb= cache-buster. Tick the topic off here.
 Queue (tick when done):
 - [x] orthopaedic cast padding nonwoven India (16 Oct)
-- [ ] shoulder pad nonwoven fabric India (wadding/needle punched pads for garments)
+- [x] shoulder pad nonwoven fabric India (wadding/needle punched pads for garments) (17 Oct)
 - [ ] shoe insole board / strobel nonwoven India
 - [ ] filter felt for bag filters in cement, steel and power plants India (extend the dust-collector angle)
 - [ ] geobag fabric (nonwoven geotextile for geobags) India
