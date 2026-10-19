@@ -22,7 +22,11 @@ import './Exports.css';
 const GUIDES_FOR_AREA = {
   geotextile: ['geotextile-for-road-construction', 'geotextile-gsm-for-road-construction-india', 'nonwoven-geotextile-for-railway-track-india', 'geotextile-for-drainage-and-erosion-control'],
   automotive: ['automotive-nvh-felt-guide'],
-  'apparel-footwear': ['nonwoven-fabric-for-footwear-and-apparel', 'shoulder-pad-nonwoven-fabric-india'],
+  'apparel-footwear': [
+    'nonwoven-fabric-for-footwear-and-apparel',
+    'shoulder-pad-nonwoven-fabric-india',
+    'shoe-insole-strobel-nonwoven-india',
+  ],
   industrial: ['dust-collector-filter-bag-felt', 'carpet-backing-and-underlay-felt', 'orthopaedic-cast-padding-nonwoven-india'],
 };
 const ALWAYS_GUIDES = ['nonwoven-manufacturers-in-india', 'hs-code-nonwoven-felt-geotextile', 'how-to-request-a-nonwoven-felt-quote'];

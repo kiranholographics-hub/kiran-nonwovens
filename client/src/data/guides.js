@@ -1722,6 +1722,122 @@ export const guides = [
     ],
     relatedGuides: ['nonwoven-fabric-for-footwear-and-apparel', 'gsm-in-nonwoven-fabric', 'nonwoven-manufacturers-in-india'],
   },
+  {
+    slug: 'shoe-insole-strobel-nonwoven-india',
+    title: 'Insole and strobel nonwoven for footwear: what to buy from India',
+    seoTitle: 'Shoe Insole & Strobel Nonwoven India Guide',
+    description:
+      'Strobel sock, insole board and sockliner are three different materials. What each one does, which are nonwoven, and what to specify when buying from India.',
+    readMins: 6,
+    published: '2026-10-19',
+    intro:
+      'Buyers often ask for “insole material” and mean one of three different things. The strobel sock, the insole board and the sockliner sit in different places in a shoe, carry different loads, and are not made the same way. This guide separates them, says plainly which are nonwoven and which are not, and sets out what to specify.',
+    sections: [
+      {
+        h: 'Three parts that get called the same thing',
+        table: {
+          head: ['', 'Strobel sock', 'Insole board', 'Sockliner / insole cover'],
+          rows: [
+            ['Where it sits', 'Stitched to the bottom edge of the upper', 'Between the outsole and the foot, through the shoe bottom', 'The top layer the foot rests on'],
+            ['Main job', 'Closing the upper so the shoe can be lasted', 'Stiffness and shape through the shoe bottom', 'Comfort, feel and moisture handling'],
+            ['What it is usually made from', 'Nonwoven sheet', 'Resin-bonded cellulose or fibreboard, sometimes nonwoven-based', 'Nonwoven, foam, textile or a laminate'],
+            ['Do we supply it?', 'Yes — needle punched nonwoven', 'No — we do not make resin-impregnated board', 'Yes — as the nonwoven layer'],
+          ],
+        },
+      },
+      {
+        h: 'What strobel construction is',
+        p: [
+          'In strobel construction the upper is closed at the bottom with a sheet of material stitched all the way round on a strobel machine, making a sock. The closed upper is then pulled over a last and the sole is attached. It is the usual construction for sports and casual footwear because it is quick and gives a flexible shoe.',
+          'The stitched sheet is the strobel sock, and a needle punched nonwoven suits it because it takes a stitch line without tearing and does not fray along a cut edge.',
+        ],
+      },
+      {
+        h: 'What the strobel sock has to do',
+        list: [
+          'Hold the stitch line under the pull of lasting without the needle holes running',
+          'Lie flat and keep its dimensions, so the shoe bottom does not distort',
+          'Take the adhesive used to attach the sole',
+          'Stay comfortable underfoot, since only the sockliner sits above it',
+          'Cut cleanly in a nested layout, without fraying at the edge',
+        ],
+        p: [
+          'Tear strength and stitch-holding are what a strobel material is judged on, and both follow from the fibre, the weight and how heavily the web is needled.',
+        ],
+      },
+      {
+        h: 'Insole board: where nonwoven ends and board begins',
+        p: [
+          'An insole board — also called a lasting board — has to stay stiff through the life of the shoe. That stiffness normally comes from resin-bonded cellulose or fibreboard, sometimes with a nonwoven carrier inside it. Making that board is a different process from making a felt.',
+          'We make needle punched and thermal bonded nonwovens, so we supply nonwoven layers used in and around the insole; we do not make resin-impregnated insole board. If your specification calls for a board of a stated stiffness, say so at the enquiry stage and we will tell you honestly whether what we make fits, rather than supplying something close and hoping it works.',
+        ],
+      },
+      {
+        h: 'Sockliner cover and insole lining',
+        p: [
+          'The sockliner is the part the foot actually touches, and it is usually a comfort layer laminated to foam. Here the nonwoven is chosen for feel at the contact face, abrasion resistance where the foot moves, and an open structure that lets moisture vapour out.',
+          'Our [nonwoven shoe lining fabric](/products/apparel-footwear/shoe-lining-nonwoven-fabric) is a polyester needle punched felt made for these components — inner lining, insoles, heel counters, toe-puff support and slipper lining — across sports, safety and casual footwear.',
+        ],
+      },
+      {
+        h: 'Weight, thickness and what to test',
+        p: [
+          'Footwear components sit at the light end of the nonwoven range, where a small change in weight is felt immediately — in how a strobel sheet stitches, how a sockliner breathes, how a stack of blanks cuts. Material is made to order rather than picked from a stock list; [GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric) explains how weight, thickness and density relate.',
+          'A handfeel tells you little here. The test worth doing is a short run through your own process: stitch the strobel sheet on your machine and pull it, die-cut a nested layout and look at the edges, laminate a sockliner and check it has not lost loft. Samples are available on request for exactly this.',
+        ],
+      },
+      {
+        h: 'Buying footwear nonwovens from India',
+        p: [
+          'India has a large footwear manufacturing base, so most buyers for this material are shoe factories and component makers buying roll stock, not finished parts. What you buy is the fabric; the strobel sock, the sockliner and the lining are cut and assembled on your line.',
+          'Kiran Nonwovens exports material made at the plant of its manufacturing partner, Miracle Nonwoven Industries — see the [manufacturing page](/manufacturing) for the processes. For the wider picture of sourcing nonwovens from India, read [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india), and for the other garment and footwear components see our [footwear and apparel guide](/guides/nonwoven-fabric-for-footwear-and-apparel).',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'Which component — strobel sock, insole layer, sockliner cover or lining',
+          'The shoe construction and what the part has to withstand',
+          'GSM and thickness, or a swatch of the material you use today',
+          'Any stitch-holding or tear figure your specification sets',
+          'Colour, and whether the part is visible in the finished shoe',
+          'Roll width, and whether you need it cut narrower for your cutting line',
+          'Quantity per order or per month, and your destination country',
+        ],
+        p: [
+          'A swatch beats a paragraph of description, so send one if you have it. Use the [enquiry form](/contact#enquiry), or read the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) first. Where nothing standard fits, [customised nonwoven fabric](/products/industrial/customised-nonwoven-solutions) is developed to the application.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What material is used for a strobel sock?',
+        a: 'A nonwoven sheet is the usual choice, because it holds a stitch line under the pull of lasting and does not fray at a cut edge. Needle punched polyester is common. Weight and thickness are set by the shoe and the construction.',
+      },
+      {
+        q: 'Do you supply insole board?',
+        a: 'No. Insole board gets its stiffness from resin-bonded cellulose or fibreboard, which is a different process from making a felt. We make needle punched and thermal bonded nonwovens, so we supply the nonwoven layers used in and around the insole, not the resin-impregnated board.',
+      },
+      {
+        q: 'What is the difference between a strobel sock and a sockliner?',
+        a: 'The strobel sock is stitched to the bottom of the upper to close it before lasting, so it is part of the shoe structure. The sockliner is the removable or glued-in top layer the foot rests on, chosen for comfort and moisture handling.',
+      },
+      {
+        q: 'What GSM is used for footwear nonwovens?',
+        a: 'It depends on the component and the construction — a strobel sheet and a sockliner cover are not the same material. These parts sit at the lighter end of our 100–1200 GSM range and are produced to the weight your specification sets.',
+      },
+      {
+        q: 'Can I test the material before ordering?',
+        a: 'Yes. Samples are available on request, and the useful test is a run through your own stitching, cutting and lamination rather than a handfeel.',
+      },
+    ],
+    relatedProducts: [
+      'apparel-footwear/shoe-lining-nonwoven-fabric',
+      'apparel-footwear/shoulder-pad-nonwoven-fabric',
+      'industrial/customised-nonwoven-solutions',
+    ],
+    relatedGuides: ['nonwoven-fabric-for-footwear-and-apparel', 'shoulder-pad-nonwoven-fabric-india', 'nonwoven-manufacturers-in-india'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;
