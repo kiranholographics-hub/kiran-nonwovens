@@ -45,7 +45,7 @@ export const CONTACT = {
     encodeURIComponent(
       '221-C, Frontier Colony, Adarsh Nagar, Jaipur, Rajasthan 302004'
     ),
-  hours: '[Working hours — pending]',
+  hours: '10:00 am – 6:00 pm',
 };
 
 /** PLACEHOLDER — global-presence figures pending from Sir. */
