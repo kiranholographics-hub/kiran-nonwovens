@@ -38,6 +38,11 @@ export const PAGE_SEO = {
     description:
       'Send a specification-based enquiry for nonwoven felt or geotextile — fibre, GSM, width and quantity — and our export team will reply with a quote.',
   },
+  india: {
+    title: 'Nonwoven Felt & Geotextile in Jaipur, India',
+    description:
+      'Kiran Nonwovens is based in Jaipur, Rajasthan. Needle punched and thermal bonded felt and geotextile, 100–1200 GSM, made to each buyer\u2019s specification.',
+  },
   guides: {
     title: 'Nonwoven Felt & Geotextile Buyer’s Guides',
     description:
@@ -292,3 +297,29 @@ export function productFaq(product) {
 /** Plain-text version of an answer, with the [text](/path) markup removed —
  *  for schema.org FAQPage, which takes text only. */
 export const plain = (s) => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+
+
+/** Questions a buyer searching from within India asks first. Location and
+ *  capability only — nothing here states a commercial term. */
+export const INDIA_FAQ = [
+  {
+    q: 'Where is Kiran Nonwovens based?',
+    a: 'Our office is in Adarsh Nagar, Jaipur, Rajasthan. The material is produced at our manufacturing partner\u2019s factory in Phagi, Jaipur. Both addresses are on the [contact page](/contact).',
+  },
+  {
+    q: 'Are you a manufacturer or a trader?',
+    a: 'Neither exactly. Kiran Nonwovens exports material made at the plant of its manufacturing partner, Miracle Nonwoven Industries, to the specification agreed with each buyer — not bought ready-made on the open market. The [manufacturing page](/manufacturing) explains the arrangement.',
+  },
+  {
+    q: 'Which nonwoven processes do you make?',
+    a: 'Needle punched and thermal bonded only. We do not make spunbond, spunlace or meltblown. [Nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india) explains which process suits which product.',
+  },
+  {
+    q: 'What weights and widths can you produce?',
+    a: '100 to 1200 GSM, in roll widths of 5.0–5.2 m, which can be cut narrower. Thickness, roll length and colour are set per order rather than fixed.',
+  },
+  {
+    q: 'Can I get a sample before ordering?',
+    a: 'Yes. Samples are available on request. Describe the application through the [enquiry form](/contact#enquiry), or send a swatch of the material you use today.',
+  },
+];
