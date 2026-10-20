@@ -1722,6 +1722,124 @@ export const guides = [
     ],
     relatedGuides: ['nonwoven-fabric-for-footwear-and-apparel', 'gsm-in-nonwoven-fabric', 'nonwoven-manufacturers-in-india'],
   },
+  {
+    slug: 'bag-filter-felt-cement-steel-power-india',
+    title: 'Bag filter felt for cement, steel and power plants in India',
+    seoTitle: 'Bag Filter Felt: Cement, Steel, Power Plants',
+    description:
+      'Which bag filter points in Indian cement, steel and power plants run cool enough for polyester or PP felt, and which need a high-temperature fibre instead.',
+    readMins: 6,
+    published: '2026-10-20',
+    intro:
+      'Cement, steel and power plants in India run some of the largest baghouses in the country, but the dust streams inside one plant are not alike. A kiln runs far hotter than a packing plant; an ash hopper is not a crusher. Temperature decides the media before anything else does, so this guide goes point by point through each plant and says plainly where a polyester or PP needle punched felt fits and where it does not.',
+    sections: [
+      {
+        h: 'One plant, many different dust streams',
+        p: [
+          'It is tempting to talk about “cement plant filter bags” as one thing. In practice a single works has collection points separated by a hundred degrees or more, and media chosen for the hottest point is wasted money on the coolest one — while the reverse destroys bags in weeks.',
+          'So the first job is not to pick a fabric. It is to list your collection points and write the continuous and peak gas temperature against each one. Everything else follows from that list.',
+        ],
+      },
+      {
+        h: 'Cement plants, point by point',
+        table: {
+          head: ['Collection point', 'Typically runs', 'Media usually needed'],
+          rows: [
+            ['Crusher and raw material handling', 'Near ambient', 'Polyester or PP needle felt'],
+            ['Packing plant and bag house on dispatch', 'Near ambient', 'Polyester needle felt'],
+            ['Cement mill and separator vents', 'Warm', 'Polyester, where the temperature stays inside its range'],
+            ['Raw mill and kiln exhaust', 'Hot', 'High-temperature fibre, not polyester or PP'],
+            ['Clinker cooler', 'Hot', 'High-temperature fibre'],
+          ],
+        },
+        p: [
+          'The cool end of a cement works — crushing, raw material handling, packing and dispatch — is squarely the kind of duty our felt is made for. The kiln and clinker cooler are not, and no amount of finishing changes that.',
+        ],
+      },
+      {
+        h: 'Steel plants: heat, fume and sparks',
+        p: [
+          'Steel making concentrates the hardest filtration duties in the country: furnace fume, sinter plant gas, and streams that carry hot particles capable of burning a hole through a bag. Those points call for high-temperature media, and often for spark protection designed into the system rather than into the fabric.',
+          'The parts of a steel works that do suit a polyester or PP felt are the cooler, drier ones away from the furnace — raw material handling, screening, transfer points, storage and bagging. If your enquiry is for one of those, we can quote; if it is for furnace or sinter gas, we will say so rather than supply something that will not last.',
+        ],
+      },
+      {
+        h: 'Power plants: fly ash, moisture and acid',
+        p: [
+          'On a coal-fired unit, flue gas bag filters sit in a stream that is hot and can carry acid and moisture, which is why that duty is normally met with a high-temperature fibre rather than polyester. Polyester also loses strength when hot gas carries moisture, so the number on a datasheet is not the whole story.',
+          'The plant’s material handling side is different. Coal handling, ash handling at ambient conditions, transfer towers and silo vents are cooler, dustier and abrasive rather than hot — and those are duties a dense needle punched felt is well suited to.',
+        ],
+      },
+      {
+        h: 'Where we are the right source, and where we are not',
+        p: [
+          'We make needle punched and thermal bonded nonwovens in polyester, PP (virgin and recycled), viscose and blends. That covers the cool and moderate-temperature collection points described above, which in most plants are the majority of the bags by count even when they are not the most talked-about.',
+          'We do not make aramid, PPS, PTFE or fibreglass media, so for kiln exhaust, clinker coolers, furnace fume or flue gas we are not your supplier. Telling you that at the enquiry stage costs us an order and saves you a bag change. Our [dust collector filter felt guide](/guides/dust-collector-filter-bag-felt) carries the general fibre and temperature picture, with the figures labelled as industry reference rather than a product specification.',
+        ],
+      },
+      {
+        h: 'Past temperature: abrasion, moisture and acid',
+        list: [
+          'Abrasive dust — cement, clinker, ash and ore wear the face of a bag; a denser felt lasts longer against it',
+          'Damp or sticky dust — material that cakes rather than releases changes how the collector has to be cleaned',
+          'Acid and moisture together — these shorten fibre life well below the dry temperature limit',
+          'Combustible dust — handled through the system design and an antistatic construction, not by the fabric alone',
+          'Cleaning method — pulse jet, reverse air or shaker, which sets how hard the media is worked',
+        ],
+        p: [
+          'These are the questions that separate two bags of the same weight and fibre, and they are worth answering in the enquiry rather than after the first change.',
+        ],
+      },
+      {
+        h: 'Roll stock, not finished bags',
+        p: [
+          'We supply the felt as roll stock, made to be cut, stitched and fabricated into bags and filtration components by your own line or your converter. Rolls are produced at 5.0–5.2 m width and can be cut to the width your layout needs, from 100 to 1200 GSM. Our [needle punched filter geo bag felt](/products/geotextile/filter-geo-bag-felt) is the product made for this duty.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The plant and the specific collection point — not just “cement plant”',
+          'Continuous and peak gas temperature at that point',
+          'Dust type, and whether it is abrasive, damp, sticky or combustible',
+          'Cleaning method, and the collector make and model if you have it',
+          'Target GSM, thickness and air permeability, if your specification sets them',
+          'Roll width that suits your cutting layout, and quantity per order or per month',
+        ],
+        p: [
+          'If the temperature at a point is unknown, say so — it is the one figure worth measuring before ordering. Send the details through the [enquiry form](/contact#enquiry); samples are available on request so you can trial the media before a bulk order. For sourcing background, see [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Which filter bag material is used in cement plants?',
+        a: 'It depends on the collection point. Crushing, raw material handling, packing and dispatch run near ambient and commonly use polyester or PP needle punched felt. Kiln exhaust and clinker coolers run far hotter and need a high-temperature fibre, which we do not make.',
+      },
+      {
+        q: 'Can polyester filter felt be used in a power plant?',
+        a: 'On the material handling side — coal handling, ambient ash handling, transfer towers, silo vents — yes. For flue gas from a boiler, no: that stream is hot and can carry acid and moisture, which calls for a high-temperature fibre.',
+      },
+      {
+        q: 'Do you supply aramid, PPS or PTFE filter media?',
+        a: 'No. We make needle punched and thermal bonded nonwovens in polyester, PP, viscose and blends. For high-temperature media we are not the right source, and we would rather say that than supply something that fails early.',
+      },
+      {
+        q: 'Do you supply finished filter bags?',
+        a: 'We supply the felt as roll stock, suitable for cutting, stitching and fabrication into bags. It can be cut to the width your conversion line needs.',
+      },
+      {
+        q: 'What GSM is used for bag filter felt?',
+        a: 'Industrial filter felt is commonly supplied in the region of 400–550 GSM, but the right weight depends on the dust, the cleaning method and the pressure drop you can accept. We produce from 100 to 1200 GSM to the duty rather than to a standard weight.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/filter-geo-bag-felt',
+      'industrial/customised-nonwoven-solutions',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+    ],
+    relatedGuides: ['dust-collector-filter-bag-felt', 'polyester-vs-polypropylene-nonwoven', 'nonwoven-manufacturers-in-india'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;

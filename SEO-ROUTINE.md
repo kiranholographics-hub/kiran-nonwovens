@@ -65,8 +65,8 @@ Each day ONE new guide page for a low-competition niche keyword, India angle, ho
 Queue (tick when done):
 - [x] orthopaedic cast padding nonwoven India (16 Oct)
 - [x] shoulder pad nonwoven fabric India (wadding/needle punched pads for garments) (17 Oct)
-- [ ] shoe insole board / strobel nonwoven India
-- [ ] filter felt for bag filters in cement, steel and power plants India (extend the dust-collector angle)
+- [x] shoe insole board / strobel nonwoven India — SKIPPED, owner declined this page (19 Oct). Do not write it again.
+- [x] filter felt for bag filters in cement, steel and power plants India (extend the dust-collector angle) (20 Oct)
 - [ ] geobag fabric (nonwoven geotextile for geobags) India
 - [ ] geotextile for canal and pond lining India
 - [ ] geotextile for landfill and mining India
