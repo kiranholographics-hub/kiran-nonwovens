@@ -265,7 +265,7 @@ export function productFaq(product) {
   }
 
   const guideLink = {
-    geotextile: 'Read our [geotextile for road construction guide](/guides/geotextile-for-road-construction), the [GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india), the [railway track guide](/guides/nonwoven-geotextile-for-railway-track-india) and the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+    geotextile: 'Read our [geotextile for road construction guide](/guides/geotextile-for-road-construction), the [GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india), the [railway track guide](/guides/nonwoven-geotextile-for-railway-track-india), the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide) and the [geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india).',
     automotive: 'Read our [automotive NVH felt guide](/guides/automotive-nvh-felt-guide).',
     castPadding: 'Read our [guide to nonwoven cast padding from India](/guides/orthopaedic-cast-padding-nonwoven-india).',
     filterFelt:
