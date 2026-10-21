@@ -1,3 +1,4 @@
+import { getAttribution, trackLead } from './attribution.js';
 import {
   businessAreas as localBusinessAreas,
   products as localProducts,
@@ -84,7 +85,7 @@ export async function postEnquiry(payload) {
     res = await fetch(`${BASE}/api/enquiries`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({ ...getAttribution(), ...payload }),
       signal: AbortSignal.timeout(15000),
     });
   } catch {
@@ -98,5 +99,6 @@ export async function postEnquiry(payload) {
     error.fieldErrors = data.errors;
     throw error;
   }
+  trackLead({ ...getAttribution(), ...payload });
   return data;
 }

@@ -63,6 +63,11 @@ const ROWS = [
   ['Quantity', 'quantity'],
   ['Message', 'message'],
   ['Page', 'source'],
+  // Kahan se aaya (admin panel jaisa hi: utm_source > referrer domain > direct)
+  ['Traffic source', 'trafficSource'],
+  ['Medium', 'utmMedium'],
+  ['Campaign', 'utmCampaign'],
+  ['Landing page', 'landingPage'],
 ];
 
 const escapeHtml = (v) =>
@@ -78,6 +83,22 @@ const escapeHtml = (v) =>
       })[c]
   );
 
+function safeHost(u) {
+  try {
+    return new URL(u).hostname.replace('www.', '');
+  } catch {
+    return u;
+  }
+}
+
+/** utm_source > "direct" > referrer ka domain > "Not tracked". */
+function trafficSourceOf(e) {
+  if (e.utmSource) return e.utmSource;
+  if (e.referrer === 'direct') return 'direct';
+  if (e.referrer) return safeHost(e.referrer);
+  return 'Not tracked';
+}
+
 /**
  * Emails the export team about a new enquiry.
  * Returns true if sent, false if mail is not configured or the send failed —
@@ -88,15 +109,16 @@ export async function sendEnquiryMail(enquiry) {
   const to = process.env.ENQUIRY_TO;
   if (!t || !to) return false;
 
-  const filled = ROWS.filter(([, key]) => enquiry[key]);
-  const text = filled.map(([label, key]) => `${label}: ${enquiry[key]}`).join('\n');
+  const view = { ...enquiry, trafficSource: trafficSourceOf(enquiry) };
+  const filled = ROWS.filter(([, key]) => view[key]);
+  const text = filled.map(([label, key]) => `${label}: ${view[key]}`).join('\n');
   const html =
     '<table cellpadding="6" style="border-collapse:collapse;font-family:sans-serif">' +
     filled
       .map(
         ([label, key]) =>
           `<tr><th align="left" style="border-bottom:1px solid #ddd">${label}</th>` +
-          `<td style="border-bottom:1px solid #ddd">${escapeHtml(enquiry[key])}</td></tr>`
+          `<td style="border-bottom:1px solid #ddd">${escapeHtml(view[key])}</td></tr>`
       )
       .join('') +
     '</table>';

@@ -4,6 +4,21 @@ import useLoad, { fmtDate } from './useLoad.js';
 
 const STATUSES = ['new', 'contacted', 'quoted', 'closed'];
 
+// Enquiry kahan se aayi: utm_source > referrer ka domain > direct. Purani enquiries (jinme data nahi) "Not tracked".
+function safeHost(u) {
+  try {
+    return new URL(u).hostname.replace('www.', '');
+  } catch {
+    return u;
+  }
+}
+const sourceOf = (e) => {
+  if (e.utmSource) return e.utmSource;
+  if (e.referrer === 'direct') return 'direct';
+  if (e.referrer) return safeHost(e.referrer);
+  return 'Not tracked';
+};
+
 export default function Enquiries() {
   const { data, error, reload, setError } = useLoad('/enquiries');
   const [filter, setFilter] = useState('all');
@@ -21,6 +36,13 @@ export default function Enquiries() {
   const status = (e) => e.status || 'new';
   const rows = (data || []).filter((e) => filter === 'all' || status(e) === filter);
 
+  // Source ke hisaab se count (saari enquiries par)
+  const bySource = (data || []).reduce((a, e) => {
+    const s = sourceOf(e);
+    a[s] = (a[s] || 0) + 1;
+    return a;
+  }, {});
+
   return (
     <>
       <h1>Enquiries</h1>
@@ -34,6 +56,17 @@ export default function Enquiries() {
           </button>
         ))}
       </div>
+
+      {data && data.length ? (
+        <p className="hq__note" style={{ margin: '4px 0 14px' }}>
+          <b>By source:</b>{' '}
+          {Object.entries(bySource)
+            .sort((a, b) => b[1] - a[1])
+            .map(([s, n]) => `${s}: ${n}`)
+            .join(' · ')}
+        </p>
+      ) : null}
+
       <div className="hq__card">
         {rows.map((e) => {
           const id = e.id || e._id;
@@ -45,7 +78,11 @@ export default function Enquiries() {
                   <b>{e.name}</b>
                   {e.company ? ` · ${e.company}` : ''}
                   {e.country ? ` · ${e.country}` : ''}
-                  <small>{e.product || e.source || 'General enquiry'}</small>
+                  <small>
+                    {e.product || e.source || 'General enquiry'}
+                    {' · via '}
+                    {sourceOf(e)}
+                  </small>
                 </span>
                 <span className={`hq__pill hq__pill--${status(e)}`}>{status(e)}</span>
                 <time>{fmtDate(e.createdAt)}</time>
@@ -55,7 +92,19 @@ export default function Enquiries() {
                   <dl>
                     <dt>Email</dt><dd><a href={`mailto:${e.email}`}>{e.email}</a></dd>
                     {e.phone ? (<><dt>Phone</dt><dd><a href={`tel:${e.phone}`}>{e.phone}</a></dd></>) : null}
-                    {[['Fibre', e.fibre], ['GSM', e.gsm], ['Width', e.width], ['Thickness', e.thickness], ['Colour', e.colour], ['Quantity', e.quantity], ['Page', e.source]]
+                    {[
+                      ['Fibre', e.fibre],
+                      ['GSM', e.gsm],
+                      ['Width', e.width],
+                      ['Thickness', e.thickness],
+                      ['Colour', e.colour],
+                      ['Quantity', e.quantity],
+                      ['Page', e.source],
+                      ['Traffic source', sourceOf(e)],
+                      ['Medium', e.utmMedium],
+                      ['Campaign', e.utmCampaign],
+                      ['Landing page', e.landingPage],
+                    ]
                       .filter(([, v]) => v)
                       .map(([k, v]) => (<span key={k} className="hq__kv"><dt>{k}</dt><dd>{v}</dd></span>))}
                   </dl>
