@@ -268,6 +268,8 @@ export function productFaq(product) {
     geotextile: 'Read our [geotextile for road construction guide](/guides/geotextile-for-road-construction), the [GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india), the [railway track guide](/guides/nonwoven-geotextile-for-railway-track-india) and the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
     automotive: 'Read our [automotive NVH felt guide](/guides/automotive-nvh-felt-guide).',
     castPadding: 'Read our [guide to nonwoven cast padding from India](/guides/orthopaedic-cast-padding-nonwoven-india).',
+    filterFelt:
+      'Read our [dust collector filter felt guide](/guides/dust-collector-filter-bag-felt) and the [cement, steel and power plant guide](/guides/bag-filter-felt-cement-steel-power-india).',
     shoulderPad:
       'Read our [shoulder pad nonwoven fabric guide](/guides/shoulder-pad-nonwoven-fabric-india) and the [footwear and apparel nonwoven guide](/guides/nonwoven-fabric-for-footwear-and-apparel).',
     'apparel-footwear':
@@ -275,6 +277,8 @@ export function productFaq(product) {
   }[
     product.slug === 'orthopaedic-cast-padding'
       ? 'castPadding'
+      : product.slug === 'filter-geo-bag-felt'
+        ? 'filterFelt'
       : product.slug === 'shoulder-pad-nonwoven-fabric'
         ? 'shoulderPad'
         : product.category

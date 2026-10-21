@@ -66,7 +66,7 @@ Queue (tick when done):
 - [x] orthopaedic cast padding nonwoven India (16 Oct)
 - [x] shoulder pad nonwoven fabric India (wadding/needle punched pads for garments) (17 Oct)
 - [x] shoe insole board / strobel nonwoven India — SKIPPED, owner declined this page (19 Oct). Do not write it again.
-- [ ] filter felt for bag filters in cement, steel and power plants India (extend the dust-collector angle)
+- [x] filter felt for bag filters in cement, steel and power plants India (extend the dust-collector angle) (20 Oct)
 - [ ] geobag fabric (nonwoven geotextile for geobags) India
 - [ ] geotextile for canal and pond lining India
 - [ ] geotextile for landfill and mining India
