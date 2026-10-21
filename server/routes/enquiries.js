@@ -20,9 +20,21 @@ const FIELDS = [
   'quantity',
   'message',
   'source',
+  // traffic attribution (utm / referrer / landing page)
+  'utmSource',
+  'utmMedium',
+  'utmCampaign',
+  'referrer',
+  'landingPage',
 ];
 
-const MAX_LEN = { message: 4000 };
+const MAX_LEN = {
+  message: 4000,
+  utmSource: 100,
+  utmMedium: 100,
+  utmCampaign: 150,
+  landingPage: 200,
+};
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Keeps only known fields, coerces to string, trims and length-caps them. */

@@ -20,6 +20,14 @@ const enquirySchema = new mongoose.Schema(
 
     /** Which page the enquiry came from, for attribution. */
     source: { type: String, default: '', trim: true },
+
+    /** Traffic attribution: where the buyer came from before the form. */
+    utmSource: { type: String, default: '', trim: true, maxlength: 100 },
+    utmMedium: { type: String, default: '', trim: true, maxlength: 100 },
+    utmCampaign: { type: String, default: '', trim: true, maxlength: 150 },
+    referrer: { type: String, default: '', trim: true, maxlength: 300 },
+    landingPage: { type: String, default: '', trim: true, maxlength: 200 },
+
     notified: { type: Boolean, default: false },
     /** Worked from the /hq panel. */
     status: {
