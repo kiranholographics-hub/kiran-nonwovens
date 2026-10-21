@@ -20,7 +20,7 @@ import './Exports.css';
 
 // Guides worth reading for each business area a market buys for.
 const GUIDES_FOR_AREA = {
-  geotextile: ['geotextile-for-road-construction', 'geotextile-gsm-for-road-construction-india', 'nonwoven-geotextile-for-railway-track-india', 'geotextile-for-drainage-and-erosion-control'],
+  geotextile: ['geotextile-for-road-construction', 'geotextile-gsm-for-road-construction-india', 'nonwoven-geotextile-for-railway-track-india', 'geotextile-for-drainage-and-erosion-control', 'geobag-fabric-nonwoven-geotextile-india'],
   automotive: ['automotive-nvh-felt-guide'],
   'apparel-footwear': ['nonwoven-fabric-for-footwear-and-apparel', 'shoulder-pad-nonwoven-fabric-india'],
   industrial: ['dust-collector-filter-bag-felt', 'carpet-backing-and-underlay-felt', 'orthopaedic-cast-padding-nonwoven-india', 'bag-filter-felt-cement-steel-power-india'],

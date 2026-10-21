@@ -1840,6 +1840,122 @@ export const guides = [
     ],
     relatedGuides: ['dust-collector-filter-bag-felt', 'polyester-vs-polypropylene-nonwoven', 'nonwoven-manufacturers-in-india'],
   },
+  {
+    slug: 'geobag-fabric-nonwoven-geotextile-india',
+    title: 'Geobag fabric: nonwoven geotextile for river and coastal works',
+    seoTitle: 'Geobag Fabric: Nonwoven Geotextile India',
+    description:
+      'What a geobag has to survive — filling, dropping, abrasion and years underwater — and how to specify the nonwoven geotextile fabric it is stitched from.',
+    readMins: 6,
+    published: '2026-10-21',
+    intro:
+      'A geobag is a sand-filled bag stitched from geotextile and placed to hold a river bank or a coastline in place. It sounds simple, and the fabric is the whole product: once the bag is dropped into flowing water there is nothing else protecting the sand inside it. This guide covers what the fabric has to survive and how the specification is settled.',
+    sections: [
+      {
+        h: 'What a geobag is, and what it replaces',
+        p: [
+          'A geobag is filled with locally available sand, closed by stitching, and placed as armour on a slope, a bank or a scour hole. Because the fill comes from site, the material moving to site is fabric rather than stone — which is why geobags are used on rivers where quarried rock is far away or the ground is too soft to carry it.',
+          'In India they are most associated with river training and bank protection on large alluvial rivers, and with coastal protection and scour repair around structures.',
+        ],
+      },
+      {
+        h: 'Where geobags are used',
+        list: [
+          'River bank protection and anti-erosion works on alluvial rivers',
+          'Launching aprons, where bags settle into a scour hole as the bed erodes',
+          'Scour protection around bridge piers, guide bunds and spurs',
+          'Coastal protection, groynes and temporary sea defences',
+          'Emergency and flood-season repairs, where speed matters more than permanence',
+          'Embankment and slope protection on canals and ponds',
+        ],
+        p: [
+          'The filtering role in all of these is the same one described in our [drainage and erosion control guide](/guides/geotextile-for-drainage-and-erosion-control): water passes, soil stays.',
+        ],
+      },
+      {
+        h: 'What the fabric has to survive',
+        p: [
+          'A geobag fails at the fabric, not at the sand. Four things attack it, usually in this order:',
+        ],
+        list: [
+          'Filling — the bag is loaded fast, and a weak fabric splits at the seam or the corner',
+          'Placing — bags are dropped or rolled into water from a height, which is an impact and a puncture load at once',
+          'Abrasion — sand-laden water works at the surface continuously once the bag is in place',
+          'Sunlight — bags stacked on a bank before placement lose strength the longer they sit exposed',
+        ],
+      },
+      {
+        h: 'Why a needle punched nonwoven suits the job',
+        p: [
+          'A needle punched geotextile is thick and three-dimensional, with fibres running in every direction rather than in a regular weave. That structure absorbs a puncture load instead of letting a tear run, holds fine sand back while letting water through, and keeps working when the surface has been abraded.',
+          'Woven geotextiles are also used for geobags, and the choice between them belongs to the project design rather than to a supplier. What we make is the needle punched kind — see our [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide) for how the material behaves.',
+        ],
+      },
+      {
+        h: 'The specification comes from the project, not from us',
+        p: [
+          'Geobag works for river training are designed, and the design sets the numbers: bag size and filled weight, fabric mass per unit area, tensile and seam strength, puncture and tear resistance, opening size against the local sand, and permeability. Those values follow from the river, the velocity, the bed material and the depth of expected scour.',
+          'Where your project cites a standard or a code of practice, confirm the current edition with your engineer and send us the clauses that apply to the fabric. We produce to a specification; we do not set the design values and would be guessing if we offered them.',
+        ],
+      },
+      {
+        h: 'Fabric, not finished bags',
+        p: [
+          'We supply the geotextile as roll stock, made to be cut and stitched into bags by a fabricator or on site. Rolls are produced at 5.0–5.2 m width, from 100 to 1200 GSM, and can be cut to the width that suits your bag size and cutting layout.',
+          'Seam strength is usually the weak point of a finished geobag, and it depends on the stitching — thread, stitch type and seam construction — as much as on the fabric. That is the fabricator’s part of the job, so agree it with whoever is sewing the bags. Our [PP geotextile for civil works](/products/geotextile/pp-geotextile-fabric-for-civil-works) is the material made for this duty.',
+        ],
+      },
+      {
+        h: 'Fibre, and time in the sun',
+        p: [
+          'Polypropylene and polyester both resist moisture, rot and most soil chemistry, which is what matters once a bag is underwater; [polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven) sets out how the two differ. Recycled PP is available where the project allows it.',
+          'Sunlight is the real enemy before placement. Bags filled and stacked on a bank through a season lose strength, so plan the work so that bags are placed rather than stored, and tell us if your programme means long exposure.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The work — bank protection, launching apron, scour repair or coastal defence',
+          'Bag size and filled weight, and how the bags will be placed',
+          'The design values the project sets: mass per unit area, tensile and seam strength, puncture, opening size, permeability',
+          'The sand at site, if its grading is known, since it decides the opening size',
+          'Fibre preference — PP (virgin or recycled) or polyester',
+          'Roll width suited to your bag layout, quantity, and the delivery location',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request so the fabric can be stitched and tested before a bulk order. For background on buying from an Indian supplier, see [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What fabric are geobags made from?',
+        a: 'Geotextile — needle punched nonwoven or woven, depending on the project design. A needle punched nonwoven is thick and absorbs puncture and abrasion while letting water through and holding sand back. We make the needle punched kind.',
+      },
+      {
+        q: 'What GSM is used for geobag fabric?',
+        a: 'It is set by the project design, from the bag size, how the bags are placed and the river conditions — not by a standard figure. We produce from 100 to 1200 GSM to the specification you supply.',
+      },
+      {
+        q: 'Do you supply filled or stitched geobags?',
+        a: 'No. We supply the geotextile as roll stock, cut to the width that suits your bag size. The bags are cut, stitched and filled by a fabricator or on site, and seam strength depends on that stitching as much as on the fabric.',
+      },
+      {
+        q: 'Can geobags be left in the sun before placing?',
+        a: 'Only briefly. Prolonged UV exposure weakens geotextile, so bags are best placed rather than stored filled on a bank. If your programme means long exposure, say so when you enquire.',
+      },
+      {
+        q: 'Which fibre is better for geobags, PP or polyester?',
+        a: 'Both resist moisture, rot and most soil chemistry. The choice usually comes from the project design and the conditions at site rather than from a general rule, and we supply PP (virgin or recycled), polyester and blends.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['geotextile-for-drainage-and-erosion-control', 'nonwoven-geotextile-guide', 'nonwoven-manufacturers-in-india'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;
