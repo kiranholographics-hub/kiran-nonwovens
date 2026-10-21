@@ -117,7 +117,7 @@ async function loadCatalogue() {
   return {
     ...mod,
     guides: g.guides,
-    markets: m.markets,
+    regionPages: m.REGION_PAGES,
     updates: c.updates,
     customPages: c.customPages,
   };
@@ -128,7 +128,7 @@ function allRoutes({
   businessAreas,
   products,
   guides = [],
-  markets = [],
+  regionPages = [],
   updates = [],
   customPages = [],
 }) {
@@ -151,8 +151,8 @@ function allRoutes({
     priority: '0.7',
     src: GUIDES,
   }));
-  const marketRoutes = markets.map((m) => ({
-    url: `/exports/${m.slug}`,
+  const marketRoutes = regionPages.map((x) => ({
+    url: `/exports/${x.slug}`,
     priority: '0.7',
     src: MARKETS,
   }));
