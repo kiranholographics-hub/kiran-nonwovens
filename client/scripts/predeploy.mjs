@@ -21,6 +21,17 @@ const notes = [];
 
 const isLocal = (u) => /localhost|127\.0\.0\.1|\.local\b/i.test(u);
 
+/** The single hostname public/.htaccess redirects to, if it sets one. */
+function htaccessHost() {
+  const file = path.join(root, 'public/.htaccess');
+  if (!existsSync(file)) return null;
+  const m = readFileSync(file, 'utf8').match(
+    /^\s*RewriteRule\s+\S+\s+https:\/\/([^/%\s]+)/m
+  );
+  return m ? m[1] : null;
+}
+
+
 // ── Required: the public address and the API address ──────────────────────
 const site = (env.VITE_SITE_URL || '').trim();
 if (!site) errors.push('VITE_SITE_URL is not set. Set it to the live address, e.g. https://www.yourdomain.com (no trailing slash).');
@@ -28,6 +39,28 @@ else {
   if (!site.startsWith('https://')) errors.push(`VITE_SITE_URL must start with https:// — it is "${site}".`);
   if (isLocal(site)) errors.push(`VITE_SITE_URL points at your own computer ("${site}"). Google would ignore every canonical link.`);
   if (site.endsWith('/')) errors.push('VITE_SITE_URL must not end with a "/".');
+
+  // The server 301s every request to one hostname. If the build stamps a
+  // different one into canonical tags and sitemap.xml, every canonical points
+  // at a URL that redirects — the exact mixed signal the redirect rules exist
+  // to remove. Catch the mismatch here rather than in Search Console weeks on.
+  const canonicalHost = htaccessHost();
+  if (canonicalHost) {
+    let host = '';
+    try {
+      host = new URL(site).host;
+    } catch {
+      errors.push(`VITE_SITE_URL is not a valid URL — it is "${site}".`);
+    }
+    if (host && host !== canonicalHost) {
+      errors.push(
+        `VITE_SITE_URL uses "${host}" but public/.htaccess redirects everything to ` +
+          `"${canonicalHost}". Canonical tags and sitemap.xml would all point at ` +
+          `URLs that redirect. Use https://${canonicalHost}, or change the ` +
+          `RewriteRule in public/.htaccess if the other host is the one you want.`
+      );
+    }
+  }
 }
 
 const api = (env.VITE_API_URL || '').trim();

@@ -42,6 +42,7 @@ const routes = [
   '/products',
   '/about',
   '/manufacturing',
+  '/india',
   '/contact',
   '/guides',
   '/exports',

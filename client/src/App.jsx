@@ -21,6 +21,7 @@ import ExportMarket from './pages/ExportMarket.jsx';
 import Updates from './pages/Updates.jsx';
 import Update from './pages/Update.jsx';
 import CustomPage from './pages/CustomPage.jsx';
+import India from './pages/India.jsx';
 import Guides from './pages/Guides.jsx';
 import Guide from './pages/Guide.jsx';
 import Privacy from './pages/Privacy.jsx';
@@ -91,6 +92,7 @@ export default function App() {
           <Route path="/products/:category/:slug" element={<Product />} />
           <Route path="/about" element={<About />} />
           <Route path="/manufacturing" element={<Manufacturing />} />
+          <Route path="/india" element={<India />} />
           <Route path="/exports" element={<Exports />} />
           <Route path="/exports/:slug" element={<ExportMarket />} />
           <Route path="/updates" element={<Updates />} />

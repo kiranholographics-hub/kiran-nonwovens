@@ -58,6 +58,7 @@ export default function Footer() {
             <h2>Company</h2>
             <Link to="/about">About Us</Link>
             <Link to="/manufacturing">Manufacturing</Link>
+            <Link to="/india">India</Link>
             <Link to="/exports">Exports</Link>
             {updates.length ? <Link to="/updates">Updates</Link> : null}
             {customPages.map((p) => (

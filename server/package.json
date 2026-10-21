@@ -18,7 +18,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "geoip-lite": "^1.4.10",
+    "geoip-lite": "^2.0.3",
     "mongoose": "^9.10.1",
     "nodemailer": "^10.0.13"
   },

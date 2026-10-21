@@ -12,12 +12,12 @@ export const SITE = {
   url: import.meta.env.VITE_SITE_URL || 'http://localhost:3100',
   tagline: 'Needle punched & thermal bonded nonwovens',
   /** Home-page <title>: the phrase buyers search, then the brand. */
-  homeTitle: 'Nonwoven Felt & Geotextile Manufacturer | Kiran Nonwovens',
+  homeTitle: 'Nonwoven Manufacturer India: Felt, Geotextile | Kiran Nonwovens',
   /** Default social-share image (1200×630), used when a page has none. */
   ogImage: '/images/og-default.jpg',
   locale: 'en_IN',
   description:
-    'Nonwoven felt & geotextile manufacturer in Jaipur. Needle punched and thermal bonded, 100–1200 GSM, up to 5.2 m wide. Made to spec, exported worldwide.',
+    'Nonwoven manufacturer in India: needle punched and thermal bonded felt and geotextile, 100–1200 GSM, up to 5.2 m wide. Made to spec, exported worldwide.',
 };
 
 /** Contact details. Address, phone and email are confirmed; the WhatsApp

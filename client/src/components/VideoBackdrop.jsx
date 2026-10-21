@@ -39,6 +39,8 @@ function Backdrop({
 }) {
   const ref = useRef(null);
   const [videoFailed, setVideoFailed] = useState(false);
+  // The phone clip is tried first; only a real error falls back to the wide one.
+  const [mobileClipFailed, setMobileClipFailed] = useState(false);
   const [posterFailed, setPosterFailed] = useState(false);
   const [live, setLive] = useState(eager);
   const [layout, setLayout] = useState(null); // 'desktop' | 'mobile', set after mount
@@ -53,6 +55,12 @@ function Backdrop({
   const showPoster =
     !!posterDesktop && !posterFailed && (VIDEOS_READY || HERO_PHOTOS_READY);
   const showVideo = wantVideo && live && !!layout && !calm;
+  // Exactly one source is rendered. Listing the wide clip as a second <source>
+  // behind the phone one looked like a fallback, but the browser fetched both:
+  // a phone pulled hero-mobile.mp4 *and* hero.mp4 — several megabytes of video
+  // nobody watches, on the connection least able to afford it.
+  const useMobileClip = layout === 'mobile' && !mobileClipFailed;
+  const clipSrc = useMobileClip ? mobileName(video?.mp4) : video?.mp4;
 
   // Lazy-load: only attach sources when the backdrop is about to be seen.
   useEffect(() => {
@@ -183,7 +191,7 @@ function Backdrop({
 
       {showVideo ? (
         <video
-          key={layout}
+          key={`${layout}-${useMobileClip ? 'mobile' : 'wide'}`}
           className={`vbd__video${playing ? ' is-playing' : ''}`}
           autoPlay
           muted
@@ -200,10 +208,13 @@ function Backdrop({
           onPlaying={() => setPlayingLayout(layout)}
           onError={fail}
         >
-          {layout === 'mobile' ? (
-            <source src={mobileName(video.mp4)} type="video/mp4" />
-          ) : null}
-          <source src={video.mp4} type="video/mp4" onError={fail} />
+          <source
+            src={clipSrc}
+            type="video/mp4"
+            onError={
+              useMobileClip ? () => setMobileClipFailed(true) : fail
+            }
+          />
         </video>
       ) : null}
     </div>

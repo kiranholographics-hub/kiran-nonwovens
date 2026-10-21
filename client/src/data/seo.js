@@ -38,6 +38,11 @@ export const PAGE_SEO = {
     description:
       'Send a specification-based enquiry for nonwoven felt or geotextile — fibre, GSM, width and quantity — and our export team will reply with a quote.',
   },
+  india: {
+    title: 'Nonwoven Felt & Geotextile in Jaipur, India',
+    description:
+      'Kiran Nonwovens is based in Jaipur, Rajasthan. Needle punched and thermal bonded felt and geotextile, 100–1200 GSM, made to each buyer\u2019s specification.',
+  },
   guides: {
     title: 'Nonwoven Felt & Geotextile Buyer’s Guides',
     description:
@@ -259,6 +264,28 @@ export function productFaq(product) {
     });
   }
 
+  const guideLink = {
+    geotextile: 'Read our [geotextile for road construction guide](/guides/geotextile-for-road-construction), the [GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india), the [railway track guide](/guides/nonwoven-geotextile-for-railway-track-india) and the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+    automotive: 'Read our [automotive NVH felt guide](/guides/automotive-nvh-felt-guide).',
+    castPadding: 'Read our [guide to nonwoven cast padding from India](/guides/orthopaedic-cast-padding-nonwoven-india).',
+    shoulderPad:
+      'Read our [shoulder pad nonwoven fabric guide](/guides/shoulder-pad-nonwoven-fabric-india) and the [footwear and apparel nonwoven guide](/guides/nonwoven-fabric-for-footwear-and-apparel).',
+    'apparel-footwear':
+      'Read our [footwear and apparel nonwoven guide](/guides/nonwoven-fabric-for-footwear-and-apparel).',
+  }[
+    product.slug === 'orthopaedic-cast-padding'
+      ? 'castPadding'
+      : product.slug === 'shoulder-pad-nonwoven-fabric'
+        ? 'shoulderPad'
+        : product.category
+  ];
+  if (guideLink) {
+    faqs.push({
+      q: `Where can I learn more about choosing ${product.name}?`,
+      a: guideLink,
+    });
+  }
+
   faqs.push({
     q: `Can I get a sample or a custom specification of ${product.name}?`,
     a: 'Yes. Samples are available on request, and GSM, thickness, width, colour and roll length can be customised. Use the enquiry form on this page, or see [how to request a quote](/guides/how-to-request-a-nonwoven-felt-quote).',
@@ -270,3 +297,29 @@ export function productFaq(product) {
 /** Plain-text version of an answer, with the [text](/path) markup removed —
  *  for schema.org FAQPage, which takes text only. */
 export const plain = (s) => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+
+
+/** Questions a buyer searching from within India asks first. Location and
+ *  capability only — nothing here states a commercial term. */
+export const INDIA_FAQ = [
+  {
+    q: 'Where is Kiran Nonwovens based?',
+    a: 'Our office is in Adarsh Nagar, Jaipur, Rajasthan. The material is produced at our manufacturing partner\u2019s factory in Phagi, Jaipur. Both addresses are on the [contact page](/contact).',
+  },
+  {
+    q: 'Are you a manufacturer or a trader?',
+    a: 'Neither exactly. Kiran Nonwovens exports material made at the plant of its manufacturing partner, Miracle Nonwoven Industries, to the specification agreed with each buyer — not bought ready-made on the open market. The [manufacturing page](/manufacturing) explains the arrangement.',
+  },
+  {
+    q: 'Which nonwoven processes do you make?',
+    a: 'Needle punched and thermal bonded only. We do not make spunbond, spunlace or meltblown. [Nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india) explains which process suits which product.',
+  },
+  {
+    q: 'What weights and widths can you produce?',
+    a: '100 to 1200 GSM, in roll widths of 5.0–5.2 m, which can be cut narrower. Thickness, roll length and colour are set per order rather than fixed.',
+  },
+  {
+    q: 'Can I get a sample before ordering?',
+    a: 'Yes. Samples are available on request. Describe the application through the [enquiry form](/contact#enquiry), or send a swatch of the material you use today.',
+  },
+];
