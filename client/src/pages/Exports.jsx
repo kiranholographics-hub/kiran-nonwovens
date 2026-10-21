@@ -7,8 +7,7 @@ import Reveal from '../components/Reveal.jsx';
 import {
   EXPORT_SEO,
   EXPORT_STEPS,
-  REGIONS,
-  markets,
+  REGION_PAGES,
   marketsIn,
 } from '../data/markets.js';
 import { PARTNER } from '../data/locations.js';
@@ -30,9 +29,9 @@ export default function Exports() {
             name: 'Nonwoven felt and geotextile export markets',
             description: EXPORT_SEO.description,
             path: '/exports',
-            items: markets.map((m) => ({
-              name: `Nonwoven felt supplier for ${m.buyers}`,
-              path: `/exports/${m.slug}`,
+            items: REGION_PAGES.map((r) => ({
+              name: `Nonwoven felt supplier for ${r.buyers}`,
+              path: `/exports/${r.slug}`,
             })),
           }),
         ]}
@@ -74,18 +73,20 @@ export default function Exports() {
             the grades they use most.
           </p>
           <div className="exports__regions">
-            {REGIONS.map((region) => (
-              <div key={region} className="exports__region">
-                <h3>{region}</h3>
+            {REGION_PAGES.map((r) => (
+              <div key={r.slug} className="exports__region">
+                <h3>{r.region}</h3>
                 <ul>
-                  {marketsIn(region).map((m) => (
-                    <li key={m.slug}>
-                      <Link to={`/exports/${m.slug}`}>
-                        <strong>{m.name}</strong>
-                        <span>Nonwoven felt supplier for {m.buyers}</span>
-                      </Link>
-                    </li>
-                  ))}
+                  <li>
+                    <Link to={`/exports/${r.slug}`}>
+                      <strong>Nonwoven felt supplier for {r.buyers}</strong>
+                      <span>
+                        {marketsIn(r.region)
+                          .map((m) => m.name)
+                          .join(', ')}
+                      </span>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             ))}

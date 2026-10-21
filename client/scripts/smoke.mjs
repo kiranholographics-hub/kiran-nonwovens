@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 
 import { products, businessAreas } from '../src/data/catalog.js';
 import { guides } from '../src/data/guides.js';
-import { markets } from '../src/data/markets.js';
+import { REGION_PAGES as regionPages } from '../src/data/markets.js';
 import { updates, customPages } from '../src/data/content.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -48,7 +48,7 @@ const routes = [
   '/exports',
   '/privacy',
   ...guides.map((g) => `/guides/${g.slug}`),
-  ...markets.map((m) => `/exports/${m.slug}`),
+  ...regionPages.map((r) => `/exports/${r.slug}`),
   ...(updates.length ? ['/updates'] : []),
   ...updates.map((u) => `/updates/${u.slug}`),
   ...customPages.map((p) => `/pages/${p.slug}`),

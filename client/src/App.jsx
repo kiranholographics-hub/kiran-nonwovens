@@ -17,7 +17,7 @@ import About from './pages/About.jsx';
 import Manufacturing from './pages/Manufacturing.jsx';
 import Contact from './pages/Contact.jsx';
 import Exports from './pages/Exports.jsx';
-import ExportMarket from './pages/ExportMarket.jsx';
+import ExportRegion from './pages/ExportRegion.jsx';
 import Updates from './pages/Updates.jsx';
 import Update from './pages/Update.jsx';
 import CustomPage from './pages/CustomPage.jsx';
@@ -94,7 +94,7 @@ export default function App() {
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/india" element={<India />} />
           <Route path="/exports" element={<Exports />} />
-          <Route path="/exports/:slug" element={<ExportMarket />} />
+          <Route path="/exports/:slug" element={<ExportRegion />} />
           <Route path="/updates" element={<Updates />} />
           <Route path="/updates/:slug" element={<Update />} />
           <Route path="/pages/:slug" element={<CustomPage />} />

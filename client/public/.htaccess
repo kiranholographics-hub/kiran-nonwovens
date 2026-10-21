@@ -25,6 +25,53 @@
   RewriteCond %{HTTP_HOST} !^kirannonwovens\.com$ [NC]
   RewriteRule ^ https://kirannonwovens.com%{REQUEST_URI} [L,R=301]
 
+  # ── Retired per-country export pages ────────────────────────────────
+  # 32 per-country pages shared 63.7% of their main content, with 394
+  # five-word phrases identical across all of them — a doorway pattern,
+  # and the likely reason Search Console reported pages as discovered or
+  # crawled but not indexed. They are replaced by six region pages, each
+  # carrying the real per-country ports and questions in a table. These
+  # 301s keep every old link and any ranking they earned.
+  # (The South America region page keeps the slug the old catch-all page
+  # used, so that URL is served, not redirected.)
+  # Asia-Pacific
+  RewriteRule ^exports/australia-nonwoven-felt-supplier/?$ /exports/asia-pacific-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/bangladesh-nonwoven-felt-supplier/?$ /exports/asia-pacific-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/japan-nonwoven-felt-supplier/?$ /exports/asia-pacific-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/nepal-nonwoven-felt-supplier/?$ /exports/asia-pacific-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/new-zealand-nonwoven-felt-supplier/?$ /exports/asia-pacific-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/south-korea-nonwoven-felt-supplier/?$ /exports/asia-pacific-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/sri-lanka-nonwoven-felt-supplier/?$ /exports/asia-pacific-nonwoven-felt-supplier [L,R=301]
+  # South America
+  RewriteRule ^exports/brazil-nonwoven-felt-supplier/?$ /exports/south-america-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/chile-nonwoven-felt-supplier/?$ /exports/south-america-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/colombia-nonwoven-felt-supplier/?$ /exports/south-america-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/peru-nonwoven-felt-supplier/?$ /exports/south-america-nonwoven-felt-supplier [L,R=301]
+  # North America
+  RewriteRule ^exports/canada-nonwoven-felt-supplier/?$ /exports/north-america-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/mexico-nonwoven-felt-supplier/?$ /exports/north-america-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/usa-nonwoven-felt-supplier/?$ /exports/north-america-nonwoven-felt-supplier [L,R=301]
+  # Europe
+  RewriteRule ^exports/denmark-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/france-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/germany-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/italy-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/netherlands-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/norway-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/poland-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/spain-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/sweden-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/uk-nonwoven-felt-supplier/?$ /exports/europe-nonwoven-felt-supplier [L,R=301]
+  # Africa
+  RewriteRule ^exports/kenya-nonwoven-felt-supplier/?$ /exports/africa-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/nigeria-nonwoven-felt-supplier/?$ /exports/africa-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/south-africa-nonwoven-felt-supplier/?$ /exports/africa-nonwoven-felt-supplier [L,R=301]
+  # Middle East
+  RewriteRule ^exports/oman-nonwoven-felt-supplier/?$ /exports/middle-east-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/qatar-nonwoven-felt-supplier/?$ /exports/middle-east-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/saudi-arabia-nonwoven-felt-supplier/?$ /exports/middle-east-nonwoven-felt-supplier [L,R=301]
+  RewriteRule ^exports/uae-nonwoven-felt-supplier/?$ /exports/middle-east-nonwoven-felt-supplier [L,R=301]
+
   # ── One address per page ────────────────────────────────────────────
   # Every page lives at a directory (/guides/x/index.html), and Apache's
   # default is to 301 a directory URL to its trailing-slash form. That sent

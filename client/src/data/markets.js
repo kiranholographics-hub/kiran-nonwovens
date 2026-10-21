@@ -442,6 +442,82 @@ export const marketBySlug = (slug) => markets.find((m) => m.slug === slug);
 
 export const marketsIn = (region) => markets.filter((m) => m.region === region);
 
+/**
+ * Region landing pages. These replaced 32 near-identical per-country pages:
+ * measured against each other, the country pages shared 63.7% of their main
+ * content and 394 five-word phrases were identical across all 32 — the
+ * pattern Google calls a doorway. The country data below is not thrown away;
+ * it is what gives each region page its substance, as a real table of
+ * destinations, ports and what buyers there ask first.
+ *
+ * Old country URLs 301 to their region page in client/public/.htaccess.
+ */
+export const REGION_PAGES = [
+  {
+    slug: 'middle-east-nonwoven-felt-supplier',
+    region: 'Middle East',
+    name: 'the Middle East',
+    short: 'the Middle East',
+    buyers: 'Middle East importers',
+  },
+  {
+    slug: 'asia-pacific-nonwoven-felt-supplier',
+    region: 'Asia-Pacific',
+    name: 'Asia-Pacific',
+    short: 'Asia-Pacific',
+    buyers: 'Asia-Pacific importers',
+  },
+  {
+    slug: 'europe-nonwoven-felt-supplier',
+    region: 'Europe',
+    name: 'Europe',
+    short: 'Europe',
+    buyers: 'European importers',
+  },
+  {
+    slug: 'africa-nonwoven-felt-supplier',
+    region: 'Africa',
+    name: 'Africa',
+    short: 'Africa',
+    buyers: 'African importers',
+  },
+  {
+    slug: 'north-america-nonwoven-felt-supplier',
+    region: 'North America',
+    name: 'North America',
+    short: 'North America',
+    buyers: 'North American importers',
+  },
+  {
+    slug: 'south-america-nonwoven-felt-supplier',
+    region: 'South America',
+    name: 'South America',
+    short: 'South America',
+    buyers: 'South American importers',
+  },
+];
+
+export const regionBySlug = (slug) =>
+  REGION_PAGES.find((r) => r.slug === slug) || null;
+
+/** The region page an old country slug now points at. */
+export const regionForMarketSlug = (slug) => {
+  const m = markets.find((x) => x.slug === slug);
+  return m ? REGION_PAGES.find((r) => r.region === m.region) || null : null;
+};
+
+/** Every business area bought anywhere in the region, in catalogue order. */
+export const regionFocus = (region) => [
+  ...new Set(marketsIn(region).flatMap((m) => m.focus)),
+];
+
+/** Title stays under the 65-character limit once the brand is appended. */
+export const regionSeo = (r) => ({
+  title: `Nonwoven Felt from India: ${r.short === 'the Middle East' ? 'Middle East' : r.short}`,
+  description:
+    `Needle punched and thermal bonded nonwoven felt and geotextile shipped from India to ${marketsIn(r.region).length} markets in ${r.name}. Ports, grades and what buyers ask first.`,
+});
+
 /** Page title (before the brand is appended) and meta description. */
 /** Overseas buyers search "<product> supplier from India" and "<product> supplier <country>",
  *  so the title carries both. The long form is used only when it fits the 65-character limit
