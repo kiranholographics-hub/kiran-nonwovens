@@ -409,7 +409,11 @@ const fromPanel = (r) => {
   const ports = Array.isArray(r.ports) && r.ports.length ? r.ports : base?.ports ?? [];
   return {
     slug: `${r.slug}${SUFFIX}`,
-    name: r.name,
+    // A catch-all entry is not a country, and the panel does not know that:
+    // its name and flag come from the built-in entry, so a panel record
+    // cannot put "South America" back as a destination of South America.
+    name: base?.catchAll ? base.name : r.name,
+    catchAll: base?.catchAll ?? false,
     short: base?.short ?? r.name,
     buyers: base?.buyers ?? `${r.name} importers`,
     region: REGIONS.includes(r.region) ? r.region : base?.region ?? 'Europe',
