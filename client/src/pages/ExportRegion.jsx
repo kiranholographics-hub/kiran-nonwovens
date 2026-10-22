@@ -69,7 +69,12 @@ export default function ExportRegion() {
     { label: region.region },
   ];
 
-  const destinations = marketsIn(region.region);
+  // A catch-all entry is a destination, but not a country: it sits last in
+  // the table and stays out of the country list.
+  const destinations = [...marketsIn(region.region)].sort(
+    (a, b) => Number(a.catchAll ?? false) - Number(b.catchAll ?? false)
+  );
+  const countries = destinations.filter((m) => !m.catchAll);
   const areas = regionFocus(region.region)
     .map((s) => businessAreas.find((a) => a.slug === s))
     .filter(Boolean);
@@ -93,7 +98,7 @@ export default function ExportRegion() {
     },
     {
       q: `Which countries in ${region.name} do you supply?`,
-      a: `${list(destinations.map((m) => m.name))}. If your country is not listed, send the enquiry anyway — the material and the process are the same, and the destination mainly affects packing and paperwork.`,
+      a: `${list(countries.map((m) => m.name))}. If your country is not listed, send the enquiry anyway — the material and the process are the same, and the destination mainly affects packing and paperwork.`,
     },
     {
       q: `What do buyers in ${region.name} settle first?`,
