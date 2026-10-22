@@ -68,7 +68,7 @@ Queue (tick when done):
 - [x] shoe insole board / strobel nonwoven India — SKIPPED, owner declined this page (19 Oct). Do not write it again.
 - [x] filter felt for bag filters in cement, steel and power plants India (extend the dust-collector angle) (20 Oct)
 - [x] geobag fabric (nonwoven geotextile for geobags) India (21 Oct)
-- [ ] geotextile for canal and pond lining India
+- [x] geotextile for canal and pond lining India (22 Oct)
 - [ ] geotextile for landfill and mining India
 - [ ] automotive felt for OEM interiors India (headliner, hood insulator, carpet underlay)
 - [ ] luggage and bag support felt India

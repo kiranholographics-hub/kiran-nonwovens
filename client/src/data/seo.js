@@ -223,6 +223,12 @@ const list = (items, n) => {
 
 const lower = (s) => s.charAt(0).toLowerCase() + s.slice(1);
 
+/** "a, b and c" — so adding a guide to a list cannot drop a comma. */
+const sentenceList = (items) =>
+  items.length <= 1
+    ? items.join('')
+    : `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`;
+
 export function productFaq(product) {
   const specs = product.specs || {};
   const faqs = [];
@@ -265,7 +271,14 @@ export function productFaq(product) {
   }
 
   const guideLink = {
-    geotextile: 'Read our [geotextile for road construction guide](/guides/geotextile-for-road-construction), the [GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india), the [railway track guide](/guides/nonwoven-geotextile-for-railway-track-india), the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide) and the [geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india).',
+    geotextile: `Read our ${sentenceList([
+      '[geotextile for road construction guide](/guides/geotextile-for-road-construction)',
+      '[GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india)',
+      '[railway track guide](/guides/nonwoven-geotextile-for-railway-track-india)',
+      '[nonwoven geotextile guide](/guides/nonwoven-geotextile-guide)',
+      '[geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india)',
+      '[canal and pond lining guide](/guides/geotextile-canal-pond-lining-india)',
+    ])}.`,
     automotive: 'Read our [automotive NVH felt guide](/guides/automotive-nvh-felt-guide).',
     castPadding: 'Read our [guide to nonwoven cast padding from India](/guides/orthopaedic-cast-padding-nonwoven-india).',
     filterFelt:
