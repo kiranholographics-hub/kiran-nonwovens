@@ -26,6 +26,7 @@ const GUIDES_FOR_AREA = {
     'nonwoven-geotextile-for-railway-track-india',
     'geotextile-for-drainage-and-erosion-control',
     'geobag-fabric-nonwoven-geotextile-india',
+    'geotextile-canal-pond-lining-india',
   ],
   automotive: ['automotive-nvh-felt-guide'],
   'apparel-footwear': [

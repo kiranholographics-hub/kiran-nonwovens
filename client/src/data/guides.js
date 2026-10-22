@@ -1956,6 +1956,117 @@ export const guides = [
     ],
     relatedGuides: ['geotextile-for-drainage-and-erosion-control', 'nonwoven-geotextile-guide', 'nonwoven-manufacturers-in-india'],
   },
+  {
+    slug: 'geotextile-canal-pond-lining-india',
+    title: 'Geotextile for canal and pond lining: the layer under the liner',
+    seoTitle: 'Geotextile for Canal & Pond Lining India',
+    description:
+      'In a lined canal the waterproofing is a geomembrane; the geotextile protects it. What each layer does, and what to specify for the protection layer.',
+    readMins: 6,
+    published: '2026-10-22',
+    intro:
+      'Buyers searching for canal lining usually want two different materials without realising it. The layer that stops water is a geomembrane. The layer that stops the geomembrane getting punctured is a geotextile. They are made by different processes and they are not interchangeable. This guide separates them and covers the one we make.',
+    sections: [
+      {
+        h: 'Two layers, two different materials',
+        table: {
+          head: ['', 'Geomembrane', 'Nonwoven geotextile'],
+          rows: [
+            ['What it is', 'An impermeable plastic sheet, commonly HDPE or LDPE', 'A permeable needle punched fabric'],
+            ['Its job', 'Holding water in — the lining itself', 'Cushioning and protecting the membrane; filtering'],
+            ['Water', 'Must not pass through', 'Must pass through'],
+            ['Made by', 'Extruding and sheeting polymer', 'Mechanically entangling fibres'],
+            ['Do we supply it?', 'No — we do not make geomembrane', 'Yes'],
+          ],
+        },
+        p: [
+          'If what you need is the waterproof sheet, we are not your supplier and will say so on the first reply rather than after an enquiry has gone back and forth.',
+        ],
+      },
+      {
+        h: 'Where the geotextile sits in a lined canal',
+        list: [
+          'Under the membrane, as a cushion between it and the prepared subgrade',
+          'Over the membrane, where soil or concrete cover is placed on top',
+          'In the anchor trench at the top of the slope',
+          'Around any subsoil drainage laid to relieve pressure beneath the lining',
+        ],
+        p: [
+          'The filtration role in that last one is the same job covered in our [drainage and erosion control guide](/guides/geotextile-for-drainage-and-erosion-control).',
+        ],
+      },
+      {
+        h: 'Why the cushion layer earns its place',
+        p: [
+          'A geomembrane is only as good as the surface it rests on. Subgrades hold stones, roots and clods however well they are trimmed, and a membrane pressed onto them under a head of water will find the sharp points. The same happens from above when cover material is tipped and spread, or when plant tracks across the lining during construction.',
+          'A thick needle punched felt spreads those point loads so the membrane is not pressed onto a single stone. That is why protection layers are specified by the engineer rather than left out to save a line in the bill.',
+        ],
+      },
+      {
+        h: 'Earthen canals and ponds with no membrane',
+        p: [
+          'Not every canal is lined with a membrane. On an earthen channel the geotextile works on its own, as a filter and separator: water passes, the bank soil stays put, and the stone or block pitching above it does not sink into the ground.',
+          'On pond and reservoir banks the duty is similar, with wave action at the waterline doing the work that flow does in a canal. Our [drainage and soil erosion control geotextile](/products/geotextile/drainage-soil-erosion-control-geotextile) is made for these applications, and [geobag fabric](/guides/geobag-fabric-nonwoven-geotextile-india) covers the sand-filled bags often used alongside them.',
+        ],
+      },
+      {
+        h: 'The numbers come from the design',
+        p: [
+          'A protection layer is specified on mass per unit area, thickness, puncture and tear resistance, and permeability — and those values follow from the membrane thickness, the subgrade, the head of water and the cover material. The project design sets them.',
+          'Where your specification cites a standard or a code of practice, confirm the current edition with your engineer and send us the clauses that apply to the fabric. We produce to a specification; we would be guessing if we offered the design values ourselves.',
+        ],
+      },
+      {
+        h: 'What we make, plainly',
+        p: [
+          'Needle punched and thermal bonded nonwovens in polyester, PP (virgin and recycled), viscose and blends, from 100 to 1200 GSM, in roll widths of 5.0–5.2 m that can be cut narrower. That covers the protection, cushion, separation and filtration layers in a canal or pond.',
+          'It does not cover geomembrane, and it does not cover woven geotextile or geogrid. Where a project needs those alongside ours, they come from elsewhere — tell us what the full build-up is and we will quote only our part of it.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The work — lined canal, earthen canal, pond, reservoir or farm pond',
+          'Whether a geomembrane is used, and its thickness if known',
+          'Where the geotextile sits: under the membrane, over it, or on its own',
+          'The design values: mass per unit area, thickness, puncture, permeability',
+          'The subgrade, and what cover material goes on top',
+          'Roll width suited to your laying plan, quantity, and the delivery location',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request. For the wider picture of buying nonwovens from an Indian supplier, see [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Do you supply canal lining material?',
+        a: 'We supply the nonwoven geotextile used as the protection, cushion, separation and filtration layer. The waterproof lining itself is a geomembrane, usually HDPE or LDPE, which is a different process and not something we make.',
+      },
+      {
+        q: 'Why is a geotextile needed under a canal liner?',
+        a: 'The subgrade holds stones, roots and clods even after trimming, and a membrane pressed onto them under a head of water can puncture. A thick needle punched felt spreads those point loads. The same protection is needed above the membrane where cover material is placed.',
+      },
+      {
+        q: 'What GSM is used for a geomembrane protection layer?',
+        a: 'It follows from the membrane thickness, the subgrade, the head of water and the cover material, so the project design sets it. We produce from 100 to 1200 GSM to the specification you supply.',
+      },
+      {
+        q: 'Can geotextile line a pond on its own, without a membrane?',
+        a: 'It can separate and filter on its own — holding bank soil in place and keeping pitching from sinking — but it is permeable, so it does not hold water. If the pond has to retain water, that needs an impermeable liner.',
+      },
+      {
+        q: 'Do you supply woven geotextile or geogrid?',
+        a: 'No. We make needle punched and thermal bonded nonwovens. Where a project needs woven geotextile or geogrid alongside ours, those come from elsewhere and we quote only our part.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['geotextile-for-drainage-and-erosion-control', 'geobag-fabric-nonwoven-geotextile-india', 'nonwoven-geotextile-guide'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;
