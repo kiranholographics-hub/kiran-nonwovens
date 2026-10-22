@@ -70,8 +70,14 @@ export const STATIC_MARKETS = [
   },
   {
     slug: 'south-america-nonwoven-felt-supplier',
-    name: 'South America',
+    // A catch-all for the countries without an entry of their own. It read as
+    // "South America" inside the South America region page — the region listed
+    // as one of its own destinations — so it is named for what it is.
+    name: 'Elsewhere in South America',
     short: 'South America',
+    /** Not a country: the region page lists it last and leaves it out of the
+     *  "which countries do you supply" answer. */
+    catchAll: true,
     buyers: 'South American importers',
     region: 'South America',
     ports: ['Santos', 'Buenos Aires', 'Callao', 'Valparaíso'],
