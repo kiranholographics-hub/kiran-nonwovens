@@ -2067,6 +2067,121 @@ export const guides = [
     ],
     relatedGuides: ['geotextile-for-drainage-and-erosion-control', 'geobag-fabric-nonwoven-geotextile-india', 'nonwoven-geotextile-guide'],
   },
+  {
+    slug: 'geotextile-landfill-mining-india',
+    title: 'Geotextile for landfill and mining: protection, filtration, capping',
+    seoTitle: 'Geotextile for Landfill & Mining in India',
+    description:
+      'Where nonwoven geotextile sits in a landfill or a leach pad, what the cushion layer protects against, and which parts of the lining system we do not make.',
+    readMins: 6,
+    published: '2026-10-23',
+    intro:
+      'Landfill and mining containment are the heaviest duties a geotextile is asked to do. The fabric is buried under metres of waste or ore, sits against angular drainage stone, and is expected to still be working decades later when nobody can reach it. This guide covers where it sits in those systems and what that means for the specification.',
+    sections: [
+      {
+        h: 'Where the geotextile sits in a landfill',
+        list: [
+          'Between the geomembrane and the drainage stone above it — the cushion layer, usually the heaviest fabric on site',
+          'Around the leachate collection pipes and in the drainage blanket — filtration, so the collection system does not silt up',
+          'Under the geomembrane, protecting it from the prepared subgrade below',
+          'In the capping system, separating the cover soil from the drainage layer',
+          'Around gas venting stone, keeping fines out of the vent',
+        ],
+        p: [
+          'Each of those is a different fabric weight for a different reason, which is why a landfill enquiry that says only "geotextile" cannot be quoted.',
+        ],
+      },
+      {
+        h: 'Mining: leach pads, tailings and haul roads',
+        p: [
+          'A heap leach pad has the same anatomy as a landfill base — a membrane with a cushion above it and a drainage layer carrying solution to collection — but the ore above is coarse, heavy and loaded repeatedly. Tailings storage facilities use geotextile in the underdrainage and in filter zones, and haul roads use it for separation over soft ground the way any road does.',
+          'Separation under a haul road is the one duty here that is ordinary: it is the job described in our [road construction guide](/guides/geotextile-for-road-construction). The containment duties are not ordinary, and they are designed.',
+        ],
+      },
+      {
+        h: 'What the cushion layer is actually protecting against',
+        p: [
+          'A geomembrane in a landfill base is pressed against angular drainage stone by the full weight of the waste above it, and that load only grows. Over years, stone that merely rests on a liner at construction can be driven into it. Protection geotextile spreads that load so no single point carries it.',
+          'This is why landfill cushion fabrics are specified much heavier than the geotextile used in a road or a drain, and why the figure comes from a design calculation rather than from a catalogue. Nothing about the fabric being thick makes it correct; the design says what thickness the load needs.',
+        ],
+      },
+      {
+        h: 'Leachate, process solution and fibre choice',
+        p: [
+          'Landfill leachate and mining process solutions are chemically aggressive in ways ordinary groundwater is not, and temperature in a leachate collection layer can sit well above ambient. Polypropylene and polyester both resist most soil chemistry, but "resists most" is not an answer for a specific solution.',
+          'If your design names a chemical resistance requirement, send it with the enquiry. We will tell you whether what we make meets it, and say so plainly when it does not — see [polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven) for how the two fibres differ.',
+        ],
+      },
+      {
+        h: 'The parts of the system we do not make',
+        list: [
+          'Geomembrane — the barrier itself, as covered in our [canal and pond lining guide](/guides/geotextile-canal-pond-lining-india)',
+          'Geosynthetic clay liner (GCL)',
+          'Geonet, geocomposite drainage and drainage core',
+          'Woven geotextile and geogrid',
+        ],
+        p: [
+          'A landfill or leach pad lining system is assembled from several of these, usually from several suppliers. We make the nonwoven layers. Tell us the full build-up and we will quote our part of it and leave the rest alone.',
+        ],
+      },
+      {
+        h: 'Every number here comes from the design',
+        p: [
+          'Mass per unit area, thickness, puncture and tear resistance, CBR puncture, permeability and opening size are all set by the containment design, not by us. Regulatory requirements for landfill and mining containment are strict and local, and the engineer of record owns them.',
+          'Where your specification cites a standard or a code of practice, confirm the current edition with your engineer and send us the clauses that apply to the fabric. We produce to a specification; offering design values would be guessing with somebody else’s liability.',
+        ],
+      },
+      {
+        h: 'What we can supply',
+        p: [
+          'Needle punched and thermal bonded nonwovens in polyester, PP (virgin and recycled), viscose and blends, from 100 to 1200 GSM, in roll widths of 5.0–5.2 m that can be cut narrower. Thickness, roll length and colour are set per order.',
+          'If your design calls for a weight above that range, say so at the enquiry and we will tell you straight away rather than after a sample.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The facility — landfill base, capping, leach pad, tailings facility or haul road',
+          'Which layer the fabric is for, and what sits immediately above and below it',
+          'The design values: mass per unit area, puncture, CBR, permeability, opening size',
+          'Any chemical resistance or temperature requirement the design names',
+          'The drainage stone size and the load the layer carries, if known',
+          'Roll width suited to your laying plan, quantity, and the site location',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request. For background on sourcing from India, see [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What geotextile is used in a landfill?',
+        a: 'Needle punched nonwoven, in several different weights for different layers: a heavy cushion protecting the geomembrane from drainage stone, lighter fabric filtering around leachate collection pipes, and separation in the capping system. The weights come from the containment design.',
+      },
+      {
+        q: 'Do you supply landfill liners?',
+        a: 'No. The barrier is a geomembrane, and many systems also use a geosynthetic clay liner and a geonet or drainage geocomposite. We make the nonwoven protection, cushion and filtration layers only.',
+      },
+      {
+        q: 'What GSM is a landfill protection geotextile?',
+        a: 'Much heavier than road or drainage fabric, and set by a design calculation from the stone size and the load above. We produce up to 1200 GSM; if the design calls for more than that, we will say so at the enquiry rather than after a sample.',
+      },
+      {
+        q: 'Will the fabric withstand leachate or process solution?',
+        a: 'Polypropylene and polyester resist most soil chemistry, but a specific leachate or process solution needs a specific answer. Send the chemical resistance requirement your design names and we will tell you whether what we make meets it.',
+      },
+      {
+        q: 'Can you supply to a mine site in India?',
+        a: 'Tell us the site and the destination with your enquiry. The material is made to order at our manufacturing partner’s factory in Phagi, Jaipur, and quoted against your specification.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['geotextile-canal-pond-lining-india', 'geotextile-for-drainage-and-erosion-control', 'nonwoven-manufacturers-in-india'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;
