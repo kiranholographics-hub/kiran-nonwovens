@@ -280,7 +280,10 @@ export function productFaq(product) {
       '[canal and pond lining guide](/guides/geotextile-canal-pond-lining-india)',
       '[landfill and mining guide](/guides/geotextile-landfill-mining-india)',
     ])}.`,
-    automotive: 'Read our [automotive NVH felt guide](/guides/automotive-nvh-felt-guide).',
+    automotive: `Read our ${sentenceList([
+      '[automotive NVH felt guide](/guides/automotive-nvh-felt-guide)',
+      '[guide to felt for OEM interior parts](/guides/automotive-felt-oem-interiors-india)',
+    ])}.`,
     castPadding: 'Read our [guide to nonwoven cast padding from India](/guides/orthopaedic-cast-padding-nonwoven-india).',
     filterFelt:
       'Read our [dust collector filter felt guide](/guides/dust-collector-filter-bag-felt) and the [cement, steel and power plant guide](/guides/bag-filter-felt-cement-steel-power-india).',

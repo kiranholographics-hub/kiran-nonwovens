@@ -60,8 +60,8 @@ Page one today: ANFA members list, IndiaMART, KK NonWovens, Scribd, a "Top 10" l
 ## Export keyword research (16 Oct 2026)
 Overseas SERPs (UAE, Saudi Arabia, Australia): page one is local distributors and local manufacturers, which is hard for an Indian exporter; keep those pages, aim at "from India" long-tail. Africa and South Asia SERPs (Kenya, Nigeria, Nepal, Sri Lanka, Bangladesh) are Chinese factories, B2B portals and a few Indian sellers: weaker, closer to India, and infrastructure-driven. Work done: every country title now reads "Nonwoven Felt Supplier from India to <country>" and the H1 says "from India"; five new market pages added (Kenya, Nigeria, Nepal, Sri Lanka, Bangladesh). Pause any of them in /hq (Markets) if you do not want to sell there.
 
-## Daily niche India page (standing order from the owner, 16 Oct 2026)
-Each day ONE new guide page for a low-competition niche keyword, India angle, honest content only. Pick the next topic from the queue, check the SERP first (TinyFish search), write it in client/src/data/guides.js (copy an existing guide's shape; `published` = today), link it from the matching product FAQ (client/src/data/seo.js) and the country-page area map (client/src/pages/ExportMarket.jsx), build (ALLOW_LOCAL_BUILD=1 npm run build in client/), run `npm run smoke`, PR + merge, then verify live with a ?cb= cache-buster. Tick the topic off here.
+## Daily niche India pages (standing order from the owner, 16 Oct 2026; TWO a day from 24 Oct 2026)
+Owner's boss wants the site to grow every day. From 24 Oct: TWO new guide pages a day, made automatically at 9:44 IST each morning by the scheduled task "Daily SEO pages" (it wakes the Claude session that set it up, so that session needs the GitHub connector) and opened as one PR; the owner says "merge karo". Quality rule stays: each page must target a different search intent from every existing page (check guides.js first); if a topic would mostly repeat an existing guide, skip it and take the next. Each day ONE new guide page for a low-competition niche keyword, India angle, honest content only. Pick the next topic from the queue, check the SERP first (TinyFish search), write it in client/src/data/guides.js (copy an existing guide's shape; `published` = today), link it from the matching product FAQ (client/src/data/seo.js) and the country-page area map (client/src/pages/ExportMarket.jsx), build (ALLOW_LOCAL_BUILD=1 npm run build in client/), run `npm run smoke`, PR + merge, then verify live with a ?cb= cache-buster. Tick the topic off here.
 Queue (tick when done):
 - [x] orthopaedic cast padding nonwoven India (16 Oct)
 - [x] shoulder pad nonwoven fabric India (wadding/needle punched pads for garments) (17 Oct)
@@ -70,11 +70,44 @@ Queue (tick when done):
 - [x] geobag fabric (nonwoven geotextile for geobags) India (21 Oct)
 - [x] geotextile for canal and pond lining India (22 Oct)
 - [x] geotextile for landfill and mining India (23 Oct)
-- [ ] automotive felt for OEM interiors India (headliner, hood insulator, carpet underlay)
+- [x] automotive felt for OEM interiors India (headliner, hood insulator, carpet underlay) (23 Oct)
 - [ ] luggage and bag support felt India
 - [ ] packaging and protective felt India
 - [ ] flooring underlay felt India
 - [ ] Hindi guide: non woven geotextile (test)
+Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make or sell it before writing; ask in the PR, skip until answered.
+- [ ] geotextile behind retaining walls (drainage and filter layer) India
+- [ ] geotextile for embankments and highways on soft soil India
+- [ ] how to install nonwoven geotextile on site (laying, overlaps, anchoring)
+- [ ] geotextile for French drains and subsurface drains
+- [ ] geotextile for paver block and interlocking tile bases
+- [ ] geotextile for gabion and stone pitching backing
+- [ ] geotextile for hill slope protection and landslide repair India
+- [ ] geotextile for green roofs and terrace gardens India
+- [ ] geotextile for sports field and turf drainage
+- [ ] geotextile for solar plant access roads India
+- [ ] geotextile for tunnel waterproofing protection layer
+- [ ] apparent opening size (AOS) of geotextile explained
+- [ ] CBR puncture and grab tensile tests for geotextile explained
+- [ ] geotextile vs geomembrane: which one a project needs
+- [ ] how many square metres in a geotextile roll, and roll weight from GSM
+- [ ] automotive boot / trunk liner felt
+- [ ] automotive wheel-arch liner felt
+- [ ] recycled PET felt in India (where recycled fibre works and where it does not)
+- [ ] acoustic felt for buildings: ceilings, wall panels, partitions India
+- [ ] thermal insulation felt for appliances (AC, refrigerator, washing machine, geyser)
+- [ ] mattress and upholstery felt India
+- [ ] felt grow bags and plant root bags (ask)
+- [ ] capillary mat felt for nurseries and hydroponics (ask)
+- [ ] painter's felt / floor protection mat for construction sites (ask)
+- [ ] exhibition carpet / needle punched event carpet India (ask)
+- [ ] craft and DIY coloured felt sheets (ask)
+- [ ] felt thickness vs GSM: how they relate
+- [ ] how to read a nonwoven test report (what each line means)
+- [ ] what decides the price of needle punched felt (factors only, no prices)
+- [ ] FOB, CIF and other Incoterms for buying nonwovens from India
+- [ ] how many rolls fit in a 20 ft / 40 ft container (method, not a fixed number)
+- [ ] how to request and evaluate a nonwoven sample
 Rules: no MOQ, price, lead time, certification, capacity, client names, years or standards-compliance claims; MoRTH/IRC/RDSO/BIS only as "confirm the current edition with your engineer"; we make needle punched and thermal bonded only (not spunbond, spunlace, meltblown); keep the Miracle Nonwoven Industries wording; do not name or rank competitors.
 
 ## Weekly log (Search Console, Web, last 7 days)
