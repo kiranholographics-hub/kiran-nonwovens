@@ -81,6 +81,9 @@ Rules: no MOQ, price, lead time, certification, capacity, client names, years or
 Search Console ke numbers, IndiaMART/TradeIndia/Google Business ke login, admin panel ka data.
 Wo ya to screenshot bhejo ya number paste karo.
 
+## Badi strategy
+Poora 90 din ka plan, India vs world, authority aur AI search: [SEO-STRATEGY.md](SEO-STRATEGY.md).
+
 ## Pehle se ho chuka
 Search Console verified, sitemap (66 URLs), IndexNow, 27 country pages, auto deploy, admin panel.
 
