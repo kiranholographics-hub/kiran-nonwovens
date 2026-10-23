@@ -97,11 +97,11 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [ ] acoustic felt for buildings: ceilings, wall panels, partitions India
 - [ ] thermal insulation felt for appliances (AC, refrigerator, washing machine, geyser)
 - [ ] mattress and upholstery felt India
-- [ ] felt grow bags and plant root bags (ask)
-- [ ] capillary mat felt for nurseries and hydroponics (ask)
-- [ ] painter's felt / floor protection mat for construction sites (ask)
-- [ ] exhibition carpet / needle punched event carpet India (ask)
-- [ ] craft and DIY coloured felt sheets (ask)
+- [ ] felt grow bags and plant root bags (owner said yes, 23 Oct)
+- [x] capillary mat felt for nurseries and hydroponics: SKIPPED, owner said no (23 Oct). Do not write it.
+- [x] painter's felt / floor protection mat: SKIPPED, owner said no (23 Oct). Do not write it.
+- [ ] exhibition carpet / needle punched event carpet India (owner said yes, 23 Oct)
+- [x] craft and DIY coloured felt sheets: SKIPPED, owner said no (23 Oct). Do not write it.
 - [ ] felt thickness vs GSM: how they relate
 - [ ] how to read a nonwoven test report (what each line means)
 - [ ] what decides the price of needle punched felt (factors only, no prices)
