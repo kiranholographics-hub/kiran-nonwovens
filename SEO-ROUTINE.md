@@ -77,6 +77,24 @@ Queue (tick when done):
 - [ ] Hindi guide: non woven geotextile (test)
 Rules: no MOQ, price, lead time, certification, capacity, client names, years or standards-compliance claims; MoRTH/IRC/RDSO/BIS only as "confirm the current edition with your engineer"; we make needle punched and thermal bonded only (not spunbond, spunlace, meltblown); keep the Miracle Nonwoven Industries wording; do not name or rank competitors.
 
+## Weekly log (Search Console, Web, last 7 days)
+Search Console data 2-3 din peeche chalta hai; har entry mein asli date range likho.
+
+### 23 Oct 2026 (data 14-20 Oct)
+- Clicks 0, impressions 26, CTR 0%, avg position 16.9.
+- Countries: India 9, USA 7, Uganda 3; UAE, Canada, Libya, Lithuania, France, Kuwait, Pakistan 1 each.
+- Pages (25 with impressions): nonwoven-geotextile-guide 6, polyester-vs-polypropylene-nonwoven 5,
+  needle-punched-vs-thermal-bonded-nonwoven 3+2, gsm-in-nonwoven-fabric 2+2, guides index 2,
+  geotextile-gsm-for-road-construction-india 2, home 2, automotive-nvh-felt-guide 2.
+  Impressions almost all on informational guides; product pages barely show yet.
+- Queries shown (Google hides most low-volume ones): polypropylene felt, non-woven needle felt rolls,
+  nonwoven geotextile (1 each).
+- Trailing-slash URLs (e.g. /guides/gsm-in-nonwoven-fabric/) still listed: old impressions from before
+  the .htaccess 301 fix. Live check 23 Oct: slash URLs 301 to the clean URL, canonical correct. No action.
+- Takeaway: normal for a two-week-old site. Guides are the entry door, so every guide must link
+  clearly to its product page and the enquiry form. Recheck next Friday: impressions trend, first
+  clicks, and whether USA/Uganda keep showing.
+
 ## Jo Claude nahi dekh sakta (aap paste karo)
 Search Console ke numbers, IndiaMART/TradeIndia/Google Business ke login, admin panel ka data.
 Wo ya to screenshot bhejo ya number paste karo.
