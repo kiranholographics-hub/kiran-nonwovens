@@ -29,7 +29,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-canal-pond-lining-india',
     'geotextile-landfill-mining-india',
   ],
-  automotive: ['automotive-nvh-felt-guide'],
+  automotive: ['automotive-nvh-felt-guide', 'automotive-felt-oem-interiors-india'],
   'apparel-footwear': [
     'nonwoven-fabric-for-footwear-and-apparel',
     'shoulder-pad-nonwoven-fabric-india',

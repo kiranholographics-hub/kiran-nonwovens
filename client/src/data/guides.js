@@ -2177,6 +2177,111 @@ export const guides = [
     ],
     relatedGuides: ['geotextile-canal-pond-lining-india', 'nonwoven-geotextile-guide', 'geotextile-for-drainage-and-erosion-control'],
   },
+  {
+    slug: 'automotive-felt-oem-interiors-india',
+    title: 'Automotive felt for OEM interiors: headliner, hood insulator and carpet underlay',
+    seoTitle: 'Automotive Felt for OEM Interiors India',
+    description:
+      'What each interior part asks of its felt: headliner, hood insulator, dash insulator, carpet underlay, boot and wheel-arch liners. For component makers.',
+    readMins: 7,
+    published: '2026-10-23',
+    intro:
+      'A component maker does not buy "automotive felt". It buys a felt for a headliner, another for a hood insulator and another for the carpet underlay, and each one is judged on different properties. This guide goes part by part, for moulders, laminators and Tier-1 suppliers sourcing felt from India.',
+    sections: [
+      {
+        h: 'Part by part: what the felt has to do',
+        table: {
+          head: ['Part', 'Main job of the felt', 'What usually matters most'],
+          rows: [
+            ['Headliner', 'Substrate or backing layer under the face fabric', 'Light weight, holding a moulded shape, sag resistance'],
+            ['Hood (bonnet) insulator', 'Absorbing engine noise and shielding heat', 'Heat resistance, sound absorption, thickness'],
+            ['Dash insulator (firewall)', 'Blocking engine-bay noise from the cabin', 'Density and thickness, mouldability around openings'],
+            ['Carpet underlay', 'Cushioning and absorbing road noise under the carpet', 'Thickness, resilience, weight per square metre'],
+            ['Boot (trunk) liner', 'Lining and finishing the load area', 'Abrasion resistance, appearance, mouldability'],
+            ['Wheel-arch liner', 'Damping tyre and stone noise', 'Durability, resistance to water and grit'],
+          ],
+        },
+        p: [
+          'The values behind each column come from your drawing and your test plan. The table only shows why one GSM figure for "car felt" does not work across a vehicle.',
+        ],
+      },
+      {
+        h: 'Moulded parts and thermal bonding',
+        p: [
+          'Many interior parts are moulded to shape in a heated press. Felts made for this usually carry a share of low-melt fibre: when heated, that fibre softens and bonds, and when the part cools it holds the moulded shape. Thermal bonding is one of the two processes we run, so a felt can be built for moulding rather than adapted to it.',
+          'For flat parts that are only cut, stitched or laminated, a plain needle punched felt is often enough. Tell us which route the part takes, and at what temperature and time it is pressed, and the construction follows from that.',
+        ],
+      },
+      {
+        h: 'Fibre: polyester, PP or blends',
+        p: [
+          'Polyester generally tolerates higher temperatures than polypropylene, so it is the usual choice near the engine. PP is lighter and is often used in cabin parts away from heat. Blends and recycled fibre are also used, depending on the part and the programme. The [polyester vs polypropylene guide](/guides/polyester-vs-polypropylene-nonwoven) sets out the trade-offs in more detail.',
+          'Interior materials are usually tested for flammability, odour and fogging to the vehicle maker\'s own specification. Tell us which tests your programme runs and ask what data we can share for the grade you are sampling; we will not claim a result we have not tested.',
+        ],
+      },
+      {
+        h: 'From sample to production',
+        list: [
+          'Send the drawing or part description, the target GSM and thickness, and your process (moulded, laminated, die-cut or stitched)',
+          'Trial the sample in your own press and against your own acoustic, thermal and flammability tests',
+          'Adjust GSM, thickness, density or fibre mix after the trial; the felt is made to order, so it can change',
+          'Agree the roll width and length that suit your cutting layout; we produce up to 5.0–5.2 m wide and can slit narrower',
+        ],
+        p: [
+          'If your programme needs particular documentation from a supplier, ask at the start, so the answer comes before the trials rather than after them.',
+        ],
+      },
+      {
+        h: 'Where our range fits',
+        p: [
+          'General interior felt is on the [automotive needle punched felt](/products/automotive/automotive-needle-punched-felt) page; heat and sound together on [acoustic and thermal insulation felt](/products/automotive/acoustic-thermal-insulation-felt); and noise-first parts on [NVH and sound insulation fabric](/products/automotive/nvh-sound-insulation-fabric). If you are new to NVH, start with our [automotive NVH felt guide](/guides/automotive-nvh-felt-guide), which explains how felt absorbs sound and heat.',
+          'We supply the felt. We do not mould or assemble finished parts, and we do not make the face fabrics, foams or films that are laminated to it.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The part, the vehicle segment, and whether it is moulded, laminated, die-cut or stitched',
+          'GSM, thickness and density, or the acoustic and thermal target',
+          'Fibre preference, and any recycled-content requirement',
+          'The heat the part sees, and the flammability, odour and fogging tests it must pass',
+          'Colour, surface finish, roll width and length, and annual or batch quantity',
+          'Delivery location: your plant in India or a port abroad',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request. For buying from an Indian supplier more generally, see [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What felt is used in a car headliner?',
+        a: 'A light needle punched or thermal bonded felt is commonly used as the substrate or backing under the face fabric. It needs to hold its moulded shape and resist sagging, so moulded headliner felts often include low-melt fibre that bonds when the part is pressed.',
+      },
+      {
+        q: 'What material is a hood insulator made of?',
+        a: 'Hood insulators are commonly made from a heat-tolerant nonwoven felt, often polyester-based, sometimes with a facing layer. The felt absorbs engine noise and shields the bonnet from heat. We supply the felt; the facing and the moulding are done by the component maker.',
+      },
+      {
+        q: 'Can you make mouldable felt for automotive parts?',
+        a: 'Yes. We run thermal bonding as well as needle punching, so the felt can be built with low-melt fibre to bond and hold its shape when pressed. Send your press temperature and cycle time and we will suggest a construction to trial.',
+      },
+      {
+        q: 'Do you supply finished moulded parts?',
+        a: 'No. We supply felt in rolls, which can be slit to width. Moulding, lamination and assembly into finished parts are done by the component maker.',
+      },
+      {
+        q: 'Is polyester or PP felt better for car interiors?',
+        a: 'Polyester generally handles heat better, so it is the usual choice near the engine. PP is lighter and is often used in cabin parts away from heat. The part, its temperature and the vehicle maker\'s specification decide.',
+      },
+    ],
+    relatedProducts: [
+      'automotive/automotive-needle-punched-felt',
+      'automotive/acoustic-thermal-insulation-felt',
+      'automotive/nvh-sound-insulation-fabric',
+    ],
+    relatedGuides: ['automotive-nvh-felt-guide', 'polyester-vs-polypropylene-nonwoven', 'needle-punched-vs-thermal-bonded-nonwoven'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;
