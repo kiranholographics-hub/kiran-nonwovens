@@ -2067,6 +2067,116 @@ export const guides = [
     ],
     relatedGuides: ['geotextile-for-drainage-and-erosion-control', 'geobag-fabric-nonwoven-geotextile-india', 'nonwoven-geotextile-guide'],
   },
+  {
+    slug: 'geotextile-landfill-mining-india',
+    title: 'Geotextile for landfill and mining: where the nonwoven layer goes',
+    seoTitle: 'Geotextile for Landfill & Mining India',
+    description:
+      'Where nonwoven geotextile sits in a landfill liner, cap and mine site, why PP is often chosen around leachate, and what to send for a quote.',
+    readMins: 7,
+    published: '2026-10-23',
+    intro:
+      'Landfills and mines are hard on fabric. The loads are heavy, the stone is coarse, the liquids can be aggressive and nobody wants to dig the layer up again. A nonwoven geotextile does several different jobs on these sites, and each one is specified differently. This guide maps them out so an enquiry names the right one.',
+    sections: [
+      {
+        h: 'The jobs a nonwoven does on these sites',
+        table: {
+          head: ['Job', 'Where', 'What the fabric does'],
+          rows: [
+            ['Protection', 'Over and under a geomembrane liner', 'Spreads point loads from stone and waste so the liner is not punctured'],
+            ['Filtration', 'Around leachate and groundwater drains', 'Lets liquid through while holding back fines that would clog the drain'],
+            ['Separation', 'Between soil layers, under haul roads', 'Keeps aggregate and soft subgrade from mixing'],
+            ['Erosion control', 'Cap slopes, spoil heaps, mine benches', 'Holds soil while vegetation establishes'],
+          ],
+        },
+        p: [
+          'One site can need all four. They are rarely the same grade, so a single figure for "landfill geotextile" is usually the first thing that goes wrong in a bill of quantities.',
+        ],
+      },
+      {
+        h: 'Inside an engineered landfill',
+        p: [
+          'An engineered landfill cell is a build-up of layers. At the base sits a liner system, typically a geomembrane, often with a compacted clay or geosynthetic clay liner beneath it. Above the liner is a drainage layer of gravel with pipes that collect leachate, and above that the waste.',
+          'The geotextile has two places in that stack. Directly on the geomembrane, a heavy needle punched felt protects it from the drainage gravel and from the weight of waste on top. Above the gravel, a lighter filter fabric stops fine particles from the waste washing down and clogging the drainage layer.',
+          'When the cell is full, the capping system repeats the idea in reverse: a barrier to keep rainwater out, a drainage layer above it, and soil on top. Protection, filtration and erosion-control fabrics all have a place there too.',
+        ],
+      },
+      {
+        h: 'Why the protection layer is often heavy',
+        p: [
+          'The geomembrane is the part that keeps leachate out of groundwater, and a single puncture defeats it. Drainage gravel is coarse and angular, and a landfill cell can carry many metres of waste above it, so the protection fabric under that load is usually much heavier than the grades used under a road.',
+          'How heavy depends on the stone size, the waste height and the membrane, and the designer usually checks it with a puncture test against the actual gravel. Our range runs from 100 to 1200 GSM, which covers the heavy protection grades as well as the lighter filter fabrics. The canal-lining version of the same idea is covered in our [canal and pond lining guide](/guides/geotextile-canal-pond-lining-india).',
+        ],
+      },
+      {
+        h: 'PP or polyester around leachate',
+        p: [
+          'Leachate and some mine waters can be strongly alkaline or acidic. Polypropylene is generally regarded as resistant across a wide pH range, while polyester can lose strength over time in strongly alkaline conditions, for example in contact with lime or fresh concrete. For that reason PP is often preferred where the fabric sits in leachate or in alkaline water.',
+          'That is a general rule, not a substitute for the design. The project engineer decides the polymer from the chemistry of the site, and we make both. For the wider comparison, see our [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+        ],
+      },
+      {
+        h: 'On mine sites',
+        list: [
+          'Haul and access roads over soft ground, where a separation layer keeps aggregate from sinking into the subgrade',
+          'Liners for process, tailings and water ponds, where the geotextile protects the geomembrane as it does in a landfill',
+          'Drains around pits, dumps and benches, wrapped in filter fabric',
+          'Spoil heaps and reclaimed slopes, where the fabric holds soil while vegetation takes',
+        ],
+        p: [
+          'The road case is the same separation job described in our [geotextile for road construction guide](/guides/geotextile-for-road-construction), only with heavier trucks. Sand-filled bags for bunds and toe protection are covered in the [geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india).',
+        ],
+      },
+      {
+        h: 'The specification belongs to the design',
+        p: [
+          'Landfill and mine works are usually designed to rules on waste management, pollution control and mine closure, and the fabric values follow from that design: mass per unit area, thickness, puncture and tear resistance, permeability, apparent opening size and polymer. Where your specification cites a standard, a guideline or a code of practice, confirm the current edition with your engineer and send us the clauses that apply to the geotextile.',
+          'We produce to a specification and can share test data for the grade you order. We do not set design values ourselves, and we do not make geomembrane, geosynthetic clay liner, woven geotextile or geogrid.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The site — landfill base liner, landfill cap, tailings or process pond, haul road, spoil slope',
+          'The job for each layer: protection, filtration, separation or erosion control',
+          'The design values for each layer: GSM, thickness, puncture, permeability, opening size',
+          'Polymer if the design fixes it, or the leachate or water chemistry if it does not',
+          'Roll width for your laying plan, quantity per grade, and the delivery location',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request. For buying nonwovens from India more generally, see [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is geotextile used for in a landfill?',
+        a: 'Mainly to protect the geomembrane liner from puncture by drainage gravel and waste, and to filter fines out of the leachate drainage layer so it does not clog. It is also used for separation and erosion control in the capping system.',
+      },
+      {
+        q: 'What GSM geotextile is used to protect a landfill liner?',
+        a: 'It depends on the drainage stone size, the waste height and the membrane, and the designer usually confirms it with a puncture test. Protection layers are typically much heavier than road grades. We produce from 100 to 1200 GSM to the specification you supply.',
+      },
+      {
+        q: 'Is PP or polyester geotextile better for landfill?',
+        a: 'PP is often preferred where the fabric is in contact with leachate or alkaline water, because polypropylene is generally resistant across a wide pH range while polyester can weaken in strongly alkaline conditions. The project engineer decides from the site chemistry; we make both.',
+      },
+      {
+        q: 'Where is geotextile used in mining?',
+        a: 'Under haul and access roads on soft ground, as a protection layer under pond and tailings liners, around drains, and on spoil heaps and reclaimed slopes to hold soil while vegetation establishes.',
+      },
+      {
+        q: 'Do you supply geomembrane or GCL for landfills?',
+        a: 'No. We make needle punched and thermal bonded nonwoven geotextile. Geomembrane, geosynthetic clay liner, woven geotextile and geogrid come from other suppliers, and we quote only our part of the build-up.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['geotextile-canal-pond-lining-india', 'nonwoven-geotextile-guide', 'geotextile-for-drainage-and-erosion-control'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;

@@ -278,6 +278,7 @@ export function productFaq(product) {
       '[nonwoven geotextile guide](/guides/nonwoven-geotextile-guide)',
       '[geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india)',
       '[canal and pond lining guide](/guides/geotextile-canal-pond-lining-india)',
+      '[landfill and mining guide](/guides/geotextile-landfill-mining-india)',
     ])}.`,
     automotive: 'Read our [automotive NVH felt guide](/guides/automotive-nvh-felt-guide).',
     castPadding: 'Read our [guide to nonwoven cast padding from India](/guides/orthopaedic-cast-padding-nonwoven-india).',

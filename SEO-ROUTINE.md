@@ -69,7 +69,7 @@ Queue (tick when done):
 - [x] filter felt for bag filters in cement, steel and power plants India (extend the dust-collector angle) (20 Oct)
 - [x] geobag fabric (nonwoven geotextile for geobags) India (21 Oct)
 - [x] geotextile for canal and pond lining India (22 Oct)
-- [ ] geotextile for landfill and mining India
+- [x] geotextile for landfill and mining India (23 Oct)
 - [ ] automotive felt for OEM interiors India (headliner, hood insulator, carpet underlay)
 - [ ] luggage and bag support felt India
 - [ ] packaging and protective felt India
@@ -80,6 +80,9 @@ Rules: no MOQ, price, lead time, certification, capacity, client names, years or
 ## Jo Claude nahi dekh sakta (aap paste karo)
 Search Console ke numbers, IndiaMART/TradeIndia/Google Business ke login, admin panel ka data.
 Wo ya to screenshot bhejo ya number paste karo.
+
+## Badi strategy
+Poora 90 din ka plan, India vs world, authority aur AI search: [SEO-STRATEGY.md](SEO-STRATEGY.md).
 
 ## Pehle se ho chuka
 Search Console verified, sitemap (66 URLs), IndexNow, 27 country pages, auto deploy, admin panel.
