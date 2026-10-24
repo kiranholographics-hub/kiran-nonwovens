@@ -2282,6 +2282,216 @@ export const guides = [
     ],
     relatedGuides: ['automotive-nvh-felt-guide', 'polyester-vs-polypropylene-nonwoven', 'needle-punched-vs-thermal-bonded-nonwoven'],
   },
+  {
+    slug: 'luggage-bag-support-felt-india',
+    title: 'Luggage and bag support felt: giving a bag its shape',
+    seoTitle: 'Luggage & Bag Support Felt India',
+    description:
+      'Where support felt goes in a bag, case or backpack, how it compares with foam and board, and what to tell a felt supplier about stiffness and finish.',
+    readMins: 6,
+    published: '2026-10-24',
+    intro:
+      'A soft-sided bag holds its shape because of layers the buyer never sees. Needle punched felt is one of the most common of them: it sits between the outer fabric and the lining, gives the panel body, and takes some of the knocks. This guide is for bag, luggage and case makers choosing that layer.',
+    sections: [
+      {
+        h: 'Where the felt goes',
+        table: {
+          head: ['Part of the bag', 'What the felt does'],
+          rows: [
+            ['Front, back and side panels', 'Gives the panel body so it stands up rather than collapses'],
+            ['Base', 'Adds firmness and cushioning where the bag is set down'],
+            ['Laptop and tablet sleeves', 'Cushions the device against knocks'],
+            ['Organiser pockets and dividers', 'Keeps compartments upright and separate'],
+            ['Straps and handles', 'Pads and spreads the load across a wider area'],
+            ['Cases and pouches', 'Lines and protects the contents from scratches'],
+          ],
+        },
+      },
+      {
+        h: 'Felt, foam or board',
+        table: {
+          head: ['', 'Needle punched felt', 'Foam', 'Rigid board'],
+          rows: [
+            ['Shape', 'Firm but flexible', 'Soft, springs back', 'Stiff, holds a flat shape'],
+            ['Sewing', 'Stitches cleanly, holds the seam', 'Can tear at the needle line', 'Hard to stitch through'],
+            ['Bonding and lamination', 'Takes adhesive and heat lamination well', 'Depends on the foam', 'Usually glued, not laminated'],
+            ['Where it suits', 'Panels, bases, dividers, sleeves', 'Padding where softness matters most', 'Hard-wearing bases and frames'],
+          ],
+        },
+        p: [
+          'Many bags use more than one: board in the base, felt in the panels, foam in the laptop sleeve. The table is about where felt earns its place, not a claim that it replaces the others everywhere.',
+        ],
+      },
+      {
+        h: 'How stiffness is set',
+        p: [
+          'A felt gets stiffer as its weight, thickness and density go up, and the fibre and process matter too. Thermal bonded felt, where low-melt fibre is heat-set through the web, is generally firmer for the same weight than a felt that is only needle punched. Both are processes we run, so the felt can be built to the stiffness the panel needs.',
+          'There is no single right GSM for a bag. A small pouch and a cabin case ask for very different panels, so start from a sample of the material you use today, or from the feel you want, and we will match or adjust it. The [GSM guide](/guides/gsm-in-nonwoven-fabric) explains what the number does and does not tell you.',
+        ],
+      },
+      {
+        h: 'Converting it in your factory',
+        list: [
+          'Cut by knife, die or press to your pattern',
+          'Stitched into the panel with the outer fabric and lining',
+          'Laminated or bonded to fabric, PU, PVC or leather',
+          'Embossed where a surface pattern is wanted',
+        ],
+        p: [
+          'Tell us how the felt is cut and joined in your line. A felt that will be heat-laminated, for example, is built differently from one that is only stitched. Our [luggage and bag support felt](/products/industrial/luggage-bag-support-felt) page lists the material in more detail.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We supply the felt in rolls, slit to the width you need, in polyester, PP or blends, from 100 to 1200 GSM, with thickness and colour set per order. We do not make bags, cut components, or the fabrics, foams and boards used alongside the felt.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The product: backpack, luggage, laptop bag, case, pouch or organiser',
+          'Which part the felt goes in, and how stiff or soft it should feel',
+          'A sample of the material you use today, if you have one',
+          'GSM and thickness if you know them, and the colour',
+          'How it is converted: cut, stitched, laminated, bonded or embossed',
+          'Roll width, quantity, and the delivery location',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request. The [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) covers the general details we ask for.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What material is used inside bags to give them shape?',
+        a: 'Needle punched nonwoven felt is commonly used between the outer fabric and the lining to give panels body and structure. Bags often combine it with foam for padding and rigid board for the base.',
+      },
+      {
+        q: 'What GSM felt is used for bags and luggage?',
+        a: 'It depends on the product and the part. A pouch and a cabin case need very different panels. Send a sample of the material you use or describe the feel you want, and we will match it from our 100 to 1200 GSM range.',
+      },
+      {
+        q: 'Is felt or foam better for a laptop bag?',
+        a: 'Many laptop bags use both: foam where softness matters most, felt where the panel needs body and clean stitching. The design decides; we supply the felt.',
+      },
+      {
+        q: 'Can bag support felt be laminated to fabric?',
+        a: 'Yes. It can be laminated or bonded to fabric, PU, PVC or leather, as well as stitched. Tell us the method so the felt is built for it.',
+      },
+      {
+        q: 'Do you supply cut components or finished bags?',
+        a: 'No. We supply felt in rolls, slit to width. Cutting, stitching and assembly are done by the bag maker.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/luggage-bag-support-felt',
+      'industrial/packaging-protective-felt',
+      'industrial/customised-nonwoven-solutions',
+    ],
+    relatedGuides: ['gsm-in-nonwoven-fabric', 'needle-punched-vs-thermal-bonded-nonwoven', 'how-to-request-a-nonwoven-felt-quote'],
+  },
+  {
+    slug: 'packaging-protective-felt-india',
+    title: 'Packaging and protective felt: keeping finished surfaces unmarked',
+    seoTitle: 'Packaging & Protective Felt India',
+    description:
+      'Where protective felt is used in packing and transit, how it compares with bubble wrap and foam, and what to specify for the goods you ship.',
+    readMins: 6,
+    published: '2026-10-24',
+    intro:
+      'A painted panel, a polished casting or a sheet of glass can reach a customer intact but scratched, and a scratch is a reject. Protective felt is the soft layer that sits against a finished surface during storage, handling and transport. This guide is for manufacturers and packers choosing it.',
+    sections: [
+      {
+        h: 'Where protective felt is used',
+        list: [
+          'Interleaving between stacked sheets, panels and glass',
+          'Lining crates, trays, bins and returnable packaging',
+          'Wrapping furniture, appliances and machined parts',
+          'Pads on racks, fixtures and trolleys so parts do not rub on metal',
+          'Separators between parts packed in the same box',
+        ],
+        p: [
+          'In most of these the felt is not the whole pack. It is the layer that touches the product, inside a box, crate or stillage that takes the heavier loads.',
+        ],
+      },
+      {
+        h: 'Felt, bubble wrap or foam',
+        table: {
+          head: ['', 'Needle punched felt', 'Bubble wrap', 'Foam sheet (e.g. EPE)'],
+          rows: [
+            ['Contact surface', 'Soft fibres, no plastic film on the product', 'Plastic film', 'Smooth foam'],
+            ['Use', 'Reusable over many trips if kept clean', 'Usually single use', 'Reusable to a point'],
+            ['Converting', 'Cut, stitched, laminated or glued to a tray', 'Cut and taped', 'Cut, glued or moulded'],
+            ['Suits best', 'Scratch and scuff protection, returnable packs', 'Light, one-way shipments', 'Cushioning against impact'],
+          ],
+        },
+        p: [
+          'Felt is mainly about protecting the surface. Where a part is heavy or fragile and needs real shock absorption, the pack usually adds foam or a moulded insert as well.',
+        ],
+      },
+      {
+        h: 'What to choose: weight, thickness, fibre and colour',
+        p: [
+          'A thin, light felt is enough to stop scuffs between flat sheets. A thicker, heavier felt gives more cushioning where parts are heavier or are moved around more. Polyester and PP are both used; the right one depends on the goods, the temperature in storage, and whether the felt is laminated or glued to something else. The [polyester vs polypropylene guide](/guides/polyester-vs-polypropylene-nonwoven) sets out the differences.',
+          'Colour is worth deciding on purpose. Some packers want a light felt that shows dirt so it is changed in time; others want a dark one that looks clean for longer. Both can be made to order.',
+        ],
+      },
+      {
+        h: 'Test it against your own surface',
+        p: [
+          'Finishes differ. Before ordering in volume, put a sample against your actual product, stack and move it the way it travels, and check the surface afterwards. If the result is not right, the GSM, thickness or fibre can change before production; the felt is made to order.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We supply protective felt in rolls, slit to width, from 100 to 1200 GSM, with thickness and colour set per order. We do not make boxes, crates, foam inserts or finished packaging; packers and converters build those with our felt. Details are on the [packaging and protective felt](/products/industrial/packaging-protective-felt) product page.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The goods and their surface finish: painted, polished, glass, wood, plastic',
+          'How the felt is used: interleaving, lining, wrapping or padding',
+          'Single-use or returnable packaging',
+          'GSM and thickness if you know them, otherwise the weight and size of the parts',
+          'Colour, roll width, quantity, and the delivery location',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request. The [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) covers the general details.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is protective felt used for in packaging?',
+        a: 'It is the soft layer that touches a finished surface, used for interleaving stacked sheets and panels, lining crates and trays, wrapping furniture and machined parts, and padding racks and trolleys so parts do not scratch.',
+      },
+      {
+        q: 'Is felt better than bubble wrap?',
+        a: 'For scratch and scuff protection, and for returnable packaging used over many trips, felt is often preferred because it is soft against the surface and reusable. For light one-way shipments, bubble wrap is common. Heavy or fragile parts often need foam as well.',
+      },
+      {
+        q: 'Can packaging felt be reused?',
+        a: 'Yes. Needle punched felt can be reused over many trips if it is kept clean and dry, which is why it is common in returnable crates and trays.',
+      },
+      {
+        q: 'What GSM felt should I use for packaging?',
+        a: 'A light felt is often enough to stop scuffs between flat sheets; heavier felt gives more cushioning for heavier parts. Test a sample against your own product. We produce from 100 to 1200 GSM.',
+      },
+      {
+        q: 'Do you make finished packaging?',
+        a: 'No. We supply felt in rolls, slit to width. Packers and converters make the crates, trays and inserts.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/packaging-protective-felt',
+      'industrial/luggage-bag-support-felt',
+      'industrial/customised-nonwoven-solutions',
+    ],
+    relatedGuides: ['polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric', 'how-to-request-a-nonwoven-felt-quote'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;

@@ -291,6 +291,8 @@ export function productFaq(product) {
       'Read our [shoulder pad nonwoven fabric guide](/guides/shoulder-pad-nonwoven-fabric-india) and the [footwear and apparel nonwoven guide](/guides/nonwoven-fabric-for-footwear-and-apparel).',
     'apparel-footwear':
       'Read our [footwear and apparel nonwoven guide](/guides/nonwoven-fabric-for-footwear-and-apparel).',
+    luggage: 'Read our [luggage and bag support felt guide](/guides/luggage-bag-support-felt-india).',
+    packaging: 'Read our [packaging and protective felt guide](/guides/packaging-protective-felt-india).',
   }[
     product.slug === 'orthopaedic-cast-padding'
       ? 'castPadding'
@@ -298,6 +300,10 @@ export function productFaq(product) {
         ? 'filterFelt'
       : product.slug === 'shoulder-pad-nonwoven-fabric'
         ? 'shoulderPad'
+      : product.slug === 'luggage-bag-support-felt'
+        ? 'luggage'
+      : product.slug === 'packaging-protective-felt'
+        ? 'packaging'
         : product.category
   ];
   if (guideLink) {

@@ -71,8 +71,8 @@ Queue (tick when done):
 - [x] geotextile for canal and pond lining India (22 Oct)
 - [x] geotextile for landfill and mining India (23 Oct)
 - [x] automotive felt for OEM interiors India (headliner, hood insulator, carpet underlay) (23 Oct)
-- [ ] luggage and bag support felt India
-- [ ] packaging and protective felt India
+- [x] luggage and bag support felt India (24 Oct)
+- [x] packaging and protective felt India (24 Oct)
 - [ ] flooring underlay felt India
 - [ ] Hindi guide: non woven geotextile (test)
 Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make or sell it before writing; ask in the PR, skip until answered.
