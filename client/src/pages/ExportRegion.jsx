@@ -39,6 +39,8 @@ const GUIDES_FOR_AREA = {
     'carpet-backing-and-underlay-felt',
     'orthopaedic-cast-padding-nonwoven-india',
     'bag-filter-felt-cement-steel-power-india',
+    'luggage-bag-support-felt-india',
+    'packaging-protective-felt-india',
   ],
 };
 const ALWAYS_GUIDES = [
