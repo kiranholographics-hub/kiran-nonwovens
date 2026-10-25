@@ -166,11 +166,7 @@ export const guides = [
       'industrial/packaging-protective-felt',
       'apparel-footwear/shoulder-pad-nonwoven-fabric',
     ],
-    relatedGuides: [
-      'hs-code-nonwoven-felt-geotextile',
-      'needle-punched-vs-thermal-bonded-nonwoven',
-      'carpet-backing-and-underlay-felt',
-    ],
+    relatedGuides: ['hs-code-nonwoven-felt-geotextile', 'needle-punched-vs-thermal-bonded-nonwoven', 'carpet-backing-and-underlay-felt', 'geotextile-roll-weight-and-coverage'],
   },
 
   {
@@ -254,12 +250,7 @@ export const guides = [
       'geotextile/drainage-soil-erosion-control-geotextile',
       'geotextile/pipeline-cable-protection-geotextile',
     ],
-    relatedGuides: [
-      'geotextile-for-road-construction',
-      'geotextile-for-drainage-and-erosion-control',
-      'polyester-vs-polypropylene-nonwoven',
-      'gsm-in-nonwoven-fabric',
-    ],
+    relatedGuides: ['geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control', 'polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric', 'geotextile-roll-weight-and-coverage', 'geotextile-retaining-wall-drainage-india'],
   },
 
   {
@@ -1023,7 +1014,7 @@ export const guides = [
       'industrial/flooring-underlay-felt',
       'industrial/multi-colour-needle-punched-felt',
     ],
-    relatedGuides: ['gsm-in-nonwoven-fabric', 'polyester-vs-polypropylene-nonwoven'],
+    relatedGuides: ['gsm-in-nonwoven-fabric', 'polyester-vs-polypropylene-nonwoven', 'exhibition-carpet-needle-punched-nonwoven-india'],
   },
 
   {
@@ -1241,7 +1232,7 @@ export const guides = [
       'geotextile/pipeline-cable-protection-geotextile',
       'geotextile/pp-geotextile-fabric-for-civil-works',
     ],
-    relatedGuides: ['geotextile-for-road-construction', 'nonwoven-geotextile-guide'],
+    relatedGuides: ['geotextile-for-road-construction', 'nonwoven-geotextile-guide', 'geotextile-retaining-wall-drainage-india'],
   },
 
   {
@@ -1323,7 +1314,7 @@ export const guides = [
       'geotextile/drainage-soil-erosion-control-geotextile',
       'geotextile/pipeline-cable-protection-geotextile',
     ],
-    relatedGuides: ['geotextile-for-road-construction', 'gsm-in-nonwoven-fabric'],
+    relatedGuides: ['geotextile-for-road-construction', 'gsm-in-nonwoven-fabric', 'geotextile-roll-weight-and-coverage'],
   },
 
   {
@@ -2281,6 +2272,377 @@ export const guides = [
       'automotive/nvh-sound-insulation-fabric',
     ],
     relatedGuides: ['automotive-nvh-felt-guide', 'polyester-vs-polypropylene-nonwoven', 'needle-punched-vs-thermal-bonded-nonwoven'],
+  },
+
+  {
+    slug: 'geotextile-roll-weight-and-coverage',
+    title: 'Geotextile roll weight and coverage: how to calculate it from GSM, width and length',
+    seoTitle: 'Geotextile Roll Weight: GSM x Width x Length',
+    description:
+      'Work out the weight and area of a geotextile roll from its GSM, width and length, how many square metres a tonne covers, and what it means for container loading.',
+    readMins: 5,
+    published: '2026-10-25',
+    intro:
+      'Buyers of geotextile ask the same practical questions before they order: how heavy is one roll, how much ground does a tonne cover, and how many rolls will a container take? All three come from one formula. This guide shows it, works through examples for the wide rolls we make, and explains what the answer does and does not tell you.',
+    sections: [
+      {
+        h: 'The formula',
+        p: [
+          'GSM is grams per square metre, so the nominal weight of a roll is its area multiplied by its GSM.',
+        ],
+        list: [
+          'Area in m² = width in metres × length in metres',
+          'Weight in kg = GSM × area in m² ÷ 1,000',
+          'Example: 200 GSM × 5.2 m × 100 m ÷ 1,000 = 104 kg',
+        ],
+      },
+      {
+        h: 'Worked examples: 100 m rolls',
+        p: [
+          'These are nominal fabric weights for a roll 100 m long. Our rolls are 5.0–5.2 m wide and can be cut narrower; length is set to your order.',
+        ],
+        list: [
+          '100 GSM: 50 kg at 5.0 m wide, 52 kg at 5.2 m wide',
+          '150 GSM: 75 kg at 5.0 m wide, 78 kg at 5.2 m wide',
+          '200 GSM: 100 kg at 5.0 m wide, 104 kg at 5.2 m wide',
+          '300 GSM: 150 kg at 5.0 m wide, 156 kg at 5.2 m wide',
+          '400 GSM: 200 kg at 5.0 m wide, 208 kg at 5.2 m wide',
+          '600 GSM: 300 kg at 5.0 m wide, 312 kg at 5.2 m wide',
+        ],
+      },
+      {
+        h: 'How much does one tonne cover?',
+        p: [
+          'Turn the formula round: area in m² = 1,000,000 ÷ GSM for each tonne of fabric. A heavier fabric covers less ground per tonne, so compare price per square metre, not price per kilogram.',
+        ],
+        list: [
+          '100 GSM: 10,000 m² per tonne',
+          '150 GSM: about 6,667 m² per tonne',
+          '200 GSM: 5,000 m² per tonne',
+          '300 GSM: about 3,333 m² per tonne',
+          '400 GSM: 2,500 m² per tonne',
+        ],
+
+      },
+      {
+        h: 'Finding the length you need',
+        p: [
+          'If you know the area to cover, divide it by the roll width to get the length. A 2,600 m² area with 5.2 m rolls needs 500 m of fabric before overlaps, so allow for overlap and waste in the design, which your engineer sets.',
+        ],
+      },
+      {
+        h: 'What the calculation does not include',
+        list: [
+          'The core and the packaging, which add to the shipping weight',
+          'The manufacturing tolerance on GSM, so a roll can run slightly above or below nominal',
+          'Overlaps, anchor trenches and cutting waste on site',
+        ],
+        p: [
+          'Treat the figure as a nominal fabric weight. Packed and shipped weights are confirmed with your order.',
+        ],
+      },
+      {
+        h: 'Wide rolls and container loading',
+        p: [
+          'Rolls 5.0–5.2 m wide are longer than the width of a shipping container, so they are loaded lying lengthwise. A 20 ft container is about 5.9 m long inside, which leaves little spare room beside a 5.2 m roll. Confirm the loading plan and the container weight limit with your freight forwarder before you fix the roll length.',
+          'If your site handling or your container plan prefers a narrower roll, rolls can be cut narrower than 5.0 m.',
+        ],
+      },
+      {
+        h: 'Ordering by weight or by area',
+        p: [
+          'Tell us the GSM, the width, the length per roll and the number of rolls, or the area in m². Our export team will confirm the roll count and the shipped weight with your quote. Read how GSM works in our [GSM guide](/guides/gsm-in-nonwoven-fabric), how to choose it for roads in the [road geotextile GSM guide](/guides/geotextile-gsm-for-road-construction-india), and what to include in an enquiry in the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote). Samples are available on request.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I calculate the weight of a geotextile roll?',
+        a: 'Multiply GSM by the width in metres and the length in metres, then divide by 1,000 to get kilograms. A 200 GSM roll 5.2 m wide and 100 m long weighs about 104 kg of fabric.',
+      },
+      {
+        q: 'How many square metres does one tonne of geotextile cover?',
+        a: 'Divide 1,000,000 by the GSM. A 200 GSM fabric covers 5,000 m² per tonne, and a 300 GSM fabric covers about 3,333 m².',
+      },
+      {
+        q: 'Is the calculated weight the shipping weight?',
+        a: 'No. It is the nominal fabric weight. The core, the packaging and the GSM tolerance change the real figure, so confirm packed weights with your order.',
+      },
+      {
+        q: 'What roll width and GSM can you supply?',
+        a: 'Roll widths of 5.0–5.2 m, which can be cut narrower, across a 100–1200 GSM range, with length set to your order.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'industrial/customised-nonwoven-solutions',
+    ],
+    relatedGuides: ['gsm-in-nonwoven-fabric', 'geotextile-gsm-for-road-construction-india', 'how-to-request-a-nonwoven-felt-quote'],
+  },
+
+  {
+    slug: 'geotextile-retaining-wall-drainage-india',
+    title: 'Geotextile behind retaining walls in India: the filter that keeps drainage working',
+    seoTitle: 'Geotextile for Retaining Walls India',
+    description:
+      'Where nonwoven geotextile goes behind a retaining wall in India, why it stops the drainage layer clogging in monsoon, common mistakes, and what to specify.',
+    readMins: 6,
+    published: '2026-10-25',
+    intro:
+      'A retaining wall holds back soil, and the wall can only do that safely if water does not build up behind it. A drainage layer of stone or a drainage board carries the water out through weep holes, and a nonwoven geotextile keeps the soil from washing into that layer. This guide covers where the fabric goes, what goes wrong when it is left out or chosen badly, and what to specify.',
+    sections: [
+      {
+        h: 'Why water behind a wall matters',
+        p: [
+          'Water that cannot escape adds pressure on the wall on top of the push from the soil itself. In a monsoon, soil behind a wall can be saturated for weeks. Walls fail far more often from trapped water than from the soil alone, which is why nearly every retaining wall design includes drainage.',
+        ],
+      },
+      {
+        h: 'What the geotextile does',
+        p: [
+          'The drainage layer works only while it stays open. If fine soil washes into the stone, the voids fill, flow slows and pressure builds. A needle punched nonwoven geotextile is placed between the retained soil and the drainage layer as a filter: water passes through it, soil stays behind it.',
+        ],
+        list: [
+          'Filtration — lets water into the drainage layer and holds soil particles back',
+          'Separation — stops the drainage stone from mixing into the soil',
+          'Protection — cushions a membrane or pipe against sharp stone, where one is used',
+        ],
+      },
+      {
+        h: 'Where it goes',
+        list: [
+          'On the soil side of the drainage stone or drainage board, wrapped so the stone is enclosed',
+          'Around the perforated pipe at the toe or base of the wall, with the pipe inside a stone surround',
+          'In front of weep holes, so soil is not carried out through the opening',
+          'Under the base stone of some walls, as a separator over soft ground',
+        ],
+        p: [
+          'The exact arrangement is shown on the design drawing. Follow it, and ask the project engineer if the drawing does not name the fabric.',
+        ],
+      },
+      {
+        h: 'Common mistakes',
+        list: [
+          'Leaving the fabric out, so fines clog the stone within a few seasons',
+          'Using an impermeable plastic sheet instead of a permeable geotextile, which blocks the very water the drain is meant to carry',
+          'Choosing a fabric by appearance, not by the weight and filtration figures the soil needs',
+          'Not overlapping or wrapping the stone properly, which leaves a path for soil to reach it',
+          'Leaving the fabric uncovered in sunlight; polypropylene is sensitive to prolonged UV exposure',
+        ],
+      },
+      {
+        h: 'Roads in the hills and on slopes',
+        p: [
+          'Retaining walls on hill roads, ghat sections and embankments face steep slopes and heavy runoff, and many walls are built from stone masonry or gabions with weep holes through the face. The same rule applies: water has to leave, and the soil has to stay. A geotextile filter between the fill and the drainage stone does that on both stone and concrete walls. See our guide on [geotextile for drainage and erosion control](/guides/geotextile-for-drainage-and-erosion-control).',
+        ],
+      },
+      {
+        h: 'What to specify when you order',
+        list: [
+          'Function — filtration and separation behind the wall',
+          'Fibre — PP (virgin or recycled) or polyester',
+          'GSM and thickness, set by the design; heavier grades where angular stone could puncture the fabric',
+          'The filtration figures your design requires for the soil, such as pore size and permeability',
+          'Roll width and length, so overlaps and waste fit the wall',
+        ],
+        p: [
+          'On public works, the technical specification decides the grade and test values; confirm the current edition with your project engineer and send us the figures it asks for. Needle punched geotextile is made to order across 100–1200 GSM in rolls 5.0–5.2 m wide, and samples are available on request. Our [drainage and erosion control geotextile](/products/geotextile/drainage-soil-erosion-control-geotextile) is made for this role; send the requirement through the [enquiry form](/contact#enquiry).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is geotextile needed behind a retaining wall?',
+        a: 'Almost always where there is a drainage layer. The geotextile filters the retained soil so the stone or drainage board behind the wall does not clog, and the wall keeps draining.',
+      },
+      {
+        q: 'Which geotextile is used behind retaining walls?',
+        a: 'A permeable needle punched nonwoven geotextile of polypropylene or polyester is commonly used as the filter. The grade is set by the design and the soil.',
+      },
+      {
+        q: 'Can I use plastic sheet instead of geotextile?',
+        a: 'No, not as the filter. An impermeable sheet blocks the water the drain is meant to carry. The filter must let water through and hold the soil back.',
+      },
+      {
+        q: 'What roll width and GSM can you supply?',
+        a: 'Roll widths of 5.0–5.2 m, which can be cut narrower, across a 100–1200 GSM range, with length set to your order.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['geotextile-for-drainage-and-erosion-control', 'nonwoven-geotextile-guide', 'geotextile-roll-weight-and-coverage'],
+  },
+
+  {
+    slug: 'felt-grow-bag-fabric-nonwoven-india',
+    title: 'Felt grow bag fabric from India: what to specify in a nonwoven for grow bags',
+    seoTitle: 'Felt Grow Bag Fabric: Nonwoven Guide India',
+    description:
+      'What bag makers should specify when buying nonwoven felt for grow bags and root bags: GSM, thickness, fibre, colour, UV exposure and roll width.',
+    readMins: 5,
+    published: '2026-10-25',
+    intro:
+      'Grow bags made from nonwoven felt let air reach the roots and let excess water drain, which is why nurseries and balcony gardeners choose them over plastic pots. The bag is only as good as the fabric it is stitched from. This guide is for bag makers and importers who buy the felt as roll stock and need to know what to specify.',
+    sections: [
+      {
+        h: 'Why felt works for plants',
+        list: [
+          'Air passes through the fabric, so roots near the wall are pruned by the air instead of circling',
+          'Water drains through the wall, which reduces waterlogging',
+          'The fabric is flexible and light, and it folds flat for shipping and storage',
+          'A thick felt insulates the root zone from sudden heat',
+        ],
+        p: [
+          'These effects depend on the weight and thickness of the felt, which is why they belong in the specification.',
+        ],
+      },
+      {
+        h: 'GSM and thickness',
+        p: [
+          'A heavier, thicker felt keeps its shape when the bag is full of wet soil and lasts through more seasons. A lighter felt costs less per bag but sags and tears sooner, particularly in larger bags. Match the weight to the bag size and the number of seasons you want it to last. Our [GSM guide](/guides/gsm-in-nonwoven-fabric) explains how weight relates to thickness and feel.',
+        ],
+      },
+      {
+        h: 'Fibre: polypropylene, polyester or recycled',
+        list: [
+          'Polypropylene — light, does not absorb water and resists rot; sensitive to long, direct sunlight',
+          'Polyester — stable, with good recovery; a common choice for durable felt',
+          'Recycled fibre — available as recycled PP or recycled PET in some grades; confirm the colour and consistency with a sample',
+        ],
+        p: [
+          'See [polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven) for how the fibres compare. If the bags will sit in full sun for years, tell us before you order and ask what can be supplied for outdoor exposure.',
+        ],
+      },
+      {
+        h: 'Colour',
+        p: [
+          'Grey and black are common for grow bags. Darker colours absorb more heat in direct sun, so the colour affects the root zone as well as the look. Colour is set to order, and an approved sample fixes the shade for repeat orders.',
+        ],
+      },
+      {
+        h: 'Roll width and cutting',
+        p: [
+          'Our rolls are 5.0–5.2 m wide and can be cut narrower, which lets a bag maker choose the width that wastes the least fabric when cutting panels. Give us your bag dimensions and we can discuss a roll width and length that suit.',
+        ],
+      },
+      {
+        h: 'What we supply, and what the bag maker does',
+        p: [
+          'We supply the nonwoven felt in rolls. Cutting, stitching, handles and finished bags are made by the bag maker. Samples are available on request, so you can test stitching and a filled bag before you order in volume. Send your specification through the [enquiry form](/contact#enquiry), or use the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote). See our [multi-colour needle punched felt](/products/industrial/multi-colour-needle-punched-felt) for colour options.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What fabric are felt grow bags made from?',
+        a: 'Needle punched nonwoven felt, usually polypropylene, polyester or recycled fibre. It is permeable to air and water, flexible and light.',
+      },
+      {
+        q: 'What GSM is used for felt grow bags?',
+        a: 'It depends on the bag size and the life you want. Heavier felt holds its shape and lasts longer, and lighter felt is cheaper but sags sooner. Send your bag size and we will suggest a weight to sample.',
+      },
+      {
+        q: 'Do you make finished grow bags?',
+        a: 'We supply the felt in rolls. Cutting, stitching and finished bags are made by the bag maker.',
+      },
+      {
+        q: 'What colours are available?',
+        a: 'Colour is set to order, and grey and black are common for grow bags. An approved sample fixes the shade for repeat orders.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/multi-colour-needle-punched-felt',
+      'industrial/customised-nonwoven-solutions',
+      'industrial/packaging-protective-felt',
+    ],
+    relatedGuides: ['gsm-in-nonwoven-fabric', 'polyester-vs-polypropylene-nonwoven', 'nonwoven-manufacturers-in-india'],
+  },
+
+  {
+    slug: 'exhibition-carpet-needle-punched-nonwoven-india',
+    title: 'Needle punched exhibition carpet roll from India: what to specify',
+    seoTitle: 'Needle Punched Exhibition Carpet Roll India',
+    description:
+      'What event and exhibition carpet makers and importers should specify in a needle punched nonwoven roll: fibre, GSM, colour consistency, width and roll length.',
+    readMins: 5,
+    published: '2026-10-25',
+    intro:
+      'Exhibition and event carpet is laid for days, walked on by crowds, rolled up and laid again. A needle punched nonwoven suits it because it is dense, hard-wearing and cheap enough to be treated as consumable. This guide is for carpet makers, converters and importers who buy the nonwoven as roll stock and need to know what to specify.',
+    sections: [
+      {
+        h: 'What the carpet has to do',
+        list: [
+          'Lie flat and stay flat when walked on, wheeled over and rolled',
+          'Hold its colour evenly across the whole roll, so panels match on the stand',
+          'Resist crushing and pilling under foot traffic',
+          'Roll and unroll without cracking or shedding fibre',
+          'Be wide enough that few seams are needed',
+        ],
+      },
+      {
+        h: 'Fibre',
+        list: [
+          'Polyester (PET) — hard-wearing with good recovery; widely used for exhibition carpet',
+          'Polypropylene — light and does not absorb water; a lower-cost option for short-term use',
+          'Recycled fibre — available as recycled PP or PET in some grades; confirm the colour range with a sample',
+        ],
+        p: [
+          'See [polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven) for how they compare.',
+        ],
+      },
+      {
+        h: 'GSM and thickness',
+        p: [
+          'A heavier, thicker carpet feels more solid underfoot and survives more events, but costs more and is heavier to ship and handle. A lighter carpet suits a short stand with light traffic. Our weights span 100–1200 GSM, so the weight can be matched to the job instead of defaulting to a standard grade. The [GSM guide](/guides/gsm-in-nonwoven-fabric) explains how weight relates to thickness and feel.',
+        ],
+      },
+      {
+        h: 'Colour consistency',
+        p: [
+          'On a show floor, a visible difference in shade between two panels is the commonest complaint. Approve a sample first, and ask that repeat orders are matched to it. Our [multi-colour needle punched felt](/products/industrial/multi-colour-needle-punched-felt) is made in a range of colours, set to order.',
+        ],
+      },
+      {
+        h: 'Roll width and length',
+        p: [
+          'Our rolls are 5.0–5.2 m wide and can be cut narrower to the widths you lay, with length set to your order. A wide roll means fewer seams on a large hall. Tell us your standard widths and roll lengths so we can quote against them.',
+        ],
+      },
+      {
+        h: 'Roll stock, and what is finished elsewhere',
+        p: [
+          'We supply the needle punched nonwoven in rolls. Surface finishing such as ribbing, backing or printing is a separate step; if you need any of it, say so in your enquiry so we can confirm what can be arranged before you order. Samples are available on request. Send your specification through the [enquiry form](/contact#enquiry) or use the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote). Related: [carpet backing and flooring underlay felt](/guides/carpet-backing-and-underlay-felt).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is exhibition carpet made of?',
+        a: 'Usually a needle punched nonwoven made from polyester or polypropylene fibre. It is dense, hard-wearing and economical for short-term use.',
+      },
+      {
+        q: 'What weight of carpet is best for an exhibition?',
+        a: 'It depends on traffic and how many events the carpet must survive. Heavier carpet feels more solid and lasts longer, and lighter carpet suits short, light-use stands.',
+      },
+      {
+        q: 'How do I keep the colour even between panels?',
+        a: 'Approve a sample and ask that repeat orders are matched to it. Order enough from one batch for the whole hall where you can.',
+      },
+      {
+        q: 'What roll width can you supply?',
+        a: 'Roll widths of 5.0–5.2 m, which can be cut narrower, with length set to your order.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/multi-colour-needle-punched-felt',
+      'industrial/carpet-backing-felt',
+      'industrial/flooring-underlay-felt',
+    ],
+    relatedGuides: ['carpet-backing-and-underlay-felt', 'gsm-in-nonwoven-fabric', 'polyester-vs-polypropylene-nonwoven'],
   },
 ];
 

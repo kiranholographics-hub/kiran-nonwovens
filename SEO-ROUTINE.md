@@ -76,7 +76,7 @@ Queue (tick when done):
 - [ ] flooring underlay felt India
 - [ ] Hindi guide: non woven geotextile (test)
 Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make or sell it before writing; ask in the PR, skip until answered.
-- [ ] geotextile behind retaining walls (drainage and filter layer) India
+- [x] geotextile behind retaining walls (drainage and filter layer) India (25 Oct)
 - [ ] geotextile for embankments and highways on soft soil India
 - [ ] how to install nonwoven geotextile on site (laying, overlaps, anchoring)
 - [ ] geotextile for French drains and subsurface drains
@@ -90,17 +90,17 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [ ] apparent opening size (AOS) of geotextile explained
 - [ ] CBR puncture and grab tensile tests for geotextile explained
 - [ ] geotextile vs geomembrane: which one a project needs
-- [ ] how many square metres in a geotextile roll, and roll weight from GSM
+- [x] how many square metres in a geotextile roll, and roll weight from GSM (25 Oct)
 - [ ] automotive boot / trunk liner felt
 - [ ] automotive wheel-arch liner felt
 - [ ] recycled PET felt in India (where recycled fibre works and where it does not)
 - [ ] acoustic felt for buildings: ceilings, wall panels, partitions India
 - [ ] thermal insulation felt for appliances (AC, refrigerator, washing machine, geyser)
 - [ ] mattress and upholstery felt India
-- [ ] felt grow bags and plant root bags (owner said yes, 23 Oct)
+- [x] felt grow bags and plant root bags (owner said yes, 23 Oct) (25 Oct)
 - [x] capillary mat felt for nurseries and hydroponics: SKIPPED, owner said no (23 Oct). Do not write it.
 - [x] painter's felt / floor protection mat: SKIPPED, owner said no (23 Oct). Do not write it.
-- [ ] exhibition carpet / needle punched event carpet India (owner said yes, 23 Oct)
+- [x] exhibition carpet / needle punched event carpet India (owner said yes, 23 Oct) (25 Oct)
 - [x] craft and DIY coloured felt sheets: SKIPPED, owner said no (23 Oct). Do not write it.
 - [ ] felt thickness vs GSM: how they relate
 - [ ] how to read a nonwoven test report (what each line means)
