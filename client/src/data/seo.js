@@ -279,6 +279,8 @@ export function productFaq(product) {
       '[geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india)',
       '[canal and pond lining guide](/guides/geotextile-canal-pond-lining-india)',
       '[landfill and mining guide](/guides/geotextile-landfill-mining-india)',
+      '[retaining wall drainage guide](/guides/geotextile-retaining-wall-drainage-india)',
+      '[roll weight and coverage guide](/guides/geotextile-roll-weight-and-coverage)',
     ])}.`,
     automotive: `Read our ${sentenceList([
       '[automotive NVH felt guide](/guides/automotive-nvh-felt-guide)',
@@ -287,6 +289,10 @@ export function productFaq(product) {
     castPadding: 'Read our [guide to nonwoven cast padding from India](/guides/orthopaedic-cast-padding-nonwoven-india).',
     filterFelt:
       'Read our [dust collector filter felt guide](/guides/dust-collector-filter-bag-felt) and the [cement, steel and power plant guide](/guides/bag-filter-felt-cement-steel-power-india).',
+    feltColour:
+      'Read our guides to [felt grow bag fabric](/guides/felt-grow-bag-fabric-nonwoven-india) and [needle punched exhibition carpet rolls](/guides/exhibition-carpet-needle-punched-nonwoven-india).',
+    carpet:
+      'Read our guide to [needle punched exhibition carpet rolls](/guides/exhibition-carpet-needle-punched-nonwoven-india) and the [carpet backing and flooring underlay felt guide](/guides/carpet-backing-and-underlay-felt).',
     shoulderPad:
       'Read our [shoulder pad nonwoven fabric guide](/guides/shoulder-pad-nonwoven-fabric-india) and the [footwear and apparel nonwoven guide](/guides/nonwoven-fabric-for-footwear-and-apparel).',
     'apparel-footwear':
@@ -298,7 +304,11 @@ export function productFaq(product) {
         ? 'filterFelt'
       : product.slug === 'shoulder-pad-nonwoven-fabric'
         ? 'shoulderPad'
-        : product.category
+        : product.slug === 'multi-colour-needle-punched-felt'
+          ? 'feltColour'
+          : product.slug === 'carpet-backing-felt'
+            ? 'carpet'
+            : product.category
   ];
   if (guideLink) {
     faqs.push({
