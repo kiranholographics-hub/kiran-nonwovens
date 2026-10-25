@@ -55,7 +55,7 @@ export default function Category() {
       <PageHero
         trail={trail}
         kicker="Products"
-        title={area.name}
+        title={`${area.name} products`}
         lead={area.blurb}
         video={areaVideo(area.slug, area.name)}
         variant={2}
