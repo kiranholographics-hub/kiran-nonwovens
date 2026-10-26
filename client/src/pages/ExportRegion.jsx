@@ -28,6 +28,8 @@ const GUIDES_FOR_AREA = {
     'geobag-fabric-nonwoven-geotextile-india',
     'geotextile-canal-pond-lining-india',
     'geotextile-landfill-mining-india',
+    'geotextile-embankment-soft-soil-india',
+    'how-to-install-nonwoven-geotextile',
   ],
   automotive: ['automotive-nvh-felt-guide', 'automotive-felt-oem-interiors-india'],
   'apparel-footwear': [
@@ -39,6 +41,8 @@ const GUIDES_FOR_AREA = {
     'carpet-backing-and-underlay-felt',
     'orthopaedic-cast-padding-nonwoven-india',
     'bag-filter-felt-cement-steel-power-india',
+    'luggage-bag-support-felt-india',
+    'packaging-protective-felt-india',
   ],
 };
 const ALWAYS_GUIDES = [

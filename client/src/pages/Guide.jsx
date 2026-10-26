@@ -18,6 +18,13 @@ const anchor = (text) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 
+// Labels for a guide written in another language (`lang` on the guide).
+// English is the default; anything not listed falls back to it.
+const LABELS = {
+  hi: { guide: 'गाइड', minRead: 'मिनट', toc: 'इस गाइड में', faq: 'सवाल-जवाब' },
+};
+const EN = { guide: 'Guide', minRead: 'min read', toc: 'In this guide', faq: 'Questions' };
+
 export default function Guide() {
   const { slug } = useParams();
   const { products } = useCatalogue();
@@ -31,6 +38,10 @@ export default function Guide() {
     { label: guide.title },
   ];
   const path = `/guides/${guide.slug}`;
+  const lang = guide.lang || 'en';
+  const t = { ...EN, ...LABELS[lang] };
+  // Non-Latin headings reduce to an empty slug, so number the sections instead.
+  const sectionId = (s, i) => anchor(s.h) || `section-${i + 1}`;
   const published = guide.published || GUIDES_PUBLISHED;
 
   const related = guide.relatedProducts
@@ -47,7 +58,7 @@ export default function Guide() {
     description: guide.description,
     datePublished: published,
     dateModified: published,
-    inLanguage: 'en',
+    inLanguage: lang,
     mainEntityOfPage: `${SITE.url}${path}`,
     image: `${SITE.url}${SITE.ogImage}`,
     author: { '@type': 'Organization', name: SITE.name, url: SITE.url },
@@ -55,7 +66,7 @@ export default function Guide() {
   };
 
   return (
-    <>
+    <div lang={lang === 'en' ? undefined : lang} className="guide-lang">
       <Seo
         title={guide.seoTitle}
         description={guide.description}
@@ -70,7 +81,7 @@ export default function Guide() {
       />
       <PageHero
         trail={trail}
-        kicker={`Guide · ${guide.readMins} min read`}
+        kicker={`${t.guide} · ${guide.readMins} ${t.minRead}`}
         title={guide.title}
         lead={guide.intro}
         video={VIDEOS.about}
@@ -79,24 +90,24 @@ export default function Guide() {
 
       <article className="block guide">
         <div className="wrap guide__layout">
-          <nav className="guide__toc" aria-label="In this guide">
-            <p>In this guide</p>
+          <nav className="guide__toc" aria-label={t.toc}>
+            <p>{t.toc}</p>
             <ol>
-              {guide.sections.map((s) => (
+              {guide.sections.map((s, i) => (
                 <li key={s.h}>
-                  <a href={`#${anchor(s.h)}`}>{s.h}</a>
+                  <a href={`#${sectionId(s, i)}`}>{s.h}</a>
                 </li>
               ))}
               <li>
-                <a href="#faq-title">Questions</a>
+                <a href="#faq-title">{t.faq}</a>
               </li>
             </ol>
           </nav>
 
           <div className="guide__body">
-            {guide.sections.map((s) => (
+            {guide.sections.map((s, i) => (
               <section key={s.h} className="guide__section">
-                <h2 id={anchor(s.h)}>{s.h}</h2>
+                <h2 id={sectionId(s, i)}>{s.h}</h2>
                 {s.p && !s.list && !s.table
                   ? s.p.map((t) => (
                       <p key={t.slice(0, 40)}>
@@ -154,7 +165,7 @@ export default function Guide() {
             ))}
 
             <div className="guide__faq">
-              <Faq items={guide.faqs} title="Questions" id="faq" />
+              <Faq items={guide.faqs} title={t.faq} id="faq" />
             </div>
           </div>
         </div>
@@ -212,6 +223,6 @@ export default function Guide() {
           ) : null}
         </div>
       </section>
-    </>
+    </div>
   );
 }
