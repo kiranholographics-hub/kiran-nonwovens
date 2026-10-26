@@ -33,9 +33,12 @@ One entry per session: date, what changed, what is pending. Newest first.
 
 **Pending: needs the owner**
 - Approve PR for today's changes.
-- OK to send ONE test enquiry through the contact form?
-- Rule 4 conflict: deploy.yml now has a daily 19:00 IST automatic deploy (added 26 Oct, PR #47, to publish /hq
-  updates). Under the new rules deploys need your approval. Keep it, or remove it (I can open a PR)?
+- Test enquiry SENT 26 Oct (owner said "do what is right"): name "TEST - Claude weekly check",
+  email test@example.com; API answered 201, saved as id 6adf2eb31d2ed3f93dff7c2d. Owner to check that the
+  notification email arrived, then delete the test in /hq > Enquiries.
+- Daily 19:00 automatic deploy REMOVED in this PR (rule 4: deploys need the owner's approval). After posting an
+  update in /hq, run GitHub > Actions > "Deploy website" > "Run workflow" to publish it.
+- Home title says "Manufacturer" while production is at the partner's plant: owner to decide (not changed).
 - Google Business Profile video verification (needs the office signboard).
 - IndiaMART: fill price, MOQ, GST, year yourself; add real photos.
 - [confirm] LinkedIn: company size, company type, founded year.
