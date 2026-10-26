@@ -10,6 +10,20 @@ Bade keyword ("manufacturers in India") 6-9 mahine ka khel hai; 3 mahine ka targ
 country keywords par page one/two, directory profiles page one, brand search par site #1,
 enquiries badhna.
 
+## NAYA TAREEKA (26 Oct 2026 se): NowFloats-style "Updates"
+Owner ne guide-pages wala roz ka kaam ROK diya hai (scheduled task "Daily SEO pages" disabled).
+Ab NowFloats jaisa chalna hai: roz asli business updates, har update ek naya page, Jaipur location ke saath.
+- Owner Claude ko bhejta hai: **"update: <ek line> + photo"** (jaise "aaj 40 roll 500 GSM geotextile Ahmedabad bheje").
+- Claude usse 80-150 shabd ka update likhta hai (title, 2-3 chhote paragraph, product page ka link) aur owner ko
+  /hq > Updates mein paste karne ke liye deta hai. Photo owner /hq mein upload karta hai.
+- Site roz shaam 7 baje (IST) apne aap deploy hoti hai (deploy.yml schedule), to /hq ka update usi shaam live hota hai,
+  aur IndexNow us update URL ko Bing ko bhej deta hai. Code push wale deploy par saare URLs IndexNow ko jaate hain.
+- Update page ka title "<update> – Jaipur | Kiran Nonwovens" (lamba ho to bina Jaipur), schema mein Jaipur office ka address.
+- Wahi update text Google Business Profile post (verify hone ke baad) aur LinkedIn par bhi dalna hai.
+- NIYAM: sirf asli khabar. Koi update Claude apne se nahi banata; client ka naam owner ki marzi ke bina nahi; price/MOQ/
+  certificate ka dawa nahi. "Shehar + product" pages sirf unhi shehron ke jahan sach mein maal jaata hai (doorway pages nahi).
+- Product page titles live API (MongoDB) se aate hain; unme "Jaipur" jodna ho to DB mein badalna padega, sirf catalog.js mein nahi.
+
 ## Aapko bas ye bolna hai
 | Bolo | Claude kya karta hai |
 |---|---|
