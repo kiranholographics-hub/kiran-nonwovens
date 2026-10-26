@@ -4,7 +4,7 @@ import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
 import Body from '../components/Body.jsx';
 import { plainText, updateBySlug } from '../data/content.js';
-import { SITE, VIDEOS, breadcrumbLd } from '../lib.js';
+import { CONTACT, SITE, VIDEOS, breadcrumbLd } from '../lib.js';
 import NotFound from './NotFound.jsx';
 
 const clip = (s, n) => (s.length <= n ? s : `${s.slice(0, n - 1).trimEnd()}…`);
@@ -25,7 +25,11 @@ export default function Update() {
   return (
     <>
       <Seo
-        title={clip(update.title, 46)}
+        title={
+          // The office's city goes in the title when it fits; a long title
+          // keeps its words instead, and the place stays in the schema below.
+          update.title.length <= 44 ? `${update.title} – Jaipur` : clip(update.title, 58)
+        }
         description={description}
         path={path}
         type="article"
@@ -39,14 +43,21 @@ export default function Update() {
             description,
             datePublished: update.publishedAt,
             mainEntityOfPage: `${SITE.url}${path}`,
-            author: { '@type': 'Organization', name: SITE.name, url: SITE.url },
-            publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+            // Every update is news from the Jaipur office, so say where it
+            // happened and who it is from, as local-business pages do.
+            contentLocation: {
+              '@type': 'Place',
+              name: 'Jaipur, Rajasthan, India',
+              address: { '@type': 'PostalAddress', ...CONTACT.addressParts },
+            },
+            author: { '@type': 'Organization', '@id': `${SITE.url}/#organization`, name: SITE.name, url: SITE.url },
+            publisher: { '@type': 'Organization', '@id': `${SITE.url}/#organization`, name: SITE.name, url: SITE.url },
           },
         ]}
       />
       <PageHero
         trail={trail}
-        kicker={`Update · ${update.publishedAt}`}
+        kicker={`Update · Jaipur · ${update.publishedAt}`}
         title={update.title}
         video={VIDEOS.about}
         variant={1}
