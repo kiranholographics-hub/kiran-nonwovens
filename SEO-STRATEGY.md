@@ -55,7 +55,7 @@ local distributor milta hai. Indian exporter ka mauka hai in searches mein:
 ### Mahina 1: Foundation + quick wins
 - [ ] **Google Business Profile** (Jaipur address, category "Nonwoven fabric manufacturer" ya
       jo sabse kareeb mile), photos, har hafte ek post. "Near me" aur Maps ke liye sabse bada lever.
-- [ ] **Bing Webmaster Tools** (Search Console se import, 5 min). Bing = ChatGPT/Copilot search ka base.
+- [x] **Bing Webmaster Tools** (Search Console se import, 5 min). Bing = ChatGPT/Copilot search ka base. Ho gaya 26 Oct: sitemap Success, 73 URLs discovered.
 - [ ] **NAP same everywhere**: naam, address, phone bilkul ek jaisa (LISTINGS.md ki copy).
 - [ ] Profiles: IndiaMART, TradeIndia, ExportersIndia, Alibaba (agar budget ho), LinkedIn
       company page, YouTube channel. Har jagah website link.

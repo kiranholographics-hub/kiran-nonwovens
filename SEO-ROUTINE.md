@@ -137,7 +137,7 @@ Wo ya to screenshot bhejo ya number paste karo.
 Poora 90 din ka plan, India vs world, authority aur AI search: [SEO-STRATEGY.md](SEO-STRATEGY.md).
 
 ## Pehle se ho chuka
-Search Console verified, sitemap (66 URLs), IndexNow, 27 country pages, auto deploy, admin panel.
+Search Console verified, Bing Webmaster Tools (imported from Search Console 26 Oct; sitemap Success, 73 URLs), sitemap, IndexNow, six export region pages, auto deploy, admin panel.
 
 ## Abhi pending (aapki taraf se info chahiye)
 MOQ aur sample policy, lead time, Miracle ki certifications, asli photos/video,
