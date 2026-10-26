@@ -2644,6 +2644,509 @@ export const guides = [
     ],
     relatedGuides: ['carpet-backing-and-underlay-felt', 'gsm-in-nonwoven-fabric', 'polyester-vs-polypropylene-nonwoven'],
   },
+  {
+    slug: 'luggage-bag-support-felt-india',
+    title: 'Luggage and bag support felt: giving a bag its shape',
+    seoTitle: 'Luggage & Bag Support Felt India',
+    description:
+      'Where support felt goes in a bag, case or backpack, how it compares with foam and board, and what to tell a felt supplier about stiffness and finish.',
+    readMins: 6,
+    published: '2026-10-24',
+    intro:
+      'A soft-sided bag holds its shape because of layers the buyer never sees. Needle punched felt is one of the most common of them: it sits between the outer fabric and the lining, gives the panel body, and takes some of the knocks. This guide is for bag, luggage and case makers choosing that layer.',
+    sections: [
+      {
+        h: 'Where the felt goes',
+        table: {
+          head: ['Part of the bag', 'What the felt does'],
+          rows: [
+            ['Front, back and side panels', 'Gives the panel body so it stands up rather than collapses'],
+            ['Base', 'Adds firmness and cushioning where the bag is set down'],
+            ['Laptop and tablet sleeves', 'Cushions the device against knocks'],
+            ['Organiser pockets and dividers', 'Keeps compartments upright and separate'],
+            ['Straps and handles', 'Pads and spreads the load across a wider area'],
+            ['Cases and pouches', 'Lines and protects the contents from scratches'],
+          ],
+        },
+      },
+      {
+        h: 'Felt, foam or board',
+        table: {
+          head: ['', 'Needle punched felt', 'Foam', 'Rigid board'],
+          rows: [
+            ['Shape', 'Firm but flexible', 'Soft, springs back', 'Stiff, holds a flat shape'],
+            ['Sewing', 'Stitches cleanly, holds the seam', 'Can tear at the needle line', 'Hard to stitch through'],
+            ['Bonding and lamination', 'Takes adhesive and heat lamination well', 'Depends on the foam', 'Usually glued, not laminated'],
+            ['Where it suits', 'Panels, bases, dividers, sleeves', 'Padding where softness matters most', 'Hard-wearing bases and frames'],
+          ],
+        },
+        p: [
+          'Many bags use more than one: board in the base, felt in the panels, foam in the laptop sleeve. The table is about where felt earns its place, not a claim that it replaces the others everywhere.',
+        ],
+      },
+      {
+        h: 'How stiffness is set',
+        p: [
+          'A felt gets stiffer as its weight, thickness and density go up, and the fibre and process matter too. Thermal bonded felt, where low-melt fibre is heat-set through the web, is generally firmer for the same weight than a felt that is only needle punched. Both are processes we run, so the felt can be built to the stiffness the panel needs.',
+          'There is no single right GSM for a bag. A small pouch and a cabin case ask for very different panels, so start from a sample of the material you use today, or from the feel you want, and we will match or adjust it. The [GSM guide](/guides/gsm-in-nonwoven-fabric) explains what the number does and does not tell you.',
+        ],
+      },
+      {
+        h: 'Converting it in your factory',
+        list: [
+          'Cut by knife, die or press to your pattern',
+          'Stitched into the panel with the outer fabric and lining',
+          'Laminated or bonded to fabric, PU, PVC or leather',
+          'Embossed where a surface pattern is wanted',
+        ],
+        p: [
+          'Tell us how the felt is cut and joined in your line. A felt that will be heat-laminated, for example, is built differently from one that is only stitched. Our [luggage and bag support felt](/products/industrial/luggage-bag-support-felt) page lists the material in more detail.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We supply the felt in rolls, slit to the width you need, in polyester, PP or blends, from 100 to 1200 GSM, with thickness and colour set per order. We do not make bags, cut components, or the fabrics, foams and boards used alongside the felt.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The product: backpack, luggage, laptop bag, case, pouch or organiser',
+          'Which part the felt goes in, and how stiff or soft it should feel',
+          'A sample of the material you use today, if you have one',
+          'GSM and thickness if you know them, and the colour',
+          'How it is converted: cut, stitched, laminated, bonded or embossed',
+          'Roll width, quantity, and the delivery location',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request. The [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) covers the general details we ask for.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What material is used inside bags to give them shape?',
+        a: 'Needle punched nonwoven felt is commonly used between the outer fabric and the lining to give panels body and structure. Bags often combine it with foam for padding and rigid board for the base.',
+      },
+      {
+        q: 'What GSM felt is used for bags and luggage?',
+        a: 'It depends on the product and the part. A pouch and a cabin case need very different panels. Send a sample of the material you use or describe the feel you want, and we will match it from our 100 to 1200 GSM range.',
+      },
+      {
+        q: 'Is felt or foam better for a laptop bag?',
+        a: 'Many laptop bags use both: foam where softness matters most, felt where the panel needs body and clean stitching. The design decides; we supply the felt.',
+      },
+      {
+        q: 'Can bag support felt be laminated to fabric?',
+        a: 'Yes. It can be laminated or bonded to fabric, PU, PVC or leather, as well as stitched. Tell us the method so the felt is built for it.',
+      },
+      {
+        q: 'Do you supply cut components or finished bags?',
+        a: 'No. We supply felt in rolls, slit to width. Cutting, stitching and assembly are done by the bag maker.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/luggage-bag-support-felt',
+      'industrial/packaging-protective-felt',
+      'industrial/customised-nonwoven-solutions',
+    ],
+    relatedGuides: ['gsm-in-nonwoven-fabric', 'needle-punched-vs-thermal-bonded-nonwoven', 'how-to-request-a-nonwoven-felt-quote'],
+  },
+  {
+    slug: 'packaging-protective-felt-india',
+    title: 'Packaging and protective felt: keeping finished surfaces unmarked',
+    seoTitle: 'Packaging & Protective Felt India',
+    description:
+      'Where protective felt is used in packing and transit, how it compares with bubble wrap and foam, and what to specify for the goods you ship.',
+    readMins: 6,
+    published: '2026-10-24',
+    intro:
+      'A painted panel, a polished casting or a sheet of glass can reach a customer intact but scratched, and a scratch is a reject. Protective felt is the soft layer that sits against a finished surface during storage, handling and transport. This guide is for manufacturers and packers choosing it.',
+    sections: [
+      {
+        h: 'Where protective felt is used',
+        list: [
+          'Interleaving between stacked sheets, panels and glass',
+          'Lining crates, trays, bins and returnable packaging',
+          'Wrapping furniture, appliances and machined parts',
+          'Pads on racks, fixtures and trolleys so parts do not rub on metal',
+          'Separators between parts packed in the same box',
+        ],
+        p: [
+          'In most of these the felt is not the whole pack. It is the layer that touches the product, inside a box, crate or stillage that takes the heavier loads.',
+        ],
+      },
+      {
+        h: 'Felt, bubble wrap or foam',
+        table: {
+          head: ['', 'Needle punched felt', 'Bubble wrap', 'Foam sheet (e.g. EPE)'],
+          rows: [
+            ['Contact surface', 'Soft fibres, no plastic film on the product', 'Plastic film', 'Smooth foam'],
+            ['Use', 'Reusable over many trips if kept clean', 'Usually single use', 'Reusable to a point'],
+            ['Converting', 'Cut, stitched, laminated or glued to a tray', 'Cut and taped', 'Cut, glued or moulded'],
+            ['Suits best', 'Scratch and scuff protection, returnable packs', 'Light, one-way shipments', 'Cushioning against impact'],
+          ],
+        },
+        p: [
+          'Felt is mainly about protecting the surface. Where a part is heavy or fragile and needs real shock absorption, the pack usually adds foam or a moulded insert as well.',
+        ],
+      },
+      {
+        h: 'What to choose: weight, thickness, fibre and colour',
+        p: [
+          'A thin, light felt is enough to stop scuffs between flat sheets. A thicker, heavier felt gives more cushioning where parts are heavier or are moved around more. Polyester and PP are both used; the right one depends on the goods, the temperature in storage, and whether the felt is laminated or glued to something else. The [polyester vs polypropylene guide](/guides/polyester-vs-polypropylene-nonwoven) sets out the differences.',
+          'Colour is worth deciding on purpose. Some packers want a light felt that shows dirt so it is changed in time; others want a dark one that looks clean for longer. Both can be made to order.',
+        ],
+      },
+      {
+        h: 'Test it against your own surface',
+        p: [
+          'Finishes differ. Before ordering in volume, put a sample against your actual product, stack and move it the way it travels, and check the surface afterwards. If the result is not right, the GSM, thickness or fibre can change before production; the felt is made to order.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We supply protective felt in rolls, slit to width, from 100 to 1200 GSM, with thickness and colour set per order. We do not make boxes, crates, foam inserts or finished packaging; packers and converters build those with our felt. Details are on the [packaging and protective felt](/products/industrial/packaging-protective-felt) product page.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The goods and their surface finish: painted, polished, glass, wood, plastic',
+          'How the felt is used: interleaving, lining, wrapping or padding',
+          'Single-use or returnable packaging',
+          'GSM and thickness if you know them, otherwise the weight and size of the parts',
+          'Colour, roll width, quantity, and the delivery location',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request. The [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) covers the general details.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is protective felt used for in packaging?',
+        a: 'It is the soft layer that touches a finished surface, used for interleaving stacked sheets and panels, lining crates and trays, wrapping furniture and machined parts, and padding racks and trolleys so parts do not scratch.',
+      },
+      {
+        q: 'Is felt better than bubble wrap?',
+        a: 'For scratch and scuff protection, and for returnable packaging used over many trips, felt is often preferred because it is soft against the surface and reusable. For light one-way shipments, bubble wrap is common. Heavy or fragile parts often need foam as well.',
+      },
+      {
+        q: 'Can packaging felt be reused?',
+        a: 'Yes. Needle punched felt can be reused over many trips if it is kept clean and dry, which is why it is common in returnable crates and trays.',
+      },
+      {
+        q: 'What GSM felt should I use for packaging?',
+        a: 'A light felt is often enough to stop scuffs between flat sheets; heavier felt gives more cushioning for heavier parts. Test a sample against your own product. We produce from 100 to 1200 GSM.',
+      },
+      {
+        q: 'Do you make finished packaging?',
+        a: 'No. We supply felt in rolls, slit to width. Packers and converters make the crates, trays and inserts.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/packaging-protective-felt',
+      'industrial/luggage-bag-support-felt',
+      'industrial/customised-nonwoven-solutions',
+    ],
+    relatedGuides: ['polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric', 'how-to-request-a-nonwoven-felt-quote'],
+  },
+  {
+    slug: 'non-woven-geotextile-hindi',
+    lang: 'hi',
+    title: 'नॉन वोवन जियोटेक्सटाइल: क्या है, कहाँ लगता है और कैसे चुनें',
+    seoTitle: 'नॉन वोवन जियोटेक्सटाइल क्या है – हिंदी गाइड',
+    description:
+      'नॉन वोवन जियोटेक्सटाइल क्या है, सड़क, रेलवे, नाली और नहर में इसका काम क्या है, PP या पॉलिएस्टर कैसे चुनें और ऑर्डर के लिए क्या बताएं। आसान हिंदी में।',
+    readMins: 6,
+    published: '2026-10-25',
+    intro:
+      'सड़क, रेलवे, नाली या नहर के काम में "जियोटेक्सटाइल" शब्द अक्सर सुनने को मिलता है। यह गाइड आसान हिंदी में बताती है कि नॉन वोवन जियोटेक्सटाइल क्या होता है, ज़मीन के नीचे यह क्या काम करता है, और इसे खरीदते समय सप्लायर को क्या जानकारी देनी चाहिए।',
+    sections: [
+      {
+        h: 'नॉन वोवन जियोटेक्सटाइल क्या है',
+        p: [
+          'यह सिंथेटिक रेशों (फाइबर) से बना एक मोटा, कपड़े जैसा रोल होता है। इसे धागों से बुना नहीं जाता। रेशों की परत को हज़ारों सुइयों से बार-बार पंच किया जाता है, जिससे रेशे आपस में उलझकर एक मज़बूत शीट बना लेते हैं। इसी प्रक्रिया को नीडल पंचिंग कहते हैं।',
+          'बुने हुए (वोवन) कपड़े में धागों के बीच सीधे छेद होते हैं, जबकि नॉन वोवन में रेशे हर दिशा में फैले रहते हैं। इसलिए पानी इसमें से आसानी से निकल जाता है, पर मिट्टी के बारीक कण रुक जाते हैं। यही इसकी सबसे बड़ी खूबी है।',
+        ],
+      },
+      {
+        h: 'ज़मीन के नीचे यह क्या काम करता है',
+        table: {
+          head: ['काम', 'मतलब', 'कहाँ'],
+          rows: [
+            ['अलग रखना (Separation)', 'गिट्टी और नीचे की नरम मिट्टी को आपस में मिलने नहीं देता', 'सड़क, रेलवे ट्रैक, पार्किंग'],
+            ['छानना (Filtration)', 'पानी को निकलने देता है, मिट्टी को रोकता है', 'नाली, ड्रेनेज पाइप, दीवार के पीछे'],
+            ['पानी निकालना (Drainage)', 'अपनी मोटाई में से पानी को बहने देता है', 'ढलान, दीवार के पीछे'],
+            ['सुरक्षा (Protection)', 'प्लास्टिक लाइनर (जियोमेम्ब्रेन) को पत्थरों से फटने से बचाता है', 'नहर, तालाब, लैंडफिल'],
+          ],
+        },
+      },
+      {
+        h: 'कहाँ-कहाँ इस्तेमाल होता है',
+        list: [
+          'सड़क निर्माण: नरम मिट्टी के ऊपर गिट्टी डालने से पहले। देखें: [geotextile for road construction](/guides/geotextile-for-road-construction)',
+          'रेलवे ट्रैक: बैलास्ट और नीचे की मिट्टी के बीच। देखें: [railway track guide](/guides/nonwoven-geotextile-for-railway-track-india)',
+          'नाली और ड्रेनेज: पाइप और गिट्टी को मिट्टी से भरने से बचाने के लिए',
+          'नहर और तालाब: लाइनिंग के नीचे और ऊपर सुरक्षा परत। देखें: [canal and pond lining guide](/guides/geotextile-canal-pond-lining-india)',
+          'किनारों और ढलानों पर कटाव रोकने के लिए, और जियोबैग बनाने में',
+        ],
+      },
+      {
+        h: 'PP या पॉलिएस्टर: कौन सा लें',
+        p: [
+          'दोनों तरह के जियोटेक्सटाइल इस्तेमाल होते हैं। PP (पॉलीप्रोपाइलीन) हल्का होता है और आम तौर पर क्षारीय (alkaline) पानी, जैसे ताज़ा कंक्रीट या चूने के पास, बेहतर टिकता है। पॉलिएस्टर ज़्यादा गर्मी सह लेता है। कौन सा लेना है, यह प्रोजेक्ट का डिज़ाइन और साइट की मिट्टी-पानी तय करते हैं। हम दोनों बनाते हैं।',
+        ],
+      },
+      {
+        h: 'GSM कैसे तय होता है',
+        p: [
+          'GSM का मतलब है एक वर्ग मीटर कपड़े का वज़न ग्राम में। ज़्यादा GSM वाला कपड़ा आम तौर पर ज़्यादा मोटा और मज़बूत होता है। पर सही GSM मिट्टी, ऊपर पड़ने वाली गिट्टी के आकार, ट्रैफ़िक या लोड, और बिछाने के तरीके पर निर्भर करता है। इसलिए यह प्रोजेक्ट के डिज़ाइन से तय होता है, अंदाज़े से नहीं।',
+          'अगर आपके टेंडर या स्पेसिफिकेशन में किसी स्टैंडर्ड या नियम का हवाला है, तो उसका मौजूदा संस्करण अपने इंजीनियर से कन्फ़र्म करें और कपड़े से जुड़ी शर्तें हमें भेजें। हम 100 से 1200 GSM तक, 5.0–5.2 मीटर चौड़े रोल में, आपके स्पेसिफिकेशन के अनुसार बनाते हैं। विस्तार से: [GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india)।',
+        ],
+      },
+      {
+        h: 'ऑर्डर या कोटेशन के लिए क्या बताएं',
+        list: [
+          'काम का प्रकार: सड़क, रेलवे, नाली, नहर, तालाब, ढलान या लैंडफिल',
+          'जियोटेक्सटाइल किस काम के लिए है: अलग रखना, छानना या सुरक्षा',
+          'डिज़ाइन की वैल्यू: GSM, मोटाई, पंक्चर ताकत, पानी निकलने की क्षमता',
+          'PP या पॉलिएस्टर, अगर डिज़ाइन में तय है',
+          'रोल की चौड़ाई, कुल मात्रा, और डिलीवरी की जगह',
+        ],
+        p: [
+          'यह जानकारी [enquiry form](/contact#enquiry) से भेजें। सैंपल मांगने पर मिलता है। हमारे उत्पाद: [PP geotextile for civil works](/products/geotextile/pp-geotextile-fabric-for-civil-works) और [drainage and erosion control geotextile](/products/geotextile/drainage-soil-erosion-control-geotextile)। अंग्रेज़ी में पूरी गाइड: [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide)।',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'नॉन वोवन जियोटेक्सटाइल क्या होता है?',
+        a: 'यह सिंथेटिक रेशों से नीडल पंचिंग करके बना मोटा कपड़ा है, जिसे बुना नहीं जाता। इसमें से पानी निकल जाता है पर मिट्टी के बारीक कण रुक जाते हैं, इसलिए इसे सड़क, रेलवे, नाली और नहर के काम में इस्तेमाल किया जाता है।',
+      },
+      {
+        q: 'वोवन और नॉन वोवन जियोटेक्सटाइल में क्या फ़र्क है?',
+        a: 'वोवन धागों से बुना होता है और ज़्यादातर मज़बूती (reinforcement) के लिए इस्तेमाल होता है। नॉन वोवन में रेशे हर दिशा में फैले होते हैं, इसलिए यह छानने, पानी निकालने, अलग रखने और सुरक्षा के लिए बेहतर माना जाता है। हम सिर्फ़ नॉन वोवन बनाते हैं।',
+      },
+      {
+        q: 'सड़क के लिए कितने GSM का जियोटेक्सटाइल चाहिए?',
+        a: 'यह मिट्टी, गिट्टी, ट्रैफ़िक और प्रोजेक्ट के डिज़ाइन पर निर्भर करता है, इसलिए इंजीनियर इसे तय करते हैं। हम 100 से 1200 GSM तक आपके स्पेसिफिकेशन के अनुसार बनाते हैं।',
+      },
+      {
+        q: 'क्या आप जियोमेम्ब्रेन या जियोग्रिड भी देते हैं?',
+        a: 'नहीं। हम नीडल पंच्ड और थर्मल बॉन्डेड नॉन वोवन जियोटेक्सटाइल बनाते हैं। जियोमेम्ब्रेन, जियोग्रिड और वोवन जियोटेक्सटाइल दूसरे सप्लायर से आते हैं।',
+      },
+      {
+        q: 'सैंपल कैसे मिलेगा?',
+        a: 'Enquiry form में अपना काम, GSM, चौड़ाई और मात्रा लिखकर भेजें। सैंपल मांगने पर मिलता है।',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/filter-geo-bag-felt',
+    ],
+    relatedGuides: ['nonwoven-geotextile-guide', 'geotextile-for-road-construction', 'geotextile-gsm-for-road-construction-india'],
+  },
+  {
+    slug: 'geotextile-embankment-soft-soil-india',
+    title: 'Geotextile for embankments on soft soil: what the nonwoven layer does',
+    seoTitle: 'Geotextile for Embankments on Soft Soil India',
+    description:
+      'On soft clay, an embankment needs separation, drainage and sometimes reinforcement. Which of those a nonwoven geotextile does, and which it does not.',
+    readMins: 6,
+    published: '2026-10-26',
+    intro:
+      'Highways, rail lines and bunds often have to cross soft clay, marshy ground or black cotton soil. Building an embankment there raises three different problems: fill sinking into the ground, water that has to get out of the ground, and the risk of the bank sliding. Geosynthetics help with all three, but not the same geosynthetic. This guide sets out where a nonwoven fits.',
+    sections: [
+      {
+        h: 'Three problems, three jobs',
+        table: {
+          head: ['Problem', 'What is needed', 'Typical material'],
+          rows: [
+            ['Fill mixing into soft ground', 'Separation between the ground and the first layer of fill', 'Nonwoven geotextile'],
+            ['Water squeezed out of the clay as it settles', 'A drainage path, kept free of silt', 'Granular blanket wrapped in nonwoven, vertical drains'],
+            ['The bank sliding or spreading', 'Tensile reinforcement at the base', 'High-strength woven geotextile or geogrid'],
+          ],
+        },
+        p: [
+          'We make the first and the filter part of the second. Basal reinforcement is a structural design using high-strength woven fabric or geogrid, which we do not make. A bill of quantities that keeps these apart avoids a separation fabric being asked to hold up a bank.',
+        ],
+      },
+      {
+        h: 'Separation at the base',
+        p: [
+          'The first layer of fill is pushed into soft ground by its own weight and by the plant working on it. Without a barrier, stone and soil mix, the fill loses thickness, and more fill is needed to reach level. A nonwoven laid on the prepared ground keeps the two apart, so the fill placed stays where it is put.',
+          'This is the same separation job described in our [geotextile for road construction guide](/guides/geotextile-for-road-construction), only under a deeper fill and often on wetter ground.',
+        ],
+      },
+      {
+        h: 'Drainage while the ground settles',
+        p: [
+          'As fill goes on, soft clay slowly squeezes out water and settles. Designers often speed this up with a sand or gravel drainage blanket at the base, sometimes with vertical drains pushed into the clay below. That water has to escape without carrying fine soil into the blanket and clogging it.',
+          'A nonwoven geotextile around or under the blanket does the filtering: water passes, silt stays back. The opening size and permeability are chosen against the soil, as in our [drainage and erosion control guide](/guides/geotextile-for-drainage-and-erosion-control).',
+        ],
+      },
+      {
+        h: 'Side slopes and toe',
+        p: [
+          'On the side slopes, the nonwoven is used under stone pitching or turfing to stop rain and floodwater washing the fill out. At the toe, it wraps drains that take water away from the bank. On river and coastal bunds, sand-filled bags made from the same fabric are used for toe protection; see our [geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india).',
+        ],
+      },
+      {
+        h: 'What decides the specification',
+        list: [
+          'The soil: how soft it is, its fines content, and the water table',
+          'The fill and the size of the first stone placed on the fabric',
+          'Construction plant working directly over the fabric',
+          'Whether the fabric also filters, and against which soil',
+        ],
+        p: [
+          'Mass per unit area, puncture strength, opening size and permeability follow from these, so the design sets them. Where your specification cites a standard or code of practice, confirm the current edition with your engineer and send us the clauses that apply to the fabric. We produce to the specification rather than setting design values ourselves.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The work: highway, rail, bund, approach embankment, platform',
+          'The job of the fabric: separation, filtration around a blanket, slope protection',
+          'Design values: GSM, puncture strength, opening size, permeability, polymer',
+          'Roll width suited to the embankment width, total area, and delivery location',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry); samples are available on request. For roll quantities from an area, see [geotextile roll weight and coverage](/guides/geotextile-roll-weight-and-coverage).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why is geotextile used under an embankment on soft soil?',
+        a: 'Mainly to separate the fill from the soft ground so the two do not mix, and to filter water leaving the ground through a drainage blanket. Where the bank also needs reinforcement against sliding, that is done with high-strength woven geotextile or geogrid.',
+      },
+      {
+        q: 'Is nonwoven geotextile strong enough to reinforce an embankment?',
+        a: 'Nonwoven geotextile is used for separation, filtration and drainage, not as the main reinforcement of a high embankment on soft clay. Basal reinforcement is designed separately and uses high-strength woven fabric or geogrid.',
+      },
+      {
+        q: 'Can geotextile be used on black cotton soil?',
+        a: 'Yes. It is commonly used as a separation and drainage layer over expansive soils such as black cotton soil, under roads and embankments. The project design sets the grade.',
+      },
+      {
+        q: 'What GSM geotextile is used for embankments?',
+        a: 'It depends on the soil, the fill, the stone size and the plant working on it, so the design decides. We produce from 100 to 1200 GSM to the specification you send.',
+      },
+      {
+        q: 'Do you supply geogrid or high-strength woven geotextile?',
+        a: 'No. We make needle punched and thermal bonded nonwoven geotextile. Reinforcement materials come from other suppliers, and we quote only our part.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/filter-geo-bag-felt',
+    ],
+    relatedGuides: ['geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control', 'geotextile-roll-weight-and-coverage'],
+  },
+  {
+    slug: 'how-to-install-nonwoven-geotextile',
+    title: 'How to install nonwoven geotextile on site: laying, overlaps and cover',
+    seoTitle: 'How to Install Nonwoven Geotextile on Site',
+    description:
+      'Site steps for laying nonwoven geotextile: preparing the ground, rolling out, overlaps, pinning, placing fill and avoiding damage. General practice, not a spec.',
+    readMins: 6,
+    published: '2026-10-26',
+    intro:
+      'A geotextile that is right on paper can still fail on site: laid over sharp stones, left in the sun for weeks, or opened at the joints when fill is pushed over it. This guide covers the common site steps for nonwoven geotextile. It is general practice; where your project has its own installation specification, that one decides.',
+    sections: [
+      {
+        h: 'Before the rolls arrive',
+        list: [
+          'Check the drawing: where the fabric goes, which way the rolls run, and the overlap or seam the specification asks for',
+          'Plan roll layout against the area, so joints fall where they are easiest to make and waste is low',
+          'Have a dry, flat place to store rolls off the ground, under cover',
+        ],
+        p: [
+          'To work out how many rolls an area needs, see [geotextile roll weight and coverage](/guides/geotextile-roll-weight-and-coverage).',
+        ],
+      },
+      {
+        h: 'Prepare the ground',
+        p: [
+          'Clear roots, large stones and debris, fill holes and ruts, and trim the surface to the level shown on the drawing. Sharp objects left on the ground press into the fabric once fill goes on top. On very soft ground, the engineer may accept some unevenness rather than disturb the soil; follow their instruction.',
+        ],
+      },
+      {
+        h: 'Roll out and overlap',
+        list: [
+          'Unroll the fabric loose and flat, in full contact with the ground, without wrinkles or folds; do not stretch it tight unless the specification says so',
+          'Overlap adjacent rolls by the width the specification sets; softer ground usually calls for wider overlaps, and some projects sew joints instead',
+          'Lap the upstream or uphill roll over the downstream one, so water and fill run over the joint rather than into it',
+          'Lap in the direction the fill will be pushed, so the leading edge is not lifted open',
+        ],
+      },
+      {
+        h: 'Hold it in place',
+        p: [
+          'Wind lifts loose fabric easily. Pins, U-shaped staples, sandbags or a little fill are used to hold edges and overlaps until cover is placed. On slopes, the top edge is usually buried in an anchor trench so the fabric cannot slide down; the trench size comes from the drawing.',
+        ],
+      },
+      {
+        h: 'Place fill without damaging the fabric',
+        list: [
+          'Tip fill onto fill already placed and push it forward over the fabric, rather than tipping directly onto the fabric',
+          'Do not drive vehicles or tracked plant directly on uncovered fabric',
+          'Place the first layer at the thickness the specification sets before compacting',
+          'Do not drop large stone from height onto the fabric',
+        ],
+        p: [
+          'If the fabric is torn or punctured during placing, cover the damaged area with a patch of the same fabric, overlapping it on all sides as for a normal joint, or as the specification sets out.',
+        ],
+      },
+      {
+        h: 'Sunlight and storage',
+        p: [
+          'Synthetic geotextiles weaken under long exposure to sunlight, and polypropylene in particular. Keep rolls wrapped until they are used, unroll only what can be covered soon, and cover laid fabric within the time the specification allows. The [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide) covers how PP and polyester compare.',
+        ],
+      },
+      {
+        h: 'Ordering to suit the site',
+        p: [
+          'Tell us the roll width and length that suit your crew and your layout; we produce rolls up to 5.0–5.2 m wide and can slit narrower. Send the application, GSM and quantity through the [enquiry form](/contact#enquiry); samples are available on request.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How much should geotextile rolls overlap?',
+        a: 'Your project specification sets it. Overlaps are generally wider on soft ground and where the fabric is not otherwise fixed, and some projects sew joints instead of overlapping. Lap the uphill or upstream roll over the downstream one.',
+      },
+      {
+        q: 'Should geotextile be pulled tight when laying?',
+        a: 'For separation and filtration work it is normally laid flat and loose, in full contact with the ground, without wrinkles. Follow the specification where it says otherwise.',
+      },
+      {
+        q: 'Can trucks drive on geotextile?',
+        a: 'Not directly on uncovered fabric. Fill is usually pushed forward over the fabric from fill already placed, and vehicles run on the fill once it is at the specified thickness.',
+      },
+      {
+        q: 'How long can geotextile be left in the sun?',
+        a: 'As short a time as possible. Synthetic geotextile, especially polypropylene, weakens under long sun exposure, so the project specification normally limits how long it can stay uncovered. Keep rolls wrapped until use.',
+      },
+      {
+        q: 'How is a torn geotextile repaired on site?',
+        a: 'Usually by laying a patch of the same fabric over the damage, overlapping it on all sides as for a normal joint, unless the specification sets another method.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['geotextile-roll-weight-and-coverage', 'nonwoven-geotextile-guide', 'geotextile-for-road-construction'],
+  },
 ];
 
 export const guideBySlug = (slug) => guides.find((g) => g.slug === slug) || null;

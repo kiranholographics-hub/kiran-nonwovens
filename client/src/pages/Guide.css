@@ -198,3 +198,8 @@
 .guide__more a:hover {
   color: var(--rust);
 }
+
+/* Carries the page language (lang="hi" etc.) without adding a layout box. */
+.guide-lang {
+  display: contents;
+}

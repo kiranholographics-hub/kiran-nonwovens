@@ -71,15 +71,15 @@ Queue (tick when done):
 - [x] geotextile for canal and pond lining India (22 Oct)
 - [x] geotextile for landfill and mining India (23 Oct)
 - [x] automotive felt for OEM interiors India (headliner, hood insulator, carpet underlay) (23 Oct)
-- [ ] luggage and bag support felt India
-- [ ] packaging and protective felt India
-- [ ] flooring underlay felt India
-- [ ] Hindi guide: non woven geotextile (test)
+- [x] luggage and bag support felt India (24 Oct)
+- [x] packaging and protective felt India (24 Oct)
+- [x] flooring underlay felt India: SKIPPED (25 Oct), already covered by /guides/carpet-backing-and-underlay-felt (underlay under carpet, laminate, vinyl, wood).
+- [x] Hindi guide: non woven geotextile (test) (25 Oct) -> /guides/non-woven-geotextile-hindi. Guide.jsx now takes a `lang` field on a guide (sets lang attr, inLanguage, Hindi labels, numbered section ids). Watch Search Console for this URL before writing more Hindi pages.
 Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make or sell it before writing; ask in the PR, skip until answered.
 - [x] geotextile behind retaining walls (drainage and filter layer) India (25 Oct)
-- [ ] geotextile for embankments and highways on soft soil India
-- [ ] how to install nonwoven geotextile on site (laying, overlaps, anchoring)
-- [ ] geotextile for French drains and subsurface drains
+- [x] geotextile for embankments and highways on soft soil India (26 Oct)
+- [x] how to install nonwoven geotextile on site (laying, overlaps, anchoring) (26 Oct)
+- [x] geotextile for French drains and subsurface drains: SKIPPED (26 Oct), already covered by /guides/geotextile-for-drainage-and-erosion-control.
 - [ ] geotextile for paver block and interlocking tile bases
 - [ ] geotextile for gabion and stone pitching backing
 - [ ] geotextile for hill slope protection and landslide repair India

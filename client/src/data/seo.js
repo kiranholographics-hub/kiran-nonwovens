@@ -281,6 +281,9 @@ export function productFaq(product) {
       '[landfill and mining guide](/guides/geotextile-landfill-mining-india)',
       '[retaining wall drainage guide](/guides/geotextile-retaining-wall-drainage-india)',
       '[roll weight and coverage guide](/guides/geotextile-roll-weight-and-coverage)',
+      '[embankments on soft soil guide](/guides/geotextile-embankment-soft-soil-india)',
+      '[installation guide](/guides/how-to-install-nonwoven-geotextile)',
+      '[Hindi guide to nonwoven geotextile](/guides/non-woven-geotextile-hindi)',
     ])}.`,
     automotive: `Read our ${sentenceList([
       '[automotive NVH felt guide](/guides/automotive-nvh-felt-guide)',
@@ -293,6 +296,8 @@ export function productFaq(product) {
       'Read our guides to [felt grow bag fabric](/guides/felt-grow-bag-fabric-nonwoven-india) and [needle punched exhibition carpet rolls](/guides/exhibition-carpet-needle-punched-nonwoven-india).',
     carpet:
       'Read our guide to [needle punched exhibition carpet rolls](/guides/exhibition-carpet-needle-punched-nonwoven-india) and the [carpet backing and flooring underlay felt guide](/guides/carpet-backing-and-underlay-felt).',
+    luggage: 'Read our [luggage and bag support felt guide](/guides/luggage-bag-support-felt-india).',
+    packaging: 'Read our [packaging and protective felt guide](/guides/packaging-protective-felt-india).',
     shoulderPad:
       'Read our [shoulder pad nonwoven fabric guide](/guides/shoulder-pad-nonwoven-fabric-india) and the [footwear and apparel nonwoven guide](/guides/nonwoven-fabric-for-footwear-and-apparel).',
     'apparel-footwear':
@@ -308,6 +313,10 @@ export function productFaq(product) {
           ? 'feltColour'
           : product.slug === 'carpet-backing-felt'
             ? 'carpet'
+          : product.slug === 'luggage-bag-support-felt'
+            ? 'luggage'
+          : product.slug === 'packaging-protective-felt'
+            ? 'packaging'
             : product.category
   ];
   if (guideLink) {
