@@ -75,6 +75,7 @@ Queue (tick when done):
 - [x] packaging and protective felt India (24 Oct)
 - [x] flooring underlay felt India: SKIPPED (25 Oct), already covered by /guides/carpet-backing-and-underlay-felt (underlay under carpet, laminate, vinyl, wood).
 - [x] Hindi guide: non woven geotextile (test) (25 Oct) -> /guides/non-woven-geotextile-hindi. Guide.jsx now takes a `lang` field on a guide (sets lang attr, inLanguage, Hindi labels, numbered section ids). Watch Search Console for this URL before writing more Hindi pages.
+- [x] airlay vs needle punch (Search Console query, 26 Oct) (26 Oct) -> /guides/airlay-vs-needle-punch-nonwoven
 Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make or sell it before writing; ask in the PR, skip until answered.
 - [x] geotextile behind retaining walls (drainage and filter layer) India (25 Oct)
 - [x] geotextile for embankments and highways on soft soil India (26 Oct)
