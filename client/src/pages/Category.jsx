@@ -60,6 +60,9 @@ export default function Category() {
         video={areaVideo(area.slug, area.name)}
         variant={2}
       >
+        <Link to="/contact#enquiry" className="btn btn--light">
+          Get quote
+        </Link>
         <Link to={`/business-areas/${area.slug}`} className="btn btn--ghost-light">
           See the {area.name} business area
         </Link>
