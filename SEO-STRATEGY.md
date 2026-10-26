@@ -53,9 +53,12 @@ local distributor milta hai. Indian exporter ka mauka hai in searches mein:
 ## 3. 90 din ka plan
 
 ### Mahina 1: Foundation + quick wins
-- [ ] **Google Business Profile** (Jaipur address, category "Nonwoven fabric manufacturer" ya
-      jo sabse kareeb mile), photos, har hafte ek post. "Near me" aur Maps ke liye sabse bada lever.
-- [ ] **Bing Webmaster Tools** (Search Console se import, 5 min). Bing = ChatGPT/Copilot search ka base.
+- [ ] **Google Business Profile**: BANA DIYA 26 Oct (naam "Kiran Nonwovens", category Textile
+      Exporter, 221-C Frontier Colony, Adarsh Nagar office, phone, website). **VERIFICATION BAAKI**:
+      office par board lagne ke baad phone se video verification ("my business" search > Get verified).
+      Naya profile dobara NAHI banana. Verify hone par profile link schema `sameAs` mein jodna.
+      Phir photos, har hafte ek post, buyers se reviews. "Near me" aur Maps ke liye sabse bada lever.
+- [x] **Bing Webmaster Tools** (Search Console se import, 5 min). Bing = ChatGPT/Copilot search ka base. Ho gaya 26 Oct: sitemap Success, 73 URLs discovered.
 - [ ] **NAP same everywhere**: naam, address, phone bilkul ek jaisa (LISTINGS.md ki copy).
 - [ ] Profiles: IndiaMART, TradeIndia, ExportersIndia, Alibaba (agar budget ho), LinkedIn
       company page, YouTube channel. Har jagah website link.
