@@ -2294,7 +2294,7 @@ export const guides = [
     title: 'Geotextile roll weight and coverage: how to calculate it from GSM, width and length',
     seoTitle: 'Geotextile Roll Weight: GSM x Width x Length',
     description:
-      'Work out the weight and area of a geotextile roll from its GSM, width and length, how many square metres a tonne covers, and what it means for container loading.',
+      'Work out the weight and area of a geotextile roll from its GSM, width and length, the square metres per tonne, and what it means for container loading.',
     readMins: 5,
     published: '2026-10-25',
     intro:

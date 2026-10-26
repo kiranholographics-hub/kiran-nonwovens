@@ -21,7 +21,7 @@ export const PAGE_SEO = {
   products: {
     title: 'Nonwoven Felt & Geotextile Products',
     description:
-      'The full Kiran Nonwovens range: geotextiles, automotive felt, apparel and footwear nonwovens and industrial felt. Needle punched or thermal bonded, 100–1200 GSM.',
+      'The Kiran Nonwovens range: geotextiles, automotive felt, apparel and footwear nonwovens and industrial felt. Needle punched or thermal bonded, 100–1200 GSM.',
   },
   about: {
     title: 'About Us: Nonwoven Felt Manufacturer',
@@ -122,6 +122,10 @@ export const CATEGORY_COPY = {
         q: 'Can I choose GSM, thickness and colour?',
         a: 'Yes. GSM, thickness, width and colour are customised to each design and production line.',
       },
+      {
+        q: 'Can you match the fabric we use today?',
+        a: 'Yes. Send your target weight and thickness, or a sample of your current fabric, and we will match it.',
+      },
     ],
   },
   industrial: {
@@ -142,6 +146,10 @@ export const CATEGORY_COPY = {
       {
         q: 'Is recycled fibre available?',
         a: 'Yes. Our fibre range includes PP (virgin and recycled), alongside polyester, viscose and custom blends.',
+      },
+      {
+        q: 'Can I get a sample before ordering?',
+        a: 'Yes, samples are available on request. Send the application and the GSM and width you have in mind.',
       },
     ],
   },
