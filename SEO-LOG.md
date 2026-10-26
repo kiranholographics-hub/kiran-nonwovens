@@ -22,7 +22,7 @@ build uses the real domain (checked live 26 Oct).
 - [ ] Domain email (e.g. export@kirannonwovens.com) instead of Gmail
 - [ ] Real proof for the site: factory/machine photos, test reports, certifications if held, GST/IEC
 - [x] MOQ, lead time, packing details: answered 26 Oct, see OWNER_INPUTS.md section 13
-- [ ] Confirm: 50 m / 100 m standard roll lengths with other lengths on request? Free sample "according to location" means what?
+- [x] Confirmed 26 Oct: standard roll 50 m; samples free everywhere, delivery time depends on location
 
 ## On-page check progress
 - 26 Oct: all 73 built pages scanned by script (one H1, title, description, canonical, alt,

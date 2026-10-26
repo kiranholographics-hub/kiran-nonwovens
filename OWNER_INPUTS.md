@@ -133,14 +133,14 @@ What the owner sent, word for word:
 How the site will say it:
 - MOQ: "agreed per order" (no fixed minimum stated).
 - Lead time: "usually dispatched in 4–5 days after the order is confirmed".
-- Roll length: 50 m or 100 m rolls. **Confirm:** are these the standard lengths with
-  other lengths on request? The site currently says roll length is set for each order.
+- Roll length: standard roll is 50 m (owner corrected, 26 Oct: "roll length 50 m").
+  The product document still says roll length can be customised; those lines stay
+  unless the owner says otherwise.
 - Packing: poly bag on a paper core, or HDPE wrap.
-- Samples: free. **Confirm:** does "according to location" mean the sample is free but
-  courier is charged for some countries, or that free samples are only for some
-  places (for example India only)?
+- Samples: free everywhere; how long a sample takes to arrive depends on the buyer's
+  location (owner, 26 Oct: "Free h har jgh sample time user ke according lgega").
 
-Not on the site until both points are confirmed.
+All points confirmed; ready to use on product pages, FAQs and the RFQ guide.
 
 ---
 
