@@ -66,6 +66,7 @@ export const guides = [
         h: 'What Kiran Nonwovens makes',
         p: [
           'Kiran Nonwovens produces both needle punched and thermal bonded nonwovens, from 100 to 1200 GSM in roll widths of 5.0–5.2 m. Needle punching is the process behind our [geotextiles](/products/geotextile), automotive felt and most of the range; see [how it is made](/manufacturing) for the manufacturing capability.',
+          'Seen "airlay" listed next to "needle punched"? Airlay is a way of forming the web before it is bonded, not a rival to needle punching; our [airlay vs needle punch guide](/guides/airlay-vs-needle-punch-nonwoven) explains.',
         ],
       },
     ],
@@ -98,9 +99,9 @@ export const guides = [
   {
     slug: 'gsm-in-nonwoven-fabric',
     title: 'GSM in nonwoven fabric: what it means and how to choose',
-    seoTitle: 'GSM in Nonwoven Fabric: How to Choose Weight',
+    seoTitle: 'What Is GSM in Nonwoven Fabric?',
     description:
-      'What GSM means for nonwoven felt and geotextile, how it relates to thickness and density, and how to specify the right weight for your job.',
+      'GSM means grams per square metre. What it tells you about nonwoven felt and geotextile, why it is not thickness, and how to pick the right GSM.',
     readMins: 4,
     intro:
       'GSM is the first number on almost every nonwoven enquiry, and the one most often misunderstood. Here is what it measures, what it does not, and how to specify it so the quote you receive matches the material you need.',
@@ -172,9 +173,9 @@ export const guides = [
   {
     slug: 'nonwoven-geotextile-guide',
     title: 'Nonwoven geotextile: functions, uses and how to specify',
-    seoTitle: 'Nonwoven Geotextile: Functions and Uses',
+    seoTitle: 'Non Woven Geotextile Uses and Functions',
     description:
-      'What a needle punched nonwoven geotextile does — separation, filtration, drainage, protection — where it is used, and what to specify when you order.',
+      'Uses of non woven geotextile in roads, railways, drains, walls, canals and landfills, the five jobs it does, and what to specify when you order.',
     readMins: 6,
     intro:
       'A nonwoven geotextile is a permeable fabric laid in or on the ground to make a structure work better and last longer. This guide covers the jobs it does, where it is used, and the details to settle before you order.',
@@ -200,10 +201,24 @@ export const guides = [
         ],
       },
       {
-        h: 'Where it is used',
+        h: 'Uses of non woven geotextile',
+        table: {
+          head: ['Use', 'Main job', 'Read more'],
+          rows: [
+            ['Roads and pavements', 'Separation, filtration', 'Geotextile for road construction'],
+            ['Railway track', 'Separation under ballast', 'Railway track guide'],
+            ['Embankments on soft soil', 'Separation, drainage', 'Embankments guide'],
+            ['Drains and pipe wrapping', 'Filtration', 'Drainage and erosion control guide'],
+            ['Behind retaining walls', 'Filtration, drainage', 'Retaining wall drainage guide'],
+            ['Canals and ponds', 'Protecting the liner', 'Canal and pond lining guide'],
+            ['Landfills and mines', 'Protection, filtration', 'Landfill and mining guide'],
+            ['Geobags for river and coast', 'Containment, filtration', 'Geobag fabric guide'],
+            ['Buried pipes and cables', 'Protection', 'Pipeline and cable protection geotextile'],
+          ],
+        },
         p: [
-          'Under roads, railways, embankments and pavement subgrades, our [PP geotextile for civil works](/products/geotextile/pp-geotextile-fabric-for-civil-works) provides separation and filtration. Around perforated pipes, behind retaining walls and on slopes, [drainage and erosion control geotextile](/products/geotextile/drainage-soil-erosion-control-geotextile) lets water flow while retaining soil.',
-          'Buried services need a different job done: [pipeline and cable protection geotextile](/products/geotextile/pipeline-cable-protection-geotextile) cushions them against puncture and abrasion. And the same needle punched felt, made for air rather than soil, becomes [filter geo bag felt](/products/geotextile/filter-geo-bag-felt) for dust-collection systems.',
+          'Each use has its own guide: [roads](/guides/geotextile-for-road-construction), [railway track](/guides/nonwoven-geotextile-for-railway-track-india), [embankments on soft soil](/guides/geotextile-embankment-soft-soil-india), [drains and slopes](/guides/geotextile-for-drainage-and-erosion-control), [retaining walls](/guides/geotextile-retaining-wall-drainage-india), [canals and ponds](/guides/geotextile-canal-pond-lining-india), [landfills and mines](/guides/geotextile-landfill-mining-india) and [geobags](/guides/geobag-fabric-nonwoven-geotextile-india). For laying it on site, see [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile).',
+          'Our products for these uses: [PP geotextile for civil works](/products/geotextile/pp-geotextile-fabric-for-civil-works) for separation and filtration under roads, railways and embankments; [drainage and erosion control geotextile](/products/geotextile/drainage-soil-erosion-control-geotextile) for drains, walls and slopes; and [pipeline and cable protection geotextile](/products/geotextile/pipeline-cable-protection-geotextile) for buried services.',
         ],
       },
       {
@@ -256,9 +271,9 @@ export const guides = [
   {
     slug: 'polyester-vs-polypropylene-nonwoven',
     title: 'Polyester vs polypropylene nonwoven felt: which fibre to use',
-    seoTitle: 'Polyester vs Polypropylene Nonwoven Felt',
+    seoTitle: 'Polypropylene vs Polyester Felt Compared',
     description:
-      'Compare polyester (PET) and polypropylene (PP) nonwoven felt on weight, heat, chemical resistance and recycled options — and pick the right fibre.',
+      'PP or polyester felt? A side-by-side table on weight, heat, chemicals and recycled fibre, and a simple way to pick the right one for your job.',
     readMins: 5,
     intro:
       'Two fibres cover most nonwoven felt and geotextile: polyester and polypropylene. They look similar on a roll but behave differently in heat, chemicals and sunlight. Here is how they compare, and where viscose and blends fit.',
@@ -1238,9 +1253,9 @@ export const guides = [
   {
     slug: 'geotextile-gsm-for-road-construction-india',
     title: 'Which GSM of nonwoven geotextile for road construction in India?',
-    seoTitle: 'Geotextile GSM for Road Construction India',
+    seoTitle: 'Which GSM Geotextile for Roads in India?',
     description:
-      'How to choose the GSM of a needle punched nonwoven geotextile for roads in India: what GSM tells you, what it does not, and what else to put in the specification.',
+      'Which GSM nonwoven geotextile for road work in India: indicative ranges, why heavier is not always better, and what else goes in the specification.',
     readMins: 6,
     published: '2026-10-16',
     intro:
@@ -3146,6 +3161,97 @@ export const guides = [
       'geotextile/pipeline-cable-protection-geotextile',
     ],
     relatedGuides: ['geotextile-roll-weight-and-coverage', 'nonwoven-geotextile-guide', 'geotextile-for-road-construction'],
+  },
+  {
+    slug: 'airlay-vs-needle-punch-nonwoven',
+    title: 'Airlay vs needle punch: two different steps, not two rival fabrics',
+    seoTitle: 'Airlay vs Needle Punch Nonwoven',
+    description:
+      'Airlay is how a fibre web is formed; needle punching is how it is bonded. What each step does, how airlay compares with carding, and what to ask a supplier.',
+    readMins: 5,
+    published: '2026-10-26',
+    intro:
+      'Buyers often see "airlay" and "needle punched" listed as if they were competing products. They are not. Making a nonwoven takes two main steps: forming fibres into a web, then bonding that web into fabric. Airlay is a way of doing the first step. Needle punching is a way of doing the second. This guide untangles the two.',
+    sections: [
+      {
+        h: 'Step one forms the web, step two bonds it',
+        table: {
+          head: ['Step', 'What happens', 'Common methods'],
+          rows: [
+            ['Web forming', 'Loose fibres are laid into an even sheet, or batt', 'Carding with cross-lapping, airlay'],
+            ['Bonding', 'The batt is locked into a fabric', 'Needle punching, thermal bonding'],
+          ],
+        },
+        p: [
+          'So an "airlay" fabric still has to be bonded, often by needle punching or thermal bonding, and a "needle punched" fabric still had to be formed, often by carding or airlay. The better comparison is airlay against carding, and needle punching against thermal bonding.',
+        ],
+      },
+      {
+        h: 'Airlay and carding compared',
+        table: {
+          head: ['', 'Carding and cross-lapping', 'Airlay'],
+          rows: [
+            ['How fibres are laid', 'Combed into thin webs, then layered back and forth', 'Blown by air onto a moving screen'],
+            ['Fibre direction', 'Mostly along and across the line, set by the lapping', 'More random, so properties are more even in all directions'],
+            ['Batt it suits', 'A wide range of weights and fine, uniform webs', 'Thick, high-loft batts'],
+            ['Fibre it handles', 'Staple fibre of suitable length for the card', 'Often tolerant of shorter and mixed fibre'],
+          ],
+        },
+        p: [
+          'These are general tendencies of the two methods; actual results depend on the line and the fibre. Airlay should also not be confused with "airlaid", a different product, usually made from cellulose pulp with binders, used mainly in hygiene goods.',
+        ],
+      },
+      {
+        h: 'Needle punching and thermal bonding compared',
+        p: [
+          'Needle punching locks fibres together by driving barbed needles through the batt many times, so the fibres tangle mechanically. Thermal bonding uses low-melt fibre in the blend and heat, so fibres fuse where they cross. Needle punching tends to give a denser, tougher felt; thermal bonding is often used for lofty, resilient wadding and for felts that are moulded.',
+          'Our [needle punched vs thermal bonded guide](/guides/needle-punched-vs-thermal-bonded-nonwoven) goes through the difference in detail.',
+        ],
+      },
+      {
+        h: 'Which matters for your product',
+        list: [
+          'Thick, high-loft insulation or padding: ask how the web is formed as well as how it is bonded',
+          'Dense, tough felt for geotextile, filtration or industrial use: the bonding step and the needling density usually matter most',
+          'Moulded parts: whether the felt carries low-melt fibre for thermal bonding',
+          'Recycled or mixed fibre: whether the line can process it evenly',
+        ],
+        p: [
+          'In every case, the properties you need (GSM, thickness, density, strength, loft) are what to specify. The process is how a supplier gets there; judge it on a sample.',
+        ],
+      },
+      {
+        h: 'What we make',
+        p: [
+          'We make needle punched and thermal bonded nonwovens, from carded webs, in polyester, PP and blends, from 100 to 1200 GSM and up to 5.0–5.2 m wide. We do not run airlay lines and do not make airlaid pulp products. If your product needs a property you associate with airlay, send the target values and a sample, and we will tell you plainly whether our route can match it.',
+          'Send it through the [enquiry form](/contact#enquiry). For the different nonwoven processes made in India, see [nonwoven manufacturers in India](/guides/nonwoven-manufacturers-in-india).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between airlay and needle punch?',
+        a: 'Airlay is a web-forming method: fibres are blown by air into a batt. Needle punching is a bonding method: barbed needles tangle the fibres of a batt into a fabric. A fabric can be airlaid and then needle punched, so they are steps, not alternatives.',
+      },
+      {
+        q: 'Is airlay the same as airlaid?',
+        a: 'No. Airlay usually refers to forming a batt of staple fibre by air, which is then needle punched or thermally bonded. Airlaid usually refers to a pulp-based product with binders, used mainly in hygiene goods.',
+      },
+      {
+        q: 'Is airlay better than carding?',
+        a: 'Neither is better in general. Airlay tends to suit thick, high-loft batts with more even properties in all directions; carding with cross-lapping suits a wide range of weights and fine, uniform webs. The product decides.',
+      },
+      {
+        q: 'Do you make airlay nonwovens?',
+        a: 'No. We make needle punched and thermal bonded nonwovens from carded webs. Send your target properties and a sample, and we will say plainly whether our route can match them.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/customised-nonwoven-solutions',
+      'automotive/acoustic-thermal-insulation-felt',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+    ],
+    relatedGuides: ['needle-punched-vs-thermal-bonded-nonwoven', 'nonwoven-manufacturers-in-india', 'gsm-in-nonwoven-fabric'],
   },
 ];
 

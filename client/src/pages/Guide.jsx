@@ -154,7 +154,7 @@ export default function Guide() {
                     ))}
                   </ul>
                 ) : null}
-                {s.list && s.p
+                {(s.list || s.table) && s.p
                   ? s.p.map((t) => (
                       <p key={t.slice(0, 40)}>
                         <RichText text={t} />
