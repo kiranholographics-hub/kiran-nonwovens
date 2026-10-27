@@ -4,9 +4,10 @@ Roz subah 10 baje Claude yaad dilayega aur aaj ki list dega. Kul 20–30 minute.
 Claude ka apna kaam alag hai: Claude ko bolo **"aaj ka seo"** (KIRAN-SEO-PLAYBOOK.md).
 
 ## Har din (sab dino)
-1. **Request indexing (5 min):** Claude jo links de, unhe Search Console mein daalo
-   (https://search.google.com/search-console → upar search box mein link → Enter →
-   **Request indexing**). Ek din mein 10 tak.
+1. **Request indexing:** ye Claude roz subah aapke Chrome se khud karta hai (27 Oct se).
+   Bas Chrome khula rakho aur Claude extension juda rahe. Agar Chrome juda na ho, to
+   Claude links dega: https://search.google.com/search-console → https://kirannonwovens.com/
+   chuno → upar search box mein link → Enter → **Request indexing**.
 2. **Update (5 min, agar asli khabar ho):** Claude ko bhejo **"update: <ek line> + photo"**
    (dispatch, naya product, machine, sample bheja). Claude text likhega, aap /hq > Updates
    mein paste karo. Sirf sach; client ka naam unki marzi se.
