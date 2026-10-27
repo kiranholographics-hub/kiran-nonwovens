@@ -55,7 +55,16 @@ build uses the real domain (checked live 26 Oct).
   filter-geo-bag-felt. One H1, titles 54–59, descriptions 143–155, link to /products/geotextile,
   2+ guides, enquiry form. No fixes needed.
 - Sitemap 73 URLs; robots blocks only /hq.
-- Not checked: the new Ordering tab was not viewed in a browser before deploy (check live).
+- Not checked: the new Ordering tab was not viewed in a browser before deploy (checked live after merge: OK).
+- Search Console (Claude via the owner's Chrome): Request indexing for 7 changed pages
+  (pp-geotextile, roll-weight guide, /india, quote guide, drainage geotextile, automotive
+  needle punched felt, carpet backing felt). Findings:
+  - NOT indexed yet ("Discovered - currently not indexed"): /products/geotextile/pp-geotextile-fabric-for-civil-works
+    and /products/automotive/automotive-needle-punched-felt. Main product pages; recheck next Monday.
+  - Product pages show "Product snippets: 1 invalid item". Cause: Product schema has no offers,
+    review or aggregateRating (no prices are published, by design). Does not block indexing.
+    Thursday (schema day): decide whether to keep Product markup as is or change it; never add a fake price or review.
+  - Sitemap: read 25 Oct, Success, 67 discovered (73 now). Overview: 87 indexed, 48 not indexed (includes old URLs).
 
 ## 26 Oct 2026 (Monday, second session: playbook day 1)
 - Build: OK, 73 pages, smoke passed, lint clean on changed files.
