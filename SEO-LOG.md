@@ -21,12 +21,41 @@ build uses the real domain (checked live 26 Oct).
 - [ ] Go-ahead before a test enquiry is sent through the contact form
 - [ ] Domain email (e.g. export@kirannonwovens.com) instead of Gmail
 - [ ] Real proof for the site: factory/machine photos, test reports, certifications if held, GST/IEC
-- [ ] MOQ, lead time, packing details (needed for the Tuesday product-page upgrades)
+- [x] MOQ, lead time, packing details: answered 26 Oct, see OWNER_INPUTS.md section 13
+- [x] Confirmed 26 Oct: standard roll 50 m; samples free everywhere, delivery time depends on location
 
 ## On-page check progress
 - 26 Oct: all 73 built pages scanned by script (one H1, title, description, canonical, alt,
   related links, enquiry link). Results in the 26 Oct entry below. Next: manual read of 3 pages a
   day for content quality, starting with the 16 product pages.
+- 27 Oct: products/geotextile/pp-geotextile-fabric-for-civil-works,
+  drainage-soil-erosion-control-geotextile, filter-geo-bag-felt
+- Next: products/geotextile/pipeline-cable-protection-geotextile, then automotive products.
+
+## Product page upgrades (Tuesdays)
+- 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
+
+## 27 Oct 2026 (Tuesday: product page upgrade)
+- Build: OK, 73 pages, smoke passed, lint clean on changed files.
+- Ordering terms on the site (owner, 26 Oct; OWNER_INPUTS.md §13), from one constant
+  `ORDERING` in client/src/data/catalog.js. The live API cannot override it, so the terms
+  stay after the page loads products from MongoDB:
+  - Every product page: roll length row in the spec table now "50 m standard; other lengths
+    on request"; new "Ordering" tab (minimum order, lead time 4–5 days, roll length, packing,
+    free samples); new FAQ "minimum order and lead time"; sample FAQ says samples are free.
+    Product schema gets a "Roll length" property.
+  - /india FAQ: roll length, free samples, new "How quickly can you dispatch" question.
+  - Guides: "length set to your order" replaced with the 50 m standard roll (5 guides); sample
+    answers in the geotextile and RFQ guides now say free. Roll weight guide: new "Our standard
+    50 m roll" section (250/260 m², weights at 100–600 GSM) and a 50 m FAQ.
+- Upgrade: /products/geotextile/pp-geotextile-fabric-for-civil-works gets four buyer FAQs
+  (GSM for roads, m² per roll, cutting narrower, virgin vs recycled PP), each linking a guide.
+  Built from facts already on the site; no new claims.
+- On-page (manual): pp-geotextile-fabric-for-civil-works, drainage-soil-erosion-control-geotextile,
+  filter-geo-bag-felt. One H1, titles 54–59, descriptions 143–155, link to /products/geotextile,
+  2+ guides, enquiry form. No fixes needed.
+- Sitemap 73 URLs; robots blocks only /hq.
+- Not checked: the new Ordering tab was not viewed in a browser before deploy (check live).
 
 ## 26 Oct 2026 (Monday, second session: playbook day 1)
 - Build: OK, 73 pages, smoke passed, lint clean on changed files.

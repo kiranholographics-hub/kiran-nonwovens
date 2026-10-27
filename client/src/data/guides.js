@@ -249,7 +249,7 @@ export const guides = [
       },
       {
         q: 'What roll widths do you supply?',
-        a: 'Roll widths of 5.0–5.2 m, with roll length, GSM and thickness set to the project’s requirement.',
+        a: 'Roll widths of 5.0–5.2 m, a standard roll length of 50 m (other lengths on request), and GSM and thickness set to the project’s requirement.',
       },
       {
         q: 'Should a geotextile be covered after installation?',
@@ -257,7 +257,7 @@ export const guides = [
       },
       {
         q: 'Can I get a geotextile sample before ordering?',
-        a: 'Yes, samples are available on request. Send the application and the GSM and width you have in mind through the enquiry form.',
+        a: 'Yes, samples are free. Send the application and the GSM and width you have in mind through the enquiry form.',
       },
     ],
     relatedProducts: [
@@ -481,7 +481,7 @@ export const guides = [
       {
         h: 'Try a sample before a bulk order',
         p: [
-          'Samples are available on request, so you can test the material in your own process — cutting, stitching, laminating, moulding, embossing, die-cutting or bonding — before you commit to a volume.',
+          'Samples are free, so you can test the material in your own process — cutting, stitching, laminating, moulding, embossing, die-cutting or bonding — before you commit to a volume.',
         ],
       },
       {
@@ -518,7 +518,7 @@ export const guides = [
       },
       {
         q: 'Do you supply samples?',
-        a: 'Yes, samples are available on request so you can try the material in your own process before a bulk order.',
+        a: 'Yes, samples are free, sent to any location, so you can try the material in your own process before a bulk order.',
       },
       {
         q: 'Can you make nonwoven felt to my GSM and width?',
@@ -2314,7 +2314,7 @@ export const guides = [
       {
         h: 'Worked examples: 100 m rolls',
         p: [
-          'These are nominal fabric weights for a roll 100 m long. Our rolls are 5.0–5.2 m wide and can be cut narrower; length is set to your order.',
+          'These are nominal fabric weights for a roll 100 m long. Our rolls are 5.0–5.2 m wide and can be cut narrower. Our standard roll is 50 m long (other lengths on request); the next section works it out for 50 m.',
         ],
         list: [
           '100 GSM: 50 kg at 5.0 m wide, 52 kg at 5.2 m wide',
@@ -2323,6 +2323,19 @@ export const guides = [
           '300 GSM: 150 kg at 5.0 m wide, 156 kg at 5.2 m wide',
           '400 GSM: 200 kg at 5.0 m wide, 208 kg at 5.2 m wide',
           '600 GSM: 300 kg at 5.0 m wide, 312 kg at 5.2 m wide',
+        ],
+      },
+      {
+        h: 'Our standard 50 m roll',
+        p: [
+          'A 50 m roll covers 250 m² at 5.0 m wide and 260 m² at 5.2 m wide, before overlaps. Its nominal fabric weight is half the 100 m figure above:',
+        ],
+        list: [
+          '100 GSM: 25 kg at 5.0 m wide, 26 kg at 5.2 m wide',
+          '200 GSM: 50 kg at 5.0 m wide, 52 kg at 5.2 m wide',
+          '300 GSM: 75 kg at 5.0 m wide, 78 kg at 5.2 m wide',
+          '400 GSM: 100 kg at 5.0 m wide, 104 kg at 5.2 m wide',
+          '600 GSM: 150 kg at 5.0 m wide, 156 kg at 5.2 m wide',
         ],
       },
       {
@@ -2376,6 +2389,10 @@ export const guides = [
         a: 'Multiply GSM by the width in metres and the length in metres, then divide by 1,000 to get kilograms. A 200 GSM roll 5.2 m wide and 100 m long weighs about 104 kg of fabric.',
       },
       {
+        q: 'How much area and weight is in a standard 50 m roll?',
+        a: 'A 50 m roll covers 250 m² at 5.0 m wide or 260 m² at 5.2 m wide. At 200 GSM that is about 50–52 kg of fabric. Other roll lengths are available on request.',
+      },
+      {
         q: 'How many square metres does one tonne of geotextile cover?',
         a: 'Divide 1,000,000 by the GSM. A 200 GSM fabric covers 5,000 m² per tonne, and a 300 GSM fabric covers about 3,333 m².',
       },
@@ -2385,7 +2402,7 @@ export const guides = [
       },
       {
         q: 'What roll width and GSM can you supply?',
-        a: 'Roll widths of 5.0–5.2 m, which can be cut narrower, across a 100–1200 GSM range, with length set to your order.',
+        a: 'Roll widths of 5.0–5.2 m, which can be cut narrower, across a 100–1200 GSM range, with a standard roll length of 50 m (other lengths on request).',
       },
     ],
     relatedProducts: [
@@ -2481,7 +2498,7 @@ export const guides = [
       },
       {
         q: 'What roll width and GSM can you supply?',
-        a: 'Roll widths of 5.0–5.2 m, which can be cut narrower, across a 100–1200 GSM range, with length set to your order.',
+        a: 'Roll widths of 5.0–5.2 m, which can be cut narrower, across a 100–1200 GSM range, with a standard roll length of 50 m (other lengths on request).',
       },
     ],
     relatedProducts: [
@@ -2624,7 +2641,7 @@ export const guides = [
       {
         h: 'Roll width and length',
         p: [
-          'Our rolls are 5.0–5.2 m wide and can be cut narrower to the widths you lay, with length set to your order. A wide roll means fewer seams on a large hall. Tell us your standard widths and roll lengths so we can quote against them.',
+          'Our rolls are 5.0–5.2 m wide and can be cut narrower to the widths you lay, with a standard roll length of 50 m (other lengths on request). A wide roll means fewer seams on a large hall. Tell us your standard widths and roll lengths so we can quote against them.',
         ],
       },
       {
@@ -2649,7 +2666,7 @@ export const guides = [
       },
       {
         q: 'What roll width can you supply?',
-        a: 'Roll widths of 5.0–5.2 m, which can be cut narrower, with length set to your order.',
+        a: 'Roll widths of 5.0–5.2 m, which can be cut narrower, with a standard roll length of 50 m (other lengths on request).',
       },
     ],
     relatedProducts: [

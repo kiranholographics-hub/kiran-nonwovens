@@ -121,6 +121,29 @@ it belongs under Industrial & Others instead, say so and it moves.
 
 ---
 
+## 13. Ordering terms ✅ ANSWERED (owner, 26 Oct 2026), two points to confirm
+
+What the owner sent, word for word:
+- MOQ: after order discussion
+- Lead time (order to dispatch): 4 - 5 days
+- Roll length: 50 m / 100 m
+- Packing: poly bag + paper core / HDPE wrap
+- Sample: free, according to location
+
+How the site will say it:
+- MOQ: "agreed per order" (no fixed minimum stated).
+- Lead time: "usually dispatched in 4–5 days after the order is confirmed".
+- Roll length: standard roll is 50 m (owner corrected, 26 Oct: "roll length 50 m").
+  Owner confirmed both lines go on the site: "Standard roll 50 m; other lengths on
+  request." Keep the product document's "customised roll length" lines.
+- Packing: poly bag on a paper core, or HDPE wrap.
+- Samples: free everywhere; how long a sample takes to arrive depends on the buyer's
+  location (owner, 26 Oct: "Free h har jgh sample time user ke according lgega").
+
+All points confirmed; ready to use on product pages, FAQs and the RFQ guide.
+
+---
+
 ## Not blocked on anything
 
 For reference, these are done and need no input: site structure and both
