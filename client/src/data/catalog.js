@@ -47,6 +47,19 @@ export const TBD = null;
  */
 export const MADE_TO_ORDER = 'Made to requirement';
 
+/**
+ * Ordering terms, as the owner gave them (26 Oct 2026, OWNER_INPUTS.md §13).
+ * They hold for every product, so pages read them from here rather than from
+ * the product record — a product refreshed from MongoDB cannot drop them.
+ */
+export const ORDERING = {
+  rollLength: '50 m standard; other lengths on request',
+  moq: 'Agreed per order',
+  leadTime: 'Usually 4–5 days from order confirmation to dispatch',
+  packing: 'Poly bag on a paper core, or HDPE wrap',
+  samples: 'Free, to any location; delivery time depends on where you are',
+};
+
 /* ── Plant-wide capability (from the brief + approved demo stats band) ───── */
 export const PLANT = {
   widthMin: 5.0,
@@ -213,7 +226,7 @@ function product(p) {
       gsmMax: PLANT.gsmMax,
       thickness: MADE_TO_ORDER,
       width: PLANT.widthLabel,
-      rollLength: MADE_TO_ORDER,
+      rollLength: ORDERING.rollLength,
       colour: MADE_TO_ORDER,
       process: PLANT.processLabel,
       ...(p.specs || {}),

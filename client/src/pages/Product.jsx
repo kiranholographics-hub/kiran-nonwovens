@@ -4,14 +4,14 @@ import Seo from '../components/Seo.jsx';
 import Media from '../components/Media.jsx';
 import PageHero from '../components/PageHero.jsx';
 import Reveal from '../components/Reveal.jsx';
-import SpecTable from '../components/SpecTable.jsx';
+import SpecTable, { OrderingTable } from '../components/SpecTable.jsx';
 import TabPanel, { RuledList } from '../components/TabPanel.jsx';
 import EnquiryForm from '../components/EnquiryForm.jsx';
 import StickyQuote from '../components/StickyQuote.jsx';
 import ProductCard, { ProductGrid } from '../components/ProductCard.jsx';
 import Note from '../components/Note.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
-import { PLANT } from '../data/catalog.js';
+import { ORDERING, PLANT } from '../data/catalog.js';
 import Faq from '../components/Faq.jsx';
 import { productFaq, plain } from '../data/seo.js';
 import { SITE, VIDEOS, breadcrumbLd, faqLd } from '../lib.js';
@@ -85,6 +85,13 @@ export default function Product() {
       label: 'Applications',
       content: <RuledList items={product.applications} />,
     },
+    {
+      id: 'ordering',
+      label: 'Ordering',
+      content: (
+        <OrderingTable caption={`Ordering terms for ${product.name}`} />
+      ),
+    },
     // The Downloads tab only exists once there is something to download.
     ...(product.downloads?.length
       ? [
@@ -115,6 +122,7 @@ export default function Product() {
       `${product.specs.gsmMin}–${product.specs.gsmMax}`,
     ],
     product.specs?.width && ['Roll width', product.specs.width],
+    ['Roll length', ORDERING.rollLength],
     product.specs?.fibre && [
       'Fibre',
       [].concat(product.specs.fibre).join(', '),
