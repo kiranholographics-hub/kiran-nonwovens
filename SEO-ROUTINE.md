@@ -91,6 +91,14 @@ Queue (tick when done):
 - [x] flooring underlay felt India: SKIPPED (25 Oct), already covered by /guides/carpet-backing-and-underlay-felt (underlay under carpet, laminate, vinyl, wood).
 - [x] Hindi guide: non woven geotextile (test) (25 Oct) -> /guides/non-woven-geotextile-hindi. Guide.jsx now takes a `lang` field on a guide (sets lang attr, inLanguage, Hindi labels, numbered section ids). Watch Search Console for this URL before writing more Hindi pages.
 - [x] airlay vs needle punch (Search Console query, 26 Oct) (26 Oct) -> /guides/airlay-vs-needle-punch-nonwoven
+Export process pages (28 Oct). Export buyers ask process questions, not country questions — the 32
+per-country pages were merged into 6 regions on 21 Oct because they were 63.7% identical. Topics here
+must be about the trade, not the destination.
+- [x] Incoterms (EXW/FOB/CFR/CIF/DAP) for a nonwoven buyer (28 Oct)
+- [x] export documents for nonwoven and geotextile from India (28 Oct)
+- [ ] sampling to bulk: what happens between the sample and the first container
+- [ ] payment terms an Indian supplier and an overseas buyer usually agree
+
 Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make or sell it before writing; ask in the PR, skip until answered.
 - [x] geotextile behind retaining walls (drainage and filter layer) India (25 Oct)
 - [x] geotextile for embankments and highways on soft soil India (26 Oct)

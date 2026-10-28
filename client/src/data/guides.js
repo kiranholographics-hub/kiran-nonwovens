@@ -519,7 +519,7 @@ export const guides = [
       {
         h: 'Paperwork and classification',
         p: [
-          'Felt and nonwovens fall under chapter 56 of the Harmonized System, and the exact code depends on the construction. Confirm the code you need with your customs broker. Tell us early which documents and test reports your market requires, so they can be discussed before you order.',
+          'Felt and nonwovens fall under chapter 56 of the Harmonized System, and the exact code depends on the construction. Confirm the code you need with your customs broker. Tell us early which documents and test reports your market requires, so they can be discussed before you order — see [export documents](/guides/export-documents-nonwoven-geotextile-india) for the usual set, and [EXW, FOB or CIF](/guides/incoterms-nonwoven-felt-india) for what the term decides.',
         ],
       },
     ],
@@ -3397,6 +3397,227 @@ export const guides = [
       'geotextile/pipeline-cable-protection-geotextile',
     ],
     relatedGuides: ['nonwoven-geotextile-guide', 'geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control', 'geotextile-gsm-for-road-construction-india'],
+  },
+  {
+    slug: 'incoterms-nonwoven-felt-india',
+    title: 'EXW, FOB or CIF: choosing the term when you import nonwoven from India',
+    seoTitle: 'Incoterms for Nonwoven Felt from India',
+    description:
+      'What EXW, FOB, CFR, CIF and DAP decide when you buy nonwoven felt or geotextile from India: who books the ship, who pays, and where the risk passes.',
+    readMins: 6,
+    published: '2026-10-28',
+    intro:
+      'Two quotes for the same geotextile can differ by a quarter and both be correct, because they are quoted on different terms. The three letters at the end of a price decide who books the ship, who pays which cost, and — the part that matters most and is noticed least — the point at which the goods become your risk. This guide covers the terms a nonwoven buyer actually meets.',
+    sections: [
+      {
+        h: 'The three letters are not a price, they are a dividing line',
+        p: [
+          'An Incoterm answers three questions at once: who arranges carriage, who pays for what, and where risk passes from seller to buyer. It does not say who owns the goods, it does not set payment terms, and it is not insurance cover by itself.',
+          'So "is CIF cheaper than FOB?" is the wrong question. A CIF price includes freight and insurance that you would otherwise buy yourself; an FOB price does not. Compare landed cost, not the number on the quote.',
+        ],
+      },
+      {
+        h: 'The terms you will meet, in order of how much the seller does',
+        table: {
+          head: ['Term', 'Seller does', 'You do', 'Risk passes'],
+          rows: [
+            ['EXW', 'Makes the goods available at the works', 'Everything: loading, export clearance, carriage, insurance, import', 'At the seller’s premises'],
+            ['FCA', 'Hands over, export cleared, at the named place', 'Main carriage onward, insurance, import', 'On handover to your carrier'],
+            ['FOB', 'Delivers on board the vessel at the port of shipment', 'Sea freight, insurance, import', 'Once on board'],
+            ['CFR', 'As FOB, plus pays sea freight to the destination port', 'Insurance, import', 'Still once on board, not on arrival'],
+            ['CIF', 'As CFR, plus buys a minimum insurance cover', 'Import clearance, duty, inland carriage', 'Still once on board'],
+            ['DAP', 'Delivers to the named place in your country, not unloaded', 'Import clearance and duty', 'At that named place'],
+          ],
+        },
+        p: [
+          'FOB, CFR and CIF are for sea freight. FCA and DAP suit container, road or air movements and are the ones to use when nothing is loaded onto a vessel in the usual way.',
+        ],
+      },
+      {
+        h: 'The trap in CFR and CIF',
+        p: [
+          'Under CFR and CIF the seller pays the freight all the way to your port — but risk still passes when the goods are on board at the Indian port, not when they arrive. If a container is lost or damaged in transit, it is your loss even though the seller booked and paid for the voyage.',
+          'That is the whole reason insurance belongs in the conversation. Under CIF the seller buys cover, but the minimum level the rules require is a basic one. If your cargo warrants more than that, say so in the contract or arrange your own.',
+        ],
+      },
+      {
+        h: 'Which term suits a nonwoven order',
+        list: [
+          'You already have a freight forwarder in India — FOB or FCA, and keep control of the booking',
+          'You want one landed number and little involvement — CIF or DAP',
+          'The order is small or consolidated with other suppliers — FCA to your consolidator',
+          'You are new to importing from India — CIF is the simplest first order; move to FOB once you have a forwarder you trust',
+        ],
+        p: [
+          'There is no term that is generally better. The right one depends on who has the better freight rate and who is equipped to handle a problem at sea.',
+        ],
+      },
+      {
+        h: 'What we do, and what we do not',
+        p: [
+          'We make and supply the material, and we coordinate dispatch to your port. We are not a freight forwarder, a customs broker or an insurer, and we do not give customs or tax advice for your country. Duty, import clearance and any local compliance are yours, whatever the term says about carriage.',
+          'Tell us the term you want with the enquiry. Quoting EXW against a competitor’s CIF and calling it cheaper would be a false comparison, so we will quote on the basis you name.',
+        ],
+      },
+      {
+        h: 'Write it down properly',
+        p: [
+          'An Incoterm is incomplete without a named place: "FOB Mundra", "CIF Jebel Ali", "DAP Nairobi". "FOB India" is not a term, it is an argument waiting to happen.',
+          'Name the edition of the rules in the contract too, and confirm the current edition with your broker — they are revised periodically, and the obligations under the same three letters have changed between editions.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'The term and the named place you want quoted — for example CIF Durban',
+          'Destination port, and the forwarder you use if you have one',
+          'The specification: application, fibre, GSM, width, roll length, quantity',
+          'Whether you want the material consolidated with anything else',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry). The [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) covers the specification side, and [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage) helps you work out quantity and how it loads.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is CIF cheaper than FOB?',
+        a: 'Neither is cheaper; they include different things. A CIF price carries freight and a basic insurance cover that under FOB you buy yourself. Compare the landed cost at your door, not the two quoted numbers.',
+      },
+      {
+        q: 'Under CIF, when do the goods become my risk?',
+        a: 'When they are on board the vessel at the port of shipment, not when they arrive. The seller pays the freight to your port, but a loss in transit is yours. That is why the insurance arrangement matters.',
+      },
+      {
+        q: 'Which Incoterm should a first-time importer use?',
+        a: 'CIF is usually the simplest, because the seller arranges the voyage and you take over at your own port. Once you have a forwarder you trust in India, FOB or FCA often gives better control and a better freight rate.',
+      },
+      {
+        q: 'Do you arrange shipping and insurance?',
+        a: 'We coordinate dispatch to your port and quote on the term you name. We are not a freight forwarder, customs broker or insurer, and we do not advise on duty or clearance in your country.',
+      },
+      {
+        q: 'What do I need to write in the contract?',
+        a: 'The three letters, a named place, and the edition of the rules — for example "CIF Jebel Ali, Incoterms [edition]". Confirm the current edition with your broker, since the obligations under the same letters have changed between editions.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'industrial/customised-nonwoven-solutions',
+      'automotive/automotive-needle-punched-felt',
+    ],
+    relatedGuides: ['how-to-request-a-nonwoven-felt-quote', 'hs-code-nonwoven-felt-geotextile', 'geotextile-roll-weight-and-coverage'],
+  },
+  {
+    slug: 'export-documents-nonwoven-geotextile-india',
+    title: 'Export documents for nonwoven felt and geotextile from India',
+    seoTitle: 'Export Documents: Nonwoven Felt from India',
+    description:
+      'Which documents travel with a nonwoven felt or geotextile shipment from India, which your own country adds, and what to settle before the order is produced.',
+    readMins: 6,
+    published: '2026-10-28',
+    intro:
+      'A shipment that arrives without the right paperwork sits at the port while demurrage runs. The document set is not long, but which pieces you need depends on your country, your bank and your customs broker — not on the supplier. This guide separates what normally travels with the goods from what you have to arrange, and what to settle before production starts rather than after.',
+    sections: [
+      {
+        h: 'The set that normally travels with the goods',
+        list: [
+          'Commercial invoice — what was sold, to whom, on what terms, in what currency',
+          'Packing list — rolls, weights and dimensions, so the container can be checked without opening it',
+          'Bill of lading or air waybill — the carrier’s document, and for sea freight the one that controls release of the cargo',
+          'Certificate of origin — where the goods were made, which decides duty treatment in many markets',
+        ],
+        p: [
+          'These four are the backbone of almost any shipment. Everything beyond them exists because a particular country, product or payment method asks for it.',
+        ],
+      },
+      {
+        h: 'What gets added, and why',
+        table: {
+          head: ['Added when', 'Document', 'Asked for by'],
+          rows: [
+            ['Your market gives preference to Indian origin', 'Preferential certificate of origin under the relevant agreement', 'Your customs authority'],
+            ['You are paying by letter of credit', 'Exactly the documents the credit lists, worded exactly as it says', 'Your bank'],
+            ['Your specification names a test', 'Test or inspection report for that property', 'You or your project engineer'],
+            ['The buyer appoints an inspector', 'Third-party inspection certificate', 'You'],
+            ['Your country requires it for the product', 'Conformity or registration document', 'Your customs authority'],
+            ['The cargo is insured by the seller', 'Insurance certificate', 'The term you bought on'],
+          ],
+        },
+        p: [
+          'Your customs broker is the only reliable source for what your own country adds. We cannot tell you what your port will ask for, and a supplier who claims to know every market’s rules is guessing.',
+        ],
+      },
+      {
+        h: 'Settle the paperwork before production, not after',
+        p: [
+          'Most document problems are cheap to fix at the enquiry stage and expensive at the port. A letter of credit that calls the material something the invoice does not say, a certificate naming a test nobody agreed to run, a description that does not match the classification you declared — each one is a small wording decision made weeks earlier.',
+          'So send the document list with the order, not with the shipping instructions. If a test report is wanted, it has to be agreed before the goods are made, because some tests are destructive and all of them take time.',
+        ],
+      },
+      {
+        h: 'Classification is yours to confirm',
+        p: [
+          'Felt and nonwovens fall under chapter 56 of the Harmonized System, and the exact code depends on the construction — our [HS code guide](/guides/hs-code-nonwoven-felt-geotextile) covers how that works. The code on your import entry is declared by you, through your broker, and it drives the duty you pay.',
+          'We describe the material accurately on the invoice. We do not determine your import classification, and we do not advise on duty rates in your country.',
+        ],
+      },
+      {
+        h: 'Packing, and what the packing list has to match',
+        p: [
+          'Material ships as rolls. The standard roll is 50 m, with other lengths made to order, in widths of 5.0–5.2 m, which is what decides how a container is filled — see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage) for working out quantity and loading.',
+          'The packing list must match what is physically in the container: roll count, net and gross weight, and dimensions. A mismatch between the list and the cargo is one of the commonest causes of a hold at the destination, and it is entirely avoidable.',
+        ],
+      },
+      {
+        h: 'What we do, and what we do not',
+        p: [
+          'Export packing and the documentation your destination and customs broker ask for are agreed with each order. Tell us early which documents your market requires, so they can be discussed before you commit.',
+          'We are not a customs broker and we do not give customs, duty or tax advice for your country. Where a document has to come from an authority, a chamber or an independent inspector, it comes from them — we supply the material and the paperwork that is ours to issue.',
+        ],
+      },
+      {
+        h: 'What to send with your enquiry',
+        list: [
+          'Destination country and port, and your customs broker’s requirements if you have them',
+          'Payment method — and if it is a letter of credit, the document clauses it will carry',
+          'Any certificate of origin type your market needs for preference',
+          'Any test or inspection report your specification requires, named before production',
+          'The specification itself: application, fibre, GSM, width, roll length, quantity',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry). The [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) covers the material side, and [EXW, FOB or CIF](/guides/incoterms-nonwoven-felt-india) covers the term, which decides who holds which part of this list.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Which documents come with a shipment from India?',
+        a: 'Commercial invoice, packing list, bill of lading or air waybill, and a certificate of origin are the usual set. Anything beyond that is added because your country, your bank or your specification asks for it, and it is agreed with each order.',
+      },
+      {
+        q: 'Do you provide a certificate of origin?',
+        a: 'A certificate of origin is issued by an authorised body rather than by a supplier. Tell us at the enquiry stage which type your market needs, including any preferential certificate, so it can be arranged with the order.',
+      },
+      {
+        q: 'Can you tell me the duty I will pay?',
+        a: 'No. Duty depends on the classification declared on your import entry and your country’s tariff, both of which are for you and your customs broker. We describe the material accurately on the invoice; the classification at import is yours to confirm.',
+      },
+      {
+        q: 'We pay by letter of credit. What do you need?',
+        a: 'The document clauses the credit will carry, before the order is produced. A credit that describes the material differently from the invoice is the commonest reason documents are rejected, and it is a wording problem that is simple to fix early and costly to fix late.',
+      },
+      {
+        q: 'Can you supply a test report?',
+        a: 'Tell us which test and whose standard before production, since some tests are destructive and all take time. Where an independent report is required, it comes from the testing body, not from us.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'industrial/customised-nonwoven-solutions',
+    ],
+    relatedGuides: ['hs-code-nonwoven-felt-geotextile', 'incoterms-nonwoven-felt-india', 'how-to-request-a-nonwoven-felt-quote'],
   },
 ];
 
