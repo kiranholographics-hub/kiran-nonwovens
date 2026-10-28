@@ -2310,15 +2310,22 @@ export const guides = [
 
   {
     slug: 'geotextile-roll-weight-and-coverage',
-    title: 'Geotextile roll weight and coverage: how to calculate it from GSM, width and length',
-    seoTitle: 'Geotextile Roll Weight: GSM x Width x Length',
+    title: 'Geotextile roll weight calculator: coverage from GSM, width and length',
+    seoTitle: 'Geotextile Roll Weight Calculator',
     description:
-      'Work out the weight and area of a geotextile roll from its GSM, width and length, the square metres per tonne, and what it means for container loading.',
+      'Free geotextile roll calculator: enter GSM, width and length for roll weight and area, square metres per tonne, rolls needed, and container loading notes.',
     readMins: 5,
     published: '2026-10-25',
     intro:
       'Buyers of geotextile ask the same practical questions before they order: how heavy is one roll, how much ground does a tonne cover, and how many rolls will a container take? All three come from one formula. This guide shows it, works through examples for the wide rolls we make, and explains what the answer does and does not tell you.',
     sections: [
+      {
+        h: 'Roll calculator',
+        tool: 'roll-calculator',
+        p: [
+          'Enter the GSM, the roll width and length, and the area you need to cover. The figures update as you type. The formula behind them is set out below, with worked examples for 5.0 m and 5.2 m wide rolls.',
+        ],
+      },
       {
         h: 'The formula',
         p: [

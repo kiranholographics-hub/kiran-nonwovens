@@ -4,6 +4,7 @@ import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
 import Faq from '../components/Faq.jsx';
 import RichText from '../components/RichText.jsx';
+import RollCalculator from '../components/RollCalculator.jsx';
 import ProductCard, { ProductGrid } from '../components/ProductCard.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
 import { guideBySlug, guides, GUIDES_PUBLISHED } from '../data/guides.js';
@@ -162,6 +163,7 @@ export default function Guide() {
                       </p>
                     ))
                   : null}
+                {s.tool === 'roll-calculator' ? <RollCalculator /> : null}
               </section>
             ))}
 

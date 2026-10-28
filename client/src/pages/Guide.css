@@ -203,3 +203,64 @@
 .guide-lang {
   display: contents;
 }
+
+/* Geotextile roll calculator inside a guide */
+.roll-calc {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line, rgba(0, 0, 0, 0.14));
+  border-radius: 0.75rem;
+  background: var(--sand, rgba(0, 0, 0, 0.03));
+}
+.roll-calc__inputs {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 1fr 1fr;
+}
+.roll-calc label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+.roll-calc input {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+  border: 1px solid var(--line, rgba(0, 0, 0, 0.25));
+  border-radius: 0.4rem;
+  background: #fff;
+  color: inherit;
+}
+.roll-calc__out {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 1.25rem 0 0;
+}
+.roll-calc__out div {
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+.roll-calc__out dt {
+  font-size: 0.82rem;
+  opacity: 0.75;
+}
+.roll-calc__out dd {
+  margin: 0.15rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.roll-calc__note {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+@media (min-width: 760px) {
+  .roll-calc__inputs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .roll-calc__out {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
