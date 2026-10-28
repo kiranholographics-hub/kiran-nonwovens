@@ -16,7 +16,7 @@ const fmt = (n, d = 0) =>
 export default function RollCalculator() {
   const [gsm, setGsm] = useState('200');
   const [width, setWidth] = useState('5.2');
-  const [length, setLength] = useState('100');
+  const [length, setLength] = useState('50');
   const [area, setArea] = useState('2600');
 
   const g = num(gsm);
