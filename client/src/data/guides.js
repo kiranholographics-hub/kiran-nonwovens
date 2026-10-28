@@ -277,7 +277,7 @@ export const guides = [
       'geotextile/drainage-soil-erosion-control-geotextile',
       'geotextile/pipeline-cable-protection-geotextile',
     ],
-    relatedGuides: ['geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control', 'polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric', 'geotextile-roll-weight-and-coverage', 'geotextile-retaining-wall-drainage-india'],
+    relatedGuides: ['geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control', 'polyester-vs-polypropylene-nonwoven', 'gsm-in-nonwoven-fabric', 'geotextile-roll-weight-and-coverage', 'geotextile-retaining-wall-drainage-india', 'woven-vs-nonwoven-geotextile'],
   },
 
   {
@@ -810,6 +810,7 @@ export const guides = [
       'nonwoven-geotextile-for-railway-track-india',
       'geotextile-for-drainage-and-erosion-control',
       'nonwoven-geotextile-guide',
+      'woven-vs-nonwoven-geotextile',
     ],
   },
   {
@@ -1239,7 +1240,7 @@ export const guides = [
       },
       {
         q: 'Woven or nonwoven geotextile for drainage?',
-        a: 'Nonwoven, for drainage and filtration. A thick needle punched fabric lets water move through and along it, which is what a drain needs. Woven geotextiles are generally chosen where tensile strength and reinforcement matter more than flow.',
+        a: 'Nonwoven, for drainage and filtration. A thick needle punched fabric lets water move through and along it, which is what a drain needs. Woven geotextiles are generally chosen where tensile strength and reinforcement matter more than flow. See [woven vs nonwoven geotextile](/guides/woven-vs-nonwoven-geotextile).',
       },
       {
         q: 'What GSM is needed for drainage geotextile?',
@@ -3287,6 +3288,115 @@ export const guides = [
       'geotextile/pp-geotextile-fabric-for-civil-works',
     ],
     relatedGuides: ['needle-punched-vs-thermal-bonded-nonwoven', 'nonwoven-manufacturers-in-india', 'gsm-in-nonwoven-fabric'],
+  },
+  {
+    slug: 'woven-vs-nonwoven-geotextile',
+    title: 'Woven vs nonwoven geotextile: which one does your project need?',
+    seoTitle: 'Woven vs Nonwoven Geotextile: Which to Use',
+    description:
+      'Woven and nonwoven geotextiles do different jobs. How each is made, a side-by-side table, which suits roads, drains, slopes and liners, and what to specify.',
+    readMins: 6,
+    published: '2026-10-28',
+    intro:
+      'Woven and nonwoven geotextiles are both permeable fabrics laid in the ground, and tenders sometimes treat them as interchangeable. They are not. A woven geotextile is built for tensile strength; a nonwoven is built for water flow, filtration and cushioning. This guide explains the difference and how to match each to the job. We make nonwoven geotextile only, and say plainly below where a woven fabric is the better choice.',
+    sections: [
+      {
+        h: 'How each one is made',
+        p: [
+          'A woven geotextile is made on a loom. Flat polypropylene tapes (slit film) or round monofilament yarns are interlaced at right angles, like a coarse sack fabric. The result is a thin, stiff sheet with regular openings.',
+          'A nonwoven geotextile is made without weaving. Staple fibres are formed into a thick web and bonded, most often by needle punching, which tangles the fibres with barbed needles. The result is a soft, felt-like fabric with many small, irregular pores through its thickness. Our [needle punched vs thermal bonded guide](/guides/needle-punched-vs-thermal-bonded-nonwoven) explains the bonding step.',
+          'You can tell them apart by eye: a woven shows a criss-cross grid of tapes or yarns; a nonwoven looks and feels like felt.',
+        ],
+      },
+      {
+        h: 'Side by side',
+        table: {
+          head: ['', 'Woven geotextile', 'Nonwoven geotextile (needle punched)'],
+          rows: [
+            ['Structure', 'Interlaced tapes or yarns, thin', 'Entangled fibres, thick and felt-like'],
+            ['Strength', 'High tensile strength at low stretch', 'Lower tensile strength, stretches more before breaking'],
+            ['Water through the fabric', 'Usually lower for slit film; higher for monofilament', 'High, through many small pores'],
+            ['Water along the fabric', 'Very little', 'Yes, a thick nonwoven can carry water in its own plane'],
+            ['Filtration of fine soil', 'Depends on the opening size; slit film can blind', 'Good: the depth of the felt holds soil while water passes'],
+            ['Cushioning and puncture protection', 'Limited, the sheet is thin', 'Good, from its thickness'],
+            ['Fit to uneven ground', 'Stiffer', 'Drapes and conforms'],
+            ['Typical first choice for', 'Reinforcement and stabilisation, where strength matters most', 'Drainage, filtration, separation and protection'],
+          ],
+        },
+        p: [
+          'These are general tendencies. Within each type, the grade, the polymer and the design values decide the actual performance.',
+        ],
+      },
+      {
+        h: 'Which one for which job',
+        list: [
+          'French drains, pipe wrapping, drainage layers behind walls: nonwoven, because water has to pass through and along the fabric while soil stays out',
+          'Separation under roads, yards and railway ballast: both are used; nonwoven where the subgrade is wet or drainage matters, woven where the design needs more strength',
+          'Reinforcement and stabilisation over very soft ground: woven (or geogrid), because it takes load at low stretch',
+          'Protection of a geomembrane in canals, ponds and landfills: nonwoven, because the thick felt cushions the liner against stones',
+          'Slope and bank protection under stone or riprap: nonwoven or a monofilament woven, as the designer specifies; slit-film woven is generally avoided where filtration matters',
+          'Silt fences on construction sites: usually woven',
+        ],
+        p: [
+          'The guides for each use go into more detail: [roads](/guides/geotextile-for-road-construction), [drainage and erosion control](/guides/geotextile-for-drainage-and-erosion-control), [railway track](/guides/nonwoven-geotextile-for-railway-track-india), [canal and pond lining](/guides/geotextile-canal-pond-lining-india) and [retaining walls](/guides/geotextile-retaining-wall-drainage-india).',
+        ],
+      },
+      {
+        h: 'Why "the same GSM" does not make them equal',
+        p: [
+          'A woven and a nonwoven of the same GSM behave very differently. A light woven can be stronger in tension than a much heavier nonwoven, while the nonwoven drains and filters far better. Comparing the two by weight or by price per kilogram misleads.',
+          'Compare them on the properties the design asks for: tensile strength and elongation, puncture resistance, opening size, permeability, and for drainage layers the flow along the fabric. Our [GSM guide](/guides/gsm-in-nonwoven-fabric) explains what weight does and does not tell you.',
+        ],
+      },
+      {
+        h: 'What to put in your specification',
+        list: [
+          'The function: separation, filtration, drainage, reinforcement or protection',
+          'Woven or nonwoven, if the design fixes it',
+          'The test values the design requires (strength, puncture, opening size, permeability), with the test standard named',
+          'Roll width and length, and the area to cover',
+          'For public works, the clause of the tender or standard specification; confirm the current edition with your project engineer',
+        ],
+        p: [
+          'If you are unsure which type the job needs, ask the designer before ordering. A wrong type is not fixed by a heavier grade.',
+        ],
+      },
+      {
+        h: 'What we supply',
+        p: [
+          'We make needle punched nonwoven geotextile in PP (virgin or recycled) and polyester, from 100 to 1200 GSM, in rolls 5.0–5.2 m wide, with a standard roll length of 50 m and other lengths on request. We do not make woven geotextile. If your design calls for a woven, we will say so rather than offer a nonwoven in its place.',
+          'See [PP geotextile fabric for civil works](/products/geotextile/pp-geotextile-fabric-for-civil-works) and [drainage and erosion control geotextile](/products/geotextile/drainage-soil-erosion-control-geotextile), or send your specification through the [enquiry form](/contact#enquiry). Samples are free.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between woven and nonwoven geotextile?',
+        a: 'A woven geotextile is made by interlacing tapes or yarns on a loom; it is thin and strong in tension. A nonwoven is made by bonding a web of fibres, usually by needle punching; it is thick and felt-like, and lets water pass through and along it while holding soil back.',
+      },
+      {
+        q: 'Which is better, woven or nonwoven geotextile?',
+        a: 'Neither in general; they do different jobs. Woven suits reinforcement and stabilisation, where strength at low stretch matters. Nonwoven suits drainage, filtration, separation on wet ground and protection of liners.',
+      },
+      {
+        q: 'Which geotextile is used for drainage?',
+        a: 'Nonwoven, usually needle punched. Its thick, porous structure lets water flow through and along the fabric while it filters fine soil. See our [drainage and erosion control guide](/guides/geotextile-for-drainage-and-erosion-control).',
+      },
+      {
+        q: 'Which geotextile is used under roads?',
+        a: 'Both are used for separation under roads. Nonwoven is common where the subgrade is wet or soft and drainage matters; woven is chosen where the design needs more tensile strength. The project engineer sets the type and grade. See our [road construction guide](/guides/geotextile-for-road-construction).',
+      },
+      {
+        q: 'Do you make woven geotextile?',
+        a: 'No. We make needle punched nonwoven geotextile only. If your design needs a woven fabric, we will tell you so.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['nonwoven-geotextile-guide', 'geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control', 'geotextile-gsm-for-road-construction-india'],
   },
 ];
 

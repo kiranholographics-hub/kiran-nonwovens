@@ -312,6 +312,7 @@ export function productFaq(product) {
       '[GSM guide for road geotextile](/guides/geotextile-gsm-for-road-construction-india)',
       '[railway track guide](/guides/nonwoven-geotextile-for-railway-track-india)',
       '[nonwoven geotextile guide](/guides/nonwoven-geotextile-guide)',
+      '[woven vs nonwoven geotextile guide](/guides/woven-vs-nonwoven-geotextile)',
       '[geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india)',
       '[canal and pond lining guide](/guides/geotextile-canal-pond-lining-india)',
       '[landfill and mining guide](/guides/geotextile-landfill-mining-india)',
