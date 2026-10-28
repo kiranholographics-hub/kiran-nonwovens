@@ -1,4 +1,4 @@
-import { PLANT } from '../data/catalog.js';
+import { ORDERING, PLANT } from '../data/catalog.js';
 import './SpecTable.css';
 
 /**
@@ -28,7 +28,25 @@ function Row({ label, value, caveat }) {
   );
 }
 
-const sameList = (a = [], b = []) =>
+/** Ordering terms (MOQ, lead time, packing, samples), the same for every product. */
+export function OrderingTable({ caption }) {
+  return (
+    <div className="spec-table">
+      <table>
+        {caption ? <caption className="sr-only">{caption}</caption> : null}
+        <tbody>
+          <Row label="Minimum order" value={ORDERING.moq} />
+          <Row label="Lead time" value={ORDERING.leadTime} />
+          <Row label="Roll length" value={ORDERING.rollLength} />
+          <Row label="Packing" value={ORDERING.packing} />
+          <Row label="Samples" value={ORDERING.samples} />
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+const sameList =(a = [], b = []) =>
   a.length === b.length && a.every((v, i) => v === b[i]);
 
 export default function SpecTable({ specs, gsmConfirmed = false, caption }) {
@@ -67,7 +85,8 @@ export default function SpecTable({ specs, gsmConfirmed = false, caption }) {
           />
           <Row label="Thickness" value={specs.thickness} />
           <Row label="Width" value={specs.width} />
-          <Row label="Roll length" value={specs.rollLength} />
+          {/* Site-wide term, not the product record: see ORDERING. */}
+          <Row label="Roll length" value={ORDERING.rollLength} />
           <Row label="Colour" value={specs.colour} />
         </tbody>
       </table>

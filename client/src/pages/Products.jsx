@@ -40,7 +40,11 @@ export default function Products() {
         title="Products"
         lead="Every material we make, grouped by the industry it was built for."
         video={VIDEOS.products}
-      />
+      >
+        <Link to="/contact#enquiry" className="btn btn--light">
+          Get quote
+        </Link>
+      </PageHero>
 
       {businessAreas.map((area, i) => {
         const inArea = productsIn(area.slug);

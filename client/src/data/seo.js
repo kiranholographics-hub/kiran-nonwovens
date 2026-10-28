@@ -4,12 +4,16 @@
  *
  * Same rules as the guides — only what the catalogue and the plant capability
  * already state, plus general nonwoven knowledge. No certification, founding
- * year, capacity, lead time, MOQ or price is claimed anywhere in here.
+ * year, capacity or price is claimed anywhere in here. Lead time, MOQ, roll
+ * length, packing and samples come only from ORDERING (owner-confirmed).
  *
  * Pure data, no imports beyond the catalogue's own constants.
  *
  * Markup inside strings: [text](/path) becomes an internal link.
  */
+import { ORDERING } from './catalog.js';
+
+const lowerFirst = (s) => s.charAt(0).toLowerCase() + s.slice(1);
 
 /* ── Static-page titles + descriptions (title is ≤ ~60 chars with the brand) ── */
 export const PAGE_SEO = {
@@ -21,7 +25,7 @@ export const PAGE_SEO = {
   products: {
     title: 'Nonwoven Felt & Geotextile Products',
     description:
-      'The full Kiran Nonwovens range: geotextiles, automotive felt, apparel and footwear nonwovens and industrial felt. Needle punched or thermal bonded, 100–1200 GSM.',
+      'The Kiran Nonwovens range: geotextiles, automotive felt, apparel and footwear nonwovens and industrial felt. Needle punched or thermal bonded, 100–1200 GSM.',
   },
   about: {
     title: 'About Us: Nonwoven Felt Manufacturer',
@@ -122,6 +126,10 @@ export const CATEGORY_COPY = {
         q: 'Can I choose GSM, thickness and colour?',
         a: 'Yes. GSM, thickness, width and colour are customised to each design and production line.',
       },
+      {
+        q: 'Can you match the fabric we use today?',
+        a: 'Yes. Send your target weight and thickness, or a sample of your current fabric, and we will match it.',
+      },
     ],
   },
   industrial: {
@@ -142,6 +150,10 @@ export const CATEGORY_COPY = {
       {
         q: 'Is recycled fibre available?',
         a: 'Yes. Our fibre range includes PP (virgin and recycled), alongside polyester, viscose and custom blends.',
+      },
+      {
+        q: 'Can I get a sample before ordering?',
+        a: 'Yes, samples are available on request. Send the application and the GSM and width you have in mind.',
       },
     ],
   },
@@ -229,6 +241,30 @@ const sentenceList = (items) =>
     ? items.join('')
     : `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`;
 
+/** Extra questions for one product, keyed by slug: the buyer questions the
+ *  generated FAQ cannot answer from the product record alone. Facts only from
+ *  the guides, the plant capability and ORDERING. */
+const PRODUCT_FAQ = {
+  'pp-geotextile-fabric-for-civil-works': [
+    {
+      q: 'Which GSM of PP geotextile should I order for a road?',
+      a: 'It depends on the subgrade, the aggregate and the traffic, and on public works the tender specification sets the grade. As a rough guide, about 100–200 GSM is common for separation over a firm subgrade, 200–400 GSM on softer or wetter ground, and 400 GSM and above under angular stone or heavy traffic. Our [road geotextile GSM guide](/guides/geotextile-gsm-for-road-construction-india) explains how to choose.',
+    },
+    {
+      q: 'How many square metres are in one roll?',
+      a: 'A standard 50 m roll covers 250 m² at 5.0 m wide or 260 m² at 5.2 m wide, before overlaps. At 200 GSM that is about 50–52 kg of fabric. The [roll weight and coverage guide](/guides/geotextile-roll-weight-and-coverage) shows the calculation for other weights.',
+    },
+    {
+      q: 'Can the rolls be cut narrower than 5 m?',
+      a: 'Yes. Rolls are produced 5.0–5.2 m wide and can be cut narrower to suit your crew, your layout or your container plan. Other roll lengths than the standard 50 m are also available on request.',
+    },
+    {
+      q: 'Virgin or recycled PP: which should I choose?',
+      a: 'We supply this geotextile in both. Tell us the application and any test values your specification requires, and we will advise. The [polyester vs polypropylene guide](/guides/polyester-vs-polypropylene-nonwoven) covers where recycled fibre suits and where it does not.',
+    },
+  ],
+};
+
 export function productFaq(product) {
   const specs = product.specs || {};
   const faqs = [];
@@ -249,7 +285,7 @@ export function productFaq(product) {
     a:
       `${product.name} is made to order${gsm ? ` across a ${gsm} range` : ''}` +
       `${specs.width ? ` in roll widths of ${specs.width}` : ''}. ` +
-      `Thickness, roll length and colour are set to your requirement, and exact figures are confirmed with your quote.`,
+      `The standard roll is 50 m long, with other lengths on request. Thickness and colour are set to your requirement, and exact figures are confirmed with your quote.`,
   });
 
   const fibre = Array.isArray(specs.fibre) ? specs.fibre.join(', ') : specs.fibre;
@@ -326,9 +362,16 @@ export function productFaq(product) {
     });
   }
 
+  faqs.push(...(PRODUCT_FAQ[product.slug] || []));
+
+  faqs.push({
+    q: `What is the minimum order and lead time for ${product.name}?`,
+    a: `There is no fixed minimum: the order quantity is agreed with each order. Lead time: ${lowerFirst(ORDERING.leadTime)}. Rolls are packed in a poly bag on a paper core, or in HDPE wrap.`,
+  });
+
   faqs.push({
     q: `Can I get a sample or a custom specification of ${product.name}?`,
-    a: 'Yes. Samples are available on request, and GSM, thickness, width, colour and roll length can be customised. Use the enquiry form on this page, or see [how to request a quote](/guides/how-to-request-a-nonwoven-felt-quote).',
+    a: 'Yes. Samples are free, and we send them to any location; how long delivery takes depends on where you are. GSM, thickness, width, colour and roll length can be customised. Use the enquiry form on this page, or see [how to request a quote](/guides/how-to-request-a-nonwoven-felt-quote).',
   });
 
   return faqs;
@@ -356,10 +399,14 @@ export const INDIA_FAQ = [
   },
   {
     q: 'What weights and widths can you produce?',
-    a: '100 to 1200 GSM, in roll widths of 5.0–5.2 m, which can be cut narrower. Thickness, roll length and colour are set per order rather than fixed.',
+    a: '100 to 1200 GSM, in roll widths of 5.0–5.2 m, which can be cut narrower. The standard roll is 50 m long, with other lengths on request. Thickness and colour are set per order rather than fixed.',
   },
   {
     q: 'Can I get a sample before ordering?',
-    a: 'Yes. Samples are available on request. Describe the application through the [enquiry form](/contact#enquiry), or send a swatch of the material you use today.',
+    a: 'Yes, samples are free. Describe the application through the [enquiry form](/contact#enquiry), or send a swatch of the material you use today.',
+  },
+  {
+    q: 'How quickly can you dispatch an order?',
+    a: 'Usually 4–5 days after the order is confirmed. The minimum quantity is agreed with each order rather than fixed.',
   },
 ];

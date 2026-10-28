@@ -1,52 +1,102 @@
 # SEO log (Kiran Nonwovens)
 
 One entry per session: date, what changed, what is pending. Newest first.
+Daily routine: KIRAN-SEO-PLAYBOOK.md (from 26 Oct 2026). Older notes: SEO-ROUTINE.md.
 
-## 26 Oct 2026 (Monday: daily + weekly)
+**Tech stack:** React 19 + Vite 8 SPA in `client/`, prerendered to static HTML by
+`client/scripts/prerender.mjs` (also writes `sitemap.xml` and `robots.txt`; `<lastmod>` comes from
+each page's data). Pages: `client/src/pages/*.jsx`. Guides: `client/src/data/guides.js` (rendered by
+`pages/Guide.jsx`). Titles/descriptions/category copy and FAQs: `client/src/data/seo.js`; meta tags
+and JSON-LD via `components/Seo.jsx` + helpers in `src/lib.js`. Products and areas come from the
+live API (MongoDB, `server/`) with `data/catalog.js` as fallback. Updates are added in /hq.
+Build: `ALLOW_LOCAL_BUILD=1 npm run build` then `npm run smoke` in `client/`. Deploy: GitHub
+Actions `.github/workflows/deploy.yml` on push to main and daily at 19:00 IST; IndexNow pings Bing.
+Note: a local build writes `localhost` into robots.txt/sitemap (no VITE_SITE_URL); the deployed
+build uses the real domain (checked live 26 Oct).
 
-**Live check (kirannonwovens.com)**
-- 14 key pages answer 200, each with exactly one H1 and its own canonical; unknown URL is a real 404; sitemap 73 URLs.
-- Site-wide audit of the build: no title over 65 chars, all descriptions 110-165 chars, one H1 on every page.
-  Empty alt only on decorative images (logo beside the wordmark, video posters), which is correct.
-- Contact form: NOT tested (a test enquiry needs the owner's OK first). API health check is OK (deploy log, 26 Oct).
+## Pending for owner
+- [ ] Search Console: paste last 28 days (Queries + Pages: clicks, impressions, CTR, position) for the Monday review
+- [ ] TradeIndia: GST, year of establishment, export markets, photos; then paste and send the profile URL
+- [ ] Google Business Profile verification (office board, then video verification)
+- [ ] Go-ahead before a test enquiry is sent through the contact form
+- [ ] Domain email (e.g. export@kirannonwovens.com) instead of Gmail
+- [ ] Real proof for the site: factory/machine photos, test reports, certifications if held, GST/IEC
+- [x] MOQ, lead time, packing details: answered 26 Oct, see OWNER_INPUTS.md section 13
+- [x] Confirmed 26 Oct: standard roll 50 m; samples free everywhere, delivery time depends on location
 
-**Changed (on branch, PR for approval)**
-- Content: 3 new FAQs on /guides/needle-punched-vs-thermal-bonded-nonwoven (insulation vs padding, which one for
-  geotextile, both processes in one fabric). Page had 15 impressions at position 26.6.
-- Technical: /india was linked only from the footer, although it is the page at position 2.5 with the site's
-  first click. Added in-content links from /guides/nonwoven-manufacturers-in-india (new short section
-  "Buying from within India") and /guides/needle-punched-nonwoven-manufacturer-india.
-- Off-site draft: content-drafts/2026-10-26-linkedin-company-page.md (company page fields, About, first post).
+## On-page check progress
+- 26 Oct: all 73 built pages scanned by script (one H1, title, description, canonical, alt,
+  related links, enquiry link). Results in the 26 Oct entry below. Next: manual read of 3 pages a
+  day for content quality, starting with the 16 product pages.
+- 27 Oct: products/geotextile/pp-geotextile-fabric-for-civil-works,
+  drainage-soil-erosion-control-geotextile, filter-geo-bag-felt
+- Next: products/geotextile/pipeline-cable-protection-geotextile, then automotive products.
 
-**Search Console numbers (owner pasted 26 Oct, 3 months to 24 Oct)**
-- 1 click, 100 impressions, CTR 1%, average position 20.3. Impressions per day rising (about 2 to 10-16).
-- Page one: /india 2.5, /guides 2.5, polyester vs polypropylene 6.7, GSM in nonwoven 5.4-7.9, road GSM 7.8
-  (titles of the three guides rewritten 26 Oct, PR #45).
-- Most shown: nonwoven geotextile guide 25 impressions at 29.2 (retitled for "uses", PR #45).
+## Product page upgrades (Tuesdays)
+- 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
-**Next 3 pages to improve (from those numbers)**
-1. /guides/needle-punched-vs-thermal-bonded-nonwoven (15 impressions, 26.6): FAQs added today; next, title/description.
-2. Home page (7 impressions, 21.4): title says "Nonwoven Manufacturer India" while production is at the partner's
-   plant; owner to decide the wording before any change.
-3. /guides/geotextile-for-road-construction (5 impressions, 34.8): strengthen with links from the newer road,
-   embankment and installation guides.
+## 27 Oct 2026 (Tuesday: product page upgrade)
+- Build: OK, 73 pages, smoke passed, lint clean on changed files.
+- Ordering terms on the site (owner, 26 Oct; OWNER_INPUTS.md §13), from one constant
+  `ORDERING` in client/src/data/catalog.js. The live API cannot override it, so the terms
+  stay after the page loads products from MongoDB:
+  - Every product page: roll length row in the spec table now "50 m standard; other lengths
+    on request"; new "Ordering" tab (minimum order, lead time 4–5 days, roll length, packing,
+    free samples); new FAQ "minimum order and lead time"; sample FAQ says samples are free.
+    Product schema gets a "Roll length" property.
+  - /india FAQ: roll length, free samples, new "How quickly can you dispatch" question.
+  - Guides: "length set to your order" replaced with the 50 m standard roll (5 guides); sample
+    answers in the geotextile and RFQ guides now say free. Roll weight guide: new "Our standard
+    50 m roll" section (250/260 m², weights at 100–600 GSM) and a 50 m FAQ.
+- Upgrade: /products/geotextile/pp-geotextile-fabric-for-civil-works gets four buyer FAQs
+  (GSM for roads, m² per roll, cutting narrower, virgin vs recycled PP), each linking a guide.
+  Built from facts already on the site; no new claims.
+- On-page (manual): pp-geotextile-fabric-for-civil-works, drainage-soil-erosion-control-geotextile,
+  filter-geo-bag-felt. One H1, titles 54–59, descriptions 143–155, link to /products/geotextile,
+  2+ guides, enquiry form. No fixes needed.
+- Sitemap 73 URLs; robots blocks only /hq.
+- Not checked: the new Ordering tab was not viewed in a browser before deploy (check live).
 
-**Pending: needs the owner**
-- Approve PR for today's changes.
-- Test enquiry SENT 26 Oct (owner said "do what is right"): name "TEST - Claude weekly check",
-  email test@example.com; API answered 201, saved as id 6adf2eb31d2ed3f93dff7c2d. Owner to check that the
-  notification email arrived, then delete the test in /hq > Enquiries.
-- Daily 19:00 automatic deploy REMOVED in this PR (rule 4: deploys need the owner's approval). After posting an
-  update in /hq, run GitHub > Actions > "Deploy website" > "Run workflow" to publish it.
-- Home title says "Manufacturer" while production is at the partner's plant: owner to decide (not changed).
-- Google Business Profile video verification (needs the office signboard).
-- IndiaMART: fill price, MOQ, GST, year yourself; add real photos.
-- [confirm] LinkedIn: company size, company type, founded year.
+## 26 Oct 2026 (Monday, second session: playbook day 1)
+- Build: OK, 73 pages, smoke passed, lint clean on changed files.
+- On-page scan (all pages): one H1, canonical, unique title everywhere. Content images have
+  descriptive alt; images without alt are decorative (logo, video poster) and correctly use alt="".
+  Images have no width/height attributes, but they are absolutely positioned inside boxes with a
+  fixed aspect ratio, so there is no layout shift. No change needed.
+- Fixed: /products and the 4 product category pages (/products/geotextile, /automotive,
+  /apparel-footwear, /industrial) had no enquiry link in the page content (only in the header).
+  Added a "Get quote" button to their hero, same as the business-area and product pages.
+- Not changed: /contact, /guides, /business-areas hubs have no in-content quote link (contact is the
+  form itself; hubs are fine). 11 titles at 61-65 characters stay as decided in the earlier entry.
+- Sitemap: 73 URLs, every page has `<lastmod>`. robots.txt blocks only /hq.
+- Search Console review (Monday): no new data pasted yet, see Pending.
 
-**Search Console checklist for next Monday (read and paste)**
-1. Indexing > Pages: number "Indexed" and "Not indexed"; list the reasons, especially "Discovered - currently not indexed" and "Crawled - currently not indexed" with counts.
-2. Performance > Search results, last 28 days: total clicks, impressions, average CTR, average position (tick all four boxes).
-3. Same report, Queries tab with Position column: top 15 rows.
-4. Pages tab with Position: top 15 rows.
-5. Countries tab: top 10 rows.
-6. Sitemaps: status and "Discovered pages" for sitemap.xml.
+## 26 Oct 2026 (Monday: weekly check + daily)
+
+**Weekly live check (kirannonwovens.com)**
+- All 73 sitemap URLs return 200; sitemap count 73 matches the build.
+- Unknown URL returns 404. www and http redirect (301) to https://kirannonwovens.com/.
+- Every page has its own canonical (equal to its URL) and exactly one H1.
+- /updates returns 404 on purpose: the page is only built once the first update exists.
+- Contact form: not tested (a test enquiry needs the owner's go-ahead).
+- Product schema has no offers/price by design (no prices are published), so product rich
+  results are not expected.
+
+**Changed (PR, not merged)**
+- Technical: two meta descriptions trimmed under 160 characters (/products,
+  /guides/geotextile-roll-weight-and-coverage).
+- Content: one FAQ added to the Apparel & Footwear category (matching a current fabric) and one
+  to Industrial (samples on request). Both use facts already on the site.
+- Off-site draft: offsite-drafts/2026-10-26-tradeindia.md (TradeIndia company profile, written
+  differently from the IndiaMART text).
+
+**Backlog**
+- 11 titles are 61-63 characters. Left as they are: Google cuts by pixel width, and several of
+  these pages are already getting impressions. Revisit only if Search Console shows truncation.
+
+**Pending (owner)**
+- Search Console numbers for the weekly review (see the checklist in the session reply).
+- TradeIndia: GST, year of establishment, export markets, photos [confirm]; then paste and send
+  the profile URL.
+- Google Business Profile verification (office board, then video verification).
+- Go-ahead before a test enquiry is sent through the contact form.
