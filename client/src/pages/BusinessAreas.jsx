@@ -18,6 +18,7 @@ const AREA_GUIDES = {
     'geotextile-for-drainage-and-erosion-control',
     'geotextile-retaining-wall-drainage-india',
     'geotextile-roll-weight-and-coverage',
+    'export-documents-nonwoven-geotextile-india',
   ],
   automotive: ['automotive-nvh-felt-guide', 'automotive-felt-oem-interiors-india'],
   'apparel-footwear': [
@@ -30,6 +31,8 @@ const AREA_GUIDES = {
     'carpet-backing-and-underlay-felt',
     'orthopaedic-cast-padding-nonwoven-india',
     'felt-grow-bag-fabric-nonwoven-india',
+    'packaging-protective-felt-india',
+    'luggage-bag-support-felt-india',
     'exhibition-carpet-needle-punched-nonwoven-india',
   ],
 };

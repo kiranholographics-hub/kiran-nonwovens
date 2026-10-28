@@ -94,6 +94,8 @@ export default function Products() {
               'how-to-request-a-nonwoven-felt-quote',
               'hs-code-nonwoven-felt-geotextile',
               'nonwoven-manufacturers-in-india',
+              'airlay-vs-needle-punch-nonwoven',
+              'export-documents-nonwoven-geotextile-india',
             ]}
           />
         </div>
