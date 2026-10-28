@@ -35,6 +35,22 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 28 Oct 2026 (Wednesday: new content, gap only)
+- 10:00 reminder task ran; Chrome was not connected, so indexing was not requested by it.
+- Build: OK, 74 pages, smoke passed, lint clean.
+- On-page (manual): pipeline-cable-protection-geotextile, acoustic-thermal-insulation-felt,
+  nvh-sound-insulation-fabric. One H1, titles 54–58, descriptions 151–155, industry link,
+  2+ guides, enquiry form. No fixes needed.
+- New guide: /guides/woven-vs-nonwoven-geotextile (playbook backlog "woven vs nonwoven";
+  no page covered it, only one FAQ in the drainage guide). How each is made, comparison
+  table, which for which job, why same GSM is not equal, what to specify, what we supply
+  (nonwoven only; says plainly when a woven is better). 5 FAQs. General knowledge only; no
+  test values or compliance claims.
+- Linked from: drainage guide FAQ, nonwoven geotextile guide, road construction guide
+  (related guides), and the guide list on all 4 geotextile product FAQs (except filter
+  geo bag, which has its own list). /guides lists it automatically.
+- Sitemap 74 URLs; robots unchanged.
+
 ## 27 Oct 2026 (Tuesday: product page upgrade)
 - Build: OK, 73 pages, smoke passed, lint clean on changed files.
 - Ordering terms on the site (owner, 26 Oct; OWNER_INPUTS.md §13), from one constant
