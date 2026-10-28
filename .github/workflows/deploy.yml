@@ -19,10 +19,6 @@ on:
         description: "After the live checks pass, also ping Bing/Yandex (IndexNow) with every URL"
         type: boolean
         default: false
-  # Every evening, so updates published in the /hq panel go live without a
-  # code change (the build downloads them; see client/scripts/fetch-content.mjs).
-  schedule:
-    - cron: "30 13 * * *" # 19:00 IST
   push:
     branches: [main]
     paths:
@@ -158,15 +154,7 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.indexnow
         run: npm run indexnow
 
-      # A code push changes pages, so tell Bing/Yandex about every URL. The
-      # evening run only exists to publish /hq updates, so it sends just those
-      # (and nothing at all when there are none).
+      # A code push changes pages, so tell Bing/Yandex about every URL.
       - name: Ping IndexNow after a push
         if: github.event_name == 'push'
         run: npm run indexnow
-
-      - name: Ping IndexNow with update pages
-        if: github.event_name == 'schedule'
-        run: |
-          urls=$(grep -o '<loc>[^<]*/updates/[^<]*</loc>' dist/sitemap.xml | sed 's/<\/\?loc>//g' || true)
-          if [ -n "$urls" ]; then node scripts/indexnow.mjs $urls; else echo "No update pages to submit."; fi

@@ -16,8 +16,9 @@ Ab NowFloats jaisa chalna hai: roz asli business updates, har update ek naya pag
 - Owner Claude ko bhejta hai: **"update: <ek line> + photo"** (jaise "aaj 40 roll 500 GSM geotextile Ahmedabad bheje").
 - Claude usse 80-150 shabd ka update likhta hai (title, 2-3 chhote paragraph, product page ka link) aur owner ko
   /hq > Updates mein paste karne ke liye deta hai. Photo owner /hq mein upload karta hai.
-- Site roz shaam 7 baje (IST) apne aap deploy hoti hai (deploy.yml schedule), to /hq ka update usi shaam live hota hai,
-  aur IndexNow us update URL ko Bing ko bhej deta hai. Code push wale deploy par saare URLs IndexNow ko jaate hain.
+- Koi automatic deploy NAHI hai (26 Oct: owner ke rule 4 ke baad roz shaam wala schedule hataya). /hq mein update daalne ke
+  baad owner GitHub > Actions > "Deploy website" > "Run workflow" se deploy chalata hai (IndexNow box tick karke).
+  Code merge hone par deploy apne aap hota hai aur saare URLs IndexNow ko jaate hain.
 - Update page ka title "<update> – Jaipur | Kiran Nonwovens" (lamba ho to bina Jaipur), schema mein Jaipur office ka address.
 - Wahi update text Google Business Profile post (verify hone ke baad) aur LinkedIn par bhi dalna hai.
 - NIYAM: sirf asli khabar. Koi update Claude apne se nahi banata; client ka naam owner ki marzi ke bina nahi; price/MOQ/

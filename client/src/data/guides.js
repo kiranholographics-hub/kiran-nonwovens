@@ -83,6 +83,18 @@ export const guides = [
         q: 'Does Kiran Nonwovens offer both processes?',
         a: 'Yes. We make needle punched and thermal bonded nonwovens in polyester, PP (virgin and recycled), viscose and custom blends, and develop custom materials where no standard product fits.',
       },
+      {
+        q: 'Which is better for insulation and padding?',
+        a: 'Thermal bonded nonwoven is often chosen for lofty, resilient padding and wadding, because heat-set low-melt fibre holds an open, springy structure. Needle punched felt is denser, so it is common where a firmer insulation layer is needed, such as automotive felt. The thickness and density your part needs decide.',
+      },
+      {
+        q: 'Which one is used for geotextile?',
+        a: 'Nonwoven geotextiles for roads, drains and liner protection are usually needle punched, because the entangled structure is tough, permeable and stays stable under load. See our [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide) for the uses.',
+      },
+      {
+        q: 'Can a fabric be both needle punched and thermal bonded?',
+        a: 'Yes. A web can be needle punched and then heat-set, combining mechanical entanglement with thermal bonding to adjust stiffness, surface and stability. Tell us the property you need and we will suggest a construction to sample.',
+      },
     ],
     relatedProducts: [
       'geotextile/pp-geotextile-fabric-for-civil-works',
@@ -594,7 +606,7 @@ export const guides = [
           'What export documents and packing do you provide?',
         ],
         p: [
-          'To start, send your specification through the [enquiry form](/contact#enquiry) and our export team will reply with specifications and pricing.',
+          'To start, send your specification through the [enquiry form](/contact#enquiry) and our export team will reply with specifications and pricing. Buying from within India? Our [India page](/india) has the Jaipur office and plant details.',
         ],
       },
     ],
@@ -1482,6 +1494,12 @@ export const guides = [
         h: 'Where needle punched nonwoven is used',
         p: [
           'The main uses of the material we make are geotextile for roads, railways and drainage (see [geotextile for road construction in India](/guides/geotextile-for-road-construction)), automotive felt (see the [NVH felt guide](/guides/automotive-nvh-felt-guide)), filter felt (see the [dust collector felt guide](/guides/dust-collector-filter-bag-felt)), footwear and apparel components, flooring, packaging and medical padding.',
+        ],
+      },
+      {
+        h: 'Buying from within India',
+        p: [
+          'Our office is in Adarsh Nagar, Jaipur, and the material is made at our partner\u2019s plant in Phagi, Jaipur. Where we are, which processes we run and what to send for a domestic order are on our [India page](/india).',
         ],
       },
       {
