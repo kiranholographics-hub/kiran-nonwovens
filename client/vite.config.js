@@ -12,7 +12,7 @@ import { existsSync } from 'node:fs';
  *
  * So in preview (never in dev, where no prerendered files exist) resolve a
  * clean URL to its own index.html first. Production hosting must do the same;
- * public/.htaccess does it for Apache.
+ * server/site.js does it on the live site.
  */
 function servePrerenderedPages() {
   const dist = path.resolve(import.meta.dirname, 'dist');

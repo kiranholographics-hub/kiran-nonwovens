@@ -4,12 +4,12 @@
  *   node scripts/verify-live.mjs            (reads dist/ for what was just built)
  *
  *   SITE_URL  default https://kirannonwovens.com
- *   API_URL   default https://api.kirannonwovens.com
+ *   API_URL   default SITE_URL (the API is served from the site itself)
  *
  *  - the home page points at the SAME hashed bundle as the build (so the upload
  *    really landed, and nothing is serving a stale copy),
  *  - a page answers 200 at its clean address and 301s from the trailing-slash
- *    form (the .htaccess is in place),
+ *    form (the server's redirect rules are in place),
  *  - sitemap.xml and robots.txt are served, name the real domain and not localhost,
  *  - an unknown address is a real 404,
  *  - the API says it is connected to its database.
@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(here, '../dist');
 const SITE = (process.env.SITE_URL || 'https://kirannonwovens.com').replace(/\/$/, '');
-const API = (process.env.API_URL || 'https://api.kirannonwovens.com').replace(/\/$/, '');
+const API = (process.env.API_URL || SITE).replace(/\/$/, '');
 const PAGE = '/guides/nonwoven-geotextile-guide';
 
 let failed = 0;

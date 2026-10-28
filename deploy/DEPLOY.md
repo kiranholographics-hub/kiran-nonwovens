@@ -1,5 +1,7 @@
 # Kiran Nonwovens — site ko live karne ka guide
 
+> **Purana guide.** Ab site aur API ek hi Node app hain (kiran-holographics.com jaisa). Naya setup: [`HOSTINGER-SINGLE-SITE.md`](HOSTINGER-SINGLE-SITE.md).
+
 Site ke **do hisse** hote hain, aur dono ko alag jagah chalana padta hai:
 
 | Hissa | Kya hai | Kahan chalta hai |
@@ -162,4 +164,4 @@ Agar asli domain se pehle kisi test address par daalna ho, to `client\.env.produ
 
 ## Automatic deploy (GitHub Actions)
 
-Website ko `dist` zip karke hand se upload karne ki jagah `deploy/GITHUB-DEPLOY.md` wala workflow use kar sakte ho (build + FTP upload + live check).
+**Ab yeh sab purana hai:** site aur API ek hi Node app hain. Naya setup `deploy/HOSTINGER-SINGLE-SITE.md` mein hai.
