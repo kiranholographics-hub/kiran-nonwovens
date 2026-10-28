@@ -109,7 +109,6 @@ export default function Contact() {
             </div>
             <div className="contact__photo">
               <Media
-                src="/images/plant/entrance.jpg"
                 alt="Kiran Nonwovens office, Jaipur"
                 variant={2}
                 minHeight={200}

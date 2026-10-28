@@ -177,7 +177,6 @@ export default function About() {
             <Reveal delay={120} className="about__aside">
               <Media
                 className="about__image"
-                src="/images/plant/overview.jpg"
                 alt="Needle punched nonwoven production at our manufacturing partner’s factory"
                 variant={2}
                 label="Factory photography — pending"

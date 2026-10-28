@@ -599,6 +599,10 @@ export const products = [
   product({
     name: 'Multi-Colour Needle-Punched Felt',
     slug: 'multi-colour-needle-punched-felt',
+    // No photo of this product yet, so the page shows the theme's texture
+    // rather than advertising an <img> the server answers 404 for. Delete
+    // this line once client/public/images/products/<slug>.jpg exists.
+    images: [],
     category: 'industrial',
     shortDescription: 'Our multi-colour needle-punched felt is a versatile nonwoven fabric made from quality synthetic fibres and available in a wide range of attractive colours.',
     description: [
@@ -636,6 +640,10 @@ export const products = [
   product({
     name: 'Carpet Backing Felt',
     slug: 'carpet-backing-felt',
+    // No photo of this product yet, so the page shows the theme's texture
+    // rather than advertising an <img> the server answers 404 for. Delete
+    // this line once client/public/images/products/<slug>.jpg exists.
+    images: [],
     category: 'industrial',
     shortDescription: 'Our needle-punched carpet backing felt is designed to provide strength, cushioning, stability, and improved performance for carpets and floor coverings.',
     description: [
@@ -746,6 +754,10 @@ export const products = [
   product({
     name: 'Flooring Underlay Felt',
     slug: 'flooring-underlay-felt',
+    // No photo of this product yet, so the page shows the theme's texture
+    // rather than advertising an <img> the server answers 404 for. Delete
+    // this line once client/public/images/products/<slug>.jpg exists.
+    images: [],
     category: 'industrial',
     shortDescription: 'Our needle-punched flooring underlay felt is designed to create a comfortable, stable, and protective layer beneath floor coverings.',
     description: [
@@ -783,6 +795,10 @@ export const products = [
   product({
     name: 'Customized Nonwoven Fabric for Specialized Applications',
     slug: 'customised-nonwoven-solutions',
+    // No photo of this product yet, so the page shows the theme's texture
+    // rather than advertising an <img> the server answers 404 for. Delete
+    // this line once client/public/images/products/<slug>.jpg exists.
+    images: [],
     category: 'industrial',
     shortDescription: 'We manufacture customized needle-punched nonwoven fabrics developed to meet specific application, performance, and processing requirements.',
     description: [

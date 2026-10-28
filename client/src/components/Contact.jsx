@@ -72,7 +72,6 @@ export default function Contact() {
             </div>
             <div className="contact__photo">
               <Media
-                src="/images/plant/entrance.jpg"
                 variant={2}
                 minHeight={200}
                 label="Plant / office photo — pending"
