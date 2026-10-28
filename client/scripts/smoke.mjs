@@ -183,6 +183,25 @@ check(productHtml.includes(p.features[0]), 'features not prerendered');
 check(productHtml.includes('application/ld+json'), 'no structured data');
 check(!/&lt;table/.test(productHtml), 'table markup escaped');
 
+// Every <img> a prerendered page points at must actually be in dist. A
+// missing file is invisible in a browser — the component swaps in the theme
+// texture after hydration — but a crawler follows the src and gets a 404, so
+// that product can never appear in image search, and the alt text promises a
+// photo nobody can fetch. Four product pages shipped this way before the
+// check existed.
+{
+  const missing = new Set();
+  for (const route of routes) {
+    const file = path.join(dist, route === '/' ? '' : route, 'index.html');
+    const html = await readFile(file, 'utf8');
+    for (const m of html.matchAll(/<img[^>]+src="(\/[^"]+)"/g)) {
+      const asset = path.join(dist, decodeURIComponent(m[1]));
+      if (!existsSync(asset)) missing.add(`${route} -> ${m[1]}`);
+    }
+  }
+  check(missing.size === 0, `prerendered <img> with no file: ${[...missing].join(', ')}`);
+}
+
 // Category pages must be reachable without the JS mega-menu opening.
 const home = await readFile(path.join(dist, 'index.html'), 'utf8');
 for (const b of businessAreas) {

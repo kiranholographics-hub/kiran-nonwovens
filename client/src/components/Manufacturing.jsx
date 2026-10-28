@@ -81,7 +81,6 @@ export default function Manufacturing() {
       <section className="block">
         <div className="wrap">
           <Media
-            src="/images/plant/line.jpg"
             variant={1}
             minHeight={320}
             label="Production line photography / video — pending"

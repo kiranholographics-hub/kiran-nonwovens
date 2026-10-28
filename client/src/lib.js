@@ -116,27 +116,22 @@ export const VIDEOS = {
   cta: {
     mp4: '/videos/cta.mp4',
     webm: '/videos/cta.webm',
-    poster: '/images/hero/closing.jpg',
     label: 'Home closing banner — finished rolls, dispatch',
   },
   businessAreas: {
     mp4: '/videos/business-areas.mp4',
-    poster: '/images/hero/business-areas.jpg',
     label: 'Business Areas banner — rolls across the four industries',
   },
   products: {
     mp4: '/videos/products.mp4',
-    poster: '/images/hero/products.jpg',
     label: 'Products banner — felt close-ups',
   },
   product: {
     mp4: '/videos/product.mp4',
-    poster: '/images/hero/products.jpg',
     label: 'Product banner — felt close-up',
   },
   about: {
     mp4: '/videos/about.mp4',
-    poster: '/images/hero/about.jpg',
     label: 'About banner — plant walk-through',
   },
   manufacturing: {

@@ -109,7 +109,6 @@ export default function About() {
 
             <Media
               className="about__image"
-              src="/images/plant/overview.jpg"
               variant={2}
               label="Plant photography — pending"
             />
