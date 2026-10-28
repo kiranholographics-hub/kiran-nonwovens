@@ -17,7 +17,7 @@ Ab NowFloats jaisa chalna hai: roz asli business updates, har update ek naya pag
 - Claude usse 80-150 shabd ka update likhta hai (title, 2-3 chhote paragraph, product page ka link) aur owner ko
   /hq > Updates mein paste karne ke liye deta hai. Photo owner /hq mein upload karta hai.
 - Koi automatic deploy NAHI hai (26 Oct: owner ke rule 4 ke baad roz shaam wala schedule hataya). /hq mein update daalne ke
-  baad owner GitHub > Actions > "Deploy website" > "Run workflow" se deploy chalata hai (IndexNow box tick karke).
+  baad owner hPanel > Websites > kirannonwovens.com > Redeploy dabata hai, phir GitHub > Actions > "Deploy website" > "Run workflow" (IndexNow box tick karke).
   Code merge hone par deploy apne aap hota hai aur saare URLs IndexNow ko jaate hain.
 - Update page ka title "<update> – Jaipur | Kiran Nonwovens" (lamba ho to bina Jaipur), schema mein Jaipur office ka address.
 - Wahi update text Google Business Profile post (verify hone ke baad) aur LinkedIn par bhi dalna hai.

@@ -1,4 +1,7 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import express from 'express';
+import compression from 'compression';
 import cors from 'cors';
 
 import productRoutes from './routes/products.js';
@@ -8,16 +11,23 @@ import adminRoutes from './routes/admin.js';
 import publicRoutes from './routes/public.js';
 import { dbReady, waitForDb } from './db.js';
 import { rateLimit } from './middleware/rateLimit.js';
+import { mountSite } from './site.js';
 
-export function createApp() {
+const SITE_DIST = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../client/dist');
+
+/** The API under /api, and the built website (client/dist) at every other address. */
+export function createApp({ dist = SITE_DIST } = {}) {
   const app = express();
 
   app.disable('x-powered-by');
   app.set('trust proxy', 1);
+  // Gzip pages, scripts and JSON on the way out (Apache's mod_deflate did this before).
+  app.use(compression());
 
-  // Baseline hardening headers. This API only ever returns JSON, so it can be
+  // Baseline hardening headers. The API only ever returns JSON, so it can be
   // strict: nothing here should be framed, sniffed or treated as a page.
-  app.use((_req, res, next) => {
+  // (The website's pages get their own, looser set in site.js.)
+  app.use('/api', (_req, res, next) => {
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Frame-Options', 'DENY');
     res.setHeader('Referrer-Policy', 'no-referrer');
@@ -29,7 +39,7 @@ export function createApp() {
   // The admin panel sends whole pages of text, so it gets a larger limit; every
   // other route keeps the small one.
   app.use('/api/admin', express.json({ limit: '256kb' }));
-  app.use(express.json({ limit: '64kb' }));
+  app.use('/api', express.json({ limit: '64kb' }));
 
   const allowed = (process.env.CORS_ORIGIN || '')
     .split(',')
@@ -41,6 +51,7 @@ export function createApp() {
     );
   }
   app.use(
+    '/api',
     cors({
       origin: allowed.length ? allowed : true,
       methods: ['GET', 'POST', 'PATCH', 'DELETE'],
@@ -84,7 +95,9 @@ export function createApp() {
   app.use('/api/public', publicRoutes);
   app.use('/api/admin', adminRoutes);
 
-  app.use((_req, res) => res.status(404).json({ error: 'Not found' }));
+  app.use('/api', (_req, res) => res.status(404).json({ error: 'Not found' }));
+
+  mountSite(app, dist);
 
   // eslint-disable-next-line no-unused-vars
   app.use((err, _req, res, _next) => {

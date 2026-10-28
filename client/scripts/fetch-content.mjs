@@ -27,17 +27,29 @@ const KEYS = ['markets', 'hiddenMarkets', 'pages', 'updates', 'testimonials', 't
 let data = {};
 let note = 'no VITE_API_URL — using built-in data';
 
-if (base) {
+// The API used to live at its own subdomain. The very first build of the
+// one-app site runs before that app is live, so it asks the old address too;
+// without this, panel-managed pages would drop out of that build's sitemap.
+const OLD_API = 'https://api.kirannonwovens.com';
+const sources = base ? [...new Set([base, OLD_API])] : [];
+
+for (const from of sources) {
   try {
-    const res = await fetch(`${base}/api/public/content`, {
+    const res = await fetch(`${from}/api/public/content`, {
       signal: AbortSignal.timeout(10000),
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const json = await res.json();
+    // Images uploaded before the move still name the old subdomain; point
+    // them at the site so they outlive it.
+    const site = (env.VITE_SITE_URL || base).replace(/\/$/, '');
+    const json = JSON.parse(
+      (await res.text()).replaceAll(`${OLD_API}/api/public/media/`, `${site}/api/public/media/`)
+    );
     for (const k of KEYS) if (Array.isArray(json[k])) data[k] = json[k];
-    note = `from ${base}: ${KEYS.map((k) => `${k} ${data[k]?.length ?? 0}`).join(', ')}`;
+    note = `from ${from}: ${KEYS.map((k) => `${k} ${data[k]?.length ?? 0}`).join(', ')}`;
+    break;
   } catch (err) {
-    note = `could not reach ${base} (${err.message}) — using built-in data`;
+    note = `could not reach ${from} (${err.message}) — using built-in data`;
   }
 }
 

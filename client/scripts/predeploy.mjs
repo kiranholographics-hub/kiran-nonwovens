@@ -21,13 +21,11 @@ const notes = [];
 
 const isLocal = (u) => /localhost|127\.0\.0\.1|\.local\b/i.test(u);
 
-/** The single hostname public/.htaccess redirects to, if it sets one. */
-function htaccessHost() {
-  const file = path.join(root, 'public/.htaccess');
+/** The single hostname the server (server/site.js) redirects every page to. */
+function canonicalHostOf() {
+  const file = path.resolve(root, '../server/site.js');
   if (!existsSync(file)) return null;
-  const m = readFileSync(file, 'utf8').match(
-    /^\s*RewriteRule\s+\S+\s+https:\/\/([^/%\s]+)/m
-  );
+  const m = readFileSync(file, 'utf8').match(/export const CANONICAL_HOST = '([^']+)'/);
   return m ? m[1] : null;
 }
 
@@ -44,7 +42,7 @@ else {
   // different one into canonical tags and sitemap.xml, every canonical points
   // at a URL that redirects — the exact mixed signal the redirect rules exist
   // to remove. Catch the mismatch here rather than in Search Console weeks on.
-  const canonicalHost = htaccessHost();
+  const canonicalHost = canonicalHostOf();
   if (canonicalHost) {
     let host = '';
     try {
@@ -54,17 +52,17 @@ else {
     }
     if (host && host !== canonicalHost) {
       errors.push(
-        `VITE_SITE_URL uses "${host}" but public/.htaccess redirects everything to ` +
+        `VITE_SITE_URL uses "${host}" but server/site.js redirects everything to ` +
           `"${canonicalHost}". Canonical tags and sitemap.xml would all point at ` +
-          `URLs that redirect. Use https://${canonicalHost}, or change the ` +
-          `RewriteRule in public/.htaccess if the other host is the one you want.`
+          `URLs that redirect. Use https://${canonicalHost}, or change ` +
+          `CANONICAL_HOST in server/site.js if the other host is the one you want.`
       );
     }
   }
 }
 
 const api = (env.VITE_API_URL || '').trim();
-if (!api) errors.push('VITE_API_URL is not set — the enquiry form would say "not connected". Set it to the live API address, e.g. https://api.yourdomain.com');
+if (!api) errors.push('VITE_API_URL is not set — the enquiry form would say "not connected". Set it to the live address — the API is served from the site itself, e.g. https://yourdomain.com');
 else {
   if (!api.startsWith('https://')) errors.push(`VITE_API_URL must start with https:// — it is "${api}". A https site cannot call a http API.`);
   if (isLocal(api)) errors.push(`VITE_API_URL points at your own computer ("${api}") — the live form would not work.`);

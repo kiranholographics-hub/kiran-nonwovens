@@ -43,7 +43,7 @@ if (/localhost|127\.0\.0\.1/.test(SITE_URL) && process.env.ALLOW_LOCAL_BUILD !==
     `\n[prerender] VITE_SITE_URL is "${SITE_URL}", so sitemap.xml and robots.txt would point at localhost.\n` +
       `Put this in client/.env.production and build again:\n\n` +
       `  VITE_SITE_URL=https://kirannonwovens.com\n` +
-      `  VITE_API_URL=https://api.kirannonwovens.com\n\n` +
+      `  VITE_API_URL=https://kirannonwovens.com\n\n` +
       `(For a throw-away local test build only, run with ALLOW_LOCAL_BUILD=1.)\n`
   );
   process.exit(1);

@@ -460,7 +460,7 @@ export const marketsIn = (region) => markets.filter((m) => m.region === region);
  * it is what gives each region page its substance, as a real table of
  * destinations, ports and what buyers there ask first.
  *
- * Old country URLs 301 to their region page in client/public/.htaccess.
+ * Old country URLs 301 to their region page (REDIRECTS in server/site.js).
  */
 export const REGION_PAGES = [
   {
