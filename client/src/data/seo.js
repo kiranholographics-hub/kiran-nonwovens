@@ -42,6 +42,11 @@ export const PAGE_SEO = {
     description:
       'Send a specification-based enquiry for nonwoven felt or geotextile — fibre, GSM, width and quantity — and our export team will reply with a quote.',
   },
+  needleFelt: {
+    title: 'Needle Punched Felt Manufacturer, India',
+    description:
+      'Needle punched felt from Jaipur, India: polyester, PP and viscose, 100–1200 GSM, 5.0–5.2 m rolls, made to order. Free samples, export packing.',
+  },
   india: {
     title: 'Nonwoven Felt & Geotextile in Jaipur, India',
     description:
@@ -409,5 +414,34 @@ export const INDIA_FAQ = [
   {
     q: 'How quickly can you dispatch an order?',
     a: 'Usually 4–5 days after the order is confirmed. The minimum quantity is agreed with each order rather than fixed.',
+  },
+];
+
+
+/** Needle punched felt landing page: the questions a buyer ready to order asks. */
+export const NEEDLE_FELT_FAQ = [
+  {
+    q: 'What is needle punched felt?',
+    a: 'A nonwoven fabric made by punching barbed needles through a web of fibre, which tangles the fibres together without weaving, knitting or adhesive. Density and thickness are set by how heavily the web is needled. See [needle punched vs thermal bonded](/guides/needle-punched-vs-thermal-bonded-nonwoven) for how it differs from the other main process.',
+  },
+  {
+    q: 'What GSM and width can you make?',
+    a: '100 to 1200 GSM, in roll widths of 5.0–5.2 m. Thickness and colour are set per order. [GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric) explains how weight relates to thickness and feel.',
+  },
+  {
+    q: 'Which fibres do you offer?',
+    a: 'Polyester, PP (virgin or recycled), viscose and custom blends. The right one depends on the job; [polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven) sets out the trade-off.',
+  },
+  {
+    q: 'Where is the felt made?',
+    a: 'At the plant of our manufacturing partner, Miracle Nonwoven Industries, in Phagi, Jaipur. Kiran Nonwovens agrees the specification with you and exports against it. We are not a trading house buying ready-made stock.',
+  },
+  {
+    q: 'What is the minimum order and how long does dispatch take?',
+    a: 'The minimum is agreed per order, and dispatch is usually 4–5 days from order confirmation. A sample is free, to any location, and how long it takes to reach you depends on where you are.',
+  },
+  {
+    q: 'Do you supply finished parts or only rolls?',
+    a: 'Rolls. The standard roll is 50 m, with other lengths on request, packed in a poly bag on a paper core or in HDPE wrap. The felt is made to be cut, stitched, laminated and moulded on your own line.',
   },
 ];

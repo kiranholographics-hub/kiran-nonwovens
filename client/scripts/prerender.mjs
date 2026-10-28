@@ -60,6 +60,7 @@ const STATIC_ROUTES = [
   { url: '/about', priority: '0.6', src: 'src/pages/About.jsx' },
   { url: '/manufacturing', priority: '0.7', src: 'src/pages/Manufacturing.jsx' },
   { url: '/india', priority: '0.8', src: 'src/pages/India.jsx' },
+  { url: '/needle-punched-felt-india', priority: '0.9', src: 'src/pages/NeedlePunchedFelt.jsx' },
   { url: '/contact', priority: '0.6', src: 'src/pages/Contact.jsx' },
   { url: '/exports', priority: '0.8', src: 'src/pages/Exports.jsx' },
   { url: '/guides', priority: '0.7', src: 'src/pages/Guides.jsx' },

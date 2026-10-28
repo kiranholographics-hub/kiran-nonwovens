@@ -47,6 +47,7 @@ export default function Footer() {
           <div>
             <h2>Products</h2>
             <Link to="/products">All products</Link>
+            <Link to="/needle-punched-felt-india">Needle punched felt</Link>
             {businessAreas.map((area) => (
               <Link key={area.slug} to={`/products/${area.slug}`}>
                 {area.name}
