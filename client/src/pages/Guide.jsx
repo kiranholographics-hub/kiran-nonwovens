@@ -68,6 +68,7 @@ export default function Guide() {
   return (
     <div lang={lang === 'en' ? undefined : lang} className="guide-lang">
       <Seo
+        lang={guide.lang || 'en'}
         title={guide.seoTitle}
         description={guide.description}
         path={path}

@@ -1,6 +1,6 @@
 import { useInsertionEffect } from 'react';
 import { SITE } from '../lib.js';
-import { applyHead, isServer } from '../head.js';
+import { applyHead, isServer, setLang } from '../head.js';
 
 /**
  * Per-page <head>.
@@ -26,6 +26,9 @@ import { applyHead, isServer } from '../head.js';
  *                VITE_NOINDEX=true at build time does this for every page —
  *                for a staging copy that must not be indexed.
  */
+/** og:locale for a page's language. SITE.locale covers everything else. */
+const OG_LOCALE = { en: SITE.locale, hi: 'hi_IN' };
+
 export default function Seo({
   title,
   description,
@@ -34,6 +37,7 @@ export default function Seo({
   image,
   type = 'website',
   article,
+  lang = 'en',
   noindex: noindexProp = false,
 }) {
   const noindex = noindexProp || import.meta.env.VITE_NOINDEX === 'true';
@@ -68,7 +72,7 @@ export default function Seo({
 
     { kind: 'meta', attrs: { property: 'og:type', content: type } },
     { kind: 'meta', attrs: { property: 'og:site_name', content: SITE.name } },
-    { kind: 'meta', attrs: { property: 'og:locale', content: SITE.locale } },
+    { kind: 'meta', attrs: { property: 'og:locale', content: OG_LOCALE[lang] || SITE.locale } },
     { kind: 'meta', attrs: { property: 'og:title', content: fullTitle } },
     { kind: 'meta', attrs: { property: 'og:description', content: desc } },
     { kind: 'meta', attrs: { property: 'og:url', content: url } },
@@ -114,10 +118,16 @@ export default function Seo({
 
   // On the server this records the tags for the prerender; in the browser it
   // writes them to the DOM before paint, so the title never flashes.
-  if (isServer) applyHead(tags);
+  if (isServer) {
+    setLang(lang);
+    applyHead(tags);
+  }
 
   useInsertionEffect(() => {
-    if (!isServer) applyHead(tags);
+    if (!isServer) {
+      setLang(lang);
+      applyHead(tags);
+    }
   });
 
   return null;

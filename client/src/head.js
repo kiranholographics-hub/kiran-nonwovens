@@ -16,10 +16,31 @@
 export const isServer = typeof window === 'undefined';
 
 let sink = [];
+let lang = 'en';
 
 /** Prerender only: start a fresh collection before rendering a route. */
 export function resetHead() {
   sink = [];
+  lang = 'en';
+}
+
+/**
+ * The page's language. The shell's <html lang> is a single fixed value, so a
+ * page written in another language would otherwise declare itself English —
+ * which is the one thing that page cannot afford, since it exists to be found
+ * in that language.
+ */
+export function setLang(value) {
+  if (isServer) {
+    lang = value || 'en';
+    return;
+  }
+  document.documentElement.lang = value || 'en';
+}
+
+/** Prerender only: the language of the last rendered route. */
+export function collectLang() {
+  return lang;
 }
 
 /** Prerender only: the tags collected during the last render, as HTML. */
