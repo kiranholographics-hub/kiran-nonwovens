@@ -606,7 +606,7 @@ export const guides = [
           'What export documents and packing do you provide?',
         ],
         p: [
-          'To start, send your specification through the [enquiry form](/contact#enquiry) and our export team will reply with specifications and pricing. Buying from within India? Our [India page](/india) has the Jaipur office and plant details.',
+          'To start, send your specification through the [enquiry form](/contact#enquiry) and our export team will reply with specifications and pricing. Buying from within India? Our [India page](/india) has the Jaipur office and plant details. Ready to see the range and ordering terms? Read our [needle punched felt page](/needle-punched-felt-india).',
         ],
       },
     ],
@@ -1488,7 +1488,7 @@ export const guides = [
       {
         h: 'Where our material is made',
         p: [
-          'Kiran Nonwovens exports material made at the plant of its manufacturing partner, Miracle Nonwoven Industries, in Phagi, Jaipur. You agree the specification with us, approve a sample, and the order is produced and shipped against it. See the [manufacturing page](/manufacturing) for the processes.',
+          'Kiran Nonwovens exports material made at the plant of its manufacturing partner, Miracle Nonwoven Industries, in Phagi, Jaipur. You agree the specification with us, approve a sample, and the order is produced and shipped against it. See the [manufacturing page](/manufacturing) for the processes, and the [needle punched felt page](/needle-punched-felt-india) for the range and how an order works.',
         ],
       },
       {

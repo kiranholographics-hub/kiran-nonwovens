@@ -43,6 +43,7 @@ const routes = [
   '/about',
   '/manufacturing',
   '/india',
+  '/needle-punched-felt-india',
   '/contact',
   '/guides',
   '/exports',

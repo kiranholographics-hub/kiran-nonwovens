@@ -22,6 +22,7 @@ import Updates from './pages/Updates.jsx';
 import Update from './pages/Update.jsx';
 import CustomPage from './pages/CustomPage.jsx';
 import India from './pages/India.jsx';
+import NeedlePunchedFelt from './pages/NeedlePunchedFelt.jsx';
 import Guides from './pages/Guides.jsx';
 import Guide from './pages/Guide.jsx';
 import Privacy from './pages/Privacy.jsx';
@@ -93,6 +94,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/india" element={<India />} />
+          <Route path="/needle-punched-felt-india" element={<NeedlePunchedFelt />} />
           <Route path="/exports" element={<Exports />} />
           <Route path="/exports/:slug" element={<ExportRegion />} />
           <Route path="/updates" element={<Updates />} />
