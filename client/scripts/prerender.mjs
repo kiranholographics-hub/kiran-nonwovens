@@ -212,8 +212,9 @@ async function findFontPreloads() {
     .join('\n    ');
 }
 
-function inject(template, { html, head }) {
+function inject(template, { html, head, lang }) {
   let out = template.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
+  if (lang && lang !== 'en') out = out.replace(/<html lang="[^"]*"/i, `<html lang="${lang}"`);
   if (fontPreloads) out = out.replace('</head>', `  ${fontPreloads}\n  </head>`);
   if (head) {
     // The page supplies its own title/description, so drop the shell's

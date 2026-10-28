@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 
 import App from './App.jsx';
-import { collectHead, resetHead } from './head.js';
+import { collectHead, collectLang, resetHead } from './head.js';
 // No stylesheet imports here: the client build already emits every stylesheet
 // and index.html links them. The SSR bundle only needs the markup.
 
@@ -22,5 +22,5 @@ export function render(url) {
       </StaticRouter>
     </StrictMode>
   );
-  return { html, head: collectHead() };
+  return { html, head: collectHead(), lang: collectLang() };
 }
