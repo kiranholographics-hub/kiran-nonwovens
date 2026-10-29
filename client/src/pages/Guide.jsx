@@ -22,9 +22,12 @@ const anchor = (text) =>
 // Labels for a guide written in another language (`lang` on the guide).
 // English is the default; anything not listed falls back to it.
 const LABELS = {
-  hi: { guide: 'गाइड', minRead: 'मिनट', toc: 'इस गाइड में', faq: 'सवाल-जवाब', updated: 'अपडेट', published: 'प्रकाशित' },
+  hi: { guide: 'गाइड', minRead: 'मिनट', toc: 'इस गाइड में', faq: 'सवाल-जवाब', updated: 'अपडेट', published: 'प्रकाशित', by: 'लेखक' },
 };
-const EN = { guide: 'Guide', minRead: 'min read', toc: 'In this guide', faq: 'Questions', updated: 'Updated', published: 'Published' };
+const EN = { guide: 'Guide', minRead: 'min read', toc: 'In this guide', faq: 'Questions', updated: 'Updated', published: 'Published', by: 'By' };
+
+/** The person who writes the guides (owner, 29 Oct 2026). Role and experience to be added when confirmed. */
+const AUTHOR = 'Ranjeet Sharma';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 /** '2026-10-27' -> '27 Oct 2026', the same on the server and in the browser. */
@@ -71,7 +74,11 @@ export default function Guide() {
     inLanguage: lang,
     mainEntityOfPage: `${SITE.url}${path}`,
     image: `${SITE.url}${SITE.ogImage}`,
-    author: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+    author: {
+      '@type': 'Person',
+      name: AUTHOR,
+      worksFor: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+    },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url },
   };
 
@@ -92,7 +99,7 @@ export default function Guide() {
       />
       <PageHero
         trail={trail}
-        kicker={`${t.guide} · ${guide.readMins} ${t.minRead} · ${guide.updated ? t.updated : t.published} ${showDate(modified)}`}
+        kicker={`${t.guide} · ${guide.readMins} ${t.minRead} · ${guide.updated ? t.updated : t.published} ${showDate(modified)} · ${t.by} ${AUTHOR}`}
         title={guide.title}
         lead={guide.intro}
         video={VIDEOS.about}

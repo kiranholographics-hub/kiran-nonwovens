@@ -59,8 +59,8 @@ build uses the real domain (checked live 26 Oct).
 - Bing AI Performance (Copilot citations), 25-26 Oct: 0 citations, 0 cited pages. Baseline;
   recheck weekly.
 - Merged as PR #62; live: /llms.txt 200 text/plain, guide dates showing.
-- Owner: a named author (person, role, years in nonwovens) would strengthen guides for
-  AI citation; needs real details.
+- Author (owner, 29 Oct): guides now say "By Ranjeet Sharma" and Article author is a Person
+  (worksFor Kiran Nonwovens). Role and years of experience still to confirm; not shown until then.
 
 ## 29 Oct 2026 (Thursday: schema and technical)
 - Hosting changed 28 Oct (PR #53): one Hostinger Node app builds from GitHub main; FTP deploy gone.
