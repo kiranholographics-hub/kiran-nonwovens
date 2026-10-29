@@ -96,8 +96,8 @@ per-country pages were merged into 6 regions on 21 Oct because they were 63.7% i
 must be about the trade, not the destination.
 - [x] Incoterms (EXW/FOB/CFR/CIF/DAP) for a nonwoven buyer (28 Oct)
 - [x] export documents for nonwoven and geotextile from India (28 Oct)
-- [ ] sampling to bulk: what happens between the sample and the first container
-- [ ] payment terms an Indian supplier and an overseas buyer usually agree
+- [x] sampling to bulk: what happens between the sample and the first container (29 Oct)
+- [ ] payment terms an Indian supplier and an overseas buyer usually agree — HOLD: the owner has not confirmed any payment terms, so do not write until he does
 
 Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make or sell it before writing; ask in the PR, skip until answered.
 - [x] geotextile behind retaining walls (drainage and filter layer) India (25 Oct)

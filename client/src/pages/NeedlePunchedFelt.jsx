@@ -51,6 +51,7 @@ const READING = [
   '[GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric) — choosing a weight',
   '[Polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven) — choosing a fibre',
   '[What to check in a needle punched felt manufacturer](/guides/needle-punched-nonwoven-manufacturer-india) — a checklist for importers',
+  '[How to test a sample](/guides/how-to-test-a-nonwoven-felt-sample) — what to check before you order in bulk',
   '[The quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) — what to send with an enquiry',
 ];
 
