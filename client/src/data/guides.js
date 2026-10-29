@@ -495,7 +495,7 @@ export const guides = [
       {
         h: 'Try a sample before a bulk order',
         p: [
-          'Samples are free, so you can test the material in your own process — cutting, stitching, laminating, moulding, embossing, die-cutting or bonding — before you commit to a volume.',
+          'Samples are free, so you can test the material in your own process — cutting, stitching, laminating, moulding, embossing, die-cutting or bonding — before you commit to a volume. [How to test a nonwoven felt sample](/guides/how-to-test-a-nonwoven-felt-sample) covers what to check and what to write down before bulk.',
         ],
       },
       {
@@ -576,7 +576,7 @@ export const guides = [
       {
         h: 'Ask for samples and test your own process',
         p: [
-          'A sample run through your own cutting, laminating, moulding or installation tells you more than a datasheet. Ask whether samples are available and what they cover.',
+          'A sample run through your own cutting, laminating, moulding or installation tells you more than a datasheet. Ask whether samples are available and what they cover, then see [how to test a nonwoven felt sample](/guides/how-to-test-a-nonwoven-felt-sample) for what to check.',
         ],
       },
       {
@@ -3630,6 +3630,149 @@ export const guides = [
       'industrial/customised-nonwoven-solutions',
     ],
     relatedGuides: ['hs-code-nonwoven-felt-geotextile', 'incoterms-nonwoven-felt-india', 'how-to-request-a-nonwoven-felt-quote'],
+  },
+  {
+    slug: 'how-to-test-a-nonwoven-felt-sample',
+    title: 'Testing a nonwoven felt sample before you order: what to check',
+    seoTitle: 'How to Test a Nonwoven Felt Sample',
+    description:
+      'What to check when a nonwoven felt or geotextile sample arrives: weight, thickness, behaviour in your process, and what to fix in writing before bulk.',
+    readMins: 6,
+    published: '2026-10-29',
+    intro:
+      'A sample is not a courtesy. It is the one moment a specification becomes something you can hold, weigh and run through your own line. Most disputes over bulk felt start from a sample that was glanced at, liked, and never written down. This guide covers what to ask for, what to check, and what to put on paper before the order is produced.',
+    sections: [
+      {
+        h: 'The sample is the real specification',
+        p: [
+          'A paper specification says 300 GSM, 3 mm, white. Two felts can match that line and still feel, cut and lay differently. Once you approve a sample, the order is produced against it, so what you approve is what you are agreeing to.',
+          'That makes the sample worth treating as a test, not a formality. Ask for one that matches what you intend to order: the same fibre, the same weight, the same width if the width matters to your line.',
+        ],
+      },
+      {
+        h: 'Ask for a piece you can actually use',
+        list: [
+          'Large enough to run on your equipment, not a postage-stamp swatch',
+          'The fibre and GSM you plan to buy, so you are testing the real thing',
+          'Two or three weights side by side if you have not settled on one — tell us the range and we will confirm what can be sent',
+          'A note of the specification it was made to, so you can compare it with what arrives',
+        ],
+        p: [
+          'Samples are free, to any location. How long one takes to reach you depends on where you are, so allow for it in your own timeline.',
+        ],
+      },
+      {
+        h: 'Check the weight yourself, in two minutes',
+        p: [
+          'GSM is grams per square metre, and you can verify it with a ruler and a small scale. Cut a square of known size, weigh it, and divide the weight in grams by the area in square metres.',
+          'Use a scale that reads to 0.1 g or better, cut several pieces from different places, and average them. A single small cut can mislead, because felt is not perfectly uniform across its width.',
+        ],
+      },
+      {
+        h: 'The arithmetic, worked through',
+        table: {
+          head: ['Piece cut', 'Area', 'Weight', 'Works out to'],
+          rows: [
+            ['10 cm × 10 cm', '0.01 m²', '3.0 g', '300 GSM'],
+            ['20 cm × 20 cm', '0.04 m²', '12.0 g', '300 GSM'],
+            ['10 cm × 10 cm', '0.01 m²', '1.5 g', '150 GSM'],
+          ],
+        },
+        p: [
+          'The first two rows are the same felt cut at two sizes, which is a useful sanity check: the larger piece is easier to weigh accurately. [GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric) explains why weight and thickness are separate things.',
+        ],
+      },
+      {
+        h: 'Then check what weight cannot tell you',
+        table: {
+          head: ['What to check', 'How', 'Why it matters'],
+          rows: [
+            ['Thickness', 'Measure at several points, under the same light pressure each time', 'Two felts of one weight can differ in loft'],
+            ['Feel and body', 'Handle it, fold it, pull it', 'Firmness decides how it drapes, cuts and holds shape'],
+            ['Surface and edge', 'Look at the face; cut an edge', 'Fraying and fuzz show up at the cutting step'],
+            ['Colour', 'Compare under your own lighting, against your reference', 'Colour looks different under a shop light and a window'],
+            ['Behaviour in your process', 'Run it: cut, stitch, laminate, mould, bond', 'The only test that matches how you will actually use it'],
+          ],
+        },
+        p: [
+          'The last row is the one that counts. A felt that handles well by hand can still misbehave on the line, so a short run through your real process is worth more than any amount of looking.',
+        ],
+      },
+      {
+        h: 'If your specification names a test',
+        p: [
+          'Some jobs, geotextile above all, are specified on laboratory tests the project engineer sets. A sample is also what you send to an independent lab. If a test is required, tell us which one and whose method before production, and confirm the current edition of any standard with your engineer.',
+          'Test reports from an independent laboratory come from that laboratory. We cannot give you a figure from a test nobody has run on the material you are buying.',
+        ],
+      },
+      {
+        h: 'Tell us what you found',
+        p: [
+          'If the sample is close but not right, say how: too firm, too thin, colour a shade off, fraying at the die. That is how a specification is adjusted and a second sample made, rather than a bulk order produced to a near-miss.',
+          'Be specific and give numbers where you have them: the weight you measured, the thickness, a photo of the problem. "It is not good" costs a round of questions; "it weighs 270 where we need 300" does not.',
+        ],
+      },
+      {
+        h: 'Write down what you approved',
+        list: [
+          'The specification: fibre, GSM, thickness, width, colour, roll length',
+          'The tolerance you will accept on weight and thickness, in numbers',
+          'That the approved sample is the reference for the order',
+          'Any test or document the order depends on',
+        ],
+        p: [
+          'Keep the approved sample sealed and labelled with the date. It is your reference when the first roll arrives. No nonwoven is identical roll to roll, so the tolerance is not a detail: agree it before production, not after the first complaint.',
+        ],
+      },
+      {
+        h: 'From sample to bulk',
+        p: [
+          'The minimum order is agreed per order. After the order is confirmed, dispatch is usually 4–5 days. The standard roll is 50 m, with other lengths on request, packed in a poly bag on a paper core or in HDPE wrap — see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage) for working out how much you need.',
+          'When the first roll arrives, check it against your reference sample the same way you checked the sample: weight, thickness, colour, and a run through your process before you open the rest. If something is off, send the roll number, the measurements and photos alongside the reference sample, so it can be looked at against the specification you agreed.',
+        ],
+      },
+      {
+        h: 'What to send when you ask for a sample',
+        list: [
+          'The application, and what the material has to do',
+          'Fibre and GSM, or the range you want to compare',
+          'The width and the size of piece you need for your line',
+          'The tests or documents your order will depend on',
+          'Your destination, so the sample ships to the right place',
+        ],
+        p: [
+          'Send it through the [enquiry form](/contact#enquiry), or use the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote) to cover everything at once. Our [needle punched felt page](/needle-punched-felt-india) shows the range and ordering terms.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Are samples free?',
+        a: 'Yes, free, to any location. How long a sample takes to arrive depends on where you are.',
+      },
+      {
+        q: 'How do I check the GSM of a sample?',
+        a: 'Cut a square of known size, weigh it, and scale to one square metre. A 10 cm × 10 cm piece is 0.01 m², so 3.0 g works out to 300 GSM. Use a scale that reads to 0.1 g, cut several pieces from different places and average them.',
+      },
+      {
+        q: 'What should I test a felt sample for?',
+        a: 'Weight, thickness, feel, surface, colour under your own lighting, and above all how it behaves in your process: cutting, stitching, laminating, moulding or bonding. The run through your real process is the most useful test.',
+      },
+      {
+        q: 'Can I get samples in more than one GSM?',
+        a: 'Tell us the range you want to compare and the application, and we will confirm what can be sent. It is easier to choose between weights side by side than from a description.',
+      },
+      {
+        q: 'What if the bulk order is slightly different from the sample?',
+        a: 'No nonwoven is identical roll to roll, so agree a tolerance on weight and thickness in writing before production, and keep the approved sample sealed as your reference. If a roll is off, send the roll number, your measurements and photos with the reference sample so it can be checked against the agreed specification.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/customised-nonwoven-solutions',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'automotive/automotive-needle-punched-felt',
+    ],
+    relatedGuides: ['how-to-request-a-nonwoven-felt-quote', 'gsm-in-nonwoven-fabric', 'needle-punched-nonwoven-manufacturer-india'],
   },
 ];
 
