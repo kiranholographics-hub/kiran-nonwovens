@@ -22,9 +22,9 @@ const anchor = (text) =>
 // Labels for a guide written in another language (`lang` on the guide).
 // English is the default; anything not listed falls back to it.
 const LABELS = {
-  hi: { guide: 'गाइड', minRead: 'मिनट', toc: 'इस गाइड में', faq: 'सवाल-जवाब', updated: 'अपडेट', published: 'प्रकाशित', by: 'लेखक' },
+  hi: { guide: 'गाइड', minRead: 'मिनट', toc: 'इस गाइड में', faq: 'सवाल-जवाब', updated: 'अपडेट', published: 'प्रकाशित', by: 'लेखक', keyPoints: 'मुख्य बातें' },
 };
-const EN = { guide: 'Guide', minRead: 'min read', toc: 'In this guide', faq: 'Questions', updated: 'Updated', published: 'Published', by: 'By' };
+const EN = { guide: 'Guide', minRead: 'min read', toc: 'In this guide', faq: 'Questions', updated: 'Updated', published: 'Published', by: 'By', keyPoints: 'Key points' };
 
 /** The person who writes the guides (owner, 29 Oct 2026). Role and experience to be added when confirmed. */
 const AUTHOR = 'Ranjeet Sharma';
@@ -123,6 +123,19 @@ export default function Guide() {
           </nav>
 
           <div className="guide__body">
+            {/* The short answer first: the passage AI answers and snippets lift. */}
+            {guide.keyPoints?.length ? (
+              <section className="guide__section guide__keypoints" aria-labelledby="key-points">
+                <h2 id="key-points">{t.keyPoints}</h2>
+                <ul className="guide__list">
+                  {guide.keyPoints.map((li) => (
+                    <li key={li.slice(0, 40)}>
+                      <RichText text={li} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
             {guide.sections.map((s, i) => (
               <section key={s.h} className="guide__section">
                 <h2 id={sectionId(s, i)}>{s.h}</h2>

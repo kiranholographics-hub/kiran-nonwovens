@@ -27,6 +27,12 @@ export const guides = [
     readMins: 5,
     intro:
       'Both processes turn loose fibre into a fabric without weaving or knitting, but they hold the fibre together in different ways — and that changes how the finished roll behaves. This guide explains how each works and how to choose between them.',
+    keyPoints: [
+      'Needle punching tangles fibres mechanically with barbed needles; thermal bonding fuses low-melt fibre with heat. Neither needs glue.',
+      'Needle punched felt is usually denser, firmer and more stable, so it is the usual choice for geotextile, automotive and filter felt.',
+      'Thermal bonded material is usually lighter, loftier and softer, and suits padding and linings; it needs low-melt fibre in the blend.',
+      'A web can be needle punched and then heat-set to combine both.',
+    ],
     sections: [
       {
         h: 'How needle punching works',
@@ -117,6 +123,12 @@ export const guides = [
     readMins: 4,
     intro:
       'GSM is the first number on almost every nonwoven enquiry, and the one most often misunderstood. Here is what it measures, what it does not, and how to specify it so the quote you receive matches the material you need.',
+    keyPoints: [
+      'GSM is grams per square metre: the weight of the fabric, not its thickness.',
+      'Two fabrics with the same GSM can differ in thickness and density, so specify GSM and thickness together.',
+      'Heavier is not automatically better: choose the lightest weight that reliably does the job.',
+      'Agree a GSM tolerance with the supplier when you order.',
+    ],
     sections: [
       {
         h: 'What GSM means',
@@ -192,6 +204,12 @@ export const guides = [
     updated: '2026-10-27',
     intro:
       'A nonwoven geotextile is a permeable fabric laid in or on the ground to make a structure work better and last longer. This guide covers the jobs it does, where it is used, and the details to settle before you order.',
+    keyPoints: [
+      'A nonwoven geotextile is a permeable, felt-like fabric laid in or on the ground; most are needle punched from polypropylene or polyester fibre.',
+      'It does five jobs: separation, filtration, drainage, protection and erosion control.',
+      'Typical uses: under roads and railway ballast, around drains and pipes, behind retaining walls, on slopes, and under canal, pond and landfill liners.',
+      'To order, give the function, fibre, GSM and thickness, roll size and any strength or permeability values your design requires.',
+    ],
     sections: [
       {
         h: 'What a nonwoven geotextile is',
@@ -290,6 +308,12 @@ export const guides = [
     readMins: 5,
     intro:
       'Two fibres cover most nonwoven felt and geotextile: polyester and polypropylene. They look similar on a roll but behave differently in heat, chemicals and sunlight. Here is how they compare, and where viscose and blends fit.',
+    keyPoints: [
+      'Polypropylene (PP) is lighter, absorbs very little water and resists many acids, alkalis and salts, so it is common in geotextile and filtration.',
+      'Polyester (PET) tolerates more heat and sunlight, so it is common in automotive felt and near warm areas; it is weak in strongly alkaline conditions.',
+      'Viscose is soft and absorbent and is usually used in blends for feel and comfort.',
+      'Choose from the environment first: temperature, chemistry and how long the fabric sees sunlight.',
+    ],
     sections: [
       {
         h: 'Polypropylene (PP)',
@@ -373,6 +397,12 @@ export const guides = [
     readMins: 5,
     intro:
       'Quiet, comfortable vehicle interiors depend on layers of material most drivers never see. Needle punched nonwoven felt is one of the most widely used of them. This guide explains what NVH means, how felt helps, and what to specify.',
+    keyPoints: [
+      'NVH means noise, vibration and harshness; needle punched felt reduces it by absorbing sound and slowing heat in the air trapped between its fibres.',
+      'It is used in carpet backing, door panels, headliners, boot and wheel-arch liners, and dashboard and engine-bay insulation.',
+      'Performance depends on thickness, density, fibre and finish, so felt is specified per component; polyester is generally chosen near heat.',
+      'Trial a sample in your own component, because moulding, laminating or stitching changes how felt behaves.',
+    ],
     sections: [
       {
         h: 'What NVH means',
@@ -1275,6 +1305,12 @@ export const guides = [
     published: '2026-10-16',
     intro:
       'Buyers often ask for “150 GSM geotextile” as if the number settles the choice. GSM is the weight of the fabric per square metre, and it is a useful starting point, but the right grade for a road depends on the subgrade, the aggregate, the traffic and the specification your engineer works to. This guide explains what GSM does and does not tell you.',
+    keyPoints: [
+      'There is no single right GSM for a road: the subgrade, aggregate, traffic and the project specification decide it.',
+      'As a rough guide, about 100–200 GSM is common for separation over firm ground, 200–400 GSM on softer or wetter ground, and 400 GSM and above under angular stone or heavy traffic.',
+      'GSM alone is not a specification: add function, fibre, strength and puncture values, permeability and roll size.',
+      'On Indian public works the specification usually refers to MoRTH and IRC; confirm the current edition with your engineer.',
+    ],
     sections: [
       {
         h: 'What GSM tells you',
@@ -3311,6 +3347,12 @@ export const guides = [
     published: '2026-10-28',
     intro:
       'Woven and nonwoven geotextiles are both permeable fabrics laid in the ground, and tenders sometimes treat them as interchangeable. They are not. A woven geotextile is built for tensile strength; a nonwoven is built for water flow, filtration and cushioning. This guide explains the difference and how to match each to the job. We make nonwoven geotextile only, and say plainly below where a woven fabric is the better choice.',
+    keyPoints: [
+      'Woven geotextile is thin and strong in tension; nonwoven (needle punched) is thick and felt-like and lets water pass through and along it.',
+      'Use nonwoven for drainage, filtration, liner protection and separation on wet ground; use woven or geogrid for reinforcement over very soft ground.',
+      'The same GSM does not make them equal: compare the strength, puncture, opening size and permeability the design needs.',
+      'Kiran Nonwovens makes nonwoven geotextile only.',
+    ],
     sections: [
       {
         h: 'How each one is made',

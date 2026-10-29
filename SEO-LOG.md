@@ -37,6 +37,22 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 30 Oct 2026 (owner asked: research what replaced SEO, get the site ready)
+- Research (web, Oct 2026): SEO has not been replaced. AEO (your passage used as the answer in
+  AI Overviews / AI Mode) and GEO (brand named in ChatGPT, Gemini, Perplexity) are layers on top.
+  AI Mode splits a question into many sub-queries ("query fan-out"), so subtopic coverage with
+  clear headings and FAQs helps. Google needs no special schema for AI features.
+- Status vs the site: done before today: prerendered HTML, robots open to AI crawlers (Bing live
+  test OK), FAQs on every page, comparison tables, Article/Organization/LocalBusiness/Product
+  schema, freshness dates, named author, llms.txt, IndexNow, Bing + GSC AI reports as baseline.
+- Done today: "Key points" box (answer-first, 3-4 bullets) at the top of 7 guides with
+  impressions or high intent: nonwoven-geotextile-guide, polyester-vs-polypropylene,
+  needle-punched-vs-thermal-bonded, gsm-in-nonwoven-fabric, geotextile-gsm-for-road-construction-india,
+  automotive-nvh-felt-guide, woven-vs-nonwoven-geotextile. Facts only from each guide's own text.
+  Optional `keyPoints` field; Hindi label "मुख्य बातें".
+- Still needs the owner (GEO is mostly off-site): profile URLs for Organization sameAs
+  (LinkedIn, IndiaMART, TradeIndia, Google Business Profile, YouTube); listings live; real photos.
+
 ## 29 Oct 2026 (Thursday, later: "new techniques" request)
 - Research (web, Oct 2026): Google says AI search optimisation is still SEO; since 15 May 2026
   manipulating AI answers is spam. Useful items: AI crawlers can read the site, visible freshness,
