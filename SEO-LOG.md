@@ -50,6 +50,14 @@ build uses the real domain (checked live 26 Oct).
   (related guides), and the guide list on all 4 geotextile product FAQs (except filter
   geo bag, which has its own list). /guides lists it automatically.
 - Sitemap 74 URLs; robots unchanged.
+- Merged as PR #52; deploy OK, new guide live (200, in sitemap, links live).
+- Search Console (Claude via Chrome): Request indexing for the new guide, drainage guide,
+  nonwoven geotextile guide, road construction guide and the Hindi guide. The new guide and
+  /guides/non-woven-geotextile-hindi were "unknown to Google"; the other three are indexed.
+- Deploys: runs #46 (PR #50) and #48 failed with "The FTP upload failed" (Hostinger FTP).
+  The next deploy succeeded each time, so the site is current, but a failed run can leave a
+  deploy half-uploaded. Watch the Actions tab after each merge; if it fails twice in a row,
+  check the FTP_USERNAME / FTP_PASSWORD secrets against hPanel.
 
 ## 27 Oct 2026 (Tuesday: product page upgrade)
 - Build: OK, 73 pages, smoke passed, lint clean on changed files.
