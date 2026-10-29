@@ -54,6 +54,8 @@ build uses the real domain (checked live 26 Oct).
   indexed by Bing", so the real Bingbot gets through. The guide was "Discovered but not
   crawled" (found 29 Oct); Bing indexing requested (quota 100 a day). Bing notice: 1 image with
   empty alt (the decorative logo/poster; alt="" is correct for decoration, left as is).
+- Owner confirmed office days (29 Oct): Monday to Saturday, 10:00-18:00. Shown on /contact and
+  added to LocalBusiness as openingHoursSpecification (/contact and /india).
 - Bing AI Performance (Copilot citations), 25-26 Oct: 0 citations, 0 cited pages. Baseline;
   recheck weekly.
 - Merged as PR #62; live: /llms.txt 200 text/plain, guide dates showing.

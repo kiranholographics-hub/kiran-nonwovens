@@ -45,7 +45,9 @@ export const CONTACT = {
     encodeURIComponent(
       '221-C, Frontier Colony, Adarsh Nagar, Jaipur, Rajasthan 302004'
     ),
-  hours: '10:00 am – 6:00 pm',
+  hours: 'Monday to Saturday, 10:00 am – 6:00 pm',
+  /** Same hours for schema.org (owner, 29 Oct 2026). */
+  openingHours: { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '10:00', closes: '18:00' },
 };
 
 /** PLACEHOLDER — global-presence figures pending from Sir. */
@@ -237,7 +239,7 @@ export function organizationLd() {
 
 /**
  * The Jaipur office as a LocalBusiness, tied to the Organization by @id.
- * Opening hours are left out: the site gives the times but not the days.
+ * Opening hours: Monday to Saturday, 10:00-18:00 (owner, 29 Oct 2026).
  */
 export function localBusinessLd() {
   return {
@@ -251,6 +253,12 @@ export function localBusinessLd() {
     email: CONTACT.email,
     address: { '@type': 'PostalAddress', ...CONTACT.addressParts },
     parentOrganization: { '@id': `${SITE.url}/#organization` },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: CONTACT.openingHours.days,
+      opens: CONTACT.openingHours.opens,
+      closes: CONTACT.openingHours.closes,
+    },
   };
 }
 
