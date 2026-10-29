@@ -231,6 +231,36 @@ function inject(template, { html, head, lang }) {
 const xmlEscape = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+/** llms.txt: what the company makes, then links to products, guides and company pages. */
+function llmsTxt({ businessAreas, products, guides = [], PLANT }) {
+  const link = (title, url, note) =>
+    `- [${title}](${SITE_URL}${url})${note ? `: ${note}` : ''}`;
+  const areaName = (slug) => businessAreas.find((b) => b.slug === slug)?.name || slug;
+  return [
+    '# Kiran Nonwovens',
+    '',
+    `> Manufacturer and exporter of needle punched and thermal bonded nonwoven felt and geotextile, based in Jaipur, India. ${PLANT.gsmLabel} GSM, roll widths ${PLANT.widthLabel}, in polyester, PP (virgin and recycled), viscose and blends, made to order. Produced at the plant of manufacturing partner Miracle Nonwoven Industries, Phagi, Jaipur.`,
+    '',
+    'We do not make spunbond, spunlace, meltblown or woven fabric. We publish no prices; quotes are given per specification.',
+    '',
+    '## Products',
+    ...products.map((p) =>
+      link(p.name, `/products/${p.category}/${p.slug}`, areaName(p.category))
+    ),
+    '',
+    "## Buyer's guides",
+    ...guides.map((g) => link(g.title, `/guides/${g.slug}`)),
+    '',
+    '## Company',
+    link('About', '/about'),
+    link('Manufacturing', '/manufacturing', 'how and where the material is made'),
+    link('Exports', '/exports', 'regions we supply'),
+    link('India', '/india', 'buying from within India'),
+    link('Contact and enquiry', '/contact', '221-C, Frontier Colony, Adarsh Nagar, Jaipur 302004; +91 78781 09226; kirannonwovens@gmail.com'),
+    '',
+  ].join('\n');
+}
+
 async function run() {
   const catalogue = await loadCatalogue();
   const routes = allRoutes(catalogue);
@@ -283,6 +313,13 @@ async function run() {
       : `User-agent: *\nDisallow: /hq\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
     'utf8'
   );
+
+  // A plain-text map of the main pages for AI assistants (llmstxt.org).
+  // Built from the same data as the pages, so it cannot drift from them.
+  if (process.env.VITE_NOINDEX !== 'true') {
+    await writeFile(path.join(dist, 'llms.txt'), llmsTxt(catalogue), 'utf8');
+    console.log('[prerender] llms.txt written');
+  }
 
   await rm(ssrDist, { recursive: true, force: true });
   console.log('[prerender] done');

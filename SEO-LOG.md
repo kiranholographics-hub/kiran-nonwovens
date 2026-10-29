@@ -37,6 +37,22 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 29 Oct 2026 (Thursday, later: "new techniques" request)
+- Research (web, Oct 2026): Google says AI search optimisation is still SEO; since 15 May 2026
+  manipulating AI answers is spam. Useful items: AI crawlers can read the site, visible freshness,
+  real authors, third-party mentions, Search Console's new AI-features report, Bing's AI
+  Performance report. llms.txt is optional with unproven value.
+- Done: guides now carry an `updated` date (set by hand only when content changed) used for
+  dateModified and shown as "Updated 28 Oct 2026" (else "Published ..."). Set on 5 guides
+  edited 27-28 Oct. Before this, dateModified always equalled datePublished.
+- Done: /llms.txt generated at build from the catalogue and guides (company summary, 16 products,
+  all guides, company pages). Not written for noindex staging builds.
+- Check: requests faking Bingbot got 403 and GPTBot 429 from Hostinger. Likely bot protection
+  against spoofed user agents from a normal IP, not proof the real crawlers are blocked.
+  Verify with Bing Webmaster Tools URL Inspection (live test).
+- Owner: a named author (person, role, years in nonwovens) would strengthen guides for
+  AI citation; needs real details.
+
 ## 29 Oct 2026 (Thursday: schema and technical)
 - Hosting changed 28 Oct (PR #53): one Hostinger Node app builds from GitHub main; FTP deploy gone.
 - Build: OK, 77 pages (other sessions added /needle-punched-felt-india, Incoterms and export
