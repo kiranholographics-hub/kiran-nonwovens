@@ -11,7 +11,7 @@ import { RuledList } from '../components/TabPanel.jsx';
 import { PLANT } from '../data/catalog.js';
 import { PARTNER } from '../data/locations.js';
 import { INDIA_FAQ, PAGE_SEO, plain } from '../data/seo.js';
-import { CONTACT, SITE, VIDEOS, breadcrumbLd, faqLd } from '../lib.js';
+import { CONTACT, VIDEOS, breadcrumbLd, faqLd, localBusinessLd } from '../lib.js';
 
 /** What the four business areas mean to a buyer searching from within India. */
 const SECTORS = [
@@ -53,16 +53,7 @@ const READING = [
 export default function India() {
   const trail = [{ to: '/', label: 'Home' }, { label: 'India' }];
 
-  const localLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: SITE.name,
-    url: `${SITE.url}/india`,
-    image: `${SITE.url}${SITE.ogImage}`,
-    telephone: '+917878109226',
-    email: CONTACT.email,
-    address: { '@type': 'PostalAddress', ...CONTACT.addressParts },
-  };
+  const localLd = localBusinessLd();
 
   return (
     <>

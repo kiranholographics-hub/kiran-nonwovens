@@ -30,10 +30,36 @@ build uses the real domain (checked live 26 Oct).
   day for content quality, starting with the 16 product pages.
 - 27 Oct: products/geotextile/pp-geotextile-fabric-for-civil-works,
   drainage-soil-erosion-control-geotextile, filter-geo-bag-felt
-- Next: products/geotextile/pipeline-cable-protection-geotextile, then automotive products.
+- 28 Oct: pipeline-cable-protection-geotextile, acoustic-thermal-insulation-felt, nvh-sound-insulation-fabric
+- 29 Oct: carpet-backing-felt, customised-nonwoven-solutions, flooring-underlay-felt
+- Next: luggage-bag-support-felt, multi-colour-needle-punched-felt, orthopaedic-cast-padding
 
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
+
+## 29 Oct 2026 (Thursday: schema and technical)
+- Hosting changed 28 Oct (PR #53): one Hostinger Node app builds from GitHub main; FTP deploy gone.
+- Build: OK, 77 pages (other sessions added /needle-punched-felt-india, Incoterms and export
+  documents guides), smoke passed, lint clean on changed files.
+- Schema audit, all 77 pages (script): every JSON-LD block parses; BreadcrumbList on every inner
+  page; Organization + WebSite on home; Article on all 36 guides with datePublished,
+  dateModified, author and image; FAQPage only where the FAQ text is on the page; Product on all
+  16 products. NAP in schema matches section 0 exactly.
+- Fixed: /contact had only a bare ContactPage. Added a shared localBusinessLd() (lib.js) with
+  @id /#office, address, phone, email and parentOrganization -> /#organization; used on /contact
+  and /india (replacing the hand-built copy there). ContactPage now says it is about the
+  Organization. Opening hours left out: the site shows 10:00-6:00 but not the days.
+- Decision on "Product snippets: invalid" (Search Console): keep Product markup without offers,
+  review or rating. Google needs one of those for product rich results, and we publish no price
+  and have no real reviews. It does not block indexing. Revisit only if the owner publishes a
+  price or collects real reviews.
+- Core Web Vitals basics: hero posters 45-84 KB (fine); videos load after the page. Backlog:
+  product/area photos are ~200 KB JPGs (WebP would roughly halve them; needs an image tool such
+  as sharp, none installed); all code is one 648 KB JS file (code-split the guides data).
+- On-page (manual): carpet-backing-felt, customised-nonwoven-solutions, flooring-underlay-felt.
+  All fine. Titles of carpet backing (37 chars) and flooring underlay (40) are short and could
+  carry "needle punched"; product titles come from MongoDB, so change them in /hq or the DB,
+  not only in catalog.js.
 
 ## 28 Oct 2026 (Wednesday: new content, gap only)
 - 10:00 reminder task ran; Chrome was not connected, so indexing was not requested by it.
