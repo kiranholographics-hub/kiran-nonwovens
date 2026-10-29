@@ -235,6 +235,25 @@ export function organizationLd() {
   };
 }
 
+/**
+ * The Jaipur office as a LocalBusiness, tied to the Organization by @id.
+ * Opening hours are left out: the site gives the times but not the days.
+ */
+export function localBusinessLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${SITE.url}/#office`,
+    name: SITE.name,
+    url: SITE.url,
+    image: abs(SITE.ogImage),
+    telephone: '+917878109226',
+    email: CONTACT.email,
+    address: { '@type': 'PostalAddress', ...CONTACT.addressParts },
+    parentOrganization: { '@id': `${SITE.url}/#organization` },
+  };
+}
+
 export function websiteLd() {
   return {
     '@context': 'https://schema.org',

@@ -5,7 +5,7 @@ import EnquiryForm from '../components/EnquiryForm.jsx';
 import { RuledList } from '../components/TabPanel.jsx';
 import Faq from '../components/Faq.jsx';
 import { CONTACT_FAQ, PAGE_SEO, plain } from '../data/seo.js';
-import { CONTACT, SITE, breadcrumbLd, faqLd, isPlaceholder } from '../lib.js';
+import { CONTACT, SITE, breadcrumbLd, faqLd, isPlaceholder, localBusinessLd } from '../lib.js';
 import { PARTNER } from '../data/locations.js';
 import './Contact.css';
 
@@ -58,7 +58,9 @@ export default function Contact() {
             '@type': 'ContactPage',
             name: 'Contact Kiran Nonwovens',
             url: `${SITE.url}/contact`,
+            about: { '@id': `${SITE.url}/#organization` },
           },
+          localBusinessLd(),
           breadcrumbLd([{ to: '/', label: 'Home' }, { label: 'Contact' }]),
           faqLd(CONTACT_FAQ.map((f) => ({ q: f.q, a: plain(f.a) }))),
         ]}
