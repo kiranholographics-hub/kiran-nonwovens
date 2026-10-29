@@ -22,9 +22,16 @@ const anchor = (text) =>
 // Labels for a guide written in another language (`lang` on the guide).
 // English is the default; anything not listed falls back to it.
 const LABELS = {
-  hi: { guide: 'गाइड', minRead: 'मिनट', toc: 'इस गाइड में', faq: 'सवाल-जवाब' },
+  hi: { guide: 'गाइड', minRead: 'मिनट', toc: 'इस गाइड में', faq: 'सवाल-जवाब', updated: 'अपडेट', published: 'प्रकाशित' },
 };
-const EN = { guide: 'Guide', minRead: 'min read', toc: 'In this guide', faq: 'Questions' };
+const EN = { guide: 'Guide', minRead: 'min read', toc: 'In this guide', faq: 'Questions', updated: 'Updated', published: 'Published' };
+
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+/** '2026-10-27' -> '27 Oct 2026', the same on the server and in the browser. */
+const showDate = (iso) => {
+  const [y, m, d] = iso.split('-').map(Number);
+  return `${d} ${MONTHS[m - 1]} ${y}`;
+};
 
 export default function Guide() {
   const { slug } = useParams();
@@ -44,6 +51,8 @@ export default function Guide() {
   // Non-Latin headings reduce to an empty slug, so number the sections instead.
   const sectionId = (s, i) => anchor(s.h) || `section-${i + 1}`;
   const published = guide.published || GUIDES_PUBLISHED;
+  // `updated` is set by hand only when a guide's content really changed.
+  const modified = guide.updated || published;
 
   const related = guide.relatedProducts
     .map((key) => products.find((p) => `${p.category}/${p.slug}` === key))
@@ -58,7 +67,7 @@ export default function Guide() {
     headline: guide.title,
     description: guide.description,
     datePublished: published,
-    dateModified: published,
+    dateModified: modified,
     inLanguage: lang,
     mainEntityOfPage: `${SITE.url}${path}`,
     image: `${SITE.url}${SITE.ogImage}`,
@@ -74,7 +83,7 @@ export default function Guide() {
         description={guide.description}
         path={path}
         type="article"
-        article={{ published, modified: published }}
+        article={{ published, modified }}
         jsonLd={[
           articleLd,
           breadcrumbLd(trail),
@@ -83,7 +92,7 @@ export default function Guide() {
       />
       <PageHero
         trail={trail}
-        kicker={`${t.guide} · ${guide.readMins} ${t.minRead}`}
+        kicker={`${t.guide} · ${guide.readMins} ${t.minRead} · ${guide.updated ? t.updated : t.published} ${showDate(modified)}`}
         title={guide.title}
         lead={guide.intro}
         video={VIDEOS.about}

@@ -189,6 +189,7 @@ export const guides = [
     description:
       'Uses of non woven geotextile in roads, railways, drains, walls, canals and landfills, the five jobs it does, and what to specify when you order.',
     readMins: 6,
+    updated: '2026-10-27',
     intro:
       'A nonwoven geotextile is a permeable fabric laid in or on the ground to make a structure work better and last longer. This guide covers the jobs it does, where it is used, and the details to settle before you order.',
     sections: [
@@ -460,6 +461,7 @@ export const guides = [
     description:
       'What importers should include when requesting a quote for nonwoven felt or geotextile: application, fibre, GSM, width, quantity, destination and samples.',
     readMins: 4,
+    updated: '2026-10-27',
     intro:
       'Nonwoven felt and geotextile are made to order, so a price cannot be given without a specification. The more of the details below you send, the faster and more accurate the reply. Use this as a checklist for your first enquiry.',
     sections: [
@@ -2315,6 +2317,7 @@ export const guides = [
     description:
       'Free geotextile roll calculator: enter GSM, width and length for roll weight and area, square metres per tonne, rolls needed, and container loading notes.',
     readMins: 5,
+    updated: '2026-10-28',
     published: '2026-10-25',
     intro:
       'Buyers of geotextile ask the same practical questions before they order: how heavy is one roll, how much ground does a tonne cover, and how many rolls will a container take? All three come from one formula. This guide shows it, works through examples for the wide rolls we make, and explains what the answer does and does not tell you.',
@@ -2446,6 +2449,7 @@ export const guides = [
     description:
       'Where nonwoven geotextile goes behind a retaining wall in India, why it stops the drainage layer clogging in monsoon, common mistakes, and what to specify.',
     readMins: 6,
+    updated: '2026-10-27',
     published: '2026-10-25',
     intro:
       'A retaining wall holds back soil, and the wall can only do that safely if water does not build up behind it. A drainage layer of stone or a drainage board carries the water out through weep holes, and a nonwoven geotextile keeps the soil from washing into that layer. This guide covers where the fabric goes, what goes wrong when it is left out or chosen badly, and what to specify.',
@@ -2627,6 +2631,7 @@ export const guides = [
     description:
       'What event and exhibition carpet makers and importers should specify in a needle punched nonwoven roll: fibre, GSM, colour consistency, width and roll length.',
     readMins: 5,
+    updated: '2026-10-27',
     published: '2026-10-25',
     intro:
       'Exhibition and event carpet is laid for days, walked on by crowds, rolled up and laid again. A needle punched nonwoven suits it because it is dense, hard-wearing and cheap enough to be treated as consumable. This guide is for carpet makers, converters and importers who buy the nonwoven as roll stock and need to know what to specify.',
