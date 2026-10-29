@@ -50,6 +50,13 @@ build uses the real domain (checked live 26 Oct).
 - Check: requests faking Bingbot got 403 and GPTBot 429 from Hostinger. Likely bot protection
   against spoofed user agents from a normal IP, not proof the real crawlers are blocked.
   Verify with Bing Webmaster Tools URL Inspection (live test).
+  Checked same day: Bing live test on /guides/woven-vs-nonwoven-geotextile says "URL can be
+  indexed by Bing", so the real Bingbot gets through. The guide was "Discovered but not
+  crawled" (found 29 Oct); Bing indexing requested (quota 100 a day). Bing notice: 1 image with
+  empty alt (the decorative logo/poster; alt="" is correct for decoration, left as is).
+- Bing AI Performance (Copilot citations), 25-26 Oct: 0 citations, 0 cited pages. Baseline;
+  recheck weekly.
+- Merged as PR #62; live: /llms.txt 200 text/plain, guide dates showing.
 - Owner: a named author (person, role, years in nonwovens) would strengthen guides for
   AI citation; needs real details.
 
