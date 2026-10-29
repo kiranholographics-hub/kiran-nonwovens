@@ -264,3 +264,15 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Key points: a short answer box at the top of a guide. */
+.guide__keypoints {
+  padding: 20px 22px 6px;
+  background: var(--sand, #f3efe6);
+  border-left: 3px solid var(--forest, #1f3a2e);
+}
+
+.guide__keypoints h2 {
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  margin-bottom: 8px;
+}
