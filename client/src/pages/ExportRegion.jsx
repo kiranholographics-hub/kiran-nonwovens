@@ -30,6 +30,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-landfill-mining-india',
     'geotextile-embankment-soft-soil-india',
     'how-to-install-nonwoven-geotextile',
+    'geotextile-under-paver-blocks-india',
   ],
   automotive: ['automotive-nvh-felt-guide', 'automotive-felt-oem-interiors-india'],
   'apparel-footwear': [

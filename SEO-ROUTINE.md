@@ -104,7 +104,7 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [x] geotextile for embankments and highways on soft soil India (26 Oct)
 - [x] how to install nonwoven geotextile on site (laying, overlaps, anchoring) (26 Oct)
 - [x] geotextile for French drains and subsurface drains: SKIPPED (26 Oct), already covered by /guides/geotextile-for-drainage-and-erosion-control.
-- [ ] geotextile for paver block and interlocking tile bases
+- [x] geotextile for paver block and interlocking tile bases (30 Oct) -> /guides/geotextile-under-paver-blocks-india
 - [ ] geotextile for gabion and stone pitching backing
 - [ ] geotextile for hill slope protection and landslide repair India
 - [ ] geotextile for green roofs and terrace gardens India
