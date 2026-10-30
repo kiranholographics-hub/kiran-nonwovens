@@ -3247,6 +3247,125 @@ export const guides = [
     relatedGuides: ['geotextile-roll-weight-and-coverage', 'nonwoven-geotextile-guide', 'geotextile-for-road-construction'],
   },
   {
+    slug: 'geotextile-under-paver-blocks-india',
+    title: 'Geotextile under paver blocks: what it does in the base, and when it is not needed',
+    seoTitle: 'Geotextile Under Paver Blocks: Base Layer Guide',
+    description:
+      'Where a nonwoven geotextile sits under interlocking paver blocks, what it keeps apart, when a base does not need one, and what to check before you order.',
+    readMins: 6,
+    published: '2026-10-30',
+    intro:
+      'Paver blocks look after themselves until the base under them moves. Then a lane of blocks sinks, a joint opens, or a soft patch shows after the first monsoon. A nonwoven geotextile is one of the tools used to stop that, but it is not needed on every job, and it can do harm if it is put in the wrong layer. This guide explains what the fabric does in a paver base, where it goes, and when to leave it out. It is general practice; your drawing and your engineer decide.',
+    sections: [
+      {
+        h: 'What a paver base is made of',
+        list: [
+          'Subgrade: the natural or filled soil, trimmed and compacted to level',
+          'Base: compacted aggregate, which carries the load and spreads it over the soil',
+          'Bedding layer: a thin screeded layer of sand that the blocks are set into',
+          'Blocks and joint sand: the visible surface, locked together by the sand in the joints',
+        ],
+        p: [
+          'The geotextile, where it is used, goes between the subgrade and the base. It is not part of the bedding layer and it does not replace the aggregate.',
+        ],
+      },
+      {
+        h: 'What the fabric does there',
+        p: [
+          'Under load, and especially when the ground is wet, soft soil works its way up into the open spaces of an aggregate base, and the aggregate presses down into the soil. Over time the base gets thinner, the soil gets into the stone, and the surface follows. A nonwoven geotextile laid between the two keeps the layers apart. This is separation. On wet or clayey ground it also lets water pass while holding the fine soil back, which is the filtration role covered in the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+          'It does not make a weak subgrade strong. If the soil is soft enough to need stabilising, that is a design question for the engineer, and the answer may be a thicker base, treatment of the soil or a different product.',
+        ],
+      },
+      {
+        h: 'Where paver bases usually meet this problem',
+        table: {
+          head: ['Site', 'What goes wrong without separation', 'What to ask your engineer'],
+          rows: [
+            ['Parking and driveways on clayey or black cotton soil', 'Base presses into soft soil, wheel tracks sink', 'Whether a separator is called for under the base'],
+            ['Footpaths and plazas on filled ground', 'Uneven settlement as fill and stone mix', 'Fill type and how it was compacted'],
+            ['Industrial yards and godown aprons', 'Heavy wheel loads punch the base down', 'Load class and base thickness'],
+            ['Low-lying or waterlogged sites', 'Water softens the soil, fines pump up into the stone', 'Drainage of the base and whether the fabric must also filter'],
+            ['Residential paths on firm, well-drained soil', 'Often nothing, if the soil is firm and the base is sound', 'Whether the fabric is needed at all'],
+          ],
+        },
+        p: [
+          'The right-hand column is a question, not a rule. The same soil can behave differently from one season to the next, so the decision should rest on the site investigation rather than on this table.',
+        ],
+      },
+      {
+        h: 'When you may not need it',
+        p: [
+          'On firm, free-draining ground with a properly compacted base, a separator may add cost without adding much. Some contractors also avoid placing fabric under the sand bedding layer, because a fabric there can trap water or let the bedding sand slide. Others use it only on the soft sections of a job. Whether to use it is a design call, and it is reasonable to leave it out where the engineer says so.',
+        ],
+      },
+      {
+        h: 'Laying it',
+        list: [
+          'Trim and compact the subgrade first, and remove sharp stones or roots that could press through',
+          'Roll the fabric out flat and loose over the subgrade, in contact with the ground and without folds',
+          'Overlap rolls by the width your specification asks for, and bring the fabric up the sides where the base is edged by kerbs or retaining edges, if the drawing shows it',
+          'Place the aggregate over the fabric from the edge, rather than tipping onto it or driving plant over it bare',
+          'Compact the base in layers as specified, then screed the bedding sand and lay the blocks',
+        ],
+        p: [
+          'The general site steps are in [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile).',
+        ],
+      },
+      {
+        h: 'What to ask for when you order',
+        list: [
+          'Nonwoven needle punched geotextile, in the fibre your project calls for (polyester or polypropylene)',
+          'The GSM and any test values your specification sets; we do not quote a figure for you, because the right weight depends on the soil and load',
+          'Roll width and length to suit your layout; to work out how many rolls an area needs, see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage)',
+        ],
+        p: [
+          'Tell us the application, the weight and the quantity through the [enquiry form](/contact#enquiry). Samples are free, to any location, so you can check the fabric before you order.',
+        ],
+      },
+      {
+        h: 'What we do not supply',
+        p: [
+          'We make needle punched and thermal bonded nonwovens. We do not make woven geotextile, geogrid or geocell, which are the products usually specified for stabilising a soft subgrade. If your drawing asks for one of those, we are not the right supplier for that item. The [woven vs nonwoven comparison](/guides/woven-vs-nonwoven-geotextile) explains how to tell which one a job needs.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Do I need geotextile under paver blocks?',
+        a: 'Not always. It is most useful where the soil is soft, clayey or wet and the base is likely to mix with it. On firm, well-drained soil with a properly compacted base it may not be needed. Your engineer or site investigation should decide.',
+      },
+      {
+        q: 'Where does the geotextile go in a paver base?',
+        a: 'Normally between the subgrade and the compacted aggregate base. It is not usually placed under the bedding sand, where it can trap water or let the sand move.',
+      },
+      {
+        q: 'Does geotextile stop weeds growing through paver joints?',
+        a: 'Not reliably. Weeds mostly grow from seeds that land in the joint sand from above, so a fabric under the base does little to stop them. It is there for separation, not weed control.',
+      },
+      {
+        q: 'Will geotextile strengthen a weak subgrade under pavers?',
+        a: 'No. A nonwoven keeps the base and the soil apart and lets water through. A weak subgrade needs a design answer from the engineer, such as a thicker base or soil treatment.',
+      },
+      {
+        q: 'Which GSM should I use under pavers?',
+        a: 'It depends on the soil and the load, so we do not give a number here. Use the value in your specification, or ask your engineer, and confirm against a sample before bulk.',
+      },
+      {
+        q: 'Do you supply woven geotextile or geogrid for paver bases?',
+        a: 'No. We make needle punched and thermal bonded nonwoven fabric only.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+    ],
+    relatedGuides: [
+      'how-to-install-nonwoven-geotextile',
+      'geotextile-roll-weight-and-coverage',
+      'woven-vs-nonwoven-geotextile',
+    ],
+  },
+  {
     slug: 'airlay-vs-needle-punch-nonwoven',
     title: 'Airlay vs needle punch: two different steps, not two rival fabrics',
     seoTitle: 'Airlay vs Needle Punch Nonwoven',
