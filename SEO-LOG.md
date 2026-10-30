@@ -46,7 +46,8 @@ build uses the real domain (checked live 26 Oct).
 - All six region pages: ordering terms table (MOQ per order, 4–5 days to dispatch, 50 m roll,
   packing, free samples), a dispatch FAQ, MOQ and sample FAQs brought in line with the owner's
   answers (samples were still "on request").
-- Next Fridays: give Europe, then Africa, their own `context` section the same way.
+- Europe done the same day (30 Oct, owner asked): `context` section (EN 13249-13257 standards series, UK vs EU paperwork, cold-ground separation, component makers) and 3 FAQs; no conformity or test claim.
+- Next Friday: give Africa its own `context` section the same way.
 - GBP checked in Chrome: Kiran Nonwovens profile exists, address matches the site, status
   "Verification required". Owner is doing the video verification and creating IndiaMART,
   TradeIndia and LinkedIn accounts.

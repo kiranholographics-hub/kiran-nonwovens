@@ -504,6 +504,31 @@ export const REGION_PAGES = [
     name: 'Europe',
     short: 'Europe',
     buyers: 'European importers',
+    // Region-specific section and questions. Standards and conditions are
+    // general knowledge; nothing here claims a certification or a test result.
+    context: {
+      h: 'Buying for European projects and plants.',
+      p: [
+        '**Standards and test values.** European civil-engineering contracts usually name the geotextile standard and the values it must meet. The EN 13249 to EN 13257 series covers geotextiles part by part, by application: roads, railways, earthworks, drainage, erosion control, reservoirs, canals, tunnels and landfill. Confirm with your engineer which part applies and which test values and conformity paperwork the contract asks for, and tell us before production. We cannot quote a figure from a test nobody has run on the material you are buying; see [how to test a nonwoven felt sample](/guides/how-to-test-a-nonwoven-felt-sample) and [export documents](/guides/export-documents-nonwoven-geotextile-india).',
+        '**UK and EU are separate markets.** Conformity requirements and paperwork can differ between the United Kingdom and the EU. Say which one the goods are for when you enquire, so the documents match the destination.',
+        '**Cold ground.** In Nordic and Alpine projects a spring thaw leaves a soft, wet subgrade, which is where a separation layer earns its place. The GSM follows the fill and the traffic above it; see [geotextile GSM for road construction](/guides/geotextile-gsm-for-road-construction-india).',
+        '**Component makers.** Automotive, footwear and industrial buyers in Germany, Poland, Italy and Spain typically write down fibre, GSM, thickness tolerance and colour, and approve a sample before an order. Agree the tolerance in writing before production, as set out in the [sample guide](/guides/how-to-test-a-nonwoven-felt-sample), and read how weight and thickness relate in [GSM in nonwoven fabric](/guides/gsm-in-nonwoven-fabric).',
+      ],
+    },
+    faqs: [
+      {
+        q: 'Which standard do European geotextile tenders refer to?',
+        a: 'Usually the EN 13249 to EN 13257 series, one part for each application such as roads, railways, drainage or landfill. Confirm the part and the current edition with your project engineer, and send us the values the contract requires.',
+      },
+      {
+        q: 'Is the paperwork the same for the UK and the EU?',
+        a: 'Not necessarily. Requirements can differ, so tell us the destination country when you enquire and which documents your customs broker or the contract asks for.',
+      },
+      {
+        q: 'Can you hold a tight tolerance on GSM and thickness?',
+        a: 'No nonwoven is identical from roll to roll, so agree the tolerance you will accept in numbers before production and approve a sample as the reference. Tell us the tolerance your process needs and we will confirm what can be supplied.',
+      },
+    ],
   },
   {
     slug: 'africa-nonwoven-felt-supplier',
