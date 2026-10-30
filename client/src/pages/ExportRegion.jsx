@@ -3,7 +3,10 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
 import Faq from '../components/Faq.jsx';
+import RichText from '../components/RichText.jsx';
+import { OrderingTable } from '../components/SpecTable.jsx';
 import { useCatalogue } from '../CatalogueContext.jsx';
+import { ORDERING } from '../data/catalog.js';
 import {
   REGION_PAGES,
   marketsIn,
@@ -110,9 +113,14 @@ export default function ExportRegion() {
       q: `What do buyers in ${region.name} settle first?`,
       a: `It varies by destination — the table above sets out what each one usually asks about. Across the region it comes down to the specification, the paperwork your customs broker needs, and consistency from one shipment to the next.`,
     },
+    ...(region.faqs || []),
     {
       q: 'What is the minimum order quantity?',
-      a: 'It depends on the material, GSM and how much is customised. Tell us the product and quantity you need and our export team will confirm the figure with your quote.',
+      a: 'It is agreed per order, as it depends on the material, GSM and how much is customised. Tell us the product and quantity you need and our export team will confirm it with your quote.',
+    },
+    {
+      q: 'How soon is an order dispatched?',
+      a: `${ORDERING.leadTime} from Jaipur. Sea transit to your port comes on top of that and depends on the route and sailing.`,
     },
     {
       q: 'Can you match a nonwoven we already buy?',
@@ -120,7 +128,7 @@ export default function ExportRegion() {
     },
     {
       q: 'Can we see a sample before ordering?',
-      a: 'Samples are available on request, so you can test the material in your own process before a bulk order.',
+      a: `Yes, samples are free, to ${region.name} as anywhere else; delivery time depends on where you are. Test the material in your own process before a bulk order.`,
     },
   ];
 
@@ -195,6 +203,16 @@ export default function ExportRegion() {
               <strong>{m.name}.</strong> {m.note}
             </p>
           ))}
+          {region.context ? (
+            <>
+              <h2>{region.context.h}</h2>
+              {region.context.p.map((t) => (
+                <p key={t.slice(0, 40)}>
+                  <RichText text={t} />
+                </p>
+              ))}
+            </>
+          ) : null}
         </div>
       </section>
 
@@ -252,6 +270,7 @@ export default function ExportRegion() {
             Tell us the application, fibre, GSM, width and quantity and our
             export team will reply with a quote.
           </p>
+          <OrderingTable caption={`Ordering terms for ${region.name}`} />
           <div className="cta-row">
             <Link to="/contact#enquiry" className="btn btn--fill">
               Send an enquiry
