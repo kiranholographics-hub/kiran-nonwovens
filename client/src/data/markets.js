@@ -469,6 +469,27 @@ export const REGION_PAGES = [
     name: 'the Middle East',
     short: 'the Middle East',
     buyers: 'Middle East importers',
+    // Region-specific section and questions, so this page is more than the
+    // shared template. Site conditions are general engineering knowledge;
+    // nothing here is a test figure or a certification.
+    context: {
+      h: 'Geotextile and felt on Gulf sites.',
+      p: [
+        '**Heat and sunlight.** Polypropylene is sensitive to prolonged UV exposure, and on Gulf sites the sun is strong all year. Rolls are best kept in their wrap, off the ground and out of direct sun until they are laid, and the geotextile covered with fill soon after. Polyester also holds its properties to a higher temperature than polypropylene — see [polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven).',
+        '**Sand and sabkha ground.** Loose sand and soft, saline sabkha soils are common under Gulf roads, yards and platforms. A needle punched geotextile laid between the ground and the fill keeps the two apart; the GSM follows the fill and the traffic on top, as set out in [geotextile GSM for road construction](/guides/geotextile-gsm-for-road-construction-india).',
+        '**Local use or re-export.** Many orders landing at Jebel Ali move on to other Gulf countries. Say which it is when you enquire, so the documents match the final destination; the [HS code guide](/guides/hs-code-nonwoven-felt-geotextile) covers how nonwoven felt and geotextile are classified.',
+      ],
+    },
+    faqs: [
+      {
+        q: 'How should geotextile rolls be stored on a Gulf site?',
+        a: 'In their wrap, off the ground and out of direct sun until they are laid, then covered with fill soon after. Polypropylene is sensitive to prolonged UV exposure, so follow your project’s installation details for exposure limits.',
+      },
+      {
+        q: 'Which geotextile is used over sabkha or loose sand?',
+        a: 'A needle punched nonwoven geotextile, laid between the ground and the fill as a separation and filtration layer. The GSM depends on the fill and the traffic; send the project specification and we will quote against it.',
+      },
+    ],
   },
   {
     slug: 'asia-pacific-nonwoven-felt-supplier',

@@ -37,6 +37,20 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 30 Oct 2026 (Friday: export page)
+
+- /exports/middle-east-nonwoven-felt-supplier: new "Geotextile and felt on Gulf sites" section
+  (UV and storage, sabkha and loose sand, local use vs re-export through Jebel Ali), linking the
+  fibre, road GSM and HS code guides; two Gulf-only FAQs (roll storage on site, geotextile over
+  sabkha). Region-specific content lives in `context` / `faqs` on REGION_PAGES in markets.js.
+- All six region pages: ordering terms table (MOQ per order, 4–5 days to dispatch, 50 m roll,
+  packing, free samples), a dispatch FAQ, MOQ and sample FAQs brought in line with the owner's
+  answers (samples were still "on request").
+- Next Fridays: give Europe, then Africa, their own `context` section the same way.
+- GBP checked in Chrome: Kiran Nonwovens profile exists, address matches the site, status
+  "Verification required". Owner is doing the video verification and creating IndiaMART,
+  TradeIndia and LinkedIn accounts.
+
 ## 30 Oct 2026 (owner asked: research what replaced SEO, get the site ready)
 - Research (web, Oct 2026): SEO has not been replaced. AEO (your passage used as the answer in
   AI Overviews / AI Mode) and GEO (brand named in ChatGPT, Gemini, Perplexity) are layers on top.
