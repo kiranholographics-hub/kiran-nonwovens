@@ -3453,6 +3453,126 @@ export const guides = [
     relatedGuides: ['nonwoven-geotextile-guide', 'geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control', 'geotextile-gsm-for-road-construction-india'],
   },
   {
+    slug: 'geotextile-gabion-stone-pitching-india',
+    title: 'Geotextile behind gabions and stone pitching: the filter between the soil and the stone',
+    seoTitle: 'Geotextile for Gabions and Stone Pitching',
+    description:
+      'Why gabion walls and stone pitching on slopes and river banks need a nonwoven filter behind the stone, where it goes, common mistakes, and what to specify.',
+    readMins: 6,
+    published: '2026-10-31',
+    intro:
+      'Gabion baskets and stone pitching are built from stone, and stone is open. Water passes through the gaps easily, which is the point, but the soil behind and under the stone can pass through them too. Rain and river water carry it out grain by grain until the slope sinks or the wall leans. A nonwoven geotextile is the usual filter placed to stop that. This guide covers where it goes, what it has to do, and what to settle with your engineer before you order. It is general practice; your drawing decides.',
+    sections: [
+      {
+        h: 'Why stone work needs a filter',
+        p: [
+          'A gabion wall or a pitched slope is permeable by design, so water never builds up behind it. The risk is not the water but what it carries. Fine soil moves through the voids between stones, a little at each storm, and leaves a cavity behind. The stone then settles into the cavity, the slope or the wall moves, and the repair costs more than the fabric would have. The geotextile lets the water through and holds the soil back, which is the filtration role described in the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide).',
+        ],
+      },
+      {
+        h: 'Where the fabric goes',
+        table: {
+          head: ['Structure', 'Where the fabric sits', 'What it does there'],
+          rows: [
+            ['Gabion retaining wall', 'Against the soil behind the baskets, and under the base', 'Stops backfill washing into the stone; separates base from soil'],
+            ['Gabion mattress on a river bank or canal slope', 'Under the mattress, between it and the bank soil', 'Filters seepage and wave wash, keeps bank soil in place'],
+            ['Stone pitching on an embankment or dam slope', 'Between the prepared slope and the stone', 'Lets water drain out, stops fines moving up through the pitching'],
+            ['Riprap at a culvert outlet or bridge abutment', 'Under the stone, and at the toe', 'Filter against scour; stops stone sinking into the soil'],
+          ],
+        },
+        p: [
+          'On a gabion wall the fabric is normally taken up the back of the baskets and across the top of the fill, so soil from above cannot wash down into the stone. The exact laps and wraps come from the drawing.',
+        ],
+      },
+      {
+        h: 'Why a nonwoven is used',
+        list: [
+          'It passes water freely and holds fine soil back, which is the filter job',
+          'It separates the stone from the soil, so the stone does not push down into soft ground',
+          'It has some thickness, which gives a little cushion against sharp stone, and a heavier weight gives more of it',
+          'It conforms to an uneven slope and a stone-filled face better than a stiff sheet',
+        ],
+        p: [
+          'How heavy the fabric should be depends on the stone size, how it is placed and the soil behind it. We do not quote one weight for all jobs. Use the value in your specification, and confirm against a sample before bulk.',
+        ],
+      },
+      {
+        h: 'Mistakes that cause failures',
+        list: [
+          'Overlaps left open or too short, so soil escapes through the joint instead of the fabric',
+          'Stone dropped from height on bare fabric, which punches or tears it',
+          'Fabric left uncovered in the sun for weeks before the stone goes on',
+          'The top edge left loose, so soil washes down behind the fabric',
+          'Fabric stretched tight over a rough slope, so it tears when the stone settles',
+          'Weep paths or drains blocked by folded fabric',
+        ],
+        p: [
+          'Most of these are laying problems, not fabric problems. The general site steps are in [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile).',
+        ],
+      },
+      {
+        h: 'Gabion wall or retaining wall drainage?',
+        p: [
+          'A gabion wall holds soil back by its own weight and drains through itself. A drained retaining wall of concrete or masonry has a separate drainage layer behind it. The filter idea is the same, but the layers are different, so see [geotextile behind retaining walls](/guides/geotextile-retaining-wall-drainage-india) if that is your structure.',
+        ],
+      },
+      {
+        h: 'What to settle with your engineer',
+        list: [
+          'Fibre: polyester or polypropylene, as your specification calls for',
+          'Weight (GSM) and any test values the specification sets',
+          'Overlap width and how the fabric wraps at the top and toe',
+          'How long the fabric may stay uncovered before the stone is placed',
+          'Roll width and length to suit the structure; for working out how many rolls an area needs, see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage)',
+        ],
+        p: [
+          'If your project follows a BIS, IRC or other agency specification for gabions, confirm the current edition with your engineer; we do not quote a standard on this page.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We make needle punched and thermal bonded nonwoven fabric, which is what goes behind and under the stone. We do not make gabion wire mesh or baskets, woven geotextile, geogrid or geomembrane. If your drawing needs one of those, you will buy it elsewhere. Send the application, the weight and the quantity through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Do gabions need geotextile?',
+        a: 'In most designs yes, as a filter between the soil and the stone, so that soil does not wash through the voids. Whether and how heavy is a design decision; your engineer or specification sets it.',
+      },
+      {
+        q: 'Which geotextile is used behind gabion walls?',
+        a: 'A nonwoven geotextile is commonly used as the filter. Polyester or polypropylene, and the weight, depend on your specification and the soil.',
+      },
+      {
+        q: 'Is geotextile needed under stone pitching?',
+        a: 'It is commonly placed between the prepared slope and the stone to stop fine soil washing out through the pitching. Your drawing shows whether and where.',
+      },
+      {
+        q: 'Where does the fabric go on a gabion wall?',
+        a: 'Against the soil behind the baskets and under the base, usually taken up the back of the wall and across the top of the fill. The laps and wraps come from the drawing.',
+      },
+      {
+        q: 'Can I drop stone directly on the geotextile?',
+        a: 'Not from height. Dropped stone can punch or tear bare fabric. Place the stone as the specification sets out, and cover the fabric soon after laying.',
+      },
+      {
+        q: 'Do you supply gabion baskets or wire mesh?',
+        a: 'No. We make needle punched and thermal bonded nonwoven fabric only, not gabion mesh, woven geotextile, geogrid or geomembrane.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+    ],
+    relatedGuides: [
+      'geotextile-retaining-wall-drainage-india',
+      'how-to-install-nonwoven-geotextile',
+      'geotextile-for-drainage-and-erosion-control',
+    ],
+  },
+  {
     slug: 'incoterms-nonwoven-felt-india',
     title: 'EXW, FOB or CIF: choosing the term when you import nonwoven from India',
     seoTitle: 'Incoterms for Nonwoven Felt from India',

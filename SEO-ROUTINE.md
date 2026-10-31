@@ -105,7 +105,7 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [x] how to install nonwoven geotextile on site (laying, overlaps, anchoring) (26 Oct)
 - [x] geotextile for French drains and subsurface drains: SKIPPED (26 Oct), already covered by /guides/geotextile-for-drainage-and-erosion-control.
 - [ ] geotextile for paver block and interlocking tile bases
-- [ ] geotextile for gabion and stone pitching backing
+- [x] geotextile for gabion and stone pitching backing (31 Oct) -> /guides/geotextile-gabion-stone-pitching-india
 - [ ] geotextile for hill slope protection and landslide repair India
 - [ ] geotextile for green roofs and terrace gardens India
 - [ ] geotextile for sports field and turf drainage

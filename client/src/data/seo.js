@@ -326,6 +326,7 @@ export function productFaq(product) {
       '[embankments on soft soil guide](/guides/geotextile-embankment-soft-soil-india)',
       '[installation guide](/guides/how-to-install-nonwoven-geotextile)',
       '[Hindi guide to nonwoven geotextile](/guides/non-woven-geotextile-hindi)',
+      '[gabion and stone pitching guide](/guides/geotextile-gabion-stone-pitching-india)',
     ])}.`,
     automotive: `Read our ${sentenceList([
       '[automotive NVH felt guide](/guides/automotive-nvh-felt-guide)',

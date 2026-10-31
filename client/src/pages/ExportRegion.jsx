@@ -32,6 +32,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-canal-pond-lining-india',
     'geotextile-landfill-mining-india',
     'geotextile-embankment-soft-soil-india',
+    'geotextile-gabion-stone-pitching-india',
     'how-to-install-nonwoven-geotextile',
   ],
   automotive: ['automotive-nvh-felt-guide', 'automotive-felt-oem-interiors-india'],
