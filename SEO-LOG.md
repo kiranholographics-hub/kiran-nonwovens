@@ -37,6 +37,15 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 31 Oct 2026 (Saturday: off-page prep)
+
+- offpage/2026-10-31.md: two Google Business Profile posts (free samples; geotextile rolls
+  with 50 m / 4–5 day dispatch), one LinkedIn post from the woven vs nonwoven guide, and
+  ready-to-paste descriptions for ExportersIndia, Go4WorldBusiness and Europages, each worded
+  differently and linking a different page (products, exports hub, Europe region).
+- offpage/listings.md: tracker for every listing and profile, with status and profile URL.
+- Nothing posted. GBP posts wait for verification.
+
 ## 30 Oct 2026 (Friday: export page)
 
 - /exports/middle-east-nonwoven-felt-supplier: new "Geotextile and felt on Gulf sites" section
