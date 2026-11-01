@@ -31,6 +31,7 @@ const GUIDES_FOR_AREA = {
     'geobag-fabric-nonwoven-geotextile-india',
     'geotextile-canal-pond-lining-india',
     'geotextile-landfill-mining-india',
+    'geotextile-hill-slope-protection-india',
     'geotextile-embankment-soft-soil-india',
     'how-to-install-nonwoven-geotextile',
   ],

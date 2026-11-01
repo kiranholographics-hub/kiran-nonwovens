@@ -106,7 +106,7 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [x] geotextile for French drains and subsurface drains: SKIPPED (26 Oct), already covered by /guides/geotextile-for-drainage-and-erosion-control.
 - [ ] geotextile for paver block and interlocking tile bases
 - [ ] geotextile for gabion and stone pitching backing
-- [ ] geotextile for hill slope protection and landslide repair India
+- [x] geotextile for hill slope protection and landslide repair India (1 Nov) -> /guides/geotextile-hill-slope-protection-india
 - [ ] geotextile for green roofs and terrace gardens India
 - [ ] geotextile for sports field and turf drainage
 - [ ] geotextile for solar plant access roads India
