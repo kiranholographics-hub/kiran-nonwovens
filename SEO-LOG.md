@@ -32,10 +32,26 @@ build uses the real domain (checked live 26 Oct).
   drainage-soil-erosion-control-geotextile, filter-geo-bag-felt
 - 28 Oct: pipeline-cable-protection-geotextile, acoustic-thermal-insulation-felt, nvh-sound-insulation-fabric
 - 29 Oct: carpet-backing-felt, customised-nonwoven-solutions, flooring-underlay-felt
-- Next: luggage-bag-support-felt, multi-colour-needle-punched-felt, orthopaedic-cast-padding
+- 2 Nov: luggage-bag-support-felt, multi-colour-needle-punched-felt, orthopaedic-cast-padding (one H1, ordering terms, guide links all present; no change needed)
+- Next: shoulder-pad-nonwoven-fabric, shoe-lining-nonwoven-fabric, packaging-protective-felt
 
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
+
+## 2 Nov 2026 (Monday: rank check + page upgrade)
+
+- Rank check (web search, 2 Nov): **first page-one result**: kirannonwovens.com is at position 10
+  for "geotextile GSM for road construction India" with /guides/geotextile-gsm-for-road-construction-india
+  (published 16 Oct). Not in the top 10 for: geotextile roll weight calculator (US calculators and
+  suppliers), woven vs nonwoven geotextile, non woven geotextile uses and functions, needle punched
+  felt manufacturer India (directories and older sites), how to test nonwoven felt sample GSM.
+- Upgraded the page-one page so it can move up: a table of common road situations with indicative
+  GSM bands and what pushes each up (all hedged, no design values), a "four questions to settle
+  the grade" list, two FAQs (village roads; whether a government scheme or MoRTH fixes the GSM),
+  `updated` set to 2 Nov. No claim about any scheme's requirement.
+- On-page check of luggage-bag-support-felt, multi-colour-needle-punched-felt,
+  orthopaedic-cast-padding: fine.
+- Pending from the owner for the Monday review: Search Console Queries + Pages screenshot (28 days).
 
 ## 31 Oct 2026 (Saturday: off-page prep)
 

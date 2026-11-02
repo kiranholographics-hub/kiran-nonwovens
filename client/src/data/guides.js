@@ -1303,6 +1303,7 @@ export const guides = [
       'Which GSM nonwoven geotextile for road work in India: indicative ranges, why heavier is not always better, and what else goes in the specification.',
     readMins: 6,
     published: '2026-10-16',
+    updated: '2026-11-02',
     intro:
       'Buyers often ask for “150 GSM geotextile” as if the number settles the choice. GSM is the weight of the fabric per square metre, and it is a useful starting point, but the right grade for a road depends on the subgrade, the aggregate, the traffic and the specification your engineer works to. This guide explains what GSM does and does not tell you.',
     keyPoints: [
@@ -1328,6 +1329,34 @@ export const guides = [
         ],
         p: [
           'Treat these as the bands people usually discuss, not as design values. The grade for your road is set by the project design and the specification it cites.',
+        ],
+      },
+      {
+        h: 'Where common road situations tend to sit',
+        table: {
+          head: ['Situation', 'Band people usually discuss (indicative)', 'What pushes it higher'],
+          rows: [
+            ['Village or access road on firm, well-drained ground, rounded aggregate', 'About 100–200 GSM', 'Wet-season soft patches, heavier construction traffic'],
+            ['Road or embankment over soft clay or wet ground, such as black cotton soil', 'About 200–400 GSM', 'A very weak subgrade, heavy axle loads'],
+            ['Haul road, heavy traffic or angular stone', '400 GSM and above', 'Risk of puncture and installation damage'],
+            ['Wrap around an edge drain or filter layer behind a wall', 'Light to mid grades, set by what the soil needs to be filtered', 'Coarse, angular stone against the fabric'],
+            ['Railway ballast separation', 'Heavier grades, set by the owner’s specification', 'Ballast load and angular stone'],
+          ],
+        },
+        p: [
+          'These are the bands buyers usually discuss, not design values. They are here so you can tell whether a quote is in a sensible range, not to replace the project design.',
+        ],
+      },
+      {
+        h: 'Four questions to settle the grade',
+        list: [
+          'What is under the fabric? The soil and its strength, from the site investigation, not from appearance',
+          'What goes on top? Stone size and shape, layer thickness, and whether construction traffic runs on it',
+          'What will drive over it, and when? Include the heavy plant during construction, not only the finished road',
+          'What does the tender or drawing already say? If it names a grade or test values, that settles it',
+        ],
+        p: [
+          'Answer these and your engineer can pick the grade in minutes. Send the answers with your enquiry and we will quote against them.',
         ],
       },
       {
@@ -1361,6 +1390,14 @@ export const guides = [
       {
         q: 'What GSM geotextile is used for roads?',
         a: 'It depends on the subgrade, aggregate and traffic. Lighter grades of roughly 100–200 GSM are common for separation over firmer ground, and heavier grades are used on soft or wet subgrades or with angular stone. The project design and specification set the value.',
+      },
+      {
+        q: 'What GSM geotextile is used for rural or village roads?',
+        a: 'Lighter grades of roughly 100–200 GSM are commonly discussed over firm, well-drained ground, and heavier grades where the ground is soft or wet. The project design and specification set the value for your road.',
+      },
+      {
+        q: 'Does a government road scheme or MoRTH fix the GSM?',
+        a: 'Public-works specifications can name the grade and the test values. Read the tender and ask your project engineer which clauses apply, and confirm the current edition. We cannot say what a particular scheme requires; send us the values it names and we will quote against them.',
       },
       {
         q: 'Is a higher GSM geotextile always better?',
