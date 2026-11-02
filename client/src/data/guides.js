@@ -1303,6 +1303,7 @@ export const guides = [
       'Which GSM nonwoven geotextile for road work in India: indicative ranges, why heavier is not always better, and what else goes in the specification.',
     readMins: 6,
     published: '2026-10-16',
+    updated: '2026-11-02',
     intro:
       'Buyers often ask for “150 GSM geotextile” as if the number settles the choice. GSM is the weight of the fabric per square metre, and it is a useful starting point, but the right grade for a road depends on the subgrade, the aggregate, the traffic and the specification your engineer works to. This guide explains what GSM does and does not tell you.',
     keyPoints: [
@@ -1328,6 +1329,34 @@ export const guides = [
         ],
         p: [
           'Treat these as the bands people usually discuss, not as design values. The grade for your road is set by the project design and the specification it cites.',
+        ],
+      },
+      {
+        h: 'Where common road situations tend to sit',
+        table: {
+          head: ['Situation', 'Band people usually discuss (indicative)', 'What pushes it higher'],
+          rows: [
+            ['Village or access road on firm, well-drained ground, rounded aggregate', 'About 100–200 GSM', 'Wet-season soft patches, heavier construction traffic'],
+            ['Road or embankment over soft clay or wet ground, such as black cotton soil', 'About 200–400 GSM', 'A very weak subgrade, heavy axle loads'],
+            ['Haul road, heavy traffic or angular stone', '400 GSM and above', 'Risk of puncture and installation damage'],
+            ['Wrap around an edge drain or filter layer behind a wall', 'Light to mid grades, set by what the soil needs to be filtered', 'Coarse, angular stone against the fabric'],
+            ['Railway ballast separation', 'Heavier grades, set by the owner’s specification', 'Ballast load and angular stone'],
+          ],
+        },
+        p: [
+          'These are the bands buyers usually discuss, not design values. They are here so you can tell whether a quote is in a sensible range, not to replace the project design.',
+        ],
+      },
+      {
+        h: 'Four questions to settle the grade',
+        list: [
+          'What is under the fabric? The soil and its strength, from the site investigation, not from appearance',
+          'What goes on top? Stone size and shape, layer thickness, and whether construction traffic runs on it',
+          'What will drive over it, and when? Include the heavy plant during construction, not only the finished road',
+          'What does the tender or drawing already say? If it names a grade or test values, that settles it',
+        ],
+        p: [
+          'Answer these and your engineer can pick the grade in minutes. Send the answers with your enquiry and we will quote against them.',
         ],
       },
       {
@@ -1361,6 +1390,14 @@ export const guides = [
       {
         q: 'What GSM geotextile is used for roads?',
         a: 'It depends on the subgrade, aggregate and traffic. Lighter grades of roughly 100–200 GSM are common for separation over firmer ground, and heavier grades are used on soft or wet subgrades or with angular stone. The project design and specification set the value.',
+      },
+      {
+        q: 'What GSM geotextile is used for rural or village roads?',
+        a: 'Lighter grades of roughly 100–200 GSM are commonly discussed over firm, well-drained ground, and heavier grades where the ground is soft or wet. The project design and specification set the value for your road.',
+      },
+      {
+        q: 'Does a government road scheme or MoRTH fix the GSM?',
+        a: 'Public-works specifications can name the grade and the test values. Read the tender and ask your project engineer which clauses apply, and confirm the current edition. We cannot say what a particular scheme requires; send us the values it names and we will quote against them.',
       },
       {
         q: 'Is a higher GSM geotextile always better?',
@@ -3148,6 +3185,126 @@ export const guides = [
       'geotextile/filter-geo-bag-felt',
     ],
     relatedGuides: ['geotextile-for-road-construction', 'geotextile-for-drainage-and-erosion-control', 'geotextile-roll-weight-and-coverage'],
+  },
+  {
+    slug: 'geotextile-green-roof-terrace-garden-india',
+    title: 'Geotextile on green roofs and terrace gardens in India: the two layers it forms',
+    seoTitle: 'Geotextile for Green Roofs and Terrace Gardens',
+    description:
+      'Where nonwoven felt goes in a terrace garden or green roof in India: the protection layer over the waterproofing and the filter under the soil. What is not supplied.',
+    readMins: 6,
+    published: '2026-11-02',
+    intro:
+      'A terrace garden is a stack of layers on a slab, and a nonwoven fabric appears in it twice. Under the soil it keeps the growing medium from washing into the drainage layer. Over the waterproofing it protects the membrane from whatever is placed on top. The two jobs need different fabrics, and neither replaces the waterproofing itself. This guide explains where each goes, what to ask for, and what we do not supply. It is general practice; the roof designer and the waterproofing system supplier decide.',
+    sections: [
+      {
+        h: 'The layers, bottom to top',
+        table: {
+          head: ['Layer', 'What it is', 'Where nonwoven felt comes in'],
+          rows: [
+            ['Structural slab', 'The roof or terrace slab, with its slope to the outlets', 'Not applicable'],
+            ['Waterproofing', 'The membrane or coating that keeps water out of the building', 'Not supplied by us'],
+            ['Protection layer', 'A layer that guards the waterproofing from stone, tools and roots of the layers above', 'A heavier nonwoven felt is commonly used here'],
+            ['Drainage layer', 'Gravel, a drainage board or cells, which carry excess water to the outlets', 'Not supplied by us'],
+            ['Filter layer', 'A fabric between the drainage layer and the soil', 'A nonwoven geotextile'],
+            ['Growing medium and plants', 'The soil or substrate and the planting', 'Not applicable'],
+          ],
+        },
+        p: [
+          'Not every terrace garden has every layer. A light planter-based garden may use fewer, and a heavy roof garden more. The designer sets the build-up.',
+        ],
+      },
+      {
+        h: 'The filter layer under the soil',
+        p: [
+          'Watering and monsoon rain move fine particles down through the soil. Without a filter, they settle into the drainage layer and clog it, and the water that should drain away stays in the roots. A nonwoven geotextile lets water pass and holds the fine soil back. That is the filtration role described in the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide), here applied at a small scale on a roof.',
+        ],
+      },
+      {
+        h: 'The protection layer over the waterproofing',
+        p: [
+          'Waterproofing on a terrace can be damaged by a dropped tool, a stone in the drainage layer or the edge of a drainage cell. A needle punched felt laid over the waterproofing, under the drainage layer, spreads the point loads and cushions the membrane. How heavy it should be depends on what sits on top of it. Some waterproofing systems specify their own protection layer; where yours does, follow the system supplier rather than this page.',
+        ],
+      },
+      {
+        h: 'Why monsoon changes the choice',
+        list: [
+          'Heavy monsoon rain sends a lot of water through the build-up in a short time, so the filter has to pass water freely and not clog',
+          'Standing water on a roof is a leak risk, so the drainage path to the outlets has to stay open',
+          'Dry summer months mean the soil is watered by hand or by drip, which also carries fines down',
+          'A fabric that is too fine can clog; one that is too open lets soil through. The right balance comes from the soil and the drainage layer, so confirm against a sample',
+        ],
+        p: [
+          'We do not give a single weight or opening size for all roofs. Use the value in your specification.',
+        ],
+      },
+      {
+        h: 'Laying it',
+        list: [
+          'Keep the slab, waterproofing and any testing finished and signed off before the felt goes on',
+          'Lay the protection felt flat and loose over the waterproofing, with the overlap the specification sets',
+          'Place the drainage layer, then the filter fabric over it, running the filter up the edges so soil cannot wash around it',
+          'Bring the soil in without dragging heavy plant over bare fabric',
+          'Keep the fabric away from open edges and outlets, so that the drainage path is not blocked by folded fabric',
+        ],
+        p: [
+          'Check roof load limits and the weight of wet soil with the structural engineer; that is a structural question this page does not answer. Site steps for laying are in [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile).',
+        ],
+      },
+      {
+        h: 'What to ask for',
+        list: [
+          'Which layer the fabric is for: protection, filter, or both in separate rolls',
+          'Fibre: polyester or polypropylene, as the specification calls for',
+          'Weight (GSM) for each layer, set by the designer; confirm against a sample',
+          'Roll width and length to suit the terrace; see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage) for working out the quantity',
+        ],
+        p: [
+          'Send the application, the weight and the quantity through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We make needle punched and thermal bonded nonwoven fabric, which is what goes in the protection and filter layers. We do not supply waterproofing membranes or coatings, root barriers, drainage boards or cells, soil or planters, and we do not make woven geotextile, geogrid or geomembrane. For those you will buy from the relevant supplier. We also do not offer installation.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is geotextile used on terrace gardens?',
+        a: 'Yes, commonly as a filter layer between the drainage layer and the soil, and sometimes as a protection layer over the waterproofing. The roof designer sets which layers are used.',
+      },
+      {
+        q: 'What does the filter fabric do in a green roof?',
+        a: 'It lets water pass down to the drainage layer while holding the fine soil back, so the drainage layer does not clog.',
+      },
+      {
+        q: 'Can geotextile replace waterproofing on a terrace?',
+        a: 'No. A nonwoven felt is permeable and is not a waterproofing layer. It protects or filters; the waterproofing is a separate membrane or coating.',
+      },
+      {
+        q: 'Does geotextile stop roots damaging the waterproofing?',
+        a: 'Do not rely on it for that. Root protection is a separate product, usually a root-resistant barrier or a root-resistant waterproofing, which we do not supply.',
+      },
+      {
+        q: 'Which GSM should I use on a terrace garden?',
+        a: 'It depends on the layer, the soil and the drainage build-up, so we do not give a number here. Use the value in your specification and confirm against a sample.',
+      },
+      {
+        q: 'Do you supply drainage boards or waterproofing for terrace gardens?',
+        a: 'No. We make needle punched and thermal bonded nonwoven fabric only.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+    ],
+    relatedGuides: [
+      'geotextile-for-drainage-and-erosion-control',
+      'how-to-install-nonwoven-geotextile',
+      'geotextile-roll-weight-and-coverage',
+    ],
   },
   {
     slug: 'how-to-install-nonwoven-geotextile',
