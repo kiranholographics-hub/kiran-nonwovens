@@ -328,6 +328,7 @@ export function productFaq(product) {
       '[installation guide](/guides/how-to-install-nonwoven-geotextile)',
       '[guide to geotextile under paver blocks](/guides/geotextile-under-paver-blocks-india)',
       '[Hindi guide to nonwoven geotextile](/guides/non-woven-geotextile-hindi)',
+      '[gabion and stone pitching guide](/guides/geotextile-gabion-stone-pitching-india)',
     ])}.`,
     automotive: `Read our ${sentenceList([
       '[automotive NVH felt guide](/guides/automotive-nvh-felt-guide)',
