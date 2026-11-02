@@ -30,10 +30,12 @@ const GUIDES_FOR_AREA = {
     'geotextile-for-drainage-and-erosion-control',
     'geobag-fabric-nonwoven-geotextile-india',
     'geotextile-canal-pond-lining-india',
+    'geotextile-green-roof-terrace-garden-india',
     'geotextile-landfill-mining-india',
     'geotextile-embankment-soft-soil-india',
     'geotextile-gabion-stone-pitching-india',
     'how-to-install-nonwoven-geotextile',
+    'geotextile-under-paver-blocks-india',
   ],
   automotive: ['automotive-nvh-felt-guide', 'automotive-felt-oem-interiors-india'],
   'apparel-footwear': [
