@@ -23,6 +23,8 @@ import Update from './pages/Update.jsx';
 import CustomPage from './pages/CustomPage.jsx';
 import India from './pages/India.jsx';
 import NeedlePunchedFelt from './pages/NeedlePunchedFelt.jsx';
+import Landing from './pages/Landing.jsx';
+import { LANDING_LIST } from './data/landing.js';
 import Guides from './pages/Guides.jsx';
 import Guide from './pages/Guide.jsx';
 import Privacy from './pages/Privacy.jsx';
@@ -95,6 +97,9 @@ export default function App() {
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/india" element={<India />} />
           <Route path="/needle-punched-felt-india" element={<NeedlePunchedFelt />} />
+          {LANDING_LIST.map((page) => (
+            <Route key={page.path} path={page.path} element={<Landing page={page} />} />
+          ))}
           <Route path="/exports" element={<Exports />} />
           <Route path="/exports/:slug" element={<ExportRegion />} />
           <Route path="/updates" element={<Updates />} />
