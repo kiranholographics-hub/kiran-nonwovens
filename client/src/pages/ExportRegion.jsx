@@ -32,6 +32,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-canal-pond-lining-india',
     'geotextile-green-roof-terrace-garden-india',
     'geotextile-landfill-mining-india',
+    'geotextile-hill-slope-protection-india',
     'geotextile-embankment-soft-soil-india',
     'geotextile-gabion-stone-pitching-india',
     'how-to-install-nonwoven-geotextile',

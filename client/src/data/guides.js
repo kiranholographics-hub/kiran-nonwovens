@@ -3614,6 +3614,132 @@ export const guides = [
     relatedGuides: ['needle-punched-vs-thermal-bonded-nonwoven', 'nonwoven-manufacturers-in-india', 'gsm-in-nonwoven-fabric'],
   },
   {
+    slug: 'geotextile-hill-slope-protection-india',
+    title: 'Geotextile on hill slopes and landslide repair in India: what a nonwoven can and cannot do',
+    seoTitle: 'Geotextile for Hill Slope Protection India',
+    description:
+      'What a nonwoven geotextile does on a hill slope or a landslide scar in India: filter, separator, erosion control under cover. And what it cannot hold back.',
+    readMins: 7,
+    published: '2026-11-01',
+    intro:
+      'Hill roads, ghat sections and cut slopes in India fail in two different ways, and a geotextile helps with only one of them. The first is surface washout: monsoon rain runs down a bare slope and carries the soil away. The second is a slope that moves as a mass, which is a geotechnical problem. A nonwoven can protect against the first and help drainage with the second, but it does not hold a moving slope back. This guide says which is which, so that the fabric is specified for a job it can do.',
+    sections: [
+      {
+        h: 'Two problems, two different answers',
+        table: {
+          head: ['Problem', 'What is happening', 'Where a nonwoven geotextile helps'],
+          rows: [
+            ['Surface erosion', 'Rain and runoff strip soil from a bare slope, leaving gullies', 'Under rock, gabion or soil cover, as a filter and separator that keeps the soil in place'],
+            ['Washout behind or under structures', 'Water carries fines out through drains, walls and stone work', 'As a filter around drains and behind walls, so drainage keeps working'],
+            ['Shallow slip on a wet slope', 'The surface layer saturates and slides off the deeper soil', 'Only as part of a drained cover designed by the engineer'],
+            ['Deep-seated slope movement', 'A large mass moves along a failure plane well below the surface', 'It does not hold this back; the fix is geotechnical design'],
+          ],
+        },
+        p: [
+          'The last row is the important one. A geotextile is thin and has little strength against a deep landslide. If a slope is moving as a mass, the engineer will look at drainage, regrading, retaining structures and reinforcement. A nonwoven may appear in that design as a filter, not as the thing that holds the slope.',
+        ],
+      },
+      {
+        h: 'What the fabric does on a hill slope',
+        list: [
+          'Filter: lets water out of the slope while holding the soil back, so drains and weep paths do not clog',
+          'Separator: keeps stone and soil apart, so cover stone does not sink into the slope',
+          'Surface protection under cover: holds the ground surface beneath rock armour, gabions or a soil layer, while the cover takes the rain and flow',
+        ],
+        p: [
+          'These are the same roles described in the [nonwoven geotextile guide](/guides/nonwoven-geotextile-guide). On a hill the difference is the setting: steeper ground, heavy runoff, and sites that are hard to reach.',
+        ],
+      },
+      {
+        h: 'Where it is usually used',
+        list: [
+          'Under stone pitching, gabions or rock cover on cut and fill slopes',
+          'Around drains cut into the slope, such as side drains and cascade drains, to keep them from silting',
+          'Behind retaining walls on hill roads, see [geotextile behind retaining walls](/guides/geotextile-retaining-wall-drainage-india)',
+          'Under a soil and planting layer, where the plants will take over the surface protection in time',
+          'At culvert inlets and outlets, where flow concentrates',
+        ],
+        p: [
+          'For the wider picture of filtration and drainage see [geotextile for drainage and erosion control](/guides/geotextile-for-drainage-and-erosion-control).',
+        ],
+      },
+      {
+        h: 'Why a bare fabric on its own is not enough',
+        p: [
+          'A fabric laid on a steep slope and left open does not stop erosion for long. Rain runs along the surface and under the edges, and sunlight weakens the fibre. The fabric works because something covers it: stone, gabions, a soil layer with roots. The cover takes the rain and the flow, and the fabric stops the soil underneath from moving into it. Without the cover, the fabric is only a temporary layer.',
+        ],
+      },
+      {
+        h: 'Laying on a slope',
+        list: [
+          'Trim the slope and remove loose stone and roots before the fabric goes on',
+          'Start from the top, with the upper end set in an anchor trench so the fabric cannot slide down; the trench size comes from the drawing',
+          'Lap the upper roll over the lower one, so water runs over the joint rather than into it',
+          'Pin or anchor the fabric as the drawing shows, because wind and runoff lift loose edges',
+          'Place the cover from the bottom up where the drawing allows, and keep plant and stone off the fabric until it is covered',
+          'Cover soon after laying, because sunlight weakens synthetic fibre, polypropylene in particular',
+        ],
+        p: [
+          'The general site steps are in [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile). On steep ground, where people work on the slope, safety on the slope itself is the contractor’s to plan.',
+        ],
+      },
+      {
+        h: 'What to settle with your engineer',
+        list: [
+          'Whether the slope has a surface problem, a movement problem or both',
+          'What cover goes over the fabric, and how soon after laying',
+          'Fibre (polyester or polypropylene) and weight, as the specification sets; we do not quote one weight for all slopes, so confirm against a sample',
+          'Overlap width, anchor trench size and pinning',
+          'Roll width and length to suit the slope; see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage) to work out quantity',
+        ],
+        p: [
+          'If your project follows an IRC, BIS or road-agency specification for slope work, confirm the current edition with your engineer; we do not quote a standard on this page.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We make needle punched and thermal bonded nonwoven fabric. We do not make geogrid, geocell, woven geotextile, erosion-control mats, jute or coir netting, or gabion mesh. Those are the products usually specified for reinforcing a slope or for open-surface erosion control, and if your drawing asks for them you will buy them elsewhere. Send the application, the weight and the quantity through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can geotextile stop a landslide?',
+        a: 'No. A nonwoven geotextile does not hold back a moving slope. It can act as a filter and separator in the drainage and cover of a repair, but stopping a landslide is a geotechnical design question for the engineer.',
+      },
+      {
+        q: 'Is geotextile used on hill slopes in India?',
+        a: 'Yes, mainly as a filter and separator under stone pitching, gabions and soil cover, and around slope drains. Whether it is needed on a given slope is the engineer’s decision.',
+      },
+      {
+        q: 'Does geotextile prevent erosion on steep slopes?',
+        a: 'Not on its own. It works together with a cover such as stone, gabions or a soil and planting layer. The cover takes the rain and flow, and the fabric keeps the soil underneath in place.',
+      },
+      {
+        q: 'How is geotextile fixed on a slope?',
+        a: 'Usually with the upper edge set in an anchor trench, rolls overlapped with the upper one over the lower, and pins or anchors as the drawing shows. The drawing sets the details.',
+      },
+      {
+        q: 'Which geotextile weight should be used on a hill slope?',
+        a: 'It depends on the slope, the cover and how it is placed, so we do not give a number here. Use the value in your specification, and confirm against a sample before bulk.',
+      },
+      {
+        q: 'Do you supply geogrid, geocell or erosion-control mats?',
+        a: 'No. We make needle punched and thermal bonded nonwoven fabric only.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+    ],
+    relatedGuides: [
+      'geotextile-for-drainage-and-erosion-control',
+      'geotextile-retaining-wall-drainage-india',
+      'how-to-install-nonwoven-geotextile',
+    ],
+  },
+  {
     slug: 'woven-vs-nonwoven-geotextile',
     title: 'Woven vs nonwoven geotextile: which one does your project need?',
     seoTitle: 'Woven vs Nonwoven Geotextile: Which to Use',

@@ -325,6 +325,7 @@ export function productFaq(product) {
       '[retaining wall drainage guide](/guides/geotextile-retaining-wall-drainage-india)',
       '[roll weight and coverage guide](/guides/geotextile-roll-weight-and-coverage)',
       '[embankments on soft soil guide](/guides/geotextile-embankment-soft-soil-india)',
+      '[hill slope protection guide](/guides/geotextile-hill-slope-protection-india)',
       '[installation guide](/guides/how-to-install-nonwoven-geotextile)',
       '[guide to geotextile under paver blocks](/guides/geotextile-under-paver-blocks-india)',
       '[Hindi guide to nonwoven geotextile](/guides/non-woven-geotextile-hindi)',
