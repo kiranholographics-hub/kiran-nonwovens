@@ -30,6 +30,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-for-drainage-and-erosion-control',
     'geobag-fabric-nonwoven-geotextile-india',
     'geotextile-canal-pond-lining-india',
+    'geotextile-green-roof-terrace-garden-india',
     'geotextile-landfill-mining-india',
     'geotextile-embankment-soft-soil-india',
     'how-to-install-nonwoven-geotextile',

@@ -107,7 +107,7 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [ ] geotextile for paver block and interlocking tile bases
 - [ ] geotextile for gabion and stone pitching backing
 - [ ] geotextile for hill slope protection and landslide repair India
-- [ ] geotextile for green roofs and terrace gardens India
+- [x] geotextile for green roofs and terrace gardens India (2 Nov) -> /guides/geotextile-green-roof-terrace-garden-india
 - [ ] geotextile for sports field and turf drainage
 - [ ] geotextile for solar plant access roads India
 - [ ] geotextile for tunnel waterproofing protection layer
