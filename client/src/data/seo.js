@@ -321,6 +321,7 @@ export function productFaq(product) {
       '[geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india)',
       '[canal and pond lining guide](/guides/geotextile-canal-pond-lining-india)',
       '[green roof and terrace garden guide](/guides/geotextile-green-roof-terrace-garden-india)',
+      '[sports field and turf drainage guide](/guides/geotextile-sports-field-turf-drainage-india)',
       '[landfill and mining guide](/guides/geotextile-landfill-mining-india)',
       '[retaining wall drainage guide](/guides/geotextile-retaining-wall-drainage-india)',
       '[roll weight and coverage guide](/guides/geotextile-roll-weight-and-coverage)',
