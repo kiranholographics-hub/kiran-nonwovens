@@ -33,6 +33,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-green-roof-terrace-garden-india',
     'geotextile-landfill-mining-india',
     'geotextile-hill-slope-protection-india',
+    'geotextile-test-methods-explained',
     'geotextile-embankment-soft-soil-india',
     'geotextile-gabion-stone-pitching-india',
     'how-to-install-nonwoven-geotextile',

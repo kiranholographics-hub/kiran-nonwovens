@@ -111,8 +111,8 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [ ] geotextile for sports field and turf drainage
 - [ ] geotextile for solar plant access roads India
 - [ ] geotextile for tunnel waterproofing protection layer
-- [ ] apparent opening size (AOS) of geotextile explained
-- [ ] CBR puncture and grab tensile tests for geotextile explained
+- [x] apparent opening size (AOS) of geotextile explained (5 Nov) -> merged into /guides/geotextile-test-methods-explained
+- [x] CBR puncture and grab tensile tests for geotextile explained (5 Nov) -> same pillar guide
 - [ ] geotextile vs geomembrane: which one a project needs
 - [x] how many square metres in a geotextile roll, and roll weight from GSM (25 Oct)
 - [ ] automotive boot / trunk liner felt
@@ -127,7 +127,7 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [x] exhibition carpet / needle punched event carpet India (owner said yes, 23 Oct) (25 Oct)
 - [x] craft and DIY coloured felt sheets: SKIPPED, owner said no (23 Oct). Do not write it.
 - [ ] felt thickness vs GSM: how they relate
-- [ ] how to read a nonwoven test report (what each line means)
+- [x] how to read a nonwoven test report (what each line means) (5 Nov): geotextile side covered in /guides/geotextile-test-methods-explained; a felt-only version only if Search Console asks for it
 - [ ] what decides the price of needle punched felt (factors only, no prices)
 - [ ] FOB, CIF and other Incoterms for buying nonwovens from India
 - [ ] how many rolls fit in a 20 ft / 40 ft container (method, not a fixed number)

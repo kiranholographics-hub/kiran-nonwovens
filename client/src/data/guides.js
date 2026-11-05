@@ -1218,7 +1218,7 @@ export const guides = [
       {
         h: 'The filtration balance: retain soil, pass water',
         p: [
-          'Two properties describe the balance. Permeability, usually expressed for geotextiles as permittivity, says how readily water crosses the fabric. Opening size — reported as apparent opening size or as O90 depending on the standard — says how large a particle can pass. A good filter has an opening size small enough to retain the soil it faces and a permeability comfortably higher than the soil’s own.',
+          'Two properties describe the balance. Permeability, usually expressed for geotextiles as permittivity, says how readily water crosses the fabric. Opening size — reported as apparent opening size or as O90 depending on the standard — says how large a particle can pass. How each is tested is explained in our [geotextile test methods guide](/guides/geotextile-test-methods-explained). A good filter has an opening size small enough to retain the soil it faces and a permeability comfortably higher than the soil’s own.',
           'The numbers that matter follow from the soil, not from the fabric. Fine silts and clays need a tighter filter than a sandy gravel, and a project design will normally state the required values. Send those values with your enquiry; where a design has not set them, describe the soil and the drain and we will discuss what suits.',
         ],
       },
@@ -3809,7 +3809,7 @@ export const guides = [
         list: [
           'The function: separation, filtration, drainage, reinforcement or protection',
           'Woven or nonwoven, if the design fixes it',
-          'The test values the design requires (strength, puncture, opening size, permeability), with the test standard named',
+          'The test values the design requires (strength, puncture, opening size, permeability), with the test standard named; our [geotextile test methods guide](/guides/geotextile-test-methods-explained) explains each one',
           'Roll width and length, and the area to cover',
           'For public works, the clause of the tender or standard specification; confirm the current edition with your project engineer',
         ],
@@ -4265,7 +4265,7 @@ export const guides = [
       {
         h: 'If your specification names a test',
         p: [
-          'Some jobs, geotextile above all, are specified on laboratory tests the project engineer sets. A sample is also what you send to an independent lab. If a test is required, tell us which one and whose method before production, and confirm the current edition of any standard with your engineer.',
+          'Some jobs, geotextile above all, are specified on laboratory tests the project engineer sets. A sample is also what you send to an independent lab. If a test is required, tell us which one and whose method before production, and confirm the current edition of any standard with your engineer. Our [geotextile test methods guide](/guides/geotextile-test-methods-explained) explains what each common test measures.',
           'Test reports from an independent laboratory come from that laboratory. We cannot give you a figure from a test nobody has run on the material you are buying.',
         ],
       },
@@ -4337,6 +4337,179 @@ export const guides = [
       'automotive/automotive-needle-punched-felt',
     ],
     relatedGuides: ['how-to-request-a-nonwoven-felt-quote', 'gsm-in-nonwoven-fabric', 'needle-punched-nonwoven-manufacturer-india'],
+  },
+  {
+    slug: 'geotextile-test-methods-explained',
+    title: 'Geotextile test methods explained: tensile, CBR puncture, opening size and permeability',
+    seoTitle: 'Geotextile Test Methods Explained (ISO, ASTM)',
+    description:
+      'What each line of a geotextile datasheet means: GSM, thickness, grab and wide-width tensile, CBR puncture, AOS/O90, permittivity, with ISO and ASTM methods.',
+    readMins: 9,
+    published: '2026-11-05',
+    intro:
+      'A geotextile tender rarely asks for "300 GSM" alone. It asks for a tensile strength in kN/m, a CBR puncture value in newtons, an opening size in millimetres and a permeability figure, each tied to a test standard. Buyers and site engineers then receive datasheets and lab reports full of these numbers and have to decide whether a roll is acceptable. This guide explains what each common test measures, how it is done in plain words, which ISO and ASTM methods are usually cited, and how to read the results. It explains methods only. The values your project needs come from its design and specification, not from this page.',
+    keyPoints: [
+      'GSM (mass per unit area) is an identity check, not a performance value. Strength, puncture, opening size and permeability are what the design relies on.',
+      'ISO and ASTM methods for the "same" property give different numbers (grab vs wide-width tensile, O90 vs AOS, velocity index vs permittivity), so compare only results from the same method.',
+      'Check whether a value is a typical value, a minimum average roll value (MARV) or a single result, and whether it is in the machine or cross direction.',
+      'Name the property, the method and the required value in your enquiry; a weight alone cannot be checked against a design.',
+    ],
+    sections: [
+      {
+        h: 'Why geotextiles are specified by test values',
+        p: [
+          'Two fabrics of the same weight can behave very differently in the ground. Fibre (PP or polyester), fibre fineness, how hard the web was needle punched and whether the fabric was heat-set all change strength, stretch, pore size and flow. Our [GSM guide](/guides/gsm-in-nonwoven-fabric) explains what weight does and does not tell you.',
+          'So a designer specifies the job a geotextile has to do, separation, filtration, drainage, protection or reinforcement, and turns it into properties that a lab can measure. Each property is measured by a written test method, so that two labs testing the same roll should get comparable results. The method matters as much as the number: change the method and the number changes.',
+        ],
+      },
+      {
+        h: 'The common tests at a glance',
+        table: {
+          head: ['Property', 'Common ISO method', 'Common ASTM method', 'Unit', 'What it tells you'],
+          rows: [
+            ['Mass per unit area (GSM)', 'ISO 9864', 'ASTM D5261', 'g/m²', 'How much fibre is in the fabric; an identity and consistency check'],
+            ['Thickness under load', 'ISO 9863-1', 'ASTM D5199', 'mm', 'Bulk of the felt under a small set pressure; matters for cushioning and in-plane flow'],
+            ['Wide-width tensile strength and elongation', 'ISO 10319', 'ASTM D4595', 'kN/m, %', 'Strength across a wide strip, per metre of width; used where the fabric carries load'],
+            ['Grab tensile strength and elongation', '(no direct ISO equivalent)', 'ASTM D4632', 'N, %', 'Strength of a narrow gripped zone; common in US-style specifications'],
+            ['Static puncture (CBR)', 'ISO 12236', 'ASTM D6241', 'N, mm', 'Resistance to a blunt plunger pushed through, like a stone pressed in by load'],
+            ['Dynamic perforation (cone drop)', 'ISO 13433', 'n/a', 'mm', 'Size of hole made by a falling cone, like a stone dropped during placing'],
+            ['Trapezoidal tear', 'n/a', 'ASTM D4533', 'N', 'Resistance to a tear spreading from a cut or snag during installation'],
+            ['Opening size', 'ISO 12956 (O90)', 'ASTM D4751 (AOS, O95)', 'mm', 'Size of the largest pores; decides which soil particles the fabric holds back'],
+            ['Water flow through the plane', 'ISO 11058 (velocity index)', 'ASTM D4491 (permittivity)', 'mm/s or l/m²/s; s⁻¹', 'How easily water crosses the fabric'],
+            ['Water flow in the plane', 'ISO 12958', 'ASTM D4716', 'm²/s or l/m/s', 'How much water the fabric carries along its own thickness, under pressure'],
+            ['UV resistance', 'EN 12224', 'ASTM D4355', '% strength retained', 'How much strength is left after set exposure to light; matters if rolls stay uncovered'],
+          ],
+        },
+        p: [
+          'Standards are revised. A specification should name the method and, for public works, the edition its clause refers to; confirm the current edition with your project engineer. BIS also publishes Indian test methods for geotextiles; if a tender cites an IS number, follow that method.',
+        ],
+      },
+      {
+        h: 'Mass per unit area and thickness',
+        p: [
+          'Mass per unit area is measured by cutting a number of specimens of known area from across the roll width, weighing them and averaging. It is the GSM on the label. It tells you whether the roll matches what was ordered and whether production is consistent, but no design is built on GSM alone.',
+          'Thickness is measured between two plates under a small, fixed pressure (ISO 9863-1 uses 2 kPa as the reference pressure, and some reports also give thickness at higher pressures). Needle punched felt compresses, so thickness depends on the pressure: always read the pressure with the number. Thickness matters for cushioning a geomembrane and for how much water can flow along the fabric.',
+          'A quick GSM check on a sample can be done in your own office; the method is in our [sample testing guide](/guides/how-to-test-a-nonwoven-felt-sample).',
+        ],
+      },
+      {
+        h: 'Tensile strength: wide-width vs grab',
+        p: [
+          'Both tests clamp a strip of fabric and pull it apart until it breaks, recording the peak force and how much it stretched (elongation). The difference is the specimen.',
+          'In the wide-width test (ISO 10319, ASTM D4595) the specimen is 200 mm wide and gripped across its full width. The result is given in kN per metre of width, which is how a design that relies on the fabric carrying load expresses strength. Nonwovens tend to narrow ("neck") while stretched; the wide strip limits that.',
+          'In the grab test (ASTM D4632) a 100 mm wide specimen is held by jaws only 25 mm wide in the middle, so fibres outside the jaws help carry the load. The result is a force in newtons. It is quick and widely used in specifications that follow US practice, such as AASHTO M288.',
+          'The two numbers cannot be converted into each other by a fixed factor. If your specification gives a grab value, ask for a grab result; if it gives kN/m, ask for wide-width.',
+        ],
+        list: [
+          'Machine direction (MD) is along the roll, cross direction (CD) is across it. Needle punched fabric is usually not equal in both, so a report should give both, or state which direction is quoted.',
+          'Elongation at break is reported with strength. Nonwovens stretch much more than wovens before breaking; AASHTO M288 classes a geotextile as nonwoven-type at 50% elongation or more. High elongation helps the fabric follow uneven ground without tearing, but it is not the same as reinforcement strength. See [woven vs nonwoven geotextile](/guides/woven-vs-nonwoven-geotextile).',
+          'Strength at 2%, 5% or 10% strain is sometimes asked for in reinforcement designs. That is normally a woven or geogrid job.',
+        ],
+      },
+      {
+        h: 'Puncture, perforation and tear: surviving installation',
+        p: [
+          'Many geotextiles do not fail in service; they are damaged while aggregate is dumped and rolled on top of them. Three tests try to imitate that.',
+          'The CBR puncture test (ISO 12236, ASTM D6241) clamps a circle of fabric and pushes a flat-ended 50 mm plunger through it at a steady speed. The peak force, usually in newtons or kilonewtons, is the CBR puncture strength, and the plunger travel at that point is reported too. It imitates a stone pressed into the fabric by load. Needle punched nonwovens usually do well here because the felt stretches around the plunger before it breaks.',
+          'The cone drop test (ISO 13433) drops a steel cone onto a stretched specimen from a set height and measures the hole. A smaller hole is better. It imitates a sharp stone dropped on the fabric.',
+          'The trapezoidal tear test (ASTM D4533) starts a small cut in a specimen and measures the force needed to keep tearing it. It shows how readily a snag during handling spreads.',
+          'Where the fabric protects a liner, heavier grades are often specified for puncture and cushioning; the [canal and pond lining guide](/guides/geotextile-canal-pond-lining-india) and [landfill and mining guide](/guides/geotextile-landfill-mining-india) cover those uses.',
+        ],
+      },
+      {
+        h: 'Opening size: AOS and O90',
+        p: [
+          'Opening size is the property that decides filtration: which soil particles the fabric lets pass and which it holds back. A nonwoven has no visible holes, so the pore size is measured indirectly by sieving particles through it.',
+          'In the ASTM method (D4751) glass beads of known sizes are dry-sieved through the fabric. The apparent opening size (AOS), also called O95, is the bead size of which 5% or less passes. It is often reported as a US sieve number as well as in millimetres; a higher sieve number means a smaller opening.',
+          'In the ISO method (ISO 12956) a graded soil is wet-sieved through the fabric with water, and the characteristic opening size O90 is read from the grading of what passed. O90 and AOS are measured differently and are not the same number, even on the same roll.',
+          'For both, a smaller value means finer openings. Smaller is not automatically better: openings that are too fine for the soil can clog, and openings that are too coarse let soil pipe through. The right opening size comes from the grading of the soil at site, which is why designs ask for it.',
+        ],
+      },
+      {
+        h: 'Permeability: through the fabric and along it',
+        p: [
+          'Water flow through the fabric (normal to the plane) is reported in two common ways. ASTM D4491 gives permittivity, in units of s⁻¹: the flow of water per second through a unit area of fabric under a unit head of water (in effect, permeability divided by thickness, so fabrics of different thickness can be compared). ISO 11058 gives the velocity index, often written VH50, the flow velocity in mm/s (or l/m²/s) at a 50 mm head difference. Again, the two are not interchangeable.',
+          'Water flow along the fabric (in the plane) is transmissivity or in-plane flow capacity (ISO 12958, ASTM D4716). It is measured under a normal pressure, because flow along a felt drops as it is squeezed. It matters where the geotextile itself acts as a thin drain, for example behind a [retaining wall](/guides/geotextile-retaining-wall-drainage-india). For heavy drainage duty a geocomposite drain is often used instead, and we do not make those.',
+          'Permeability is usually set as "at least" the flow the soil can deliver, with a margin, so the fabric never becomes the bottleneck. The [drainage and erosion control guide](/guides/geotextile-for-drainage-and-erosion-control) explains that balance.',
+        ],
+      },
+      {
+        h: 'Durability: UV and chemical exposure',
+        p: [
+          'Polypropylene and polyester both lose strength in strong sunlight over time, which is why rolls are stored covered and laid fabric is covered within the time the specification allows. UV tests expose specimens to artificial light for a set number of hours and report the percentage of strength retained. Where the fabric meets strongly alkaline ground, such as fresh concrete or lime-treated soil, the polymer choice matters; our [PP vs polyester guide](/guides/polyester-vs-polypropylene-nonwoven) covers the difference. Long-term chemical and oxidation tests exist for landfill and mining designs; your designer will name them if they are needed.',
+        ],
+      },
+      {
+        h: 'How to read a geotextile datasheet or test report',
+        list: [
+          'Method and edition: every value should name its test method. A number with no method cannot be compared with your specification.',
+          'Typical, minimum or MARV: a typical (or nominal) value is an average of production. A minimum average roll value (MARV), common in US practice, is a value the average of any roll tested should meet, so it is lower than the typical value. Compare like with like: if your specification lists MARVs, a datasheet of typical values does not answer it.',
+          'Direction: MD, CD, or both. If only one is given, ask which.',
+          'Mean and spread: a report normally gives the mean of several specimens, and often the standard deviation or coefficient of variation. A wide spread means uneven fabric even if the mean passes.',
+          'What was tested: product name, GSM, roll or batch number, sampling date. A report on a different grade, or a report several years old, does not prove the roll on your site.',
+          'Who tested: a manufacturer\'s own lab result and a result from an independent laboratory accredited for that test (in India, NABL accreditation to ISO/IEC 17025 is the usual check) carry different weight. Public works often require the independent result; your specification will say.',
+          'Conditioning and units: geotextile tests are run after conditioning in a standard atmosphere, and units must match (N vs kN, kN/m vs N/50 mm). Many disputes are unit mistakes.',
+        ],
+        p: [
+          'If a value does not meet the specification, ask what the method was before rejecting the fabric. If the method matches and the value still falls short, the grade is wrong for the job; a heavier grade or a different fabric is the fix, not a different reading of the report.',
+        ],
+      },
+      {
+        h: 'What to send with a geotextile enquiry',
+        list: [
+          'The function: separation, filtration, drainage or protection',
+          'Each required property with its test method and value, as written in the specification (for example "CBR puncture, ISO 12236, at least ... N")',
+          'Whether values are typical, minimum or MARV, and in which direction',
+          'Fibre if fixed (PP or polyester, virgin or recycled), roll width and area to cover',
+          'Whether an independent lab report is needed, and for which properties',
+        ],
+        p: [
+          'With these we can tell you which grade to consider and what can be provided for your order, instead of guessing from a GSM. Our [quote guide](/guides/how-to-request-a-nonwoven-felt-quote) lists the rest of what helps.',
+        ],
+      },
+      {
+        h: 'What we supply',
+        p: [
+          'We make needle punched nonwoven geotextile in PP (virgin or recycled) and polyester, from 100 to 1200 GSM, in rolls 5.0–5.2 m wide, with a standard roll length of 50 m and other lengths on request, at our partner plant, Miracle Nonwoven Industries, Phagi, Jaipur. We do not publish one set of test values for every grade, because the values depend on the fibre and the grade built for your job. Send your specification through the [enquiry form](/contact#enquiry), or see [PP geotextile fabric for civil works](/products/geotextile/pp-geotextile-fabric-for-civil-works). Samples are free, so you can have them tested at a lab of your choice before bulk.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What tests are done on nonwoven geotextile?',
+        a: 'The common ones are mass per unit area (GSM), thickness, tensile strength and elongation (wide-width or grab), CBR puncture, opening size (O90 or AOS), and water permeability through and along the fabric. Tear, cone drop and UV resistance are added where installation damage or sunlight is a concern. The specification names which ones apply and by which method.',
+      },
+      {
+        q: 'What is the CBR puncture test for geotextile?',
+        a: 'A circle of fabric is clamped and a flat-ended 50 mm plunger is pushed through it at a steady speed. The peak force, in newtons or kilonewtons, is the CBR puncture strength. It imitates a stone pressed into the fabric by load. The usual methods are ISO 12236 and ASTM D6241.',
+      },
+      {
+        q: 'What is AOS in geotextile?',
+        a: 'AOS, the apparent opening size or O95, is a measure of the largest pores, found by dry-sieving glass beads of known sizes through the fabric (ASTM D4751). It is the bead size of which 5% or less passes. A smaller AOS means finer openings. The ISO equivalent, O90 by wet sieving (ISO 12956), is measured differently and gives a different number.',
+      },
+      {
+        q: 'What is the difference between grab tensile and wide-width tensile strength?',
+        a: 'Grab tensile (ASTM D4632) grips a 25 mm zone in the middle of a 100 mm specimen and reports a force in newtons. Wide-width tensile (ISO 10319, ASTM D4595) grips a 200 mm wide strip across its full width and reports kN per metre. The two cannot be converted by a fixed factor, so test by the method your specification names.',
+      },
+      {
+        q: 'What is permittivity of a geotextile?',
+        a: 'Permittivity (ASTM D4491) describes how easily water flows through the fabric, in units of s⁻¹. The ISO method (ISO 11058) reports a velocity index in mm/s at a 50 mm head instead. Both describe flow through the plane; flow along the fabric is a separate property called transmissivity.',
+      },
+      {
+        q: 'What does MARV mean on a geotextile datasheet?',
+        a: 'Minimum average roll value. It is a value that the average of tests on any roll should meet, and it sits below the typical production average. US-style specifications such as AASHTO M288 are written in MARVs, so a datasheet that gives only typical values does not show compliance with them.',
+      },
+      {
+        q: 'Can you provide a test report with the geotextile?',
+        a: 'Tell us which properties, methods and values your project requires, and whether an independent lab report is needed, and we will confirm what can be provided for your order. Samples are free, so you can also have them tested at a lab of your choice before bulk.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: ['nonwoven-geotextile-guide', 'woven-vs-nonwoven-geotextile', 'geotextile-gsm-for-road-construction-india', 'how-to-test-a-nonwoven-felt-sample'],
   },
 ];
 

@@ -38,6 +38,24 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 5 Nov 2026 (Thursday: pillar guide, owner asked for "the best content")
+
+- New pillar guide /guides/geotextile-test-methods-explained (~3,500 words on the page): what each
+  datasheet line means (GSM, thickness, wide-width vs grab tensile, CBR puncture, cone drop, tear,
+  AOS/O90, permittivity/velocity index, transmissivity, UV), a table of the usual ISO and ASTM
+  methods with units, how to read a test report (method, typical vs MARV, MD/CD, spread, which
+  roll, independent NABL lab, units) and what to send with an enquiry. Seven FAQs (FAQPage schema).
+- Why this topic: no page on the site explained test methods, while every tender and importer
+  specifies by them; global searches with low competition. Three queue items folded into one strong
+  page instead of three thin ones (AOS, CBR/grab, reading a test report).
+- No test values, certifications or report claims for our fabric. Standards named as methods only,
+  "confirm the current edition with your engineer"; BIS/IS numbers not quoted.
+- Linked from: woven vs nonwoven, nonwoven geotextile guide, sample testing guide, geotextile
+  manufacturer landing page, geotextile product FAQ (seo.js), geotextile area map (ExportRegion.jsx).
+  8 built pages link to it.
+- Build: OK, 86 pages, smoke passed, lint clean on changed files.
+- After deploy: Request indexing in Search Console and Bing for the new URL.
+
 ## 2 Nov 2026 (Monday: rank check + page upgrade)
 
 - Rank check (web search, 2 Nov): **first page-one result**: kirannonwovens.com is at position 10

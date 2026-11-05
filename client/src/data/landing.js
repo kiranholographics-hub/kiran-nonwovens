@@ -74,6 +74,7 @@ export const LANDING = {
       '[Polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven) — choosing a fibre',
       '[Roll weight and coverage](/guides/geotextile-roll-weight-and-coverage) — how much to order',
       '[How to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile) — site steps',
+      '[Geotextile test methods explained](/guides/geotextile-test-methods-explained) — tensile, CBR puncture, AOS, permeability',
       '[How to test a sample](/guides/how-to-test-a-nonwoven-felt-sample) — before you order in bulk',
     ],
     faqs: [
