@@ -56,6 +56,7 @@ build uses the real domain (checked live 26 Oct).
 - Build: OK, 86 pages, smoke passed, lint clean on changed files.
 - Live 5 Nov (checked: 200, canonical, FAQPage, in sitemap). Deploy run #97 pinged IndexNow (Bing).
   Google Search Console: Request indexing done by the owner, 5 Nov.
+- 6 Nov: PR #76 (/guides/geotextile-sports-field-turf-drainage-india) merged and live; Request indexing done by the owner.
 
 ## 2 Nov 2026 (Monday: rank check + page upgrade)
 
