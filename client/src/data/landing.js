@@ -38,7 +38,7 @@ export const LANDING = {
       '[Roads](/guides/geotextile-for-road-construction) and [road GSM](/guides/geotextile-gsm-for-road-construction-india): separation between subgrade and aggregate',
       '[Railway track](/guides/nonwoven-geotextile-for-railway-track-india) and [embankments on soft soil](/guides/geotextile-embankment-soft-soil-india)',
       '[Drainage and erosion control](/guides/geotextile-for-drainage-and-erosion-control), [retaining walls](/guides/geotextile-retaining-wall-drainage-india) and [hill slopes](/guides/geotextile-hill-slope-protection-india)',
-      '[Gabions and stone pitching](/guides/geotextile-gabion-stone-pitching-india), [paver block bases](/guides/geotextile-under-paver-blocks-india) and [green roofs](/guides/geotextile-green-roof-terrace-garden-india)',
+      '[Gabions and stone pitching](/guides/geotextile-gabion-stone-pitching-india), [paver block bases](/guides/geotextile-under-paver-blocks-india), [green roofs](/guides/geotextile-green-roof-terrace-garden-india) and [sports fields](/guides/geotextile-sports-field-turf-drainage-india)',
       '[Canal and pond lining](/guides/geotextile-canal-pond-lining-india), [landfill and mining](/guides/geotextile-landfill-mining-india) and [geobags](/guides/geobag-fabric-nonwoven-geotextile-india)',
     ],
     notTitle: 'What we do not supply',

@@ -31,6 +31,7 @@ const GUIDES_FOR_AREA = {
     'geobag-fabric-nonwoven-geotextile-india',
     'geotextile-canal-pond-lining-india',
     'geotextile-green-roof-terrace-garden-india',
+    'geotextile-sports-field-turf-drainage-india',
     'geotextile-landfill-mining-india',
     'geotextile-hill-slope-protection-india',
     'geotextile-test-methods-explained',

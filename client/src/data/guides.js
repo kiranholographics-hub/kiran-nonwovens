@@ -3523,6 +3523,130 @@ export const guides = [
     ],
   },
   {
+    slug: 'geotextile-sports-field-turf-drainage-india',
+    title: 'Geotextile in sports field and turf drainage in India: where the fabric goes and where it should not',
+    seoTitle: 'Geotextile for Sports Field Drainage India',
+    description:
+      'Where nonwoven geotextile goes in football, cricket and school ground drains and under artificial turf in India: drain trenches, base separation, one layer to avoid.',
+    readMins: 7,
+    published: '2026-11-04',
+    intro:
+      'A sports field has to drain after monsoon rain or it cannot be played on. The drainage is a set of layers and trenches under the turf, and a nonwoven geotextile appears in some of them. It does not appear in all of them: one common place for fabric is also one that many designs avoid. This guide goes through a natural turf field and an artificial turf field, says where the fabric belongs, and flags that layer. It is general practice; the sports field designer decides.',
+    sections: [
+      {
+        h: 'Two kinds of field, two builds',
+        table: {
+          head: ['Field', 'What drains it', 'Where nonwoven geotextile is used'],
+          rows: [
+            ['Natural turf (football, cricket outfield, school ground)', 'A rootzone over a gravel layer, with drain pipes or stone-filled trenches below', 'Wrapping the drain trenches and pipes; sometimes separating the subgrade from the stone'],
+            ['Artificial turf (football, hockey, multi-sport)', 'A compacted stone base under the turf carpet, with drains at the edges and below', 'Between the subgrade and the stone base, as a separator and filter'],
+            ['Play areas and school grounds', 'A simple graded base, often with edge drains', 'Under the base on soft or clayey ground; around edge drains'],
+          ],
+        },
+        p: [
+          'These are typical builds. The designer sets the real one, which depends on the soil, the rainfall and the level of play.',
+        ],
+      },
+      {
+        h: 'Wrapping a drain trench',
+        p: [
+          'Lines of stone-filled trench or perforated pipe carry water out from under the field. Without a filter, fine soil washes into the stone and the pipe, and the drain clogs within a few seasons. A nonwoven geotextile lining the trench, folded over the top of the stone, lets water in and holds the soil out. This is the same filter job described in [geotextile for drainage and erosion control](/guides/geotextile-for-drainage-and-erosion-control), applied across the whole field. Lay it to the trench profile without stretching it, with the overlap the specification sets, and cover it soon after laying.',
+        ],
+      },
+      {
+        h: 'Under an artificial turf base',
+        p: [
+          'Artificial turf sits on a compacted stone base. Where that base sits on soft or clayey ground, the stone works down into the soil and soil works up into the stone, and the surface follows with dips and soft patches. A nonwoven laid between the subgrade and the stone keeps the two apart and lets water through, much as under a paver base (see [geotextile under paver blocks](/guides/geotextile-under-paver-blocks-india)). On firm, free-draining ground the designer may leave it out.',
+        ],
+      },
+      {
+        h: 'The layer to be careful with',
+        p: [
+          'On a natural turf field, the rootzone is usually a sand-based mix laid over a gravel layer. Some designs lay a fabric directly between the two, and some deliberately do not, because fine particles from the rootzone can collect on the fabric and slow drainage over time. Practice varies and depends on how the rootzone and gravel are graded. This is the sports field designer’s call. We do not recommend either way here, and a supplier should not push you to buy a fabric for that layer without the designer’s drawing saying so.',
+        ],
+      },
+      {
+        h: 'Why monsoon matters on a field',
+        list: [
+          'A large flat area takes a lot of rain at once, so the drains have to pass water freely and stay open',
+          'A field that stays waterlogged after rain cannot be used and the turf suffers',
+          'Fine soil and silt arrive with the water, so the filter has to hold the fines without clogging',
+          'Black cotton and clayey soils hold water, so the base matters more on them',
+        ],
+        p: [
+          'We do not give one weight or opening size for all fields. Use the value in your specification, and confirm against a sample.',
+        ],
+      },
+      {
+        h: 'Laying it',
+        list: [
+          'Trim and compact the subgrade, and remove sharp stone or roots that could press through',
+          'Line trenches before the stone goes in, with enough fabric to fold over the top of the fill',
+          'Overlap rolls by the width the specification sets, with the upstream roll over the downstream one',
+          'Place stone from the edge or from stone already placed, and do not drive plant over bare fabric',
+          'Cover the fabric soon after laying, because sunlight weakens synthetic fibre, polypropylene in particular',
+        ],
+        p: [
+          'The general site steps are in [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile).',
+        ],
+      },
+      {
+        h: 'What to settle with the designer',
+        list: [
+          'Which layers get fabric, and which do not, from the drawing',
+          'Fibre: polyester or polypropylene, as the specification calls for',
+          'Weight (GSM) and any test values the specification sets',
+          'Overlap width and how the fabric wraps at trench tops and edges',
+          'Roll width and length to suit the trench lengths and field size; see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage)',
+        ],
+        p: [
+          'If your project follows a BIS, IRC or other agency or federation specification for sports surfaces, confirm the current edition with your engineer; we do not quote a standard on this page.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We make needle punched and thermal bonded nonwoven fabric, which is what lines the trenches and separates the base. We do not make drain pipes, geocomposite drains, woven separation fabric, geogrid, geomembrane, artificial turf, infill, shock pads or the sand and gravel layers, and we do not install. Send the application, the weight and the quantity through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is geotextile used in football field drainage?',
+        a: 'Yes, mainly as a filter around drain trenches and pipes, and as a separator between the subgrade and stone in some designs. Which layers get fabric is the sports field designer’s decision.',
+      },
+      {
+        q: 'Do you need geotextile under artificial turf?',
+        a: 'It is commonly used between the subgrade and the stone base on soft or clayey ground, to keep soil and stone apart and let water through. On firm, free-draining ground the designer may leave it out.',
+      },
+      {
+        q: 'Should geotextile go between the sand rootzone and the gravel layer?',
+        a: 'Practice varies. Some designs include it and some avoid it because fine particles can collect on it and slow drainage. The designer’s drawing should decide, not the supplier.',
+      },
+      {
+        q: 'How do you stop a field drain clogging?',
+        a: 'Line the trench with a nonwoven geotextile filter so water enters and soil stays out, and cover it soon after laying. A clogged drain is usually a missing or damaged filter.',
+      },
+      {
+        q: 'Which GSM should I use for a sports field drain?',
+        a: 'It depends on the soil, the stone and the load, so we do not give a number here. Use the value in your specification and confirm against a sample before bulk.',
+      },
+      {
+        q: 'Do you supply drain pipes, turf or shock pads?',
+        a: 'No. We make needle punched and thermal bonded nonwoven fabric only.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/drainage-soil-erosion-control-geotextile',
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+    ],
+    relatedGuides: [
+      'geotextile-for-drainage-and-erosion-control',
+      'geotextile-under-paver-blocks-india',
+      'how-to-install-nonwoven-geotextile',
+    ],
+  },
+  {
     slug: 'airlay-vs-needle-punch-nonwoven',
     title: 'Airlay vs needle punch: two different steps, not two rival fabrics',
     seoTitle: 'Airlay vs Needle Punch Nonwoven',
