@@ -52,6 +52,7 @@ build uses the real domain (checked live 26 Oct).
   rows, new "PP vs polyester in geotextile" section (fibre per GSM, alkali, heat, creep, UV) with a
   site-condition table, two FAQs, "samples are free" (was "on request"), `updated` 6 Nov.
 - Build: OK, 88 pages, smoke passed, lint clean.
+- Merged and live 6 Nov (checked); Request indexing for both URLs done by the owner.
 
 ## 5 Nov 2026 (Thursday: pillar guide, owner asked for "the best content")
 
