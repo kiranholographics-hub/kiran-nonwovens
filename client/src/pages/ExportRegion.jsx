@@ -35,6 +35,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-landfill-mining-india',
     'geotextile-hill-slope-protection-india',
     'geotextile-test-methods-explained',
+    'geotextile-vs-geomembrane',
     'geotextile-embankment-soft-soil-india',
     'geotextile-gabion-stone-pitching-india',
     'how-to-install-nonwoven-geotextile',

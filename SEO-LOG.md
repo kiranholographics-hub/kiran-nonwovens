@@ -38,6 +38,21 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 6 Nov 2026 (Friday: content for ranking, owner asked)
+
+- SERP check (web search, US results): "geotextile vs geomembrane" top results are blogspot and
+  seller blogs, so a clear, factual page can compete. Our site does not show in these US results
+  for the queries checked; use Search Console for India positions.
+- New guide /guides/geotextile-vs-geomembrane: one-line difference, side-by-side table (material,
+  water, how each is specified, joints, typical places), which job needs which (links 6 use guides),
+  why lined works use both (cushion build-up), common mistakes, GCL and geocomposites, what to tell
+  a supplier. Six FAQs. Says plainly we do not make geomembrane, GCL or geocomposites.
+  Linked from canal and landfill guides, geotextile landing page, product FAQ, area map (7 pages).
+- Upgraded /guides/polyester-vs-polypropylene-nonwoven (had impressions): density and melting point
+  rows, new "PP vs polyester in geotextile" section (fibre per GSM, alkali, heat, creep, UV) with a
+  site-condition table, two FAQs, "samples are free" (was "on request"), `updated` 6 Nov.
+- Build: OK, 88 pages, smoke passed, lint clean.
+
 ## 5 Nov 2026 (Thursday: pillar guide, owner asked for "the best content")
 
 - New pillar guide /guides/geotextile-test-methods-explained (~3,500 words on the page): what each

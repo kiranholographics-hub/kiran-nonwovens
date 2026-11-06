@@ -43,7 +43,7 @@ export const LANDING = {
     ],
     notTitle: 'What we do not supply',
     notText: [
-      'We make needle punched and thermal bonded nonwovens only. We do not make woven geotextile, geogrid or geocell, geomembrane or liners, erosion-control mats, jute or coir netting, or gabion mesh, and we do not install. If your drawing calls for one of those, you will buy it elsewhere; the [woven vs nonwoven guide](/guides/woven-vs-nonwoven-geotextile) helps tell which your job needs.',
+      'We make needle punched and thermal bonded nonwovens only. We do not make woven geotextile, geogrid or geocell, geomembrane or liners, erosion-control mats, jute or coir netting, or gabion mesh, and we do not install. If your drawing calls for one of those, you will buy it elsewhere; the [woven vs nonwoven guide](/guides/woven-vs-nonwoven-geotextile) and the [geotextile vs geomembrane guide](/guides/geotextile-vs-geomembrane) help tell which your job needs.',
       'Test values on a project come from an independent laboratory, not from us. If your specification names a test, tell us which one and whose method before production, and confirm the current edition of any standard with your engineer.',
     ],
     fibreTitle: 'Choosing the fibre and the weight',

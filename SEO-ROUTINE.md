@@ -113,7 +113,7 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [ ] geotextile for tunnel waterproofing protection layer
 - [x] apparent opening size (AOS) of geotextile explained (5 Nov) -> merged into /guides/geotextile-test-methods-explained
 - [x] CBR puncture and grab tensile tests for geotextile explained (5 Nov) -> same pillar guide
-- [ ] geotextile vs geomembrane: which one a project needs
+- [x] geotextile vs geomembrane: which one a project needs (6 Nov) -> /guides/geotextile-vs-geomembrane
 - [x] how many square metres in a geotextile roll, and roll weight from GSM (25 Oct)
 - [ ] automotive boot / trunk liner felt
 - [ ] automotive wheel-arch liner felt
