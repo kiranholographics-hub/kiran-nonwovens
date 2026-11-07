@@ -38,6 +38,24 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 7 Nov 2026 (Saturday: hub upgrade + off-page prep)
+
+- /guides/nonwoven-geotextile-guide (most impressions in the last Search Console data) turned
+  into the geotextile hub: uses table now has 14 rows with a working link in each (added gabions,
+  hill slopes, paver blocks, sports fields, green roofs), new sections "Nonwoven geotextile and
+  the other geosynthetics" (woven, geomembrane, geogrid/geocell, geocomposite) and "How to choose
+  the grade" (links test methods, road GSM, roll weight), three FAQs (GSM, waterproof?, woven vs
+  nonwoven), "confirm exposure limits with the supplier" replaced by the specification's limit,
+  `updated` 7 Nov.
+- Guide.jsx: table cells now render [text](/path) links (RichText), so tables can link guides.
+- Link check over all built pages: no broken internal links. New guides linked from: test methods
+  11 pages, geotextile vs geomembrane 8, sports field 6.
+- offpage/2026-11-07.md: two GBP posts (liner cushion; order by test values), one LinkedIn post
+  (test methods), ready-to-paste Justdial, Fibre2Fashion and Kompass descriptions, each linking a
+  different page. listings.md updated. Nothing posted.
+- Build: OK, 88 pages, smoke passed, lint clean.
+- Pending: Search Console 28-day Queries + Pages (needed to pick pages at position 5-20).
+
 ## 6 Nov 2026 (Friday: content for ranking, owner asked)
 
 - SERP check (web search, US results): "geotextile vs geomembrane" top results are blogspot and

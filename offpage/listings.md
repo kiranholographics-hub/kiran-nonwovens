@@ -13,5 +13,8 @@ accounts and posts; Claude drafts and adds each live profile URL to the site's `
 | Go4WorldBusiness | Not started | offpage/2026-10-31.md | — |
 | Europages | Not started | offpage/2026-10-31.md | — |
 | YouTube (factory/process videos) | Not started | — | — |
+| Justdial | Not started | offpage/2026-11-07.md | — |
+| Fibre2Fashion | Not started | offpage/2026-11-07.md | — |
+| Kompass | Not started | offpage/2026-11-07.md | — |
 | Alibaba.com, Kompass, ThomasNet | Later (paid or US-only) | — | — |
 | Industry directories (TTAI etc.) | Only if eligible | — | — |

@@ -199,9 +199,9 @@ export const guides = [
     title: 'Nonwoven geotextile: functions, uses and how to specify',
     seoTitle: 'Non Woven Geotextile Uses and Functions',
     description:
-      'Uses of non woven geotextile in roads, railways, drains, walls, canals and landfills, the five jobs it does, and what to specify when you order.',
-    readMins: 6,
-    updated: '2026-10-27',
+      'Uses of non woven geotextile in roads, railways, drains, walls, canals and landfills, the five jobs it does, how to choose the grade, and what to specify.',
+    readMins: 9,
+    updated: '2026-11-07',
     intro:
       'A nonwoven geotextile is a permeable fabric laid in or on the ground to make a structure work better and last longer. This guide covers the jobs it does, where it is used, and the details to settle before you order.',
     keyPoints: [
@@ -236,20 +236,47 @@ export const guides = [
         table: {
           head: ['Use', 'Main job', 'Read more'],
           rows: [
-            ['Roads and pavements', 'Separation, filtration', 'Geotextile for road construction'],
-            ['Railway track', 'Separation under ballast', 'Railway track guide'],
-            ['Embankments on soft soil', 'Separation, drainage', 'Embankments guide'],
-            ['Drains and pipe wrapping', 'Filtration', 'Drainage and erosion control guide'],
-            ['Behind retaining walls', 'Filtration, drainage', 'Retaining wall drainage guide'],
-            ['Canals and ponds', 'Protecting the liner', 'Canal and pond lining guide'],
-            ['Landfills and mines', 'Protection, filtration', 'Landfill and mining guide'],
-            ['Geobags for river and coast', 'Containment, filtration', 'Geobag fabric guide'],
-            ['Buried pipes and cables', 'Protection', 'Pipeline and cable protection geotextile'],
+            ['Roads and pavements', 'Separation, filtration', '[Road construction](/guides/geotextile-for-road-construction) and [road GSM](/guides/geotextile-gsm-for-road-construction-india)'],
+            ['Railway track', 'Separation under ballast', '[Railway track guide](/guides/nonwoven-geotextile-for-railway-track-india)'],
+            ['Embankments on soft soil', 'Separation, drainage', '[Embankments guide](/guides/geotextile-embankment-soft-soil-india)'],
+            ['Drains and pipe wrapping', 'Filtration', '[Drainage and erosion control](/guides/geotextile-for-drainage-and-erosion-control)'],
+            ['Behind retaining walls', 'Filtration, drainage', '[Retaining wall drainage](/guides/geotextile-retaining-wall-drainage-india)'],
+            ['Gabions and stone pitching', 'Filtration behind stone', '[Gabions and stone pitching](/guides/geotextile-gabion-stone-pitching-india)'],
+            ['Hill slopes and landslide repair', 'Filtration, separation', '[Hill slope protection](/guides/geotextile-hill-slope-protection-india)'],
+            ['Paver blocks and interlocking tiles', 'Separation under the bedding sand', '[Under paver blocks](/guides/geotextile-under-paver-blocks-india)'],
+            ['Sports fields and turf', 'Filtration in drains, separation', '[Sports field drainage](/guides/geotextile-sports-field-turf-drainage-india)'],
+            ['Green roofs and terrace gardens', 'Filtration, protection', '[Green roofs](/guides/geotextile-green-roof-terrace-garden-india)'],
+            ['Canals and ponds', 'Protecting the liner', '[Canal and pond lining](/guides/geotextile-canal-pond-lining-india)'],
+            ['Landfills and mines', 'Protection, filtration', '[Landfill and mining](/guides/geotextile-landfill-mining-india)'],
+            ['Geobags for river and coast', 'Containment, filtration', '[Geobag fabric](/guides/geobag-fabric-nonwoven-geotextile-india)'],
+            ['Buried pipes and cables', 'Protection', '[Pipeline and cable protection geotextile](/products/geotextile/pipeline-cable-protection-geotextile)'],
           ],
         },
         p: [
-          'Each use has its own guide: [roads](/guides/geotextile-for-road-construction), [railway track](/guides/nonwoven-geotextile-for-railway-track-india), [embankments on soft soil](/guides/geotextile-embankment-soft-soil-india), [drains and slopes](/guides/geotextile-for-drainage-and-erosion-control), [retaining walls](/guides/geotextile-retaining-wall-drainage-india), [canals and ponds](/guides/geotextile-canal-pond-lining-india), [landfills and mines](/guides/geotextile-landfill-mining-india) and [geobags](/guides/geobag-fabric-nonwoven-geotextile-india). For laying it on site, see [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile).',
+          'For laying it on site, see [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile). A Hindi version of the basics is in our [Hindi geotextile guide](/guides/non-woven-geotextile-hindi).',
           'Our products for these uses: [PP geotextile for civil works](/products/geotextile/pp-geotextile-fabric-for-civil-works) for separation and filtration under roads, railways and embankments; [drainage and erosion control geotextile](/products/geotextile/drainage-soil-erosion-control-geotextile) for drains, walls and slopes; and [pipeline and cable protection geotextile](/products/geotextile/pipeline-cable-protection-geotextile) for buried services.',
+        ],
+      },
+      {
+        h: 'Nonwoven geotextile and the other geosynthetics',
+        p: [
+          'Several products are laid in the ground alongside a nonwoven, and specifications sometimes mix up their names. A short way to tell them apart:',
+        ],
+        table: {
+          head: ['Product', 'What it does', 'Compared with a nonwoven geotextile'],
+          rows: [
+            ['Woven geotextile', 'Tensile strength at low stretch: stabilisation, reinforcement, silt fences', '[Woven vs nonwoven geotextile](/guides/woven-vs-nonwoven-geotextile)'],
+            ['Geomembrane', 'Waterproof barrier in ponds, canals, landfills', '[Geotextile vs geomembrane](/guides/geotextile-vs-geomembrane)'],
+            ['Geogrid and geocell', 'Reinforce and confine soil or aggregate', 'Different job; often used with a nonwoven as the separator'],
+            ['Geocomposite drain', 'A drainage core with filter fabric, for heavy drainage duty', 'A thick nonwoven drains lighter flows on its own'],
+          ],
+        },
+      },
+      {
+        h: 'How to choose the grade',
+        p: [
+          'GSM tells you how much fibre is in the fabric, not what it will do. Designs set the grade from the job and the site: how soft and wet the ground is, how sharp the stone placed on it is, what soil the fabric must hold back, and how much water must pass. They express that as test values such as tensile strength, CBR puncture, opening size and permeability. Our [geotextile test methods guide](/guides/geotextile-test-methods-explained) explains each of them and how to read a test report.',
+          'Where a design gives only a GSM, ask the engineer what the fabric has to do; the [road GSM guide](/guides/geotextile-gsm-for-road-construction-india) shows how the usual bands move with site conditions. To work out how many rolls an area needs and what each weighs, use the [roll weight and coverage guide](/guides/geotextile-roll-weight-and-coverage).',
         ],
       },
       {
@@ -269,7 +296,7 @@ export const guides = [
           'How long the fabric will be exposed before it is covered',
         ],
         p: [
-          'Follow the project engineer’s installation details for overlaps and cover. Polypropylene is sensitive to prolonged sunlight, so geotextiles are normally covered soon after they are laid — confirm exposure limits for your project with the supplier.',
+          'Follow the project engineer’s installation details for overlaps and cover. Polypropylene is sensitive to prolonged sunlight, so geotextiles are normally covered soon after they are laid; follow the exposure limit in your specification. The [installation guide](/guides/how-to-install-nonwoven-geotextile) covers overlaps, anchoring and cover.',
         ],
       },
     ],
@@ -284,7 +311,19 @@ export const guides = [
       },
       {
         q: 'Should a geotextile be covered after installation?',
-        a: 'Normally yes, soon after it is laid. Polypropylene is sensitive to prolonged UV exposure, so follow your project’s installation details and confirm exposure limits with the supplier.',
+        a: 'Normally yes, soon after it is laid. Polypropylene is sensitive to prolonged UV exposure, so follow the exposure limit in your project’s specification.',
+      },
+      {
+        q: 'What GSM of geotextile should I use?',
+        a: 'The project design sets it, from the job, the ground and the stone placed on the fabric, usually together with strength, puncture and permeability values. We make 100 to 1200 GSM. See the [road GSM guide](/guides/geotextile-gsm-for-road-construction-india) and the [test methods guide](/guides/geotextile-test-methods-explained).',
+      },
+      {
+        q: 'Is nonwoven geotextile waterproof?',
+        a: 'No. It is permeable by design. Waterproofing needs a geomembrane; the nonwoven then protects it. See [geotextile vs geomembrane](/guides/geotextile-vs-geomembrane).',
+      },
+      {
+        q: 'What is the difference between woven and nonwoven geotextile?',
+        a: 'Woven is thin and strong in tension, for stabilisation and reinforcement. Nonwoven is thick and felt-like, for separation, filtration, drainage and protection. See [woven vs nonwoven geotextile](/guides/woven-vs-nonwoven-geotextile).',
       },
       {
         q: 'Can I get a geotextile sample before ordering?',
