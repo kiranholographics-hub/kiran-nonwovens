@@ -110,7 +110,7 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [x] geotextile for green roofs and terrace gardens India (2 Nov) -> /guides/geotextile-green-roof-terrace-garden-india
 - [x] geotextile for sports field and turf drainage (4 Nov) -> /guides/geotextile-sports-field-turf-drainage-india
 - [ ] geotextile for solar plant access roads India
-- [ ] geotextile for tunnel waterproofing protection layer
+- [x] geotextile for tunnel waterproofing protection layer (9 Nov) -> /guides/geotextile-tunnel-waterproofing-protection-india
 - [x] apparent opening size (AOS) of geotextile explained (5 Nov) -> merged into /guides/geotextile-test-methods-explained
 - [x] CBR puncture and grab tensile tests for geotextile explained (5 Nov) -> same pillar guide
 - [x] geotextile vs geomembrane: which one a project needs (6 Nov) -> /guides/geotextile-vs-geomembrane

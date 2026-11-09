@@ -324,6 +324,7 @@ export function productFaq(product) {
       '[sports field and turf drainage guide](/guides/geotextile-sports-field-turf-drainage-india)',
       '[landfill and mining guide](/guides/geotextile-landfill-mining-india)',
       '[retaining wall drainage guide](/guides/geotextile-retaining-wall-drainage-india)',
+      '[tunnel waterproofing guide](/guides/geotextile-tunnel-waterproofing-protection-india)',
       '[roll weight and coverage guide](/guides/geotextile-roll-weight-and-coverage)',
       '[embankments on soft soil guide](/guides/geotextile-embankment-soft-soil-india)',
       '[hill slope protection guide](/guides/geotextile-hill-slope-protection-india)',
