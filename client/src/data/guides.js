@@ -2451,6 +2451,122 @@ export const guides = [
     ],
     relatedGuides: ['automotive-nvh-felt-guide', 'polyester-vs-polypropylene-nonwoven', 'needle-punched-vs-thermal-bonded-nonwoven'],
   },
+  {
+    slug: 'needle-punched-felt-price-factors-india',
+    title: 'What decides the price of needle punched felt: why two quotes for the same GSM can differ',
+    seoTitle: 'Needle Punched Felt Price: What Decides It',
+    description:
+      'Why needle punched felt quotes differ in India: fibre, GSM, width, colour and quoting basis. How to turn a per kg quote into per m² and compare quotes fairly.',
+    readMins: 6,
+    published: '2026-11-11',
+    intro:
+      'Ask three suppliers for the same needle punched felt and you may get three very different prices. Part of the gap is real: the fibre, the weight and the finish all cost something. Part of it is only the way the quote is written, per kilogram, per square metre or per roll. This guide lists what decides the price and shows the arithmetic for comparing quotes. It gives no prices: felt is made to order, so a price follows a specification, and any figure on a web page is for someone else’s felt.',
+    sections: [
+      {
+        h: 'What moves the price',
+        table: {
+          head: ['Factor', 'How it moves the price', 'What to tell the supplier'],
+          rows: [
+            ['Fibre', 'Virgin and recycled fibre, and polyester, PP and viscose, cost different amounts, and fibre prices change over time', 'The fibre your job needs, and whether recycled is acceptable'],
+            ['GSM (weight)', 'More weight means more fibre in every square metre', 'The GSM you need, and the tolerance you accept'],
+            ['Thickness and density', 'A denser, more heavily needled felt takes more processing', 'The thickness, or how the felt must feel and behave'],
+            ['Width and roll length', 'Width and length change waste and handling', 'The width and roll length your line takes'],
+            ['Colour', 'A matched or multi-colour felt can cost more than a natural or standard colour', 'The colour, and how closely it must match'],
+            ['Quantity', 'Order size affects how a run is planned and packed', 'The quantity, once, and any repeat volume'],
+            ['Packing and shipping', 'The packing and the delivery term change the total', 'Destination and the delivery term you want'],
+          ],
+        },
+        p: [
+          'Minimum order, lead time and packing follow the ordering terms on the [needle punched felt page](/needle-punched-felt-india). The price follows the specification, so the quickest way to a number is a complete enquiry: see the [quote checklist](/guides/how-to-request-a-nonwoven-felt-quote).',
+        ],
+      },
+      {
+        h: 'Per kilogram and per square metre are not the same thing',
+        p: [
+          'Many felt quotes are per kilogram. Many buyers think per square metre. The link between them is the weight of the felt: a square metre of 200 GSM felt weighs 200 grams, so it carries 0.2 kg of felt. At the same rate per kilogram, a heavier felt costs more per square metre in direct proportion.',
+        ],
+      },
+      {
+        h: 'The arithmetic: the same rate per kg at different weights',
+        table: {
+          head: ['GSM', 'Weight of one m²', 'Cost per m² compared with 100 GSM, at the same rate per kg'],
+          rows: [
+            ['100', '0.1 kg', '1×'],
+            ['200', '0.2 kg', '2×'],
+            ['400', '0.4 kg', '4×'],
+            ['800', '0.8 kg', '8×'],
+          ],
+        },
+        p: [
+          'So cost per m² = rate per kg × GSM ÷ 1000. Two quotes at the same rate per kg are only the same price if they are for the same weight. For how many square metres a roll covers, see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage); the same method works for any felt.',
+        ],
+      },
+      {
+        h: 'Why the same GSM can still price differently',
+        list: [
+          'The GSM is nominal on one quote and measured on another. A felt sold as 300 GSM that weighs 270 contains less fibre, and costs less to make',
+          'The fibre differs: virgin, recycled or a blend, which can look alike by eye',
+          'The tolerance differs: a tight tolerance on weight and thickness takes more control than a loose one',
+          'The quote includes different things: packing, loading, freight, or none of them',
+          'The width or roll length differs, so waste and handling differ',
+        ],
+        p: [
+          'Check the weight yourself on the sample: [how to test a nonwoven felt sample](/guides/how-to-test-a-nonwoven-felt-sample) shows how, with a ruler and a small scale.',
+        ],
+      },
+      {
+        h: 'How to compare quotes fairly',
+        list: [
+          'Ask every supplier to quote the same specification: fibre, GSM, thickness, width, roll length and colour',
+          'Ask for the same basis, per kg, per m² or per roll, and convert them to one with the arithmetic above',
+          'Ask what the price includes: packing, loading, freight, insurance. See [EXW, FOB or CIF](/guides/incoterms-nonwoven-felt-india) for how the term changes the total',
+          'Ask for a sample of the specification and weigh it before you compare',
+          'Write the tolerance you accept into the order',
+        ],
+      },
+      {
+        h: 'Why we do not publish a price list',
+        p: [
+          'Our felt is made to order, so one list price would not mean anything: it would depend on the fibre, weight, width and colour that you choose. We quote after we read your specification. Send it through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What decides the price of needle punched felt?',
+        a: 'Mainly the fibre and its cost, the GSM (more weight means more fibre per m²), the thickness and density, the width and roll length, the colour, the order quantity, and the packing and delivery term.',
+      },
+      {
+        q: 'Why do two suppliers quote very different prices for the same GSM?',
+        a: 'Often because the GSM is nominal in one case and measured in another, the fibre differs (virgin, recycled or blend), the tolerance differs, or one quote includes packing and freight and the other does not. Compare on the same specification and basis.',
+      },
+      {
+        q: 'How do I convert a price per kg to a price per square metre?',
+        a: 'Multiply the rate per kg by the GSM and divide by 1000. A 200 GSM felt weighs 0.2 kg per square metre, so at the same rate per kg it costs twice as much per square metre as a 100 GSM felt.',
+      },
+      {
+        q: 'Do you publish a price list?',
+        a: 'No. The felt is made to order, so the price depends on the specification. We quote after reading it. Use the enquiry form, and see the quote checklist for what to send.',
+      },
+      {
+        q: 'Does recycled fibre make the felt cheaper?',
+        a: 'Recycled fibre can lower the fibre cost where the job allows it, but it may not suit every application. Say whether recycled is acceptable and we will advise.',
+      },
+      {
+        q: 'Are samples free?',
+        a: 'Yes, free, to any location. How long a sample takes to reach you depends on where you are.',
+      },
+    ],
+    relatedProducts: [
+      'industrial/multi-colour-needle-punched-felt',
+      'industrial/customised-nonwoven-solutions',
+    ],
+    relatedGuides: [
+      'how-to-request-a-nonwoven-felt-quote',
+      'gsm-in-nonwoven-fabric',
+      'incoterms-nonwoven-felt-india',
+    ],
+  },
 
   {
     slug: 'geotextile-roll-weight-and-coverage',

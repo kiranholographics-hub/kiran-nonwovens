@@ -53,6 +53,7 @@ const GUIDES_FOR_AREA = {
     'bag-filter-felt-cement-steel-power-india',
     'luggage-bag-support-felt-india',
     'packaging-protective-felt-india',
+    'needle-punched-felt-price-factors-india',
   ],
 };
 const ALWAYS_GUIDES = [
