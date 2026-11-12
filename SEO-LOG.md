@@ -56,6 +56,8 @@ build uses the real domain (checked live 26 Oct).
   company at all. Listings (Justdial, IndiaMART, TradeIndia, Fibre2Fashion, Kompass) remain the
   biggest gap for ranking.
 - Build: OK, 88 pages, smoke passed, lint clean.
+- Merged and live (checked). Owner requested indexing for pp-geotextile, automotive felt,
+  filter felt and drainage geotextile product pages.
 
 ## 7 Nov 2026 (Saturday: hub upgrade + off-page prep)
 
