@@ -38,6 +38,17 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 13 Nov 2026 (Friday: Africa region page)
+
+- Africa region page (/africa-nonwoven-felt-supplier) had only the shared template. Gave it its
+  own section "Shipping geotextile and felt to African projects" (long inland hauls, wet season and
+  erosion, mining and heavy plant, paperwork by destination) and 3 FAQs. Same way as Middle East
+  and Europe. No certification, price or test figure claimed; document rules left to the
+  importer or clearing agent; packing is the confirmed poly bag on paper core or HDPE wrap.
+- Build OK, 91 pages, smoke passed, lint clean.
+- Pending: Request indexing for /africa-nonwoven-felt-supplier after deploy; Search Console
+  Queries + Pages screenshot still owed for the review.
+
 ## 11 Nov 2026 (owner: "site rank nahi ho rahi", content fix)
 
 - Diagnosis: the 16 product pages (the buyer-intent pages, earlier "Discovered - currently not
