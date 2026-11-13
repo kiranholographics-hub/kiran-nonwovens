@@ -65,3 +65,60 @@
 .product__main + .product__overview {
   padding-top: calc(var(--section-y) * 0.25);
 }
+
+/* Buying notes: the product-specific section (data/productDetails.js). */
+.product__choose p {
+  margin-top: 14px;
+}
+
+.product__choose h3 {
+  margin-top: 28px;
+}
+
+.product__choose-table {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  margin: 28px auto 8px;
+  max-width: 960px;
+}
+
+.product__choose-table table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.product__choose-table th,
+.product__choose-table td {
+  padding: 13px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.product__choose-table thead th {
+  background: var(--sand);
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+.product__choose-table tbody th {
+  color: var(--muted);
+  font-weight: 500;
+  width: 30%;
+}
+
+.product__choose-table tbody tr:last-child th,
+.product__choose-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.product__choose-list {
+  margin-top: 12px;
+  padding-left: 1.2em;
+}
+
+.product__choose-list li {
+  margin-top: 8px;
+}

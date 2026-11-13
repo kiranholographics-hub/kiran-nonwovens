@@ -38,6 +38,61 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 11 Nov 2026 (owner: "site rank nahi ho rahi", content fix)
+
+- Diagnosis: the 16 product pages (the buyer-intent pages, earlier "Discovered - currently not
+  indexed") shared about half their text with each other: 8-word shingle check on the built pages
+  gave 43-51% unique text per product page (58% for pp-geotextile). Near-duplicate templates are a
+  common reason Google leaves pages unindexed.
+- Fix: new client/src/data/productDetails.js (kept out of catalog.js so the live API cannot drop
+  it) gives every product its own "Buying notes" section: two paragraphs on how the choice is
+  really made for that product, a use table linking the matching guides, "what to tell us" list,
+  and two product-specific FAQs (merged into the FAQ block and FAQPage schema). Removed the
+  templated "main features" FAQ, which only repeated the Features list on the same page.
+- Result: 56-66% unique per product page (was 43-51%), pages now 870-1300 words.
+  No new claims: no prices, test values, certificates, clients; says what we do not make
+  (finished filter bags, moulded parts, shoulder pads, packed cast padding, high-temp fibres).
+- Brand check (web search): "Kiran Nonwovens Jaipur" returns no third-party mention of the
+  company at all. Listings (Justdial, IndiaMART, TradeIndia, Fibre2Fashion, Kompass) remain the
+  biggest gap for ranking.
+- Build: OK, 88 pages, smoke passed, lint clean.
+- Merged and live (checked). Owner requested indexing for pp-geotextile, automotive felt,
+  filter felt and drainage geotextile product pages.
+
+## 7 Nov 2026 (Saturday: hub upgrade + off-page prep)
+
+- /guides/nonwoven-geotextile-guide (most impressions in the last Search Console data) turned
+  into the geotextile hub: uses table now has 14 rows with a working link in each (added gabions,
+  hill slopes, paver blocks, sports fields, green roofs), new sections "Nonwoven geotextile and
+  the other geosynthetics" (woven, geomembrane, geogrid/geocell, geocomposite) and "How to choose
+  the grade" (links test methods, road GSM, roll weight), three FAQs (GSM, waterproof?, woven vs
+  nonwoven), "confirm exposure limits with the supplier" replaced by the specification's limit,
+  `updated` 7 Nov.
+- Guide.jsx: table cells now render [text](/path) links (RichText), so tables can link guides.
+- Link check over all built pages: no broken internal links. New guides linked from: test methods
+  11 pages, geotextile vs geomembrane 8, sports field 6.
+- offpage/2026-11-07.md: two GBP posts (liner cushion; order by test values), one LinkedIn post
+  (test methods), ready-to-paste Justdial, Fibre2Fashion and Kompass descriptions, each linking a
+  different page. listings.md updated. Nothing posted.
+- Build: OK, 88 pages, smoke passed, lint clean.
+- Pending: Search Console 28-day Queries + Pages (needed to pick pages at position 5-20).
+
+## 6 Nov 2026 (Friday: content for ranking, owner asked)
+
+- SERP check (web search, US results): "geotextile vs geomembrane" top results are blogspot and
+  seller blogs, so a clear, factual page can compete. Our site does not show in these US results
+  for the queries checked; use Search Console for India positions.
+- New guide /guides/geotextile-vs-geomembrane: one-line difference, side-by-side table (material,
+  water, how each is specified, joints, typical places), which job needs which (links 6 use guides),
+  why lined works use both (cushion build-up), common mistakes, GCL and geocomposites, what to tell
+  a supplier. Six FAQs. Says plainly we do not make geomembrane, GCL or geocomposites.
+  Linked from canal and landfill guides, geotextile landing page, product FAQ, area map (7 pages).
+- Upgraded /guides/polyester-vs-polypropylene-nonwoven (had impressions): density and melting point
+  rows, new "PP vs polyester in geotextile" section (fibre per GSM, alkali, heat, creep, UV) with a
+  site-condition table, two FAQs, "samples are free" (was "on request"), `updated` 6 Nov.
+- Build: OK, 88 pages, smoke passed, lint clean.
+- Merged and live 6 Nov (checked); Request indexing for both URLs done by the owner.
+
 ## 5 Nov 2026 (Thursday: pillar guide, owner asked for "the best content")
 
 - New pillar guide /guides/geotextile-test-methods-explained (~3,500 words on the page): what each
@@ -54,7 +109,9 @@ build uses the real domain (checked live 26 Oct).
   manufacturer landing page, geotextile product FAQ (seo.js), geotextile area map (ExportRegion.jsx).
   8 built pages link to it.
 - Build: OK, 86 pages, smoke passed, lint clean on changed files.
-- After deploy: Request indexing in Search Console and Bing for the new URL.
+- Live 5 Nov (checked: 200, canonical, FAQPage, in sitemap). Deploy run #97 pinged IndexNow (Bing).
+  Google Search Console: Request indexing done by the owner, 5 Nov.
+- 6 Nov: PR #76 (/guides/geotextile-sports-field-turf-drainage-india) merged and live; Request indexing done by the owner.
 
 ## 2 Nov 2026 (Monday: rank check + page upgrade)
 

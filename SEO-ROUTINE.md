@@ -108,12 +108,12 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [x] geotextile for gabion and stone pitching backing (31 Oct) -> /guides/geotextile-gabion-stone-pitching-india
 - [x] geotextile for hill slope protection and landslide repair India (1 Nov) -> /guides/geotextile-hill-slope-protection-india
 - [x] geotextile for green roofs and terrace gardens India (2 Nov) -> /guides/geotextile-green-roof-terrace-garden-india
-- [ ] geotextile for sports field and turf drainage
+- [x] geotextile for sports field and turf drainage (4 Nov) -> /guides/geotextile-sports-field-turf-drainage-india
 - [x] geotextile for solar plant access roads India (6 Nov) -> /guides/geotextile-solar-plant-access-roads-india
 - [ ] geotextile for tunnel waterproofing protection layer
 - [x] apparent opening size (AOS) of geotextile explained (5 Nov) -> merged into /guides/geotextile-test-methods-explained
 - [x] CBR puncture and grab tensile tests for geotextile explained (5 Nov) -> same pillar guide
-- [ ] geotextile vs geomembrane: which one a project needs
+- [x] geotextile vs geomembrane: which one a project needs (6 Nov) -> /guides/geotextile-vs-geomembrane
 - [x] how many square metres in a geotextile roll, and roll weight from GSM (25 Oct)
 - [ ] automotive boot / trunk liner felt
 - [ ] automotive wheel-arch liner felt

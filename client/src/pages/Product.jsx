@@ -14,6 +14,8 @@ import { useCatalogue } from '../CatalogueContext.jsx';
 import { ORDERING, PLANT } from '../data/catalog.js';
 import Faq from '../components/Faq.jsx';
 import { productFaq, plain } from '../data/seo.js';
+import { productDetails } from '../data/productDetails.js';
+import RichText from '../components/RichText.jsx';
 import { SITE, VIDEOS, breadcrumbLd, faqLd } from '../lib.js';
 import NotFound from './NotFound.jsx';
 import './Product.css';
@@ -34,6 +36,7 @@ export default function Product() {
   }
 
   const area = areaName(product.category);
+  const details = productDetails(product.slug);
 
   // Full copy from the company's product-description document. The first
   // paragraph leads the page; the rest reads as the overview below it.
@@ -214,6 +217,64 @@ export default function Product() {
               {moreParagraphs.map((text) => (
                 <p key={text.slice(0, 32)}>{text}</p>
               ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {details ? (
+        <section className="block product__choose">
+          <div className="wrap">
+            <div className="narrow">
+              <p className="eyebrow">Buying notes</p>
+              <h2>{details.h}</h2>
+              {details.p.map((text) => (
+                <p key={text.slice(0, 32)}>
+                  <RichText text={text} />
+                </p>
+              ))}
+            </div>
+            {details.table ? (
+              <div className="product__choose-table">
+                <table>
+                  <thead>
+                    <tr>
+                      {details.table.head.map((h) => (
+                        <th key={h} scope="col">
+                          {h}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {details.table.rows.map((row) => (
+                      <tr key={row[0]}>
+                        {details.table.head.map((_, i) =>
+                          i === 0 ? (
+                            <th key={i} scope="row">
+                              {row[0]}
+                            </th>
+                          ) : (
+                            <td key={i}>
+                              <RichText text={row[i] || '—'} />
+                            </td>
+                          )
+                        )}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
+            <div className="narrow">
+              <h3>What to tell us when you ask for a quote</h3>
+              <ul className="product__choose-list">
+                {details.specify.map((item) => (
+                  <li key={item.slice(0, 32)}>
+                    <RichText text={item} />
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>

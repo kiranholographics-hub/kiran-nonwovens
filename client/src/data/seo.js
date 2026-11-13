@@ -12,6 +12,7 @@
  * Markup inside strings: [text](/path) becomes an internal link.
  */
 import { ORDERING } from './catalog.js';
+import { PRODUCT_DETAILS } from './productDetails.js';
 
 const lowerFirst = (s) => s.charAt(0).toLowerCase() + s.slice(1);
 
@@ -304,12 +305,9 @@ export function productFaq(product) {
     });
   }
 
-  if (product.features?.length) {
-    faqs.push({
-      q: `What are the main features of ${product.name}?`,
-      a: `${product.features.slice(0, 4).map((f) => lower(f.replace(/\.$/, ''))).join('; ')}.`.replace(/^(.)/, (c) => c.toUpperCase()),
-    });
-  }
+  // Product-specific questions first after the basics, so each page's FAQ
+  // block is its own rather than the shared template.
+  faqs.push(...(PRODUCT_DETAILS[product.slug]?.faqs || []));
 
   const guideLink = {
     geotextile: `Read our ${sentenceList([
@@ -322,12 +320,14 @@ export function productFaq(product) {
       '[geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india)',
       '[canal and pond lining guide](/guides/geotextile-canal-pond-lining-india)',
       '[green roof and terrace garden guide](/guides/geotextile-green-roof-terrace-garden-india)',
+      '[sports field and turf drainage guide](/guides/geotextile-sports-field-turf-drainage-india)',
       '[landfill and mining guide](/guides/geotextile-landfill-mining-india)',
       '[retaining wall drainage guide](/guides/geotextile-retaining-wall-drainage-india)',
       '[roll weight and coverage guide](/guides/geotextile-roll-weight-and-coverage)',
       '[embankments on soft soil guide](/guides/geotextile-embankment-soft-soil-india)',
       '[hill slope protection guide](/guides/geotextile-hill-slope-protection-india)',
       '[geotextile test methods guide](/guides/geotextile-test-methods-explained)',
+      '[geotextile vs geomembrane guide](/guides/geotextile-vs-geomembrane)',
       '[installation guide](/guides/how-to-install-nonwoven-geotextile)',
       '[guide to geotextile under paver blocks](/guides/geotextile-under-paver-blocks-india)',
       '[Hindi guide to nonwoven geotextile](/guides/non-woven-geotextile-hindi)',

@@ -167,7 +167,9 @@ export default function Guide() {
                                   {cell}
                                 </th>
                               ) : (
-                                <td key={i}>{cell}</td>
+                                <td key={i}>
+                                  <RichText text={cell} />
+                                </td>
                               )
                             )}
                           </tr>
