@@ -536,6 +536,31 @@ export const REGION_PAGES = [
     name: 'Africa',
     short: 'Africa',
     buyers: 'African importers',
+    // Region-specific section and questions. General project and shipping
+    // knowledge only; no certification, price or test figure is claimed.
+    context: {
+      h: 'Shipping geotextile and felt to African projects.',
+      p: [
+        '**Long inland hauls.** Much sea cargo lands at a coastal port and then travels a long way by road or rail to the site. Rolls should arrive intact, so say how far the site is from the port when you enquire. We pack rolls in poly bag on a paper core or in HDPE wrap; tell us if the route or the storage calls for more protection, and see [export documents](/guides/export-documents-nonwoven-geotextile-india).',
+        '**Rains and erosion.** Road, drainage and embankment works often run through a wet season, when a soft subgrade and washed-out slopes are the usual problems. A needle punched geotextile separates the ground from the fill and filters water; the GSM follows the fill and the traffic, as set out in [geotextile GSM for road construction](/guides/geotextile-gsm-for-road-construction-india). Keep rolls wrapped and off the ground until they are laid.',
+        '**Mining and heavy plant.** Mining and haul-road work puts angular stone and heavy axles on the fabric, which usually points to heavier grades and a puncture value the design states. Send the specification and we quote against it; we do not quote a figure from a test that has not been run on the material you are buying.',
+        '**Paperwork by destination.** Import rules differ from one African country to the next, and some ask for inspection or conformity papers before shipment. Ask your importer or clearing agent which documents the destination port needs and tell us before production; the [HS code guide](/guides/hs-code-nonwoven-felt-geotextile) covers how nonwoven felt and geotextile are classified.',
+      ],
+    },
+    faqs: [
+      {
+        q: 'How are rolls packed for shipment to Africa?',
+        a: 'In poly bag on a paper core or in HDPE wrap, as standard. If the route to site is long or storage is outdoors, tell us and we will agree extra protection before dispatch.',
+      },
+      {
+        q: 'Which geotextile is used on soft or wet ground in African road projects?',
+        a: 'A needle punched nonwoven geotextile laid between the ground and the fill as a separation and filtration layer. The GSM depends on the fill and the traffic; send the project specification and we will quote against it.',
+      },
+      {
+        q: 'Do you know which documents my country needs?',
+        a: 'Import rules differ by country, so ask your importer or clearing agent which documents the destination asks for and send us the list. We then prepare the shipping documents to match.',
+      },
+    ],
   },
   {
     slug: 'north-america-nonwoven-felt-supplier',
