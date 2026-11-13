@@ -341,8 +341,11 @@ export function productFaq(product) {
     castPadding: 'Read our [guide to nonwoven cast padding from India](/guides/orthopaedic-cast-padding-nonwoven-india).',
     filterFelt:
       'Read our [dust collector filter felt guide](/guides/dust-collector-filter-bag-felt) and the [cement, steel and power plant guide](/guides/bag-filter-felt-cement-steel-power-india).',
-    feltColour:
-      'Read our guides to [felt grow bag fabric](/guides/felt-grow-bag-fabric-nonwoven-india) and [needle punched exhibition carpet rolls](/guides/exhibition-carpet-needle-punched-nonwoven-india).',
+    feltColour: `Read our guides to ${sentenceList([
+      '[felt grow bag fabric](/guides/felt-grow-bag-fabric-nonwoven-india)',
+      '[needle punched exhibition carpet rolls](/guides/exhibition-carpet-needle-punched-nonwoven-india)',
+      '[what decides the price of needle punched felt](/guides/needle-punched-felt-price-factors-india)',
+    ])}.`,
     carpet:
       'Read our guide to [needle punched exhibition carpet rolls](/guides/exhibition-carpet-needle-punched-nonwoven-india) and the [carpet backing and flooring underlay felt guide](/guides/carpet-backing-and-underlay-felt).',
     luggage: 'Read our [luggage and bag support felt guide](/guides/luggage-bag-support-felt-india).',

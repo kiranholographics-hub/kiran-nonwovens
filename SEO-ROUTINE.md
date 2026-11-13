@@ -115,8 +115,8 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [x] CBR puncture and grab tensile tests for geotextile explained (5 Nov) -> same pillar guide
 - [x] geotextile vs geomembrane: which one a project needs (6 Nov) -> /guides/geotextile-vs-geomembrane
 - [x] how many square metres in a geotextile roll, and roll weight from GSM (25 Oct)
-- [ ] automotive boot / trunk liner felt
-- [ ] automotive wheel-arch liner felt
+- [x] automotive boot / trunk liner felt: SKIPPED (11 Nov), already covered part by part in /guides/automotive-felt-oem-interiors-india.
+- [x] automotive wheel-arch liner felt: SKIPPED (11 Nov), same guide covers it.
 - [ ] recycled PET felt in India (where recycled fibre works and where it does not)
 - [ ] acoustic felt for buildings: ceilings, wall panels, partitions India
 - [ ] thermal insulation felt for appliances (AC, refrigerator, washing machine, geyser)
@@ -128,7 +128,7 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [x] craft and DIY coloured felt sheets: SKIPPED, owner said no (23 Oct). Do not write it.
 - [ ] felt thickness vs GSM: how they relate
 - [x] how to read a nonwoven test report (what each line means) (5 Nov): geotextile side covered in /guides/geotextile-test-methods-explained; a felt-only version only if Search Console asks for it
-- [ ] what decides the price of needle punched felt (factors only, no prices)
+- [x] what decides the price of needle punched felt (factors only, no prices) (11 Nov) -> /guides/needle-punched-felt-price-factors-india
 - [ ] FOB, CIF and other Incoterms for buying nonwovens from India
 - [ ] how many rolls fit in a 20 ft / 40 ft container (method, not a fixed number)
 - [ ] how to request and evaluate a nonwoven sample
