@@ -3716,6 +3716,117 @@ export const guides = [
     ],
   },
   {
+    slug: 'geotextile-tunnel-waterproofing-protection-india',
+    title: 'Nonwoven geotextile in tunnel waterproofing in India: the protection layer behind the membrane',
+    seoTitle: 'Geotextile for Tunnel Waterproofing India',
+    description:
+      'What a needle punched nonwoven does in a tunnel waterproofing system in India: the protection layer between rock or shotcrete and the membrane, and its limits.',
+    readMins: 6,
+    published: '2026-11-09',
+    intro:
+      'A tunnel lining is kept dry by a waterproofing membrane, and the membrane is thin. Shotcrete and rock are rough, and a sharp point can puncture the membrane before the final lining is cast. A needle punched nonwoven laid behind the membrane cushions it and lets water drain down behind it. This page covers that one job: where the nonwoven sits, what it does, and what to settle before you order. The waterproofing itself is a separate product, and the design belongs to the tunnel engineer and the waterproofing system supplier.',
+    sections: [
+      {
+        h: 'The layers, from the rock inwards',
+        table: {
+          head: ['Layer', 'What it is', 'Where nonwoven felt comes in'],
+          rows: [
+            ['Rock or primary lining', 'Excavated rock, usually sprayed with shotcrete', 'Not applicable'],
+            ['Protection and drainage layer', 'A fabric laid against the rough surface', 'A needle punched nonwoven goes here'],
+            ['Waterproofing membrane', 'The sheet that keeps water out of the tunnel', 'Not supplied by us'],
+            ['Final lining', 'The cast concrete ring inside the membrane', 'Not applicable'],
+          ],
+        },
+        p: [
+          'Some systems use fabric on both sides of the membrane. Which one a tunnel uses, and how it is fixed, is set by the waterproofing design.',
+        ],
+      },
+      {
+        h: 'What the nonwoven does behind the membrane',
+        list: [
+          'Cushions: spreads the point loads from shotcrete, rock edges and bolt heads so they do not punch the membrane',
+          'Drains: lets water that seeps through the rock move down and out, instead of building pressure behind the lining',
+          'Separates: keeps the membrane from touching the rough surface directly',
+        ],
+        p: [
+          'The cushion matters most, which is why a heavier felt is usually chosen than for a filter. How heavy depends on the surface behind it, so we do not give one weight for all tunnels. Use the value in your specification and confirm against a sample.',
+        ],
+      },
+      {
+        h: 'What it does not do',
+        p: [
+          'A nonwoven is permeable. It does not keep water out of the tunnel; the membrane does. It also does not repair a leaking lining, and it does not remove the need for a smooth enough shotcrete surface. If the surface is too rough, the engineer will specify smoothing, not just a thicker fabric.',
+        ],
+      },
+      {
+        h: 'What the system specifier decides',
+        list: [
+          'Fibre: polyester or polypropylene, as the specification calls for',
+          'Weight (GSM) and any test values the specification sets, such as puncture or compression behaviour',
+          'Whether the fabric is bonded or fixed to the membrane, and how it is held to the rock',
+          'Fire performance: tunnels often set requirements for materials. Ask your engineer what applies; we make no fire claim on this page',
+          'Roll width and length to suit the tunnel profile; see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage)',
+        ],
+        p: [
+          'If the project follows a client, agency or standard specification, confirm the current edition with your engineer; we do not quote a standard on this page.',
+        ],
+      },
+      {
+        h: 'Where this shows up in India',
+        p: [
+          'Tunnels in India run through hill roads and ghats, rail and metro routes, and hydro and water-transfer projects. Each has its own groundwater, rock and lining design, so the fabric and the system are chosen project by project. A tunnel waterproofing supplier usually specifies the whole system, protection layer included, and a nonwoven felt manufacturer is asked to match the fabric part of it.',
+        ],
+      },
+      {
+        h: 'Laying it',
+        p: [
+          'Fixing the fabric to rock or shotcrete overhead is a specialist job for the waterproofing contractor. The fabric has to be fixed so it does not sag, with overlaps as the system sets, and kept clean and dry until the membrane goes over it. The general principles of laying, overlaps and keeping fabric clear of damage are in [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile).',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We make needle punched and thermal bonded nonwoven fabric, which is what goes behind the membrane. We do not make waterproofing membranes, geomembrane, drainage composites, woven geotextile or geogrid, and we do not install. The [geotextile vs geomembrane guide](/guides/geotextile-vs-geomembrane) explains how the two differ. Send the application, the weight and the quantity through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the geotextile used for in tunnel waterproofing?',
+        a: 'As a protection and drainage layer behind the waterproofing membrane. It cushions the membrane against rough shotcrete and rock and lets seepage drain. The membrane is what keeps water out.',
+      },
+      {
+        q: 'Does geotextile waterproof a tunnel?',
+        a: 'No. A nonwoven is permeable. Waterproofing is the membrane; the nonwoven protects it and drains behind it.',
+      },
+      {
+        q: 'Which geotextile weight is used in tunnels?',
+        a: 'It depends on the surface behind it and the system design, and is usually heavier than a filter fabric. We do not give a number here. Use the value in your specification and confirm against a sample.',
+      },
+      {
+        q: 'Do you supply the waterproofing membrane?',
+        a: 'No. We make needle punched and thermal bonded nonwoven fabric only, not membrane, geomembrane or drainage composites.',
+      },
+      {
+        q: 'Do you give a fire rating for tunnel use?',
+        a: 'No. Tunnels often set fire requirements for materials. Ask your engineer what applies; we make no fire claim for the fabric.',
+      },
+      {
+        q: 'Can you install the fabric in a tunnel?',
+        a: 'No. We supply the fabric only. Installation is a specialist job for the waterproofing contractor.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: [
+      'geotextile-vs-geomembrane',
+      'how-to-install-nonwoven-geotextile',
+      'geotextile-roll-weight-and-coverage',
+    ],
+  },
+  {
     slug: 'airlay-vs-needle-punch-nonwoven',
     title: 'Airlay vs needle punch: two different steps, not two rival fabrics',
     seoTitle: 'Airlay vs Needle Punch Nonwoven',

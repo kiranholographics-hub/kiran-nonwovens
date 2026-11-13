@@ -34,6 +34,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-green-roof-terrace-garden-india',
     'geotextile-sports-field-turf-drainage-india',
     'geotextile-landfill-mining-india',
+    'geotextile-tunnel-waterproofing-protection-india',
     'geotextile-hill-slope-protection-india',
     'geotextile-test-methods-explained',
     'geotextile-vs-geomembrane',
