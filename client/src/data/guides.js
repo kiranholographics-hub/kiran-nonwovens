@@ -3832,6 +3832,117 @@ export const guides = [
     ],
   },
   {
+    slug: 'geotextile-tunnel-waterproofing-protection-india',
+    title: 'Nonwoven geotextile in tunnel waterproofing in India: the protection layer behind the membrane',
+    seoTitle: 'Geotextile for Tunnel Waterproofing India',
+    description:
+      'What a needle punched nonwoven does in a tunnel waterproofing system in India: the protection layer between rock or shotcrete and the membrane, and its limits.',
+    readMins: 6,
+    published: '2026-11-09',
+    intro:
+      'A tunnel lining is kept dry by a waterproofing membrane, and the membrane is thin. Shotcrete and rock are rough, and a sharp point can puncture the membrane before the final lining is cast. A needle punched nonwoven laid behind the membrane cushions it and lets water drain down behind it. This page covers that one job: where the nonwoven sits, what it does, and what to settle before you order. The waterproofing itself is a separate product, and the design belongs to the tunnel engineer and the waterproofing system supplier.',
+    sections: [
+      {
+        h: 'The layers, from the rock inwards',
+        table: {
+          head: ['Layer', 'What it is', 'Where nonwoven felt comes in'],
+          rows: [
+            ['Rock or primary lining', 'Excavated rock, usually sprayed with shotcrete', 'Not applicable'],
+            ['Protection and drainage layer', 'A fabric laid against the rough surface', 'A needle punched nonwoven goes here'],
+            ['Waterproofing membrane', 'The sheet that keeps water out of the tunnel', 'Not supplied by us'],
+            ['Final lining', 'The cast concrete ring inside the membrane', 'Not applicable'],
+          ],
+        },
+        p: [
+          'Some systems use fabric on both sides of the membrane. Which one a tunnel uses, and how it is fixed, is set by the waterproofing design.',
+        ],
+      },
+      {
+        h: 'What the nonwoven does behind the membrane',
+        list: [
+          'Cushions: spreads the point loads from shotcrete, rock edges and bolt heads so they do not punch the membrane',
+          'Drains: lets water that seeps through the rock move down and out, instead of building pressure behind the lining',
+          'Separates: keeps the membrane from touching the rough surface directly',
+        ],
+        p: [
+          'The cushion matters most, which is why a heavier felt is usually chosen than for a filter. How heavy depends on the surface behind it, so we do not give one weight for all tunnels. Use the value in your specification and confirm against a sample.',
+        ],
+      },
+      {
+        h: 'What it does not do',
+        p: [
+          'A nonwoven is permeable. It does not keep water out of the tunnel; the membrane does. It also does not repair a leaking lining, and it does not remove the need for a smooth enough shotcrete surface. If the surface is too rough, the engineer will specify smoothing, not just a thicker fabric.',
+        ],
+      },
+      {
+        h: 'What the system specifier decides',
+        list: [
+          'Fibre: polyester or polypropylene, as the specification calls for',
+          'Weight (GSM) and any test values the specification sets, such as puncture or compression behaviour',
+          'Whether the fabric is bonded or fixed to the membrane, and how it is held to the rock',
+          'Fire performance: tunnels often set requirements for materials. Ask your engineer what applies; we make no fire claim on this page',
+          'Roll width and length to suit the tunnel profile; see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage)',
+        ],
+        p: [
+          'If the project follows a client, agency or standard specification, confirm the current edition with your engineer; we do not quote a standard on this page.',
+        ],
+      },
+      {
+        h: 'Where this shows up in India',
+        p: [
+          'Tunnels in India run through hill roads and ghats, rail and metro routes, and hydro and water-transfer projects. Each has its own groundwater, rock and lining design, so the fabric and the system are chosen project by project. A tunnel waterproofing supplier usually specifies the whole system, protection layer included, and a nonwoven felt manufacturer is asked to match the fabric part of it.',
+        ],
+      },
+      {
+        h: 'Laying it',
+        p: [
+          'Fixing the fabric to rock or shotcrete overhead is a specialist job for the waterproofing contractor. The fabric has to be fixed so it does not sag, with overlaps as the system sets, and kept clean and dry until the membrane goes over it. The general principles of laying, overlaps and keeping fabric clear of damage are in [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile).',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We make needle punched and thermal bonded nonwoven fabric, which is what goes behind the membrane. We do not make waterproofing membranes, geomembrane, drainage composites, woven geotextile or geogrid, and we do not install. The [geotextile vs geomembrane guide](/guides/geotextile-vs-geomembrane) explains how the two differ. Send the application, the weight and the quantity through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the geotextile used for in tunnel waterproofing?',
+        a: 'As a protection and drainage layer behind the waterproofing membrane. It cushions the membrane against rough shotcrete and rock and lets seepage drain. The membrane is what keeps water out.',
+      },
+      {
+        q: 'Does geotextile waterproof a tunnel?',
+        a: 'No. A nonwoven is permeable. Waterproofing is the membrane; the nonwoven protects it and drains behind it.',
+      },
+      {
+        q: 'Which geotextile weight is used in tunnels?',
+        a: 'It depends on the surface behind it and the system design, and is usually heavier than a filter fabric. We do not give a number here. Use the value in your specification and confirm against a sample.',
+      },
+      {
+        q: 'Do you supply the waterproofing membrane?',
+        a: 'No. We make needle punched and thermal bonded nonwoven fabric only, not membrane, geomembrane or drainage composites.',
+      },
+      {
+        q: 'Do you give a fire rating for tunnel use?',
+        a: 'No. Tunnels often set fire requirements for materials. Ask your engineer what applies; we make no fire claim for the fabric.',
+      },
+      {
+        q: 'Can you install the fabric in a tunnel?',
+        a: 'No. We supply the fabric only. Installation is a specialist job for the waterproofing contractor.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/pipeline-cable-protection-geotextile',
+    ],
+    relatedGuides: [
+      'geotextile-vs-geomembrane',
+      'how-to-install-nonwoven-geotextile',
+      'geotextile-roll-weight-and-coverage',
+    ],
+  },
+  {
     slug: 'airlay-vs-needle-punch-nonwoven',
     title: 'Airlay vs needle punch: two different steps, not two rival fabrics',
     seoTitle: 'Airlay vs Needle Punch Nonwoven',
@@ -4281,6 +4392,127 @@ export const guides = [
       'geotextile-retaining-wall-drainage-india',
       'how-to-install-nonwoven-geotextile',
       'geotextile-for-drainage-and-erosion-control',
+    ],
+  },
+  {
+    slug: 'geotextile-solar-plant-access-roads-india',
+    title: 'Geotextile under solar plant access roads in India: what it does for the road, and what it does not',
+    seoTitle: 'Geotextile for Solar Plant Access Roads India',
+    description:
+      'How a nonwoven geotextile is used under access roads, cable trenches and drains at solar plants in India: separation on soft ground, monsoon and its limits.',
+    readMins: 7,
+    published: '2026-11-06',
+    intro:
+      'A solar plant in India is built on a large open site, often on flat dry land that turns to mud in the monsoon. Piling rigs, cranes, delivery trucks and module trailers all need to reach the rows, and the access roads that carry them are usually unpaved. A nonwoven geotextile is one of the things used under those roads so the stone stays on top of the soil instead of sinking into it. This page sets out where it helps at a solar site, what it cannot do, and what to settle before you order. It is general practice; the road designer and the site engineer decide.',
+    sections: [
+      {
+        h: 'What goes wrong on an unpaved site road',
+        p: [
+          'The stone layer is placed on soil that looks firm when dry. In the first rains the soil softens, the heavy plant presses the stone down into it, and soil works up into the stone. Ruts form, the road needs topping up again and again, and trucks start to get stuck. The cost is not only the stone, but the delay to the construction programme. A geotextile between the soil and the stone keeps the two apart, which is the separation role described in the [geotextile for road construction guide](/guides/geotextile-for-road-construction).',
+        ],
+      },
+      {
+        h: 'Where a nonwoven is used at a solar plant',
+        table: {
+          head: ['Where', 'What the fabric does', 'Typical concern'],
+          rows: [
+            ['Main access road from the gate', 'Separates the stone from the subgrade; lets water out', 'Heavy trucks and plant, repeated passes'],
+            ['Internal roads between blocks', 'Same, under a thinner stone layer', 'Black cotton or clayey soil that softens when wet'],
+            ['Crane and piling platforms', 'Separates the working platform stone from the soil', 'Concentrated loads in one place'],
+            ['Cable trenches and drains', 'Filters around stone-filled trenches so they do not clog with fines', 'Silt washing in during monsoon'],
+            ['Stormwater channels and culvert ends', 'Filter under stone lining', 'Scour where water speeds up'],
+          ],
+        },
+        p: [
+          'Not every road at every plant needs a fabric. On firm, well-drained soil it may add cost without much benefit. The soil investigation and the designer decide.',
+        ],
+      },
+      {
+        h: 'What it does not do',
+        p: [
+          'A nonwoven separates and filters. It does not make soft ground strong. On very soft ground, designs often call for a thicker stone layer, soil treatment, or a different product, such as a woven geotextile or geogrid, that is specified for stabilising a weak subgrade. We make none of those. If your road design needs reinforcement, say so to the engineer, and use a nonwoven only where the drawing asks for separation or filtration. The [woven vs nonwoven guide](/guides/woven-vs-nonwoven-geotextile) explains how the two differ.',
+        ],
+      },
+      {
+        h: 'Why monsoon decides the specification',
+        list: [
+          'Soil strength can drop sharply once it is wet, so the road has to be designed for the wettest condition, not the dry one',
+          'Construction traffic is heaviest during the build, often before any permanent surface goes on',
+          'Water has to leave the road, so the fabric must pass water freely and not clog',
+          'Silt from unpaved areas washes into drains and trenches, so filter fabric around them matters',
+        ],
+        p: [
+          'We do not give one weight for every site. Use the value in your specification, and confirm against a sample before bulk.',
+        ],
+      },
+      {
+        h: 'Laying it on a large site',
+        list: [
+          'Trim and compact the subgrade, and remove sharp stones, roots and debris',
+          'Roll out the fabric flat and loose, in contact with the ground, without folds',
+          'Overlap rolls by the width the specification sets, with the lead roll over the next in the direction the stone will be tipped',
+          'Tip stone onto stone already placed and push it forward over the fabric; do not drive plant over bare fabric',
+          'Keep to the stone layer thickness the drawing sets before compacting',
+          'Cover the fabric soon after laying, because sunlight weakens synthetic fibre, polypropylene in particular',
+        ],
+        p: [
+          'The general site steps are in [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile). On a large plant the quantity is big, so work out the rolls from the road lengths: see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage).',
+        ],
+      },
+      {
+        h: 'What to settle before you order',
+        list: [
+          'The road areas that get fabric, from the drawing, with lengths and widths',
+          'Fibre: polyester or polypropylene, as the specification calls for',
+          'Weight (GSM) and any test values the specification sets',
+          'Roll width and length to suit the road widths, so overlaps and waste work out',
+          'Delivery location and timing against the construction programme; tell us when sending the enquiry',
+        ],
+        p: [
+          'If the project follows a client, EPC or agency specification, confirm the current edition of any standard it names with your engineer; we do not quote a standard on this page.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We make needle punched and thermal bonded nonwoven fabric, which is what goes under the road and around the trenches. We do not make woven geotextile, geogrid, geocell, geomembrane or drainage pipe, and we do not install. Send the application, the weight and the quantity through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is geotextile used for solar plant roads in India?',
+        a: 'Yes, commonly as a separation layer under unpaved access roads and working platforms, and as a filter around cable trenches and drains. Whether it is needed on a given road is the designer’s decision.',
+      },
+      {
+        q: 'What does geotextile do under an unpaved road?',
+        a: 'It keeps the stone and the soil apart so the stone does not sink into soft ground and soil does not work up into it. It also lets water pass. It does not strengthen the soil.',
+      },
+      {
+        q: 'Can geotextile be used on black cotton soil at a solar site?',
+        a: 'It is commonly used as a separation and drainage layer over expansive soils. How the road is built on such soil is a design question for the engineer.',
+      },
+      {
+        q: 'Is a nonwoven enough for very soft ground?',
+        a: 'Not always. Very soft ground may need a thicker stone layer, soil treatment or a different product such as woven geotextile or geogrid, which we do not make. The engineer decides.',
+      },
+      {
+        q: 'Which GSM should be used for a solar plant road?',
+        a: 'It depends on the soil, the traffic and the stone, so we do not give a number here. Use the value in your specification and confirm against a sample before bulk.',
+      },
+      {
+        q: 'Do you supply geogrid or woven geotextile for solar roads?',
+        a: 'No. We make needle punched and thermal bonded nonwoven fabric only.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+    ],
+    relatedGuides: [
+      'geotextile-for-road-construction',
+      'how-to-install-nonwoven-geotextile',
+      'geotextile-roll-weight-and-coverage',
     ],
   },
   {
