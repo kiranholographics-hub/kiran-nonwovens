@@ -38,6 +38,27 @@ build uses the real domain (checked live 26 Oct).
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
 
+## 11 Nov 2026 (owner: "site rank nahi ho rahi", content fix)
+
+- Diagnosis: the 16 product pages (the buyer-intent pages, earlier "Discovered - currently not
+  indexed") shared about half their text with each other: 8-word shingle check on the built pages
+  gave 43-51% unique text per product page (58% for pp-geotextile). Near-duplicate templates are a
+  common reason Google leaves pages unindexed.
+- Fix: new client/src/data/productDetails.js (kept out of catalog.js so the live API cannot drop
+  it) gives every product its own "Buying notes" section: two paragraphs on how the choice is
+  really made for that product, a use table linking the matching guides, "what to tell us" list,
+  and two product-specific FAQs (merged into the FAQ block and FAQPage schema). Removed the
+  templated "main features" FAQ, which only repeated the Features list on the same page.
+- Result: 56-66% unique per product page (was 43-51%), pages now 870-1300 words.
+  No new claims: no prices, test values, certificates, clients; says what we do not make
+  (finished filter bags, moulded parts, shoulder pads, packed cast padding, high-temp fibres).
+- Brand check (web search): "Kiran Nonwovens Jaipur" returns no third-party mention of the
+  company at all. Listings (Justdial, IndiaMART, TradeIndia, Fibre2Fashion, Kompass) remain the
+  biggest gap for ranking.
+- Build: OK, 88 pages, smoke passed, lint clean.
+- Merged and live (checked). Owner requested indexing for pp-geotextile, automotive felt,
+  filter felt and drainage geotextile product pages.
+
 ## 7 Nov 2026 (Saturday: hub upgrade + off-page prep)
 
 - /guides/nonwoven-geotextile-guide (most impressions in the last Search Console data) turned

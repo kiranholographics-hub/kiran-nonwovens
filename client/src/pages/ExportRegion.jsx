@@ -27,6 +27,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-for-road-construction',
     'geotextile-gsm-for-road-construction-india',
     'nonwoven-geotextile-for-railway-track-india',
+    'geotextile-solar-plant-access-roads-india',
     'geotextile-for-drainage-and-erosion-control',
     'geobag-fabric-nonwoven-geotextile-india',
     'geotextile-canal-pond-lining-india',
