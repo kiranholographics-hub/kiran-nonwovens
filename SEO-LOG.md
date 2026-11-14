@@ -72,6 +72,8 @@ build uses the real domain (checked live 26 Oct).
 - Not changed: /business-areas (25%) and /products (35%) are card hubs that repeat category card
   text by design; low priority.
 - Build: OK, 91 pages, smoke passed, lint clean.
+- Merged and live (checked). Owner requested indexing for the North America, South America and
+  Asia-Pacific region pages.
 
 ## 11 Nov 2026 (owner: "site rank nahi ho rahi", content fix)
 
