@@ -477,6 +477,7 @@ export const REGION_PAGES = [
       p: [
         '**Heat and sunlight.** Polypropylene is sensitive to prolonged UV exposure, and on Gulf sites the sun is strong all year. Rolls are best kept in their wrap, off the ground and out of direct sun until they are laid, and the geotextile covered with fill soon after. Polyester also holds its properties to a higher temperature than polypropylene — see [polyester vs polypropylene](/guides/polyester-vs-polypropylene-nonwoven).',
         '**Sand and sabkha ground.** Loose sand and soft, saline sabkha soils are common under Gulf roads, yards and platforms. A needle punched geotextile laid between the ground and the fill keeps the two apart; the GSM follows the fill and the traffic on top, as set out in [geotextile GSM for road construction](/guides/geotextile-gsm-for-road-construction-india).',
+        '**Buildings, HVAC and plant rooms.** Large building and district-cooling projects use needle punched felt for acoustic and thermal insulation in ducts, plant rooms, generator enclosures and partitions. Near hot equipment polyester is usually chosen, and any facing is laminated by the insulation maker; see [acoustic and thermal insulation felt](/products/automotive/acoustic-thermal-insulation-felt). Fire performance is set by the building code for the complete assembly, so test the finished build-up.',
         '**Local use or re-export.** Many orders landing at Jebel Ali move on to other Gulf countries. Say which it is when you enquire, so the documents match the final destination; the [HS code guide](/guides/hs-code-nonwoven-felt-geotextile) covers how nonwoven felt and geotextile are classified.',
       ],
     },
@@ -489,6 +490,10 @@ export const REGION_PAGES = [
         q: 'Which geotextile is used over sabkha or loose sand?',
         a: 'A needle punched nonwoven geotextile, laid between the ground and the fill as a separation and filtration layer. The GSM depends on the fill and the traffic; send the project specification and we will quote against it.',
       },
+      {
+        q: 'Do you supply insulation felt for HVAC and building projects in the Gulf?',
+        a: 'Yes, needle punched acoustic and thermal felt in rolls, usually polyester near heat. Facings and fire testing of the finished assembly are done by the insulation maker or contractor; tell us the thickness and density the design needs.',
+      },
     ],
   },
   {
@@ -497,6 +502,31 @@ export const REGION_PAGES = [
     name: 'Asia-Pacific',
     short: 'Asia-Pacific',
     buyers: 'Asia-Pacific importers',
+    // Region-specific section and questions. General shipping and site
+    // knowledge only; no certification, price or test figure is claimed.
+    context: {
+      h: 'One region, very different buyers.',
+      p: [
+        '**Nepal and Bangladesh: river, hill and overland.** Monsoon floods, river erosion and hill-road slips drive much of the geotextile demand here. Geobags of nonwoven geotextile are used for riverbank protection, and slopes on hill roads need a filter behind stone or gabions; see the [geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india) and [hill slope protection](/guides/geotextile-hill-slope-protection-india). Goods for Nepal move by road from India, through Kolkata or Haldia when they come by sea, and to the Birgunj side when they come overland; Bangladesh is served by sea through Chattogram or Mongla, or across the land border. Say which route your importer uses, because the documents differ.',
+        '**Sri Lanka and Bangladesh: garment and footwear makers.** Apparel and footwear factories here buy nonwoven for shoulder pads, linings and shoe components, usually against a sample from the brand. See [shoulder pad nonwoven](/guides/shoulder-pad-nonwoven-fabric-india) and [nonwoven for footwear and apparel](/guides/nonwoven-fabric-for-footwear-and-apparel).',
+        '**Australia and New Zealand: their own test series and strict biosecurity.** Projects often cite the Australian AS 3706 series of geotextile test methods alongside ISO; tell us which methods your specification names. Imports are checked for biosecurity, and timber packing must meet the ISPM 15 treatment rule. Our standard packing, poly bag on a paper core or HDPE wrap, uses no timber; if your receiver needs pallets, say so and they will be ISPM 15 marked. Our [test methods guide](/guides/geotextile-test-methods-explained) explains the common tests.',
+        '**Japan and South Korea: component makers.** Automotive and industrial buyers usually approve a sample against a written specification for weight, thickness and finish, then expect bulk to match it. Expect a sample round before the first order; see [how to test a nonwoven felt sample](/guides/how-to-test-a-nonwoven-felt-sample).',
+      ],
+    },
+    faqs: [
+      {
+        q: 'Can you deliver geotextile to Nepal by road?',
+        a: 'Yes, goods for Nepal travel by road from India. Tell us whether your importer clears at the Birgunj side or another border point, and which documents they need, before production.',
+      },
+      {
+        q: 'Does your packing meet Australian biosecurity rules?',
+        a: 'Our standard packing is a poly bag on a paper core or HDPE wrap, with no timber. If pallets are needed they must carry the ISPM 15 treatment mark; tell us and we will arrange it. Your customs broker confirms any other import conditions.',
+      },
+      {
+        q: 'Which geotextile is used for geobags in Bangladesh river works?',
+        a: 'A needle punched nonwoven geotextile, set by the project design for bag size, fill and river conditions. Send the design values and we quote against them; see our [geobag fabric guide](/guides/geobag-fabric-nonwoven-geotextile-india).',
+      },
+    ],
   },
   {
     slug: 'europe-nonwoven-felt-supplier',
@@ -568,6 +598,31 @@ export const REGION_PAGES = [
     name: 'North America',
     short: 'North America',
     buyers: 'North American importers',
+    // Region-specific section and questions. General knowledge of US and
+    // Canadian practice, hedged; no certification or compliance is claimed.
+    context: {
+      h: 'Specifications, units and domestic-content rules.',
+      p: [
+        '**Specifications are written in MARVs and ASTM methods.** US highway work commonly follows AASHTO M288 and state DOT specifications, which give minimum average roll values (MARVs) measured by ASTM methods such as grab tensile, CBR puncture, AOS and permittivity. Many state agencies also keep an approved-products list. A datasheet of typical values does not answer a MARV specification, so send the exact values and methods; our [geotextile test methods guide](/guides/geotextile-test-methods-explained) explains each one. Canadian work follows provincial and municipal specifications; send the one your contract names.',
+        '**Weights in ounces, widths in feet.** US buyers often state geotextile weight in ounces per square yard. 1 oz/yd² is about 33.9 g/m², so an 8 oz fabric is roughly 270 GSM. Our 5.0–5.2 m roll width is about 16.4–17.1 ft, and the standard 50 m roll is about 164 ft. Tell us which units your drawing uses and we quote in both.',
+        '**Domestic-content rules on public projects.** Federally funded US infrastructure can carry Buy America requirements that limit imported construction materials, and some state and provincial projects have similar rules. Check with the contractor whether the project allows imported geotextile before you ask for a quote; private, commercial and industrial work is usually not affected.',
+        '**Automotive and industrial buyers in Mexico and the US.** Component makers in the vehicle supply chain buy felt for carpets, trunk liners and insulation against a part drawing and an approved sample. See [automotive felt for OEM interiors](/guides/automotive-felt-oem-interiors-india) and [automotive NVH felt](/guides/automotive-nvh-felt-guide).',
+      ],
+    },
+    faqs: [
+      {
+        q: 'What is 8 oz geotextile in GSM?',
+        a: 'About 270 GSM. One ounce per square yard is about 33.9 g/m², so 4 oz is about 135 GSM, 6 oz about 205 GSM and 10 oz about 340 GSM. Always check the strength and puncture values the specification asks for as well, because weight alone does not set performance.',
+      },
+      {
+        q: 'Can imported geotextile be used on US government projects?',
+        a: 'It depends on the project. Federally funded infrastructure can carry Buy America requirements that limit imported materials. Ask the contractor or the agency before quoting; private and industrial projects are usually not restricted in this way.',
+      },
+      {
+        q: 'Can you meet an AASHTO M288 class?',
+        a: 'Send the class, application and the MARVs your contract lists. We will tell you which grade to consider and what test evidence can be provided for your order; we do not claim compliance for material that has not been tested to that specification.',
+      },
+    ],
   },
   {
     slug: 'south-america-nonwoven-felt-supplier',
@@ -575,6 +630,31 @@ export const REGION_PAGES = [
     name: 'South America',
     short: 'South America',
     buyers: 'South American importers',
+    // Region-specific section and questions. General project and shipping
+    // knowledge only; no certification, price or test figure is claimed.
+    context: {
+      h: 'Mines, mountains and two coasts.',
+      p: [
+        '**Mining in Chile and Peru.** Heap leach pads, tailings facilities and process ponds are lined with geomembrane, and a needle punched geotextile cushions the liner against angular stone above and below. These are designed systems: the design sets the cushion grade, often by a puncture or protection value. See [geotextile vs geomembrane](/guides/geotextile-vs-geomembrane) and [geotextile for landfill and mining](/guides/geotextile-landfill-mining-india).',
+        '**Andes roads and tropical rain.** Mountain roads in Peru, Colombia and Chile, and heavy rain in Colombia and Brazil, make slope failures and washouts common. A nonwoven geotextile works as the filter behind stone, gabions and drains; see [hill slope protection](/guides/geotextile-hill-slope-protection-india) and [gabions and stone pitching](/guides/geotextile-gabion-stone-pitching-india).',
+        '**Pacific or Atlantic port.** Cargo for Chile and Peru lands at Pacific ports such as San Antonio, Valparaíso and Callao; Brazil is served through Atlantic ports such as Santos, Paranaguá and Itajaí; Colombia has both, Cartagena on the Caribbean and Buenaventura on the Pacific. Name the port nearest the site, since the routing and transit time differ.',
+        '**The importer drives the paperwork.** Import processes in the region usually depend on the importer\'s registration and its customs broker, and some countries check classification closely. Ask your broker which documents and HS classification they want and send us the list before production; see [export documents](/guides/export-documents-nonwoven-geotextile-india) and the [HS code guide](/guides/hs-code-nonwoven-felt-geotextile).',
+      ],
+    },
+    faqs: [
+      {
+        q: 'Do you supply geotextile for heap leach pads and tailings ponds?',
+        a: 'We supply the needle punched nonwoven used as the cushion and protection layer with the geomembrane, to the grade the design sets. We do not supply the geomembrane. Send the liner design and protection values and we quote against them.',
+      },
+      {
+        q: 'Which port should I name for a South American order?',
+        a: 'The one nearest your site that your importer uses: for example San Antonio or Valparaíso for central Chile, Callao for Peru, Santos or Paranaguá for southern Brazil, Cartagena or Buenaventura for Colombia.',
+      },
+      {
+        q: 'Who prepares the import documents in Brazil or Chile?',
+        a: 'Your importer and its customs broker decide what is needed; we prepare the export documents to match. Send their list before production so the invoice, packing list and HS code agree with what they will declare.',
+      },
+    ],
   },
 ];
 

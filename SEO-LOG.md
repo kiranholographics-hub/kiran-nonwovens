@@ -49,6 +49,30 @@ build uses the real domain (checked live 26 Oct).
 - Pending: Request indexing for /africa-nonwoven-felt-supplier after deploy; Search Console
   Queries + Pages screenshot still owed for the review.
 
+## 14 Nov 2026 (owner: "content unique banao", region pages)
+
+- Whole-site uniqueness check (8-word shingles, main content, enquiry form excluded): all guides
+  above 74% unique. Weakest were the export region pages: North America 32%, South America 40%,
+  Asia-Pacific 45%, Middle East 47%, Africa 50%. Three regions had no region-specific section at all.
+- Added `context` + FAQs (markets.js REGION_PAGES):
+  - Asia-Pacific "One region, very different buyers": Nepal/Bangladesh river and hill works and
+    overland routes (Birgunj, Kolkata/Haldia, Chattogram/Mongla), Sri Lanka/Bangladesh garment and
+    footwear, Australia/NZ AS 3706 test series and ISPM 15 (our packing uses no timber),
+    Japan/Korea sample approval. 3 FAQs.
+  - North America "Specifications, units and domestic-content rules": AASHTO M288/state DOT MARVs
+    and ASTM methods, oz/yd² to GSM (1 oz/yd² ≈ 33.9 g/m²) and roll sizes in feet, Buy America
+    caution on federally funded work, Mexico/US automotive buyers. 3 FAQs (8 oz in GSM, Buy
+    America, M288 class with no compliance claim).
+  - South America "Mines, mountains and two coasts": heap leach/tailings cushion (no geomembrane
+    supplied), Andes slopes and tropical rain, Pacific vs Atlantic ports, importer/broker paperwork.
+    3 FAQs.
+  - Middle East: new paragraph on buildings/HVAC/district cooling insulation felt + 1 FAQ.
+- Removed the template FAQ "What do buyers in <region> settle first?" (filler, same on all 6).
+- Result: region pages 51-62% unique (were 32-50%). Link check on export pages: no broken links.
+- Not changed: /business-areas (25%) and /products (35%) are card hubs that repeat category card
+  text by design; low priority.
+- Build: OK, 91 pages, smoke passed, lint clean.
+
 ## 11 Nov 2026 (owner: "site rank nahi ho rahi", content fix)
 
 - Diagnosis: the 16 product pages (the buyer-intent pages, earlier "Discovered - currently not

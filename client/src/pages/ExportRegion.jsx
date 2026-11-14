@@ -119,10 +119,6 @@ export default function ExportRegion() {
       q: `Which countries in ${region.name} do you supply?`,
       a: `${list(countries.map((m) => m.name))}. If your country is not listed, send the enquiry anyway — the material and the process are the same, and the destination mainly affects packing and paperwork.`,
     },
-    {
-      q: `What do buyers in ${region.name} settle first?`,
-      a: `It varies by destination — the table above sets out what each one usually asks about. Across the region it comes down to the specification, the paperwork your customs broker needs, and consistency from one shipment to the next.`,
-    },
     ...(region.faqs || []),
     {
       q: 'What is the minimum order quantity?',
