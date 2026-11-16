@@ -132,6 +132,12 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [x] FOB, CIF and other Incoterms for buying nonwovens from India: SKIPPED (16 Nov), already covered by /guides/incoterms-nonwoven-felt-india.
 - [x] how many rolls fit in a 20 ft / 40 ft container (method, not a fixed number) (16 Nov) -> /guides/rolls-per-container-nonwoven-felt-india
 - [x] how to request and evaluate a nonwoven sample: SKIPPED (16 Nov), already covered by /guides/how-to-test-a-nonwoven-felt-sample.
+
+Queue extension (16 Nov, keyword check). Every topic above that is still unticked needs the owner to confirm what we make (recycled PET, building acoustic felt, appliance insulation, mattress felt), so the queue was stalled. SERP check on 16 Nov added these; the first two use products and claims already on the site:
+- [ ] geotextile for pipeline and cable protection India (bedding, padding, coating protection; we have the /products/geotextile/pipeline-cable-protection-geotextile product and no guide yet; SERP is mostly foreign pages and PDFs, only a few Indian pages)
+- [ ] how long nonwoven geotextile lasts: what decides its life (polymer, sunlight before cover, burial conditions, chemistry). No years promised. Informational, high search interest.
+- [ ] (ask) paving fabric under asphalt overlays, India (bitumen-absorbing nonwoven interlayer, reflective crack control). SERP is manufacturer product pages. Needs the owner to confirm we make a paving-grade nonwoven (bitumen retention, heat stability) before anything is written; skip until answered.
+Checked and NOT added: "needle punched felt supplier Jaipur" (crowded with local Jaipur makers and traders; /india and /needle-punched-felt-india already cover it) and "geotextile for river bank and flood embankments" (overlaps the gabion, geobag and hill slope guides).
 Rules: no MOQ, price, lead time, certification, capacity, client names, years or standards-compliance claims; MoRTH/IRC/RDSO/BIS only as "confirm the current edition with your engineer"; we make needle punched and thermal bonded only (not spunbond, spunlace, meltblown); keep the Miracle Nonwoven Industries wording; do not name or rank competitors.
 
 ## Weekly log (Search Console, Web, last 7 days)
