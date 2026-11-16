@@ -2570,6 +2570,7 @@ export const guides = [
 
   {
     slug: 'geotextile-roll-weight-and-coverage',
+    updated: '2026-11-16',
     title: 'Geotextile roll weight calculator: coverage from GSM, width and length',
     seoTitle: 'Geotextile Roll Weight Calculator',
     description:
