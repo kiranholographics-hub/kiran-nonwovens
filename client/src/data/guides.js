@@ -4516,6 +4516,129 @@ export const guides = [
     ],
   },
   {
+    slug: 'rolls-per-container-nonwoven-felt-india',
+    title: 'How many felt rolls fit in a 20 ft or 40 ft container: the method, not a number',
+    seoTitle: 'Felt Rolls per 20 ft and 40 ft Container',
+    description:
+      'How to work out how many wide nonwoven felt or geotextile rolls fit in a 20 ft or 40 ft container: roll weight, diameter, fit along and across, and weight limit.',
+    readMins: 7,
+    published: '2026-11-16',
+    intro:
+      'Buyers ask early how many rolls go in one container. There is no single answer, because it depends on the roll diameter, the roll weight and the way the container is loaded. This page gives the method, so you can work it out for your own specification, and says what to confirm with your freight forwarder. It does not give a rolls-per-container figure for our felt: that figure follows the specification, and a loading plan belongs to the forwarder.',
+    sections: [
+      {
+        h: 'The roll is a long cylinder, and that changes the layout',
+        p: [
+          'Felt and geotextile are wound on a core, so a roll is a cylinder. The length of the cylinder is the width of the fabric: a roll of 5.0–5.2 m wide fabric is 5.0–5.2 m long. The length of the fabric on the roll, 50 m as standard, decides only how thick the roll is wound, not how long it lies. That is why a roll that wide lies along the container, not across it. A narrower slit roll can be loaded differently. For weight and coverage of a roll see [geotextile roll weight and coverage](/guides/geotextile-roll-weight-and-coverage).',
+        ],
+      },
+      {
+        h: 'The container, in typical figures',
+        table: {
+          head: ['Container', 'Inside length', 'Inside width', 'Inside height'],
+          rows: [
+            ['20 ft standard', 'about 5.9 m', 'about 2.35 m', 'about 2.39 m'],
+            ['40 ft standard', 'about 12.0 m', 'about 2.35 m', 'about 2.39 m'],
+          ],
+        },
+        p: [
+          'These are typical inside dimensions. Containers vary a little by owner and type, and a high-cube container is taller. Check the figures for the container you are given.',
+        ],
+      },
+      {
+        h: 'The method, in five steps',
+        list: [
+          'Step 1, weight of one roll: weight in kg = GSM × width in m × length in m ÷ 1000',
+          'Step 2, diameter of one roll: D = √(d² + 4 × t × L ÷ π), all in metres, where d is the core outer diameter, t the fabric thickness and L the length of fabric on the roll. Take t from your sample and ask us for the core diameter',
+          'Step 3, rolls along the container: divide the inside length by the roll length. A 5.2 m roll fits once in a 20 ft container and twice, end to end, in a 40 ft container',
+          'Step 4, rolls across and high: divide the inside width and the inside height by D, and round down each',
+          'Step 5, check the weight: multiply the rolls by the roll weight, and compare with the container payload and the road weight limit',
+        ],
+        p: [
+          'If step 5 gives a heavier load than the payload allows, the weight sets the count, not the space. Heavy felt fills the weight limit before it fills the container.',
+        ],
+      },
+      {
+        h: 'What the geometry gives, for any roll of a given diameter',
+        table: {
+          head: ['Roll diameter', 'Across the width', 'Layers high', 'In a 20 ft, one roll long', 'In a 40 ft, two rolls long'],
+          rows: [
+            ['0.4 m', '5', '5', '25', '50'],
+            ['0.5 m', '4', '4', '16', '32'],
+            ['0.6 m', '3', '3', '9', '18'],
+            ['0.8 m', '2', '2', '4', '8'],
+          ],
+        },
+        p: [
+          'These counts are geometry only, for a 5.2 m roll in a standard container, and they are an upper limit. Soft felt is rarely stacked to the full height, and bracing, dunnage and the way the rolls are lifted take room. The forwarder sets the loading plan. Use the table to see how fast the count falls as the roll gets thicker, not as a quotation.',
+        ],
+      },
+      {
+        h: 'What reduces the count in practice',
+        list: [
+          'Stacking height: a heavy or soft roll cannot carry many above it',
+          'Handling: rolls this long are lifted by forklift with a boom or a clamp, which needs space at the door end',
+          'Bracing and dunnage, to stop the rolls shifting at sea',
+          'Packing: each roll is in a poly bag on a paper core, or in HDPE wrap, so the diameter you measure should include it',
+          'The container weight limit, for heavy rolls',
+        ],
+      },
+      {
+        h: 'Where a narrower roll helps',
+        p: [
+          'Rolls can be cut narrower than 5.0 m. A roll cut narrow enough is shorter than the container is wide, so it can lie across the container as well, and some buyers choose it to suit their site handling or their container plan. The method above works for any roll length; use the roll length in step 3.',
+        ],
+      },
+      {
+        h: 'Paperwork follows the count',
+        p: [
+          'The packing list should match what is in the container: roll count, weights and dimensions. See [export documents for nonwoven and geotextile](/guides/export-documents-nonwoven-geotextile-india). Who books the container and who pays for it depends on the delivery term; see [EXW, FOB or CIF](/guides/incoterms-nonwoven-felt-india).',
+        ],
+      },
+      {
+        h: 'What we give you, and what the forwarder gives you',
+        p: [
+          'Once the specification is fixed, we confirm the roll length, the core and the expected roll weight. The roll diameter should be measured on a sample roll rather than taken from a table. The loading plan and the container weight limit come from your freight forwarder. Send the specification through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How many rolls of felt fit in a 20 ft container?',
+        a: 'It depends on the roll diameter and weight. A 5.2 m wide roll lies lengthwise and fits once along a 20 ft container; the number across and high then follows from the diameter, and the weight limit may cap it. Use the method on this page and confirm the plan with your forwarder.',
+      },
+      {
+        q: 'Why do wide rolls lie lengthwise in a container?',
+        a: 'A roll is as long as the fabric is wide. Fabric 5.0–5.2 m wide makes a roll 5.0–5.2 m long, which is longer than the container is wide, so it lies along the container.',
+      },
+      {
+        q: 'How do I find the diameter of a roll?',
+        a: 'Measure it on a sample roll. You can estimate it with D = √(d² + 4 × t × L ÷ π), with the core diameter, the thickness and the length of fabric on the roll, all in metres.',
+      },
+      {
+        q: 'Is a container full by space or by weight?',
+        a: 'Heavy felt usually reaches the weight limit before the space is used. Work out the roll weight from GSM × width × length ÷ 1000 and compare the total with the payload.',
+      },
+      {
+        q: 'Can I get narrower rolls to load differently?',
+        a: 'Yes, rolls can be cut narrower than 5.0 m. Tell us the width that suits your site handling and your container plan when you send the enquiry.',
+      },
+      {
+        q: 'Do you give a rolls-per-container figure?',
+        a: 'No. The figure follows the specification, and the loading plan belongs to your freight forwarder. We confirm the roll length, core and expected roll weight once the specification is fixed.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pp-geotextile-fabric-for-civil-works',
+      'industrial/multi-colour-needle-punched-felt',
+    ],
+    relatedGuides: [
+      'geotextile-roll-weight-and-coverage',
+      'export-documents-nonwoven-geotextile-india',
+      'incoterms-nonwoven-felt-india',
+    ],
+  },
+  {
     slug: 'incoterms-nonwoven-felt-india',
     title: 'EXW, FOB or CIF: choosing the term when you import nonwoven from India',
     seoTitle: 'Incoterms for Nonwoven Felt from India',
