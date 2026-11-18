@@ -35,6 +35,7 @@ const GUIDES_FOR_AREA = {
     'geotextile-sports-field-turf-drainage-india',
     'geotextile-landfill-mining-india',
     'geotextile-tunnel-waterproofing-protection-india',
+    'geotextile-pipeline-cable-protection-india',
     'geotextile-hill-slope-protection-india',
     'geotextile-test-methods-explained',
     'geotextile-vs-geomembrane',

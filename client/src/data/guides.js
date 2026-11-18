@@ -4516,6 +4516,147 @@ export const guides = [
     ],
   },
   {
+    slug: 'geotextile-pipeline-cable-protection-india',
+    title: 'Geotextile for pipeline and cable protection in India: cushioning the trench, and what it cannot do',
+    seoTitle: 'Geotextile for Pipeline and Cable Protection',
+    description:
+      'How a needle punched nonwoven protects buried pipes and cables in India: cushion against stones, bedding, wrap or bed and cover. And what it does not replace.',
+    readMins: 6,
+    published: '2026-11-18',
+    intro:
+      'A buried pipe or cable is usually damaged in the trench, not in service. A sharp stone in the backfill, rock at the bottom of the trench, a spade dropped on the coating: any of them can mark a pipe or cut a cable long before it carries anything. A needle punched nonwoven laid around or over the line cushions it against those contacts. This page covers where the fabric goes, what it does, and what it does not replace. It is general practice; the pipeline owner, the specification and the engineer decide.',
+    sections: [
+      {
+        h: 'Where it is used',
+        table: {
+          head: ['Line', 'What the fabric does', 'Typical concern'],
+          rows: [
+            ['Oil and gas pipelines', 'Cushions the coating against stones and rock in the backfill', 'Coating damage during backfilling'],
+            ['Water-supply pipelines', 'Cushions and separates the pipe from stony backfill', 'Rocky or mixed ground'],
+            ['Sewer lines and drainage pipes', 'Separates bedding stone from soil, and filters around perforated pipe', 'Soil migrating into the bedding'],
+            ['Electrical, telecom and fibre-optic cables', 'Protection layer over and under the cable or duct bank', 'Rock, stones and later digging'],
+            ['Utility corridors', 'Separates and protects where several services share a trench', 'Different services, one trench'],
+          ],
+        },
+        p: [
+          'The drawing decides which of these apply. Not every trench needs a fabric: a sand bed with sieved backfill may need little protection.',
+        ],
+      },
+      {
+        h: 'What the fabric does',
+        list: [
+          'Cushions: spreads the point load from a stone in the backfill so the coating or sheath is not marked',
+          'Separates: keeps bedding stone and native soil from mixing',
+          'Filters: lets water pass while holding the soil back, around drainage and perforated pipe',
+        ],
+        p: [
+          'The cushion is the main job on a pipe or cable, which is why a thicker, heavier felt is normally chosen than for a filter. How heavy depends on the trench and the backfill, so we do not give one weight for all lines. Use the value in your specification and confirm against a sample.',
+        ],
+      },
+      {
+        h: 'Matching the felt to the trench',
+        table: {
+          head: ['Trench condition', 'Typical approach'],
+          rows: [
+            ['Sand bed and sieved backfill', 'Light protection, or a separator only'],
+            ['Mixed soil with some stones', 'Wrap, or bed and cover, in a medium weight'],
+            ['Rocky trench with crushed backfill', 'A heavier, thicker felt; the design may set a puncture value'],
+            ['Cable or duct bank', 'A protection layer over and under, as the drawing shows'],
+          ],
+        },
+        p: [
+          'These are typical approaches, not rules. Where the pipeline owner sets a protection specification, follow it.',
+        ],
+      },
+      {
+        h: 'Wrap, or bed and cover',
+        p: [
+          'Two layouts are common. In a wrap, the felt goes round the pipe with an overlap, so it is protected on all sides before backfill. In bed and cover, the felt lies in the trench bottom under the pipe and is folded over the top, or a second layer is laid over. Either way the overlap and the fixing are set by the method statement. Rolls are 5.0–5.2 m wide as standard and can be slit narrower, so one width can wrap the pipe with the overlap the method needs.',
+        ],
+      },
+      {
+        h: 'What it does not do',
+        list: [
+          'It is not a corrosion coating and does not replace one',
+          'It does not stop damage from an excavator or a deliberate strike',
+          'It is not a substitute for the right bedding and backfill material unless the design says so',
+          'It is not rated for fire or rodent damage here; where a project needs either, the specification sets the test',
+        ],
+        p: [
+          'Sometimes a felt is used to reduce imported sand, but that is a design decision, not a default. The pipe specification or the engineer decides whether fabric replaces bedding or only adds to it.',
+        ],
+      },
+      {
+        h: 'Laying it',
+        list: [
+          'Trim the trench bottom and remove sharp stones before the felt goes down',
+          'Wrap or lay with the overlap the method sets, and hold it so it does not slide while the pipe is lowered',
+          'Backfill with the material the design allows, placed gently at first, so the first layer does not tear the felt',
+          'Keep the fabric out of the sun until it is buried, because sunlight weakens synthetic fibre, polypropylene in particular',
+          'Do not drag the pipe or the cable across torn fabric',
+        ],
+        p: [
+          'The general site steps are in [how to install nonwoven geotextile](/guides/how-to-install-nonwoven-geotextile). For drain pipe wrapped as a filter, see [geotextile for drainage and erosion control](/guides/geotextile-for-drainage-and-erosion-control).',
+        ],
+      },
+      {
+        h: 'What to settle before you order',
+        list: [
+          'Pipe or cable diameter and coating type',
+          'Trench bottom and backfill: sand, soil, or stone, and the stone size',
+          'Wrap, bed and cover, or both, and the roll width that suits it',
+          'Fibre: polyester or polypropylene, as the specification calls for',
+          'Weight (GSM) and any puncture or protection value the specification sets; see [geotextile test methods explained](/guides/geotextile-test-methods-explained)',
+          'Roll length and quantity: see [roll weight and coverage](/guides/geotextile-roll-weight-and-coverage)',
+        ],
+        p: [
+          'If the project follows a client, agency or standard specification, confirm the current edition with your engineer; we do not quote a standard on this page.',
+        ],
+      },
+      {
+        h: 'What we supply, and what we do not',
+        p: [
+          'We make needle punched and thermal bonded nonwoven fabric, which is what protects and separates in the trench. We do not make pipes, ducts, pipe coatings or wrapping tape, warning tape, drainage composites, woven geotextile or geogrid, and we do not install. See the [pipeline and cable protection geotextile](/products/geotextile/pipeline-cable-protection-geotextile) page for the range. Send the application, the weight and the quantity through the [enquiry form](/contact#enquiry). Samples are free, to any location.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What does geotextile do around a buried pipeline?',
+        a: 'It cushions the pipe or its coating against sharp stones and rock in the backfill, separates bedding from soil, and filters around drain pipe. It does not replace a coating.',
+      },
+      {
+        q: 'Can geotextile replace sand bedding around a pipe?',
+        a: 'Sometimes it is used to reduce imported sand, but that is a design decision. The pipe specification or the engineer decides whether the fabric replaces bedding or only adds to it.',
+      },
+      {
+        q: 'Can rolls be cut narrower to wrap a pipe?',
+        a: 'Yes. Rolls are 5.0–5.2 m wide and can be slit narrower so one width wraps the pipe with the overlap your method needs. Tell us the pipe diameter and the overlap.',
+      },
+      {
+        q: 'Does geotextile protect cables from digging?',
+        a: 'No. It cushions against stones and backfill. It does not stop an excavator or a deliberate strike, and it does not replace warning tape or ducting.',
+      },
+      {
+        q: 'Which GSM is used for pipeline protection?',
+        a: 'It depends on the trench and the backfill, and is usually heavier for rocky ground. We do not give a number here. Use the value in your specification and confirm against a sample.',
+      },
+      {
+        q: 'Do you supply pipe coating or wrapping tape?',
+        a: 'No. We make needle punched and thermal bonded nonwoven fabric only, not coatings, tapes, pipes or ducts.',
+      },
+    ],
+    relatedProducts: [
+      'geotextile/pipeline-cable-protection-geotextile',
+      'geotextile/drainage-soil-erosion-control-geotextile',
+    ],
+    relatedGuides: [
+      'geotextile-for-drainage-and-erosion-control',
+      'how-to-install-nonwoven-geotextile',
+      'geotextile-roll-weight-and-coverage',
+    ],
+  },
+  {
     slug: 'rolls-per-container-nonwoven-felt-india',
     title: 'How many felt rolls fit in a 20 ft or 40 ft container: the method, not a number',
     seoTitle: 'Felt Rolls per 20 ft and 40 ft Container',
