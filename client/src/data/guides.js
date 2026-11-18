@@ -2576,7 +2576,6 @@ export const guides = [
     description:
       'Free geotextile roll calculator: enter GSM, width and length for roll weight and area, square metres per tonne, rolls needed, and container loading notes.',
     readMins: 5,
-    updated: '2026-10-28',
     published: '2026-10-25',
     intro:
       'Buyers of geotextile ask the same practical questions before they order: how heavy is one roll, how much ground does a tonne cover, and how many rolls will a container take? All three come from one formula. This guide shows it, works through examples for the wide rolls we make, and explains what the answer does and does not tell you.',
