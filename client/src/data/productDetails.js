@@ -121,6 +121,7 @@ export const PRODUCT_DETAILS = {
     p: [
       'A buried pipe or cable is usually damaged in the trench, not in service: sharp stones in the backfill, rock at the trench bottom, or a careless shovel. A thick nonwoven wrapped around the pipe, or laid as a bed and cover, spreads those point loads so the coating or sheath is not cut.',
       'The trench decides the grade. Sand bedding and soft soil need only light protection; rocky ground with crushed-stone backfill needs a heavier, thicker felt. Where a project uses a protection standard or a specific puncture test, follow it.',
+      'See the [guide to geotextile for pipeline and cable protection](/guides/geotextile-pipeline-cable-protection-india) for how the felt is wrapped or laid.',
     ],
     table: {
       head: ['Trench condition', 'Typical approach'],

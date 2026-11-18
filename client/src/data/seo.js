@@ -324,6 +324,7 @@ export function productFaq(product) {
       '[landfill and mining guide](/guides/geotextile-landfill-mining-india)',
       '[retaining wall drainage guide](/guides/geotextile-retaining-wall-drainage-india)',
       '[tunnel waterproofing guide](/guides/geotextile-tunnel-waterproofing-protection-india)',
+      '[pipeline and cable protection guide](/guides/geotextile-pipeline-cable-protection-india)',
       '[roll weight and coverage guide](/guides/geotextile-roll-weight-and-coverage)',
       '[felt rolls per container guide](/guides/rolls-per-container-nonwoven-felt-india)',
       '[embankments on soft soil guide](/guides/geotextile-embankment-soft-soil-india)',
