@@ -17,4 +17,10 @@ accounts and posts; Claude drafts and adds each live profile URL to the site's `
 | Fibre2Fashion | Not started | offpage/2026-11-07.md | — |
 | Kompass | Not started | offpage/2026-11-07.md | — |
 | Alibaba.com, Kompass, ThomasNet | Later (paid or US-only) | — | — |
+| Miracle Nonwoven Industries (partner site link) | Not asked yet | offpage/2026-11-22-backlinks.md (A) | — |
+| Magazine article (Textile Magazine / Techtextiles & Nonwovens / Indian Textile Journal / Textile Excellence / Fibre2Fashion) | Not sent; one magazine at a time | offpage/2026-11-22-backlinks.md (B) | — |
+| ITTA / Nonwoven Federation of India | Owner to decide on membership | offpage/2026-11-22-backlinks.md (C) | — |
+| Calculator resource pages | Not started | offpage/2026-11-22-backlinks.md (D) | — |
+| Quora (3 answers) | Not posted | offpage/2026-11-22-backlinks.md (E) | — |
+| Round 1 directories (Environmental Expert, My GeoWorld, IFAI guide, Curlie, Apparel Search, RevenueBase) | Not started | offpage/2026-11-13-backlink-outreach.md | — |
 | Industry directories (TTAI etc.) | Only if eligible | — | — |
