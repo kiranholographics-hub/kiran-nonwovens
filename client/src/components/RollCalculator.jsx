@@ -18,11 +18,15 @@ export default function RollCalculator() {
   const [width, setWidth] = useState('5.2');
   const [length, setLength] = useState('50');
   const [area, setArea] = useState('2600');
+  const [allow, setAllow] = useState('0');
 
   const g = num(gsm);
   const w = num(width);
   const l = num(length);
-  const a = num(area);
+  const a0 = num(area);
+  // Overlap and waste allowance, a percentage the buyer or engineer chooses.
+  const allowPct = Math.min(num(allow), 100);
+  const a = a0 * (1 + allowPct / 100);
 
   const rollArea = w * l;
   const rollKg = (g * rollArea) / 1000;
@@ -82,6 +86,18 @@ export default function RollCalculator() {
             onChange={(e) => setArea(e.target.value)}
           />
         </label>
+        <label>
+          <span>Overlap and waste allowance (%)</span>
+          <input
+            type="number"
+            inputMode="decimal"
+            min="0"
+            max="100"
+            step="any"
+            value={allow}
+            onChange={(e) => setAllow(e.target.value)}
+          />
+        </label>
       </div>
 
       <dl className="roll-calc__out" aria-live="polite">
@@ -98,6 +114,10 @@ export default function RollCalculator() {
           <dd>{fmt(m2PerTonne)} m²</dd>
         </div>
         <div>
+          <dt>Area to order, with allowance</dt>
+          <dd>{fmt(a, 1)} m²</dd>
+        </div>
+        <div>
           <dt>Length needed for the area</dt>
           <dd>{fmt(lengthNeeded, 1)} m</dd>
         </div>
@@ -111,9 +131,9 @@ export default function RollCalculator() {
         </div>
       </dl>
       <p className="roll-calc__note">
-        Nominal figures before overlaps, waste, cores, packaging and the GSM
-        tolerance. Your engineer sets overlaps; packed weights are confirmed
-        with the order.
+        Nominal figures before cores, packaging and the GSM tolerance. Leave the
+        allowance at 0 for the bare area, or enter the overlap and waste your
+        engineer specifies. Packed weights are confirmed with the order.
       </p>
     </form>
   );

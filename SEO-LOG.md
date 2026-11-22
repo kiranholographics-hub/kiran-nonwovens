@@ -33,10 +33,27 @@ build uses the real domain (checked live 26 Oct).
 - 28 Oct: pipeline-cable-protection-geotextile, acoustic-thermal-insulation-felt, nvh-sound-insulation-fabric
 - 29 Oct: carpet-backing-felt, customised-nonwoven-solutions, flooring-underlay-felt
 - 2 Nov: luggage-bag-support-felt, multi-colour-needle-punched-felt, orthopaedic-cast-padding (one H1, ordering terms, guide links all present; no change needed)
-- Next: shoulder-pad-nonwoven-fabric, shoe-lining-nonwoven-fabric, packaging-protective-felt
+- 16 Nov: shoulder-pad-nonwoven-fabric, shoe-lining-nonwoven-fabric, packaging-protective-felt (fine). All 16 product pages now checked once.
 
 ## Product page upgrades (Tuesdays)
 - 27 Oct: pp-geotextile-fabric-for-civil-works (4 product FAQs). Ordering terms on all 16.
+
+## 16 Nov 2026 (Monday: rank check + calculator upgrade)
+
+- Rank check (web search): **/guides/geotextile-gsm-for-road-construction-india is now #1** for
+  "geotextile GSM for road construction India" (was 10 on 2 Nov). **/guides/geotextile-roll-weight-and-coverage
+  is #2** for "geotextile roll weight calculator" (was not in the top 10), behind retech.in.
+  Not in the top 10: "needle punched felt manufacturer India" (supplier sites and directories),
+  "non woven geotextile uses and functions" (global authority and encyclopaedic pages).
+- Upgrade: roll calculator now has an "overlap and waste allowance (%)" input (default 0, so the
+  worked example is unchanged) and an "area to order, with allowance" line; rolls and weight follow
+  it. The leader in this query has an overlap input, ours did not. Tested in a browser (10 % on
+  2,600 m² gives 2,860 m², 12 rolls, 572 kg). Guide `updated` set to 16 Nov.
+- On-page check of shoulder-pad-nonwoven-fabric, shoe-lining-nonwoven-fabric, packaging-protective-felt:
+  one H1, FAQ schema, guide links and enquiry link present; nothing to fix.
+- Build OK, smoke passed, lint clean.
+- Pending from owner: Search Console Queries + Pages screenshot; Request indexing for
+  /exports/africa-nonwoven-felt-supplier (note the /exports/ path).
 
 ## 13 Nov 2026 (Friday: Africa region page)
 

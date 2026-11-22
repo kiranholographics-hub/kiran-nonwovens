@@ -129,9 +129,9 @@ Queue extension (23 Oct). Topics marked (ask) need the owner to confirm we make 
 - [ ] felt thickness vs GSM: how they relate
 - [x] how to read a nonwoven test report (what each line means) (5 Nov): geotextile side covered in /guides/geotextile-test-methods-explained; a felt-only version only if Search Console asks for it
 - [x] what decides the price of needle punched felt (factors only, no prices) (11 Nov) -> /guides/needle-punched-felt-price-factors-india
-- [ ] FOB, CIF and other Incoterms for buying nonwovens from India
-- [ ] how many rolls fit in a 20 ft / 40 ft container (method, not a fixed number)
-- [ ] how to request and evaluate a nonwoven sample
+- [x] FOB, CIF and other Incoterms for buying nonwovens from India: SKIPPED (16 Nov), already covered by /guides/incoterms-nonwoven-felt-india.
+- [x] how many rolls fit in a 20 ft / 40 ft container (method, not a fixed number) (16 Nov) -> /guides/rolls-per-container-nonwoven-felt-india
+- [x] how to request and evaluate a nonwoven sample: SKIPPED (16 Nov), already covered by /guides/how-to-test-a-nonwoven-felt-sample.
 Rules: no MOQ, price, lead time, certification, capacity, client names, years or standards-compliance claims; MoRTH/IRC/RDSO/BIS only as "confirm the current edition with your engineer"; we make needle punched and thermal bonded only (not spunbond, spunlace, meltblown); keep the Miracle Nonwoven Industries wording; do not name or rank competitors.
 
 ## Weekly log (Search Console, Web, last 7 days)
